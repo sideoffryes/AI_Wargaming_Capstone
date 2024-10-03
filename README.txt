@@ -20,3 +20,9 @@ based on user feedback. The final product will serve as a proof of concept, demo
 be harnessed to enhance and expedite the wargaming process.
 
 POC: LtCol Scotty Black, scotty.black@nps.edu 
+
+First Steps: 
+-Create a small LLM that can create 5 paragraph orders.
+-Nothing has really been done in this field yet, so we can pretty much do anything.
+-Take a look at the wargaming documents and the wargaming plans.
+
