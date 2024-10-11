@@ -1,13 +1,10 @@
-Group Members:
-Peter Asjes m250228@usna.edu
-William Robinson m255334@usna.edu
-Henry Frye m251854@usna.edu
-Caleb Koutrakos m253300@usna.edu
-Robert Ziman m257074@usna.edu
+# Capstone Description
 
-Capstone Description:
-Title: GenAI in Support of Wargaming
-Description: Creating believable, realistic, and immersive scenarios in support of wargaming objectives 
+## Title: GenAI in Support of Wargaming
+
+## Description
+
+Creating believable, realistic, and immersive scenarios in support of wargaming objectives 
 requires significant time and subject matter expertise. This capstone project proposes developing a 
 software system that leverages Large Language Models (LLMs) to automate the creation of critical wargaming 
 artifacts, such as "Road to War" briefs, concepts of operations, intelligence summaries, operational plans, 
@@ -19,10 +16,28 @@ prompt engineering, while also developing a user-friendly interface and ensuring
 based on user feedback. The final product will serve as a proof of concept, demonstrating how LLMs can 
 be harnessed to enhance and expedite the wargaming process.
 
-POC: LtCol Scotty Black, scotty.black@nps.edu 
+## Group Members
 
-First Steps: 
--Create a small LLM that can create 5 paragraph orders.
--Nothing has really been done in this field yet, so we can pretty much do anything.
--Take a look at the wargaming documents and the wargaming plans.
+[Peter Asjes](mailto:m250228@usna.edu)
 
+[William Robinson](mailto:m255334@usna.edu)
+
+[Henry Frye](mailto:m251854@usna.edu)
+
+[Caleb Koutrakos](mailto:m253300@usna.edu)
+
+[Robert Ziman](mailto:m257074@usna.edu)
+
+## POC
+
+[LtCol Scotty Black](mailto:scotty.black@nps.edu )
+
+## First Steps
+
+- Create a small LLM that can create 5 paragraph orders.
+- Nothing has really been done in this field yet, so we can pretty much do anything.
+- Take a look at the wargaming documents and the wargaming plans.
+
+## Poster
+
+![Capstone Poster](IC470%20Capstone%20Poster.png)
