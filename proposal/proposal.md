@@ -3,7 +3,10 @@
 MIDN Peter Asjes, Henry Frye, Caleb Koutrakos, Will Robinson, and Robert Ziman
 
 ## Capstone Details
+
 Slides: [Capstone Proposal](https://docs.google.com/presentation/d/1ZQm_i69DicPDcvga37xQAQbg_A87fOJkCFcStDvK-CQ/edit?usp=sharing)
+
+Poster: [Capstone Poster](./USNA%20Capstone%20Poster.png)
 
 ### What Are We Planning to Build?
 
@@ -90,7 +93,7 @@ In our initial meeting with Professor Chambers, our team received important feed
 
 LT Gentile
 
-LT Gentile is designated as a subject matter expert on Wargames. He pointed out that wargames are an incredibly broad field and he encouraged our group to solidify the specific artifacts our customer would like to see produced. 
+LT Gentile is designated as a subject matter expert on Wargames. He pointed out that wargames are an incredibly broad field and he encouraged our group to solidify the specific artifacts our customer would like to see produced.
 
 ### Resources
 
