@@ -11,7 +11,7 @@ Poster: [Capstone Poster](./USNA%20Capstone%20Poster.png)
 ### What Are We Planning to Build?
 
 Our group is planning to build a group of Language Models (LMs) capable of generating specific and niche documents for Wargaming. Wargaming is defined by the <u>NATO Wargaming Handbook</u> as "representations of conflict or competition in a safe-tofail environment, in which people make decisions and respond to the
-consequences of those decisions." These niche documents for Wargaming are operation orders such as the Five Paragraph Order of the USMC. Other examples could be MOVREPs, OPFOR creation, road to war briefs, and potential responses. Here is an example of a 5 Paragraph Order that one of the LMs would need to be capable of generating [ExampleOPorder](). Each of these LMs will be capable of creating a document based on user input into the user interface. The user interface as depicted below will allow a user to select what document they want to create and enter the required information needed to generate the document.
+consequences of those decisions." These niche documents for Wargaming are operation orders such as the Five Paragraph Order of the USMC. Other examples could be MOVREPs, OPFOR creation, road to war briefs, and potential responses. Here is an example of a 5 Paragraph Order that one of the LMs would need to be capable of generating [ExampleOPorder](./ExOPORDER.pdf). Each of these LMs will be capable of creating a document based on user input into the user interface. The user interface as depicted below will allow a user to select what document they want to create and enter the required information needed to generate the document.
 
 (Insert Example UI here)
 
