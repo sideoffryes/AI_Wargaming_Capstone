@@ -22,18 +22,19 @@ basic input about their needs and save valuable time creating their scenarios.
 
 ### Why is it important?
 
-Current publicly available AI and language models do not have the ability to create documents to the required authenticity and quality standards required for a wargame. Many currently available services are not familiar with
-the format that the various artifacts are required to be in. Furthermore, publicly available closed-source models are not able to be used on classified networks as required for some DoD applications.
+Current publicly available AI and language models do not have the ability to create documents to the required authenticity and quality standards required for a wargame. Many currently available services are not familiar with the format that the various artifacts are required to be in. Furthermore, publicly available closed-source models are not able to be used on classified networks as required for some DoD applications.
 
 ## Market Research/Lit Review
 
-The Naval Wargaming Modernization Initiative aims to transform military wargaming through the research, development, and integration of cutting-edge technologies in modeling and simulation (M&S) and artificial intelligence (AI), enhancing strategic decision-making, operational planning, and Joint multi-domain interoperability to be better postured to address the emerging complexities of modern and future conflicts. (Scotty Black, PhD)
+Wargaming has long been a tool used in military planning, training, and preparation for real combat scenarios using simulated scenarios to improve decision making of everyone involved. In the past, wargames had to be conducted manually with only human players making the decisions for both sides using their previous experiences. As early as 2015 the call to innovate wargaming came from the Deputy Secretary of the Navy. Unfortunately, that call while acknowledged and looked into did not see almost any progress. (Robert Work, Former Deputy SECNAV) General Berger was another high ranking member of the DOD who called for advancement in wargaming and M&S during his time as Commandant of the Marine Corps. (Scotty Black, LtCol. USMC PhD) In recent years, the calls for AI in wargaming to be explored in more detail have grown and many in the DOD want to see progress.
+
+The Naval Wargaming Modernization Initiative aims to transform military wargaming through the research, development, and integration of cutting-edge technologies in modeling and simulation (M&S) and artificial intelligence (AI), enhancing strategic decision-making, operational planning, and Joint multi-domain interoperability to be better postured to address the emerging complexities of modern and future conflicts. (Scotty Black, LtCol. USMC PhD) 
 
 ChatCPT and other LLMs are large and capable, however they have limitations when applied to DoD projects:
 
 First, open source LLM are not optimized for wargames and cannot provide specific and trustworthy artifacts. Most LLMs were not build with military expertise in mind which can cause the accuracy of their product to be compromised.
 
-Second, publicly available LMs do not and will not have access to confidential or secret DoD information. There is a need for LMs internal to the DoD that allow for sensitive information to be processed and produced for Wargaming Commands and beyond.
+Second, publicly available LLMs do not and will not have access to confidential or secret DoD information. There is a need for LLMs internal to the DoD that allow for sensitive information to be processed and produced for Wargaming Commands and beyond.
 
 ## How Does This Improve Wargames?
 
