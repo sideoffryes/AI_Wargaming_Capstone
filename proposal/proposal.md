@@ -10,7 +10,7 @@ Poster: [Capstone Poster](./USNA%20Capstone%20Poster.png)
 
 ### What Are We Planning to Build?
 
-Our group is planning to build a group of Language Models (LMs) capable of generating specific and niche documents for Wargaming. Wargaming is defined by the <u>NATO Wargaming Handbook</u> as "representations of conflict or competition in a safe-tofail environment, in which people make decisions and respond to the
+Our group is planning to build a group of Language Models (LMs) capable of generating specific and niche documents for wargaming. Wargaming is defined by the <u>NATO Wargaming Handbook</u> as "representations of conflict or competition in a safe-tofail environment, in which people make decisions and respond to the
 consequences of those decisions." These niche documents for Wargaming are operation orders such as the Five Paragraph Order of the USMC. Other examples could be MOVREPs, OPFOR creation, road to war briefs, and potential responses. Here is an example of a 5 Paragraph Order that one of the LMs would need to be capable of generating [ExampleOPorder](./ExOPORDER.pdf). Each of these LMs will be capable of creating a document based on user input into the user interface. The user interface as depicted below will allow a user to select what document they want to create and enter the required information needed to generate the document.
 
 ![ExampleUI](./ExampleUI.svg)
@@ -27,6 +27,8 @@ Current publicly available AI and language models do not have the ability to cre
 ## Market Research/Lit Review
 
 Wargaming has long been a tool used in military planning, training, and preparation for real combat scenarios using simulated scenarios to improve decision making of everyone involved. In the past, wargames had to be conducted manually with only human players making the decisions for both sides using their previous experiences. As early as 2015 the call to innovate wargaming came from the Deputy Secretary of the Navy. Unfortunately, that call while acknowledged and looked into did not see almost any progress. (Robert Work, Former Deputy SECNAV) General Berger was another high ranking member of the DOD who called for advancement in wargaming and M&S during his time as Commandant of the Marine Corps. (Scotty Black, LtCol. USMC PhD) In recent years, the calls for AI in wargaming to be explored in more detail have grown and many in the DOD want to see progress.
+
+The importance of AI in wargaming is highlighted by the PLA's use of the technology to train their military. China has not had a lot of combat experience in the modern battlefield and has turned to wargaming to ensure their military is capable of quick decision making to out manuever the enemy. With the U.S. military getting farther away from any near peer combat experience and the changing of the modern battlefield, we are losing our advantage. In order to stay ahead, we need to push our officers and enlisted into situations where they must improve their decision-making and capability to adapt to changing situations.
 
 The Naval Wargaming Modernization Initiative aims to transform military wargaming through the research, development, and integration of cutting-edge technologies in modeling and simulation (M&S) and artificial intelligence (AI), enhancing strategic decision-making, operational planning, and Joint multi-domain interoperability to be better postured to address the emerging complexities of modern and future conflicts. (Scotty Black, LtCol. USMC PhD) 
 
@@ -79,7 +81,7 @@ This will require:
 ### User Stories
 
 - As a user, I can generate an artifact that is accurate enough to be used in a wargame
-- As a user, I can edit the output from te program to better ft the needs of the wargame
+- As a user, I can edit the output from the program to better fit the needs of the wargame
 
 ### Product Backlog
 
