@@ -95,7 +95,7 @@ This will require:
 
 ### System Design
 
-![system design diagram](./SystemDesign.svg)
+![system design diagram](./System_Design.svg)
 
 ## Project Management
 
