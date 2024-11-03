@@ -27,25 +27,40 @@ Current publicly available AI and language models do not have the ability to cre
 ## Market Research/Lit Review
 
 ### What is wargaming?
+
 Wargaming has long been a tool used in military planning, training, and preparation for real combat scenarios using simulated scenarios to improve decision making of everyone involved. In the past, wargames had to be conducted manually with only human players making the decisions for both sides using their previous experiences. As early as 2015 the call to innovate wargaming came from the Deputy Secretary of the Navy. Unfortunately, that call while acknowledged and looked into did not see almost any progress. (Robert Work, Former Deputy SECNAV) General Berger was another high ranking member of the DOD who called for advancement in wargaming and M&S during his time as Commandant of the Marine Corps. (Scotty Black, LtCol. USMC PhD) In recent years, the calls for AI in wargaming to be explored in more detail have grown and many in the DOD want to see progress.
 
 ### Current State of PRC
+
 The importance of AI in wargaming is highlighted by the PLA's use of the technology to train their military. China has not had a lot of combat experience in the modern battlefield and has turned to wargaming to ensure their military is capable of quick decision making to out manuever the enemy. With the U.S. military getting farther away from any near peer combat experience and the changing of the modern battlefield, we are losing our advantage. In order to stay ahead, we need to push our officers and enlisted into situations where they must improve their decision-making and capability to adapt to changing situations.
 
 ### Current State of AI in wargaming for U.S. and allies
+
 "Consensus on the current state of play was consistent: ‘AI for wargaming is in its infancy’, there is ‘not much going on’ in this space, 11 and ‘AI is not really used at this stage.’" (Alan Turing Institute, AI in Wargaming) As the paper goes on to say there are many in the military community that are hesitant to believe that AI will be able to produce results worth the time and research 
 
 ### Goal of incorporating AI in wargaming
+
 The Naval Wargaming Modernization Initiative aims to transform military wargaming through the research, development, and integration of cutting-edge technologies in modeling and simulation (M&S) and artificial intelligence (AI), enhancing strategic decision-making, operational planning, and Joint multi-domain interoperability to be better postured to address the emerging complexities of modern and future conflicts. (Scotty Black, LtCol. USMC PhD) 
 
 ### State of other publicly available LLMs
+
 ChatCPT and other LLMs are large and capable, however they have limitations when applied to DoD projects:
 
-First, open source LLM are not optimized for wargames and cannot provide specific and trustworthy artifacts. Most LLMs were not build with military expertise in mind which can cause the accuracy of their product to be compromised.
+First, open source LLM are not optimized for wargames and cannot provide specific and trustworthy artifacts. Most LLMs were not build with military expertise in mind which can cause the accuracy of their product to be compromised. The level at which publicly available LLMs are at in wargaming generation is promising, but they are missing the training data and are built as a jack of all trades, not with a specific purpose in mind.
 
 Second, publicly available LLMs do not and will not have access to confidential or secret DoD information. There is a need for LLMs internal to the DoD that allow for sensitive information to be processed and produced for Wargaming Commands and beyond. With LLMs secured as an open source and private to the DoD, we could eventually train the LLMs created by our team with classified data.
 
 ### AI and reinforced learning
+
+### What is a USMC Five Pragraph Order?
+
+### What is a road to war brief?
+
+A road to war brief is a made up scenario describing how the build-up of tensions two or more nations is leading to war and potentially includes the breaking point. The brief describes what political rhetoric exists, the strength of each nation involved, border issues, the internal state of involved nations, how diplomacy has failed leading to war, and more.
+
+### What is a MOVREP?
+
+### What is OPFOR Generation?
 
 ## How Does This Improve Wargames?
 
