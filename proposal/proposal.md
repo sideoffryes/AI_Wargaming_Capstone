@@ -54,6 +54,8 @@ Second, publicly available LLMs do not and will not have access to confidential 
 
 ### What is a USMC Five Pragraph Order?
 
+The USMC five paragraph order is a standardized format consisting of the situtation, mission, execution, administration and logistics, and command and signal. Each topic is its on paragraph or information resulting in it being a five paragraph order. This is a standard employed to effectively commucicate military operations to subordinates. These five paragraph orders are generated at each level of command from the top down to small unit commanders getting more specific with each level down.
+
 ### What is a road to war brief?
 
 A road to war brief is a made up scenario describing how the build-up of tensions two or more nations is leading to war and potentially includes the breaking point. The brief describes what political rhetoric exists, the strength of each nation involved, border issues, the internal state of involved nations, how diplomacy has failed leading to war, and more.
@@ -61,6 +63,13 @@ A road to war brief is a made up scenario describing how the build-up of tension
 ### What is a MOVREP?
 
 ### What is OPFOR Generation?
+
+### Sources:
+1. .[NATO Wargaming Handbook](https://paxsims.wordpress.com/wp-content/uploads/2023/09/nato-wargaming-handbook-202309.pdf)
+2. .[AI in Wargaming](https://cetas.turing.ac.uk/publications/artificial-intelligence-wargaming)
+3. .[Scaling Artificial Intelligence for Digital Wargaming in Support of Decision-Making](https://arxiv.org/pdf/2402.06075)
+4. .[Memorandum on wargaming by Deputy SECDEF](https://paxsims.wordpress.com/wp-content/uploads/2015/04/osd-memowargaming-innovationdepsecdefworkfeb15.pdf)
+5. 
 
 ## How Does This Improve Wargames?
 
