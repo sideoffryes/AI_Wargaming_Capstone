@@ -93,8 +93,6 @@ This will require:
 1. Data to train each LM
 2. The necessary systems to host the interface
 
-### System Design
-
 ![system design diagram](./System_Design.svg)
 
 ## Project Management
