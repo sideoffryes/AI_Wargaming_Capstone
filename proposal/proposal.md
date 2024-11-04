@@ -96,7 +96,7 @@ Process After Our Product is Implemented
 2. We will train this specific LM on available 5 paragraph orders aquired from Marines on the yard with access to many of them. The LM will use retrieval-augmented generation (RAG) for training to increase the accuracy of the output generated.
 3. We will build a front end using PHP and html so a website is able to be accessed to interact with the LM. (We may explore better alternatives if needed)
 4. Once we have a single working LM and user interface we can begin exploring other wargaming documents.
-5. We will train our LMs on data collected from our customer and other sources, on and off of the Yard.
+5. We will train our LMs on data collected from our customer and other sources, on and off of the Yard. This training data will be put into a database that we will build, so each specific LM can pull the specific data it needs to produce an accurate output of the artifact it is generating.
 6. We will build several smaller, more specifically trained language models that produce a particular artifact.
 7. We will improve the front end to our customers preferences that provides a coherent interface between a user and the LMs
 
