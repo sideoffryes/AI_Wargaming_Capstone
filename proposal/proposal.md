@@ -10,21 +10,23 @@ Poster: [Capstone Poster](./USNA%20Capstone%20Poster.png)
 
 ### What Are We Planning to Build?
 
-Our group is planning to build a group of Language Models (LMs) capable of generating specific and niche documents for wargaming. Wargaming is defined by the *NATO Wargaming Handbook* as "representations of conflict or competition in a safe-to-fail environment, in which people make decisions and respond to the consequences of those decisions." These niche documents for Wargaming are operation orders such as the Five Paragraph Order of the USMC. Other examples could be MOVREPs, OPFOR creation, road to war briefs, and potential responses.
+Our group is planning to build a system that uses publicly available Large Language Models (LLMs) that have been improved with Retrieval-Augmented Generation (RAG) to produce specific and niche military artifacts for wargaming. This system will be accessed via a graphical user interface where users can provide a prompt and select the type of document that they would like the system to generate.
 
-Here is an example of a 5 Paragraph Order that one of the LMs would need to be capable of generating [ExampleOPorder](./ExOPORDER.pdf). Each of these LMs will be capable of creating a document based on user input into the user interface. The user interface as depicted below will allow a user to select what document they want to create and enter the required information needed to generate the document. 
+Wargaming is defined by the *NATO Wargaming Handbook* as "representations of conflict or competition in a safe-to-fail environment, in which people make decisions and respond to the consequences of those decisions." These niche documents for Wargaming are operation orders such as the Five Paragraph Order of the USMC. Other examples could be MOVREPs, OPFOR creation, road to war briefs, and potential responses.
+
+Here is an [example of a 5 Paragraph order](./ExOPORDER.pdf) that the LLM will be capable of generating. The LLM will be capable of creating a document based on user input into the user interface. The user interface as depicted below will allow a user to select what document they want to create and enter the required information needed to generate the document.
+
 ![ExampleUI](./ExampleUI.svg)  
 
 Our product is not designed to be implemented in a specific wargame scenario or under a particular set of rules. This product is designed to be applicable to most scenarios by generating artifacts that are commonly used in wargames that are independent of the scenario rules or can easily be included in the prompt.
 
 ### What Problem Will It Solve?
 
-Wargaming in its current state requires artifacts that need to be manually created, taking up valuable time and energy that could be better spent on the more critical aspects of the wargame. Our product would allow users to provide
-basic input about their needs and save valuable time creating their scenarios.
+Wargaming in its current state requires artifacts that need to be manually created, taking up valuable time and energy that could be better spent on the more critical aspects of the wargame; the modern battle space is continuously growing more complex and difficult to analyze. Our product would allow users to provide basic input about their needs and save valuable time creating their scenarios.
 
 ### Why is it important?
 
-Current publicly available AI and language models do not have the ability to create documents to the required authenticity and quality standards required for a wargame. Many currently available services are not familiar with the format that the various artifacts are required to be in. Furthermore, publicly available closed-source models are not able to be used on classified networks as required for some DoD applications.
+Current publicly available LLMs do not have the ability to create documents to the required authenticity and quality standards required for a wargame. Many currently available services are not familiar with the format that the various artifacts are required to be in. Furthermore, publicly available closed-source models are not able to be used on classified networks as required for some DoD applications.
 
 In addition, our capstone project fits into a larger vision, the *Naval Wargaming Modernization Initiative*. This initiative is part of a five year plan, and our capstone fits into their FY25 plan for the initial development of the initiative's capabilities. Our capstone and the initialize at large help increase our ability to address increasingly complex modern scenarios, compete with the PRC, and begin the long road to meaningful AI integration in wargaming.
 
@@ -32,11 +34,11 @@ In addition, our capstone project fits into a larger vision, the *Naval Wargamin
 
 ### What is wargaming?
 
-Joint Publicayion 1 defines a wargame as "A simulation, by whatever means, of a military operation involving two or more opposing forces, using rules, data, and procedures designed to depict an actual or assumed real life situation." Wargaming has long been a tool used in military planning, training, and preparation for real combat scenarios using simulated scenarios to improve decision making of everyone involved. In the past, wargames had to be conducted manually with only human players making the decisions for both sides using their previous experiences. As early as 2015 the call to innovate wargaming came from the Deputy Secretary of the Navy. Unfortunately, that call while acknowledged and looked into did not see almost any progress. (Robert Work, Former Deputy SECNAV) General Berger was another high ranking member of the DOD who called for advancement in wargaming and M&S during his time as Commandant of the Marine Corps. (Scotty Black, LtCol. USMC PhD) In recent years, the calls for AI in wargaming to be explored in more detail have grown and many in the DOD want to see progress.
+Joint Publication 1 defines a wargame as "A simulation, by whatever means, of a military operation involving two or more opposing forces, using rules, data, and procedures designed to depict an actual or assumed real life situation." Wargaming has long been a tool used in military planning, training, and preparation for real combat scenarios using simulated scenarios to improve decision making of everyone involved. In the past, wargames had to be conducted manually with only human players making the decisions for both sides using their previous experiences. As early as 2015 the call to innovate wargaming came from the Deputy Secretary of the Navy. Unfortunately, that call while acknowledged and looked into did not see almost any progress. (Robert Work, Former Deputy SECNAV) General Berger was another high ranking member of the DoD who called for advancement in wargaming and M&S during his time as Commandant of the Marine Corps. (Scotty Black, LtCol. USMC PhD) In recent years, the calls for AI in wargaming to be explored in more detail have grown and many in the DoD want to see progress.
 
 ### What is an LLM?
 
-A large language model is defined by IBM as "A category of foundation models trained on immense amounts of data making them capable of understanding and generating natural language and other types of content to perform a wide range of tasks." The goal of our capstone is to develop smaller language models that can produce natural and correct documentation for use in wargames. Our language models will be trained on large amounts of wargame artifacts and be able to produce unique artifacts that follow the same structure.   
+A large language model is defined by IBM as "A category of foundation models trained on immense amounts of data making them capable of understanding and generating natural language and other types of content to perform a wide range of tasks." The goal of our capstone is to augment existing LLMs, preferable open source ones, via RAG to produce the specific artifacts. Our augmented language models will be given examples of wargame artifacts and be able to produce unique artifacts that follow the same structure.
 
 ### Current State of the People's Republic of China (PRC)
 
@@ -66,7 +68,7 @@ The USMC five paragraph order is a standardized format consisting of the situati
 
 ### What is a road to war brief?
 
-A road to war brief is a made up scenario describing how the build-up of tensions two or more nations is leading to war and potentially includes the breaking point. The brief describes what political rhetoric exists, the strength of each nation involved, border issues, the internal state of involved nations, how diplomacy has failed leading to war, and more.
+A road to war brief is a made up scenario describing how the build-up of tensions between two or more nations is leading to war and potentially includes the breaking point. The brief describes what political rhetoric exists, the strength of each nation involved, border issues, the internal state of involved nations, how diplomacy has failed leading to war, and more.
 
 ### What is a MOVREP?
 
@@ -102,17 +104,24 @@ Process After Our Product is Implemented
 
 ### How are we going to build this?
 
-1. We will begin by building one small language model (LM) centered around creating 5 paragraph orders to get an idea of how to train a language model with reinforced learning.
-2. We will train this specific LM on available 5 paragraph orders acquired from Marines on the yard with access to many of them. The LM will use retrieval-augmented generation (RAG) for training to increase the accuracy of the output generated.
-3. We will build a front end using PHP and html so a website is able to be accessed to interact with the LM. (We may explore better alternatives if needed)
-4. Once we have a single working LM and user interface we can begin exploring other wargaming documents.
-5. We will train our LMs on data collected from our customer and other sources, on and off of the Yard. This training data will be put into a database that we will build, so each specific LM can pull the specific data it needs to produce an accurate output of the artifact it is generating.
-6. We will build several smaller, more specifically trained language models that produce a particular artifact.
-7. We will improve the front end to our customers preferences that provides a coherent interface between a user and the LMs
+1. We will begin by find source documents to provide context for 1 artifact to be generated by an existing LLM. This will also give us a better idea on how to use user input to identify the best documents to use for context to augment the LLM and assure that we are strictly adhering to the format of the artifact.
+
+2. We will provide the LLM with available 5 paragraph orders acquired from Marines on the yard with access to many of them. The LLM will use retrieval-augmented generation (RAG) for training to increase the accuracy of the output generated.
+
+3. We will build an interface available via a web browser so a user is able to interact with the LM. (We may explore better alternatives if needed)
+
+4. Once the LLM is able to consistently produce one type of artifact and user interface we can begin exploring other wargaming documents.
+
+5. We will provide our LLM with data collected from our customer and other sources, on and off of the Yard. This data will be put into a database that we will build, so the LLM can pull the specific data it needs to produce an accurate output of the artifact it is generating.
+
+6. We will increase the number and type of artifacts that can be generated by the LLM by finding additional existing artifacts to use as context and fine-tune our prompts to produce the most accurate output.
+
+7. We will improve the web interface to the customers preferences that provides a coherent interface between a user and the LLM.
 
 This will require:
 
-1. Data to train each LM
+1. Data to provide to the LLM as context for the desired artifact
+
 2. The necessary systems to host the interface
 
 ![system design diagram](./System_Design.svg)
@@ -121,21 +130,21 @@ This will require:
 
 ### Product Backlog
 
-1. Gather source documents to train LM. Will require reaching out to community members who have access (3/5)
+1. Gather source documents augment LLM prompt. Will require reaching out to community members who have access (3/5)
 2. Build programs to read in source documents based on document type (typed vs scanned in). These programs exist already and should be easy to find and implement (1/5)
-3. Build first LM. The group has varying levels of experience constructing LMs (5/5)
+3. Build first LLM-RAG prototype. The group has varying levels of experience working with NLP concepts (5/5)
 4. Build a UI for interface for future users. The group has limited skills regarding UI on different platforms (3/5)
-5. Build remaining LMs. This task should get easier after constructing the first one and locating source documents/training material (3/5)
+5. Build remaining artifact generation functionality. This task should get easier after constructing the first one and locating source documents/training material (3/5)
 
 ### Preliminary Release Plan
 
-- Create a way to properly parse documents to use them as training data for our models (NOV 26)
-- Gather documents needed to train LM on a USMC 5 paragraph order (DEC 10)
-- Create our first LM that can create a USMC 5 paragraph order as a proof of concept (JAN 20)
-- Create a front end with a GUI that can take user input and return the output from our LM (FEB 3)
-- Create a second LM that generates another common artifact using in wargames (FEB 17)
-- Link second LM to our front end (FEB 17)
-- Continue to create more LMs for specific artifacts and link to the front end (MARCH 1 - APRIL 30)
+- Gather documents needed to augment LLM prompt on a USMC 5 paragraph order (NOV 26)
+- Create a way to properly parse documents to use them as training data for our models (DEC 10)
+- Build our first LLM-RAG system that can create a USMC 5 paragraph order as a proof of concept (JAN 20)
+- Create a front end with a GUI that can take user input and return the output from our LLM (FEB 3)
+- Add a second artifact that the LLM can generate (FEB 17)
+- Link second artifact generation feature to our front end (FEB 17)
+- Continue to add more artifact generation functionality for specific artifacts and link to the front end (MARCH 1 - APRIL 30)
 
 ### User Stories
 
