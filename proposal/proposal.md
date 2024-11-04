@@ -10,10 +10,13 @@ Poster: [Capstone Poster](./USNA%20Capstone%20Poster.png)
 
 ### What Are We Planning to Build?
 
-Our group is planning to build a group of Language Models (LMs) capable of generating specific and niche documents for wargaming. Wargaming is defined by the <u>NATO Wargaming Handbook</u> as "representations of conflict or competition in a safe-tofail environment, in which people make decisions and respond to the
-consequences of those decisions." These niche documents for Wargaming are operation orders such as the Five Paragraph Order of the USMC. Other examples could be MOVREPs, OPFOR creation, road to war briefs, and potential responses. Here is an example of a 5 Paragraph Order that one of the LMs would need to be capable of generating [ExampleOPorder](./ExOPORDER.pdf). Each of these LMs will be capable of creating a document based on user input into the user interface. The user interface as depicted below will allow a user to select what document they want to create and enter the required information needed to generate the document.
+Our group is planning to build a group of Language Models (LMs) capable of generating specific and niche documents for wargaming. Wargaming is defined by the *NATO Wargaming Handbook* as "representations of conflict or competition in a safe-to-fail environment, in which people make decisions and respond to the consequences of those decisions." These niche documents for Wargaming are operation orders such as the Five Paragraph Order of the USMC. Other examples could be MOVREPs, OPFOR creation, road to war briefs, and potential responses.
+
+Here is an example of a 5 Paragraph Order that one of the LMs would need to be capable of generating [ExampleOPorder](./ExOPORDER.pdf). Each of these LMs will be capable of creating a document based on user input into the user interface. The user interface as depicted below will allow a user to select what document they want to create and enter the required information needed to generate the document.
 
 ![ExampleUI](./ExampleUI.svg)
+
+Our product is not designed to be implemented in a specific wargame scenario or under a particular set of rules. This product is designed to be applicable to most scenarios by generating artifacts that are commonly used in wargames that are independent of the scenario rules or can easily be included in the prompt.
 
 ### What Problem Will It Solve?
 
@@ -24,27 +27,29 @@ basic input about their needs and save valuable time creating their scenarios.
 
 Current publicly available AI and language models do not have the ability to create documents to the required authenticity and quality standards required for a wargame. Many currently available services are not familiar with the format that the various artifacts are required to be in. Furthermore, publicly available closed-source models are not able to be used on classified networks as required for some DoD applications.
 
+In addition, our capstone project fits into a larger vision, the *Naval Wargaming Modernization Initiative*. This initiative is part of a five year plan, and our capstone fits into their FY25 plan for the initial development of the initiative's capabilities. Our capstone and the initialize at large help increase our ability to address increasingly complex modern scenarios, compete with the PRC, and begin the long road to meaningful AI integration in wargaming.
+
 ## Market Research/Lit Review
 
 ### What is wargaming?
 
 Wargaming has long been a tool used in military planning, training, and preparation for real combat scenarios using simulated scenarios to improve decision making of everyone involved. In the past, wargames had to be conducted manually with only human players making the decisions for both sides using their previous experiences. As early as 2015 the call to innovate wargaming came from the Deputy Secretary of the Navy. Unfortunately, that call while acknowledged and looked into did not see almost any progress. (Robert Work, Former Deputy SECNAV) General Berger was another high ranking member of the DOD who called for advancement in wargaming and M&S during his time as Commandant of the Marine Corps. (Scotty Black, LtCol. USMC PhD) In recent years, the calls for AI in wargaming to be explored in more detail have grown and many in the DOD want to see progress.
 
-### Current State of PRC
+### Current State of the People's Republic of China (PRC)
 
 The importance of AI in wargaming is highlighted by the PLA's use of the technology to train their military. China has not had a lot of combat experience in the modern battlefield and has turned to wargaming to ensure their military is capable of quick decision making to out manuever the enemy. With the U.S. military getting farther away from any near peer combat experience and the changing of the modern battlefield, we are losing our advantage. In order to stay ahead, we need to push our officers and enlisted into situations where they must improve their decision-making and capability to adapt to changing situations.
 
 ### Current State of AI in wargaming for U.S. and allies
 
-"Consensus on the current state of play was consistent: ‘AI for wargaming is in its infancy’, there is ‘not much going on’ in this space, 11 and ‘AI is not really used at this stage.’" (Alan Turing Institute, AI in Wargaming) As the paper goes on to say there are many in the military community that are hesitant to believe that AI will be able to produce results worth the time and research 
+"Consensus on the current state of play was consistent: ‘AI for wargaming is in its infancy’, there is ‘not much going on’ in this space, 11 and ‘AI is not really used at this stage.’" (Alan Turing Institute, AI in Wargaming) As the paper goes on to say there are many in the military community that are hesitant to believe that AI will be able to produce results worth the time and research
 
 ### Goal of incorporating AI in wargaming
 
-The Naval Wargaming Modernization Initiative aims to transform military wargaming through the research, development, and integration of cutting-edge technologies in modeling and simulation (M&S) and artificial intelligence (AI), enhancing strategic decision-making, operational planning, and Joint multi-domain interoperability to be better postured to address the emerging complexities of modern and future conflicts. (Scotty Black, LtCol. USMC PhD) 
+The Naval Wargaming Modernization Initiative aims to transform military wargaming through the research, development, and integration of cutting-edge technologies in modeling and simulation (M&S) and artificial intelligence (AI), enhancing strategic decision-making, operational planning, and Joint multi-domain interoperability to be better postured to address the emerging complexities of modern and future conflicts. (Scotty Black, LtCol. USMC PhD)
 
 ### State of other publicly available LLMs
 
-ChatCPT and other LLMs are large and capable, however they have limitations when applied to DoD projects:
+ChatGPT and other LLMs are large and capable, however they have limitations when applied to DoD projects:
 
 First, open source LLM are not optimized for wargames and cannot provide specific and trustworthy artifacts. Most LLMs were not build with military expertise in mind which can cause the accuracy of their product to be compromised. The level at which publicly available LLMs are at in wargaming generation is promising, but they are missing the training data and are built as a jack of all trades, not with a specific purpose in mind.
 
@@ -52,9 +57,9 @@ Second, publicly available LLMs do not and will not have access to confidential 
 
 ### AI and reinforced learning
 
-### What is a USMC Five Pragraph Order?
+### What is a USMC Five Paragraph Order?
 
-The USMC five paragraph order is a standardized format consisting of the situtation, mission, execution, administration and logistics, and command and signal. Each topic is its on paragraph or information resulting in it being a five paragraph order. This is a standard employed to effectively commucicate military operations to subordinates. These five paragraph orders are generated at each level of command from the top down to small unit commanders getting more specific with each level down.
+The USMC five paragraph order is a standardized format consisting of the situation, mission, execution, administration and logistics, and command and signal. Each topic is its on paragraph or information resulting in it being a five paragraph order. This is a standard employed to effectively communicate military operations to subordinates. These five paragraph orders are generated at each level of command from the top down to small unit commanders getting more specific with each level down.
 
 ### What is a road to war brief?
 
@@ -62,14 +67,19 @@ A road to war brief is a made up scenario describing how the build-up of tension
 
 ### What is a MOVREP?
 
+A Movement Report (MOVREP) is a formatted message that tells where the ship is going, its speed, the waypoints it will follow, the times, and expected stops. The MOVREP is submitted when certain criteria is met.
+
 ### What is OPFOR Generation?
 
-### Sources:
-1. .[NATO Wargaming Handbook](https://paxsims.wordpress.com/wp-content/uploads/2023/09/nato-wargaming-handbook-202309.pdf)
-2. .[AI in Wargaming](https://cetas.turing.ac.uk/publications/artificial-intelligence-wargaming)
-3. .[Scaling Artificial Intelligence for Digital Wargaming in Support of Decision-Making](https://arxiv.org/pdf/2402.06075)
-4. .[Memorandum on wargaming by Deputy SECDEF](https://paxsims.wordpress.com/wp-content/uploads/2015/04/osd-memowargaming-innovationdepsecdefworkfeb15.pdf)
-5. 
+### Sources
+
+1. [NATO Wargaming Handbook](https://paxsims.wordpress.com/wp-content/uploads/2023/09/nato-wargaming-handbook-202309.pdf)
+
+2. [AI in Wargaming](https://cetas.turing.ac.uk/publications/artificial-intelligence-wargaming)
+
+3. [Scaling Artificial Intelligence for Digital Wargaming in Support of Decision-Making](https://arxiv.org/pdf/2402.06075)
+
+4. [Memorandum on wargaming by Deputy SECDEF](https://paxsims.wordpress.com/wp-content/uploads/2015/04/osd-memowargaming-innovationdepsecdefworkfeb15.pdf)
 
 ## How Does This Improve Wargames?
 
@@ -90,7 +100,7 @@ Process After Our Product is Implemented
 ### How are we going to build this?
 
 1. We will begin by building one small language model (LM) centered around creating 5 paragraph orders to get an idea of how to train a language model with reinforced learning.
-2. We will train this specific LM on available 5 paragraph orders aquired from Marines on the yard with access to many of them.
+2. We will train this specific LM on available 5 paragraph orders acquired from Marines on the yard with access to many of them.
 3. We will build a front end using PHP and html so a website is able to be accessed to interact with the LM. (We may explore better alternatives if needed)
 4. Once we have a single working LM and user interface we can begin exploring other wargaming documents.
 5. We will train our LMs on data collected from our customer and other sources, on and off of the Yard.
@@ -134,11 +144,11 @@ This will require:
 
 ### SMEs
 
-Dr. Chambers
+#### Dr. Chambers
 
 In our initial meeting with Professor Chambers, our team received important feedback. Professor Chambers is a subject matter expert on Generative AI. He encouraged us to punctuate why our product will be more useful that publicly available Artificial Intelligence.
 
-LT Gentile
+#### LT Gentile
 
 LT Gentile is designated as a subject matter expert on Wargames. He pointed out that wargames are an incredibly broad field and he encouraged our group to solidify the specific artifacts our customer would like to see produced.
 
