@@ -12,9 +12,8 @@ Poster: [Capstone Poster](./USNA%20Capstone%20Poster.png)
 
 Our group is planning to build a group of Language Models (LMs) capable of generating specific and niche documents for wargaming. Wargaming is defined by the *NATO Wargaming Handbook* as "representations of conflict or competition in a safe-to-fail environment, in which people make decisions and respond to the consequences of those decisions." These niche documents for Wargaming are operation orders such as the Five Paragraph Order of the USMC. Other examples could be MOVREPs, OPFOR creation, road to war briefs, and potential responses.
 
-Here is an example of a 5 Paragraph Order that one of the LMs would need to be capable of generating [ExampleOPorder](./ExOPORDER.pdf). Each of these LMs will be capable of creating a document based on user input into the user interface. The user interface as depicted below will allow a user to select what document they want to create and enter the required information needed to generate the document.
-
-![ExampleUI](./ExampleUI.svg)
+Here is an example of a 5 Paragraph Order that one of the LMs would need to be capable of generating [ExampleOPorder](./ExOPORDER.pdf). Each of these LMs will be capable of creating a document based on user input into the user interface. The user interface as depicted below will allow a user to select what document they want to create and enter the required information needed to generate the document. 
+![ExampleUI](./ExampleUI.svg)  
 
 Our product is not designed to be implemented in a specific wargame scenario or under a particular set of rules. This product is designed to be applicable to most scenarios by generating artifacts that are commonly used in wargames that are independent of the scenario rules or can easily be included in the prompt.
 
@@ -33,7 +32,11 @@ In addition, our capstone project fits into a larger vision, the *Naval Wargamin
 
 ### What is wargaming?
 
-Wargaming has long been a tool used in military planning, training, and preparation for real combat scenarios using simulated scenarios to improve decision making of everyone involved. In the past, wargames had to be conducted manually with only human players making the decisions for both sides using their previous experiences. As early as 2015 the call to innovate wargaming came from the Deputy Secretary of the Navy. Unfortunately, that call while acknowledged and looked into did not see almost any progress. (Robert Work, Former Deputy SECNAV) General Berger was another high ranking member of the DOD who called for advancement in wargaming and M&S during his time as Commandant of the Marine Corps. (Scotty Black, LtCol. USMC PhD) In recent years, the calls for AI in wargaming to be explored in more detail have grown and many in the DOD want to see progress.
+Joint Publicayion 1 defines a wargame as "A simulation, by whatever means, of a military operation involving two or more opposing forces, using rules, data, and procedures designed to depict an actual or assumed real life situation." Wargaming has long been a tool used in military planning, training, and preparation for real combat scenarios using simulated scenarios to improve decision making of everyone involved. In the past, wargames had to be conducted manually with only human players making the decisions for both sides using their previous experiences. As early as 2015 the call to innovate wargaming came from the Deputy Secretary of the Navy. Unfortunately, that call while acknowledged and looked into did not see almost any progress. (Robert Work, Former Deputy SECNAV) General Berger was another high ranking member of the DOD who called for advancement in wargaming and M&S during his time as Commandant of the Marine Corps. (Scotty Black, LtCol. USMC PhD) In recent years, the calls for AI in wargaming to be explored in more detail have grown and many in the DOD want to see progress.
+
+### What is an LLM?
+
+A large language model is defined by IBM as "A category of foundation models trained on immense amounts of data making them capable of understanding and generating natural language and other types of content to perform a wide range of tasks." The goal of our capstone is to develop smaller language models that can produce natural and correct documentation for use in wargames. Our language models will be trained on large amounts of wargame artifacts and be able to produce unique artifacts that follow the same structure.   
 
 ### Current State of the People's Republic of China (PRC)
 
@@ -100,10 +103,10 @@ Process After Our Product is Implemented
 ### How are we going to build this?
 
 1. We will begin by building one small language model (LM) centered around creating 5 paragraph orders to get an idea of how to train a language model with reinforced learning.
-2. We will train this specific LM on available 5 paragraph orders acquired from Marines on the yard with access to many of them.
+2. We will train this specific LM on available 5 paragraph orders acquired from Marines on the yard with access to many of them. The LM will use retrieval-augmented generation (RAG) for training to increase the accuracy of the output generated.
 3. We will build a front end using PHP and html so a website is able to be accessed to interact with the LM. (We may explore better alternatives if needed)
 4. Once we have a single working LM and user interface we can begin exploring other wargaming documents.
-5. We will train our LMs on data collected from our customer and other sources, on and off of the Yard.
+5. We will train our LMs on data collected from our customer and other sources, on and off of the Yard. This training data will be put into a database that we will build, so each specific LM can pull the specific data it needs to produce an accurate output of the artifact it is generating.
 6. We will build several smaller, more specifically trained language models that produce a particular artifact.
 7. We will improve the front end to our customers preferences that provides a coherent interface between a user and the LMs
 
