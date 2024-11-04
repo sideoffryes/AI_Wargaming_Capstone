@@ -86,14 +86,20 @@ A Movement Report (MOVREP) is a formatted message that tells where the ship is g
 
 ## How Does This Improve Wargames?
 
-Current Process:
+### Current Process:
 
+There are many phases in a wargame from initial design to the execution of the game.  According the the NATO Wargaming Handbook, the design phase is the actual creation of the wargame which is what this project seeks to improve. In the design phase, there is the research section. This includes the "topic to be explored," the "wargame mechanics," and the "forces or elements." In the wargame mechanics subsection of research, people have to manually go through previous wargames to "learn from and borrow mechanics," but the people creating the wargame have to avoid just forcing "new aims and objectives into an old wargaming structure." The forces or elements subsection must also be researched and put together by hand. This section has to be based on actual information, whether that be historical or current, and putting all of the information together to create a realistic wargame takes a large amount of man power (NATO Wargaming Handbook pgs. 23-24, URL above).
+
+Summary of Current Process:
 - A question/problem needs to be examined in a wargame
 - Artifacts for this wargame are put together by hand. This requires a large amount of manpower, especially with finding artifacts to use that fit the scenario or creating original artifacts to fit the scenario
 - Scenarios are influenced by the one putting together the wargaming documents and may not present the randomness or different way of thinking of our enemy.
 
-Process After Our Product is Implemented
+### Process After Our Product is Implemented:
 
+Our product will significantly reduce the amount of manpower needed in the design phase of the wargame. Instead of having to put together a large amount of research by hand to produce realistic artifacts for a wargame, a user of our product can put in the topic of the wargame they are creating, and they can select which artifacts they want generated. The artifacts that are created by the Langauge Models will pull from exisiting wargame data and artifacts to be as accurate as possible. This will reduce the amount of time needed to design and execute a wargame proving that generative AI is useful in wargaming.
+
+Summary of Process After Our Product is Implemented
 - A question/problem needs to be examined in a wargame
 - Generative AI produces artifacts for wargaming through some user input, significantly speeding up the process of wargame development and complexity
 - Prove that there is a future for AI in wargames for the DoD
