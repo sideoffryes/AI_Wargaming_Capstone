@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Wargaming Capstone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+            #grad1 {
+            height: 200px;
+            background-color: rgb(42, 58, 136); /* For browsers that do not support gradients */
+            background-image: linear-gradient(rgb(42, 58, 136), rgb(93, 97, 110));
+        }
+        .agdasima-regular {
+          font-family: "Agdasima", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+        }
+
+        .agdasima-bold {
+          font-family: "Agdasima", sans-serif;
+          font-weight: 700;
+          font-style: normal;
+        }
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding-left: 200px;
+            padding-right: 200px;
+            font-family: "Agdasima", sans-serif;
+        }
+
+        .left-banner, .right-banner {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 200px; /* Adjust the width of the banner */
+            background-color: rgb(42, 58, 136); /* For browsers that do not support gradients */
+            background-image: linear-gradient(rgb(6, 22, 105), rgb(255, 255, 255));
+        }
+
+        .left-banner {
+            left: 0; /* Position banner on the left side */
+        }
+
+        .right-banner {
+            right: 0; /* Position banner on the right side */
+        }
+
+        header {
+            background-color: rgb(42, 58, 136); /* For browsers that do not support gradients */
+            background-image: linear-gradient(rgb(6, 22, 105), rgb(47, 62, 136));
+            color: rgb(255, 255, 255);
+            padding: 10px 0;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .content p {
+            font-size: 18px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="left-banner"></div>
+    <div class="right-banner"></div>
+    <header>
+        <img src="img/cs_logo.gif" alt="CS logo" style="width:50px;height:50px;">
+        <h1>AI in Wargames</h1>
+    </header>
+    <div class="content">
+        <img src="img/OpOrderIcon.png" alt="CS logo" style="width:50px;height:50px;">
+        <form method="post" action="login.php">
+            <h3 style="color:black;">Crate an Operations Order</h3>
+            <p style="color:black;"> What is the core scinario </p>
+            <input type="text" name="name" size="25" id="name"
+            maxlength="30" required="true">
+            <br>
+            <p style="color:black;"> What is the Mission? </p>
+            <input type="text" name="email" size="25" id="email"
+            maxlength="30"  required>
+            <br><br> 
+            <input type="submit" value="Submit Form">
+            <input type="reset" value="Reset">
+        </form>
+    </div>
+    <div class="content">
+        <p>MIDN Asjes</p>
+        <p>MIDN Robinson</p>
+        <p>MIDN Frye</p>
+        <p>MIDN Koutrakos</p>
+        <p>MIDN Ziman</p>
+        
+    </div>
+
+</body>
+</html>
