@@ -6,7 +6,7 @@ MIDN Peter Asjes, Henry Frye, Caleb Koutrakos, Will Robinson, and Robert Ziman
 
 Slides: [Capstone Proposal](https://docs.google.com/presentation/d/1ZQm_i69DicPDcvga37xQAQbg_A87fOJkCFcStDvK-CQ/edit?usp=sharing)
 
-Poster: [Capstone Poster](./USNA%20Capstone%20Poster.png)
+Poster: [Capstone Poster](./USNA%20Capstone%20Posterv2.png)
 
 ### What Are We Planning to Build?
 

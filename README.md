@@ -40,4 +40,4 @@ be harnessed to enhance and expedite the wargaming process.
 
 ## Poster
 
-![Capstone Poster](./proposal/USNA%20Capstone%20Poster.png)
+![Capstone Poster](./proposal/USNA%20Capstone%20Posterv2.png)
