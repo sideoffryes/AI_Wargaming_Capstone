@@ -1,0 +1,959 @@
+---------- RESPONSE ----------
+ CLASSIFICATION: UNCLASSIFIED// 
+ROUTINE 
+R 161509Z FEB 24 MID120001451534U 
+FM CNO WASHINGTON DC 
+TO NAVADMIN 
+INFO CNO WASHINGTON DC 
+BT 
+UNCLAS 
+ 
+NAVADMIN 241/24 
+ 
+MSGID/NAVADMIN/CNO WASHINGTON DC/N2N6/OCT// 
+ 
+SUBJ/NEW FORTNITE UPDATE RELEASED// 
+ 
+REF/A/DOC/CSN/17DEC18//
+AMPN/REF A IS CSN 2023.14.1, FORTNITE UPDATE 2023.1.1// 
+NARR/REF A IS THE NEW FORTNITE UPDATE RELEASED ON DECEMBER 19, 2023// 
+POC/E.  AMDAHL/LTCOL/TRNGCMD/MCIS/TEL:  COMM (757) 492-0301/EMAIL: 
+EDWARD.AMDAHL@USMC.MIL//
+POC/S. KINNER/CIV/MAGTFTC/MCTOG/TEL:  COMM:  (760) 401-9847/EMAIL: 
+SCOTT.KINNER@USMC.MIL//
+POC/D. HEINZE/CIV/MAGTFTC/MCTOG/TEL: COMM: (760)672-9539/EMAIL:
+DANIELLE.HEINZE@USMC.MIL// 
+POC/R. COLE/CIV/GCED/TEL: COMM: (703)784-6642/EMAIL: 
+REYES.COLE@USMC.MIL//
+POC/J. HILL/MAJ/DC PP&O/TEL: COMM (703)692-0700/EMAIL: 
+JEFFERY.HILL@USMC.MIL//
+POC/D. GROHOSKI/CIV/DC INFORMATION/TEL: COMM: (703)784-5443/EMAIL: 
+DAVID.GROHOSKI@USMC.MIL//
+POC/R. FITZSIMMONS/CIV/TECOM/PSD/TEL:  COMM (703)432-8493/EMAIL: 
+ROSEMARIE.FITZSIMMONS@USMC.MIL//
+GENTEXT/REMARKS/1.  The purpose of this NAVADMIN is to announce the release of 
+Fortnite Update 2023.1.1.  The
+
+---------- PROMPT ----------
+Role: You work for the United States Department of the Navy, and you specialize in writing official military documents using military formatting.
+Read the following examples very carefully. Your response must follow the same formatting as these examples.
+Example:
+ CLASSIFICATION: UNCLASSIFIED// 
+ROUTINE 
+R 091558Z OCT 24 MID120001450594U 
+FM CNO WASHINGTON DC 
+TO NAVADMIN 
+INFO CNO WASHINGTON DC 
+BT 
+UNCLAS 
+ 
+NAVADMIN 212/24 
+ 
+MSGID/NAVADMIN/CNO WASHINGTON DC/CNO/OCT// 
+ 
+SUBJ/CNO BIRTHDAY MESSAGE TO THE FLEET// 
+ 
+1.  America's Warfighting Navy, it's time to reflect on our rich naval 
+history as we celebrate our 249th Birthday - 249 years of Navy 
+"Warfighting Strength and Readiness." 
+ 
+2.  The birth of our Navy came nearly a year before our Nation's 
+independence.  On October 13, 1775, during the early months of the 
+Revolutionary War, our bold and daring Continental Sailors set sail for 
+Boston to deliver America its first dose of Warfighting Advantage.  From that 
+point on, there was no turning back.  The Great American Experiment was truly 
+underway and with it the legacy of our United States Navy. 
+ 
+3.  Over the centuries, battles, and wars since, our Navy Sailors have 
+continued to deliver Warfighting Advantage, always ready to preserve the 
+peace, respond in crisis, and win decisively in war, if called. 
+ 
+4.  From the Eastern Mediterranean to the Indo-Pacific and everywhere in 
+between, our Sailors have been standing the watch, around the world and 
+around the clock, in every domain from seabed to space, and in cyberspace.   
+No other Navy in the world can train, deploy, and sustain such a lethal and 
+combat credible force at the pace, scale, and tempo we do.  All of this has 
+been made possible by you, America's Warfighting Navy.  Each one of you plays 
+a critical role in our Fleet.  You are truly our secret weapon. 
+ 
+5.  As we look to the future and the decisive decade ahead, we know that our 
+team will continue to answer our Nation's call and build on our Navy's legacy 
+with Honor, Courage, and Commitment. 
+ 
+6.  We could not be more proud of each and every one of you, our active and 
+reserve Sailors and Navy civilians who contribute to our Navy's success every 
+day.  Please extend our thanks to your families for their own service and 
+sacrifice.  We could not do what we need to do every day without their love 
+and support. 
+ 
+7.  Happy 249th Birthday, Shipmates.  See you in the Fleet. 
+ 
+8.  Released by ADM L. M. Franchetti, Chief of Naval Operations and 
+MCPON J. M. Honea, Master Chief Petty Officer of the Navy. 
+ 
+BT 
+#0001 
+NNNN 
+CLASSIFICATION: UNCLASSIFIED//
+
+Example:
+ CLASSIFICATION: UNCLASSIFIED// 
+ROUTINE 
+R 260001Z NOV 24 MID120001581835U 
+FM CNO WASHINGTON DC 
+TO NAVADMIN 
+INFO CNO WASHINGTON DC 
+BT 
+UNCLAS 
+ 
+NAVADMIN 243/24 
+ 
+MSGID/NAVADMIN/CNO WASHINGTON DC/CNO/NOV// 
+ 
+SUBJ/2024 THANKSGIVING MESSAGE// 
+ 
+RMKS/1.  America's Warfighting Navy: as we celebrate Thanksgiving this year, 
+MCPON Honea and I want to express our sincere thanks to each and every one of 
+you.  There is no doubt that our Navy-Marine Corps team has been in high 
+demand this past year, and we could not be more proud of all we have 
+accomplished around the world. 
+ 
+2.  In the Middle East and Mediterranean, our teams are delivering decisive 
+combat power and knocking down airborne threats at a rate not seen since 
+World War II.  In the Indo-Pacific, our Warfighters are defending the rules-
+based international order and upholding regional security and stability 
+alongside our Allies and partners. 
+In the Atlantic, the Baltic, and the High North, our Navy continues to work 
+alongside NATO and other partner Navies to deter Russian aggression.  And in 
+the Southern Seas, our Fleet is operating on the maritime frontlines, forging 
+partnerships with other like-minded nations and delivering power for peace. 
+Every day, our Navy team has lived up to our legacy, operating far forward to 
+deter aggression, respond in crisis, and be ready to fight and win 
+decisively, if called. 
+ 
+3.  Today we give thanks for our shipmates and fellow servicemembers standing 
+the watch and we give thanks to our families and broader support networks for 
+their own service and sacrifice.  We cannot do what we do every day without 
+their support and encouragement. 
+ 
+4.  This Thanksgiving, no matter where you are, we hope you find the time to 
+connect with family, friends, and shipmates, and reflect and give thanks. 
+Please remember that holidays like this can be a challenging time for some of 
+our shipmates. Look out for each other and continue to help our people 
+connect their dot to our mission. 
+ 
+5.  The U.S. Navy remains the world's preeminent fighting force, and we are 
+grateful for the work you, our active and reserve Sailors and civilians, do 
+every day to make it that way. 
+ 
+6.  Happy Thanksgiving, Team Navy! We are honored to serve alongside you. 
+ 
+7.  Released by ADM L. M. Franchetti, 33rd Chief of Naval Operations 
+and MCPON J. M. Honea, 16th Master Chief Petty Officer of the Navy. 
+ 
+BT 
+#0001 
+NNNN 
+CLASSIFICATION: UNCLASSIFIED//
+
+Example:
+ CLASSIFICATION: UNCLASSIFIED// 
+ROUTINE 
+R 141633Z FEB 24 MID600117190288U 
+FM CNO WASHINGTON DC 
+TO NAVADMIN 
+INFO CNO WASHINGTON DC 
+BT 
+UNCLAS 
+ 
+NAVADMIN 031/24 
+ 
+PASS TO OFFICE CODES: 
+FM CNO WASHINGTON DC//N1// 
+INFO CNO WASHINGTON DC//N1// 
+MSGID/GENADMIN/CNO WASHINGTON DC/N1/FEB// 
+ 
+SUBJ/NAVY UNIFORM POLICY AND UNIFORM INITIATIVE UPDATE FEBRUARY 2024// 
+ 
+REF/A/DOC/COMNAVPERSCOM/23AUG21// 
+ 
+AMPN/REF A IS NAVPERS 15665J, U.S. NAVY UNIFORM REGULATIONS. 
+ 
+RMKS/1.  This NAVADMIN announces updates to Navy uniform policies 
+for calendar year 2024.  These policy updates are the result of 
+Sailor feedback, command sponsored requests and direction from Navy 
+leadership. 
+ 
+2.  The following Navy uniform policy changes are effective 
+immediately: 
+    a.  Female Combination Cover.  The female combination cover, 
+also referred to as the bucket cover, is reinstated as an optional 
+Navy uniform component for female Sailors (E-1 through O-10) when 
+wearing Service Dress and Dinner Dress Uniforms.  The bucket cover 
+is now also optional for female officers and chief petty officers 
+(CPOs) when wearing Service Khaki and Summer White Uniforms.  Note: 
+the bucket cover will not be available for personal purchase at Navy 
+Exchange Uniform Centers and will need to be privately obtained if 
+desired for wear. 
+    b.  Tiara.  The tiara is reinstated as an optional Navy uniform 
+component for all female Sailors (E-1 through O-10) when wearing 
+Dinner Dress Blue and White Jacket Uniforms.  Note: the tiara will 
+be available for personal purchase as a special order item via Navy 
+Exchange Online Customer Service with a lead time of approximately 
+four weeks. 
+    c.  Physical Training Uniform.  Black or navy-blue 
+leggings/tights are authorized for optional wear with the Physical 
+Training Uniform shorts and fitness suit pants. 
+    d.  Grooming, False Eyelashes.  Female Sailors are authorized to 
+wear false eyelashes or eyelash extensions that project a natural 
+appearance and are no longer than 14 millimeters in length as 
+measured from the eyelid to the tip of the eyelash.  False eyelash 
+color will match the color of the natural eyelash.  Eyelash 
+extensions cannot hinder wear of protective eyewear. 
+    e.  Officer Headgear Cap Insignia.  Warrant Officer One Officers 
+(W-1) will no longer wear the unique W-1 cap device.  All officers 
+(W-1 through O-10) will wear the same officer cap insignia 
+consisting of two gold crossed fouled anchors with burnished silver 
+shield surmounted by a burnished silver eagle facing to wearer's 
+right and may be embroidered or made of metal.  While allowed 
+immediately, in order to allow time for W-1 officers to transition 
+this new policy becomes mandatory on 1 October 2024. 
+    f.  Chaplain Religious Faith Emblem (Chaplain Staff Corps 
+Insignia).  Navy Chaplains are authorized to wear religious faith 
+emblems above their grade insignia on uniform components with rank 
+tabs.  The religious faith emblem is a 1 1/2-inch by 1 1/2-inch 
+black patch with gold embroidered chaplain corps insignia centered 
+on the fabric and positioned upright.  When worn, the religious 
+faith emblem will be sewn or affixed to the uniform using a velcro 
+fastener directly above the rank tab. 
+    g.  Surface Chaplain Officer Qualification (SCO) Insignia.  Navy 
+Chaplains assigned to qualifying afloat units who meet qualification 
+criteria are authorized wear of the SCO breast insignia on Navy 
+uniforms.  Wear of the SCO will be in accordance with reference (a). 
+The SCO may be metal or embroidered.  The SCO insignia design 
+consists of the bow-on aspect of a warship on a background of ocean 
+swells and scroll banner underneath displaying the Navy Chaplain 
+motto, Vocati Ad Servitium. 
+    h.  Aerial Vehicle Pilot (AVP) Warfare Qualification Insignia 
+(Officer).  Chief Warrant Officers and Warrant Officers (737X) 
+successfully completing prescribed training requirements are 
+authorized to wear the AVP breast insignia on Navy uniforms in 
+accordance with reference (a).  The AVP insignia consists of a 
+silver bordered gold shield, a delta pointing downward, crossed 
+fouled anchors and stylized wings. 
+    i.  Female T-Shirts.  All female Sailors are authorized to 
+optionally wear T-shirts specifically designed for female bodies 
+with Navy uniforms.  Female t-shirts will conform to Navy's 
+requirement for color, fabric, and neck configuration (e.g., crew 
+neck, v-neck) per reference (a).  The intent of this policy update 
+is to address expressed dissatisfaction regarding the required wear 
+of male or unisex t-shirts that are not designed to fit female 
+bodies. 
+    j.  Personal Appearance.  The restriction on placing hands in 
+pockets while in uniform is rescinded.  Sailors are authorized to 
+have hands in their pockets when doing so does not compromise safety 
+nor prohibit the proper rendering of honors and courtesies. 
+    k.  Backpacks.  Commercially procured coyote brown backpacks are 
+authorized for optional wear with the NWU Type II and III.  Coyote 
+brown backpacks will be worn in accordance with reference (a). 
+ 
+3.  Ongoing Navy uniform initiatives: 
+    a.  Maternity Pilot Program (MPP).  The MPP is successfully 
+entering its third year of providing participating Sailors free 
+uniforms ready for wear at their doorstep.  Since the program 
+commenced in 2022, over 1300 Sailors have participated in the 
+program.  During 2024, the program will continue to provide pregnant 
+Sailors the option to choose from four maternity sea bag variations 
+encompassing all maternity uniforms and a cardigan sweater with 
+alterations and applicable accoutrements attached.  For more 
+information about the program visit 
+https://www.mynavyhr.navy.mil/References/US-Navy-Uniforms/Maternity-Pilot-
+Program/. 
+    b.  Size Modernization Program (SMP).  The SMP is a multiphase, 
+five-year uniform improvement program with an initial focus on 
+female uniform improvements.  The objective of the SMP is to deliver 
+Navy Sailors with a modernized and consistent uniform fit and sizing 
+system. 
+    c.  Female Officer/CPO Summer White Uniform.  A white overblouse 
+is being added to the list of authorized optional uniforms for the 
+female officer and CPO Summer White Uniform.  The new overblouse is 
+the first line of components delivered by the SMP.  Availability of 
+the Summer White Uniform overblouse is planned for early fall 2024. 
+A dress white overblouse is also being developed as an optional 
+component for the female officer and CPO Service Dress Blue Uniform 
+with estimated introduction after calendar year 2024. 
+    d.  Female Service Uniform Slacks.  The Navy is currently 
+evaluating service uniform slacks with back pockets for females. 
+The focus of the evaluation is to determine the functionality and 
+acceptability of female uniform slacks with back pockets.  If the 
+evaluation to include Sailor feedback is determined to be positive, 
+the future design of female slacks will include back pockets. 
+    e.  Uniform Surveys.  Uniform surveys will be distributed 
+throughout 2024 to continue to capture Fleet-wide input.  Surveys 
+have been determined as the best method for the Uniform Matters 
+Office to capture diverse and unbridled Sailor feedback that is 
+crucial to planning, research and execution of uniform improvements 
+and uniform and grooming policy updates.  Surveys will be announced 
+on the Uniform Matters and MyNavy HR websites.  Access to surveys 
+will be via QR codes or hyperlinks posted on the Uniform Matters and 
+MyNavy HR websites. 
+    f.  Hat Liners.  The Navy Exchange Service Command is adding 
+synthetic liners to their list of uniform accessories for the Navy 
+Working Uniform (NWU) eight-point cover.  The purpose of synthetic 
+hat liners is to address Sailors' expressed concerns regarding 
+unwanted hair removal or loss resulting from donning and doffing the 
+NWU eight-point cover.  The liner will be sold separately and must 
+be sewn into the cover for proper placement and wear.  Availability 
+is expected to commence mid-February 2024 at most major Fleet 
+concentration areas and online via https://www.mynavyexchange.com/. 
+ 
+4.  Questions regarding this NAVADMIN should be addressed via e-mail 
+to Mr. Robert B. Carroll, Navy Uniform Matters and Emerging Issues 
+Branch (OPNAV N13X), at robert.b.carroll3.civ@us.navy.mil, or ETCM 
+Richard Baumert (OPNAV N13X) via richard.a.baumert2.mil@us.navy.mil 
+or PSC Sache Hagans (OPNAV N13X) at sache.m.hagans.mil@us.navy.mil. 
+ 
+5.  Questions regarding the MPP should be addressed to the Uniform 
+Matters Office (OPNAV N13X) at Navy_MPP.fct@navy.mil or LS1 Meagan 
+Cobia, Uniform Matters Special Assistant, 
+meagan.l.cobia.mil@us.navy.mil. 
+ 
+6.  Questions regarding the SMP, Service Uniform Slacks and Summer 
+White Overblouse initiatives, should be addressed to Ms. Louise 
+Caulfield (Navy Clothing and Textile Research Facility) at 
+louise.a.caulfield.civ@us.navy.mil or Dr. Brianna Plummer (Navy 
+Clothing and Textile Research Facility) at 
+brianna.l.plummer2.civ@us.navy.mil. 
+ 
+7.  Questions regarding the Hat Liners should be addressed to Ms. 
+Angela Brown (Navy Exchange Service Command) at 
+angela.brown@nexweb.org. 
+ 
+8.  Feedback and recommendations regarding uniform policy, uniform 
+components and uniform availability are welcomed and can be provided 
+via e-mail at UMO_CMC@navy.mil, via the MyNavy UNIFORMS App, or via 
+MyNavy Portal at https://www.mnp.navy.mil/, select Professional 
+Resources, U.S. Navy Uniforms and *Ask The Chiefs*. 
+ 
+9.  Retain this NAVADMIN until policy changes are incorporated in 
+reference 
+(a), superseded or cancelled, whichever occurs first. 
+ 
+10.  Released by Vice Admiral Richard J. Cheeseman, Jr., N1.// 
+ 
+BT 
+#0001 
+NNNN 
+CLASSIFICATION: UNCLASSIFIED//
+
+Example:
+ CLASSIFICATION: UNCLASSIFIED// 
+ROUTINE 
+R 151859Z OCT 24 MID120001464464U 
+FM CNO WASHINGTON DC 
+TO NAVADMIN 
+INFO CNO WASHINGTON DC 
+BT 
+UNCLAS 
+ 
+NAVADMIN 214/24 
+ 
+MSGID/NAVADMIN/CNO WASHINGTON DC/N2N6/OCT// 
+ 
+SUBJ/FISCAL YEAR 2025 CYBERSECURITY AWARENESS CHALLENGE// 
+ 
+REF/A/MSG/CNO WASHINGTON DC/061837Z OCT 23// 
+REF/B/DOC/SECNAVINST 5239.3C/2MAY16// 
+REF/C/MSG/CNO WASHINGTON DC/071510Z OCT 24// 
+ 
+NARR/REF A IS NAVADMIN 241/23 PROVIDES GUIDANCE FOR THE FISCAL YEAR 2024 
+CYBERSECURITY AWARENESS TRAINING. 
+REF B IS THE SECRETARY OF THE NAVY INSTRUCTION DEPARTMENT OF THE NAVY (DON) 
+CYBERSECURITY POLICY WHICH ESTABLISHES DON POLICY FOR CYBERSECURITY. 
+REF C IS NAVADMIN 209/24, COMMON MILITARY TRAINING REQUIREMENTS.// 
+ 
+POC/COTTERELL/CIV/OPNAV N2N6D7/TEL:  (703) 695-1858/E-MAIL: 
+DAWN.D.COTTERELL.CIV(AT)US.NAVY.MIL// 
+ 
+RMKS/1.  This NAVADMIN supersedes reference (a) and provides guidance for the 
+Fiscal Year 2025 (FY25) Cybersecurity Awareness Challenge (CAC) training 
+requirement. 
+ 
+2.  Per references (b) and (c), Navy personnel, civilians, and contractors 
+with access to unclassified or classified networks must complete the 
+Department of Defense (DoD) employee version of CAC by 1 September 2025. 
+ 
+3.  Personnel who completed CAC 2024 after 30 September 2024 but before CAC 
+2025 version is available, will receive credit for their annual FY25 
+training. 
+ 
+4.  Total Workforce Management Services (TWMS) is the readiness platform used 
+to track CAC completion percentages for the Navy.  Commands and training 
+platforms must confirm TWMS is capturing all CAC completions under the 
+overarching requirement ID set by CNIC/TWMS Administration (TWMS Requirement 
+ID: 76689 FY25 DoD Cyber Awareness Challenge) to receive credit.  Commands 
+are prohibited from creating additional CAC training requirements to set 
+command specific training metrics.  This requirement cannot be waived.  The 
+options below are the authorized methods for training delivery: 
+    a.  Commands can elect to complete CAC training using instructor-led 
+    delivery.  A command designated cyber security professional such as the 
+    Information Systems Security Manager (ISSM) or Cyber Workforce Program 
+Manager(CWF-PM) must provide the instruction. 
+    b.  Total Workforce Management Service(TWMS), https://twms.dc3n.navy.mil; 
+ 
+    c.  Navy e-Learning (NEL), https://learning.nel.navy.mil/;  
+(Note:  The My Navy Portal, https://learning.nel.navy.mil/ELIAASv2p/  
+redirects users to the NEL link)); 
+    d.  Defense Information Systems Agency (DISA) 
+website, https://cyber.mil/training/cyber-awareness-challenge/; 
+    e.  Waypoints, https://don.csod.com; 
+    f.  Other approved training sources, DISA Digital Video Discs (DVDs). 
+ 
+5.  Ships can access the annual training from the NEL application hosted on 
+the Navy Information/Application Product Suite (NIAPS) server, eliminating 
+the need to reach back to shore hosted NEL websites.  The CAC 2025 course is 
+available via the NEL Afloat Learning Management System Pub Amendment 112 for 
+download by the NIAPS Administrator using the normal manual NIAPS distance 
+support update process.  If unable to download Learning Management System Pub 
+Amendment 112, ships can request a DVD with these files to be mailed by 
+submitting a support request to Navy 311. 
+ 
+6.  Although CAC training is an individual responsibility, commanders and 
+commanding officers are accountable for completion by 100 percent of their 
+personnel.  Effective 1 September 2020, the DoD Cybersecurity Hardening 
+Scorecard collects information on the number of users who completed annual 
+Cybersecurity Awareness training and the scorecard is briefed on a quarterly 
+basis to the Deputy Secretary of Defense. Training officers are responsible 
+for ensuring their personnel complete and properly document the required 
+training. 
+ 
+7.  Command training officers must validate training via TWMS or Fleet 
+Training Management and Planning System (FLTMPS) 
+(https//ntmpsweb.ncdc.navy.mil/fltmps/) authoritative databases. Training 
+officers will manually record training completed via the DISA website, DISA 
+DVDs, or instructor-led.  Manually record training in FLTMPS using the 
+Learning Event Completion Form.  Report any discrepancies to the Navy 
+Training Management Planning System Operational Support office at 
+ntmps.support(AT)navy.mil or 1-866-438-2898/DSN 922-1867. 
+ 
+8.  The Command ISSM is responsible for reporting compliance to meet Federal 
+Information Security Modernization Act of 2014 requirements.  Command ISSMs 
+will disable accounts of users who do not complete training by 1 September 
+2025 and maintain non-compliance list of accounts that were disabled. 
+ 
+9.  This NAVADMIN will remain in effect until cancelled or superseded. 
+ 
+10.  Released by VADM Karl O. Thomas, Deputy Chief of Naval Operations for 
+Information Warfare, OPNAV N2N6.// 
+ 
+BT 
+#0001 
+NNNN 
+CLASSIFICATION: UNCLASSIFIED//
+
+Example:
+ R 181428Z NOV 24
+MARADMIN 550/24
+MSGID/GENADMIN/CG TECOM QUANTICO VA//
+SUBJ/Q3 AND Q4 FY24 APPROVED DOCTRINE AND TRAINING PUBLICATIONS//
+REF/A/MCO/5600.31B/ARDE/17JAN18//
+NARR/REF (A) IS MARINE CORPS PRINTING, PUBLISHING, AND REPROGRAPHICS
+EQUIPMENT REGULATIONS//
+POC/E.  AMDAHL/LTCOL/TRNGCMD/MCIS/TEL:  COMM (757) 492-0301/EMAIL:
+EDWARD.AMDAHL@USMC.MIL//
+POC/S. KINNER/CIV/MAGTFTC/MCTOG/TEL:  COMM:  (760) 401-9847/EMAIL:
+SCOTT.KINNER@USMC.MIL//
+POC/D. HEINZE/CIV/MAGTFTC/MCTOG/TEL: COMM: (760) 672-9539/EMAIL:
+DANIELLE.HEINZE@USMC.MIL// 
+POC/R. COLE/CIV/GCED/TEL: COMM: (703) 784-6642/EMAIL:
+REYES.COLE@USMC.MIL//
+POC/J. HILL/MAJ/DC PP&O/TEL: COMM (703) 692-0700/EMAIL:
+JEFFERY.HILL@USMC.MIL//
+POC/D. GROHOSKI/CIV/DC INFORMATION/TEL: COMM: (703)784-5443/EMAIL:
+DAVID.GROHOSKI@USMC.MIL//
+POC/R.  FITZSIMMONS/CIV/TECOM/PSD/TEL:  COMM (703) 432-8493/EMAIL:
+ROSEMARIE.FITZSIMMONS@USMC.MIL//
+POC/T.  HARTSHORNE/CIV/TECOM/PSD/DB/TEL:  COMM (703) 432-1931/
+EMAIL: THOMAS.HARTSHORNE@USMC.MIL//
+GENTEXT/REMARKS/1.  Marine Corps doctrine and training publications
+in this MARADMIN with a “FEDCON” limited dissemination control (LDC)
+meet the controlled unclassified information (CUI) requirements
+outlined in reference (a).  They are hidden from view and require
+enhanced site permissions to access.  Readers with a valid common
+access card can request enhanced permissions by navigating to the
+Marine Corps doctrine website listed in paragraph one, scrolling to
+the bottom, clicking “Can’t Find a Publication?” and following the
+instructions.  To provide publication feedback, email the
+appropriate manager point of contact shown above.  Send other
+requests for assistance to USMC_Doctrine@usmc.mil.  The following
+publications are available via the Marine Corps Doctrine Website at
+https:(slant)(slant)usmc.sharepoint-mil.us(slant)
+sites(slant)MCEN_Support_MCDoctrine.
+1.a.  Marine Corps Warfighting Publication (MCWP) 3-31, Marine Air-
+Ground Task Force (MAGTF) Fires and Effects, was approved on 17 May
+2024.  This publication supersedes MCWP 3-31, MAGTF Fires and
+Effects, dated 3 June 2011, erratum dated 2 May 2016, and change one
+dated 4 April 2018.  It addresses integrating and synchronizing MAGTF
+capabilities to create lethal and nonlethal effects.  It defines the
+new fires and effects coordination center’s roles and
+responsibilities and incorporates a holistic approach to integrating
+fires and effects throughout the competition continuum. It also
+provides considerations for integrating United States Marine Corps
+fires and effects into a maritime force.
+1.b.  Marine Corps Tactical Publication (MCTP) 3-32F, Deception, was
+approved 31 May 2024.  This publication is designed to assist
+Marines while planning, preparing, executing, and assessing Marine
+Corps deception activities.  It examines deception as a means to
+Accomplish military objectives throughout the competition continuum.
+This publication provides a brief overview of deception theory and
+methodology, outlines responsibilities across the Marine Corps, and
+integrates the deception planning process with the Marine Corps
+planning process.
+1.c.  MCTP 12-10A, Mountain Warfare, was approved on 3 July 2024.
+This publication supersedes MCTP 12-10A, Mountain Warfare
+Operations, dated 28 February 2014, erratum dated 2 May 2016, and
+change 1 dated 4 April 2018.  This publication is one of a series
+that cover unit planning considerations that can be used across a
+range of military operations, and it identifies the skills that
+Marines need to be successful in mountainous, snow, or cold-weather
+environments.
+1.d.  MCTP 3-10F, Fire Support Coordination in the Ground Combat
+Element, was approved 3 July 2024.  This publication supersedes the
+Marine Corps Warfighting Publication 3-16, Fire Support Coordination
+in the Ground Combat Element, dated 28 November 2001, erratum dated
+2 May 2016 and change 1 dated 4 April 2018.  This publication sets
+a framework for coordinating and employing supporting arms in
+consonance with maneuver elements.  It applies to the ground combat
+element of the MAGTF and serves as a reference for Marines who plan,
+coordinate, and execute fires and effects in support of the ground
+combat element.
+1.e.  Marine Corps Reference Publication (MCRP) 2-10B.4, Geospatial
+Intelligence, was approved 15 July 2024.  This publication
+Supersedes MCRP 2-10B.4, Geospatial Information and Intelligence,
+dated 12 June 2014, erratum dated 2 May 2016, and change 1 dated 4
+April 2018 and cancels MCRP 2-10B.5, Imagery Intelligence, dated
+29 February 2016, erratum dated 2 May 2016, and change 1 dated 4
+April 2018.  This publication details doctrine, tactics, techniques,
+and procedures for conducting geospatial intelligence and supporting
+MAGTF Geospatial Intelligence operations.  It includes doctrinal
+fundamentals, command and control, communications and information
+systems support, planning, execution, equipment security, and
+training.
+1.f.  MCRP 3-10A.2, Infantry Company Operations, was approved
+25 July 2024.  This publication supersedes MCWP 3-11.1, Infantry
+Company Operations, dated 6 October 2014, erratum dated 2 May 2016,
+Erratum dated 22 February 2018, and change 1 dated 4 April 2018.  
+This publication serves as a starting point for understanding the
+capabilities of the infantry company, and it serves as the basic
+reference for infantry company operations.  This foundational
+document assists in the planning, execution, and assessment of
+company-level operations.
+1.g.  MCRP 3-20.7, Multi-Service Tactics, Techniques, and Procedures
+for Fighter Integration, was approved 30 July 2024.  It is available
+on the ALSSA SIPR Intelink site for download.
+1.h.  MCWP 6-10, Leading Marines, was approved 13 August 2024.  This
+publication supersedes MCWP 6-10, Leading Marines, dated 1 August
+2014.  It describes the leadership philosophy that distinguishes the
+U.S. Marine Corps.  This publication is not meant to be a “how to”
+guide on leadership, rather, it provides broad guidance in the form
+of concepts and values.  Leading Marines is meant to be read from
+cover to cover.  An audio version of this publication is also
+available.
+1.i.  MCTP 6-10A, Sustaining the Transformation, was approved
+16 August 2024.  This publication supersedes MCWP 6-10, Sustaining
+the Transformation, dated 6 October 2014.  It focuses on one of our
+key leadership principles:  Know your Marines and look out for their
+welfare.  It is a companion to MCWP 6-10, Leading Marines, providing
+more detail to leaders about taking care of their Marines through
+the transformation process.  It is a leadership tool that provides
+sound examples and methods for success.  An audio version of this
+publication is also available.
+2.  Coordinating Instructions.  Units can request hard copy
+publications via https:(slant)(slant)www.marines.mil/News/
+Publications/MCPEL/Print-Publications/.  Print requirements for
+publicly releasable publications are outlined in reference (a),
+paragraphs 4.A.2.B and 4.A.2.C.  Publication control numbers
+(PCNs), limited dissemination controls (LDCs), and managers are:
+2.a.  MCWP 3-31, Marine Air-Ground Task Force Fires and Effects.
+2.a.1.  PCN:  143 000162 01.
+2.a.2.  LDC:  None.
+2.a.3.  Manager:  Ground Combat Element Division.
+2.b.  MCTP 3-32F, Deception.
+2.b.1.  PCN:  147 000094 00.
+2.b.2.  LDC:  None.
+2.b.3.  Manager:  DC Plans, Policies, and Operations (PLX).
+2.c.  MCTP 12-10A, Mountain Warfare.
+2.c.1.  PCN:  147 000003 01.
+2.c.2.  LDC:  None.
+2.c.3.  Manager:  Marine Corps Tactics and Operations Group.
+2.d.  MCTP 3-10F, Fire Support Coordination in the Ground Combat
+Element.
+2.d.1.  PCN:  147 000041 01.
+2.d.2.  LDC:  FEDCON.
+2.d.3.  Manager:  Marine Corps Tactics and Operations Group.
+2.e.  MCRP 2-10B.4, Geospatial Intelligence.
+2.e.1.  PCN:  144 000239 01.
+2.e.2.  LDC:  None.
+2.e.3.  Manager:  Marine Corps Intelligence Schools.
+2.f.  MCRP 3-10A.2, Infantry Company Operations.
+2.f.1.  PCN:  144 000258 01.
+2.f.2.  LDC:  None.
+2.f.3.  Manager:  Marine Corps Tactics and Operations Group.
+2.g.  MCRP 3-20.7, Multi-Service Tactics, Techniques, and Procedures
+for Fighter Integration.
+2.g.1.  PCN:  143 000064 01.
+2.g.2.  LDC:  SIPR access only.
+2.g.3.  Manager:  Policy and Standards Division.
+2.h.  MCWP 6-10, Leading Marines.
+2.h.1.  PCN:  143 000129 81.
+2.h.2.  LDC:  None.
+2.h.3.  Manager:  Policy and Standards Division.
+
+2.i.  MCTP 6-10A, Sustaining the Transformation.
+2.i.1.  PCN:  147 000008 01.
+2.i.2.  LDC:  None.
+2.i.3.  Manager:  Policy and Standards Division.
+3.  The following publications were archived during Q3 and Q4, FY24.
+These archive actions will be recorded in the next Marine Corps
+Bulletin 5603 release:
+3.a.  MCRP 2-10B.5, Imagery Intelligence
+2.a.1.  PCN:  144 000243 00.
+2.a.2.  LDC:  None.
+2.a.3.  Manager:  DC Information.
+3.b.  MCRP 3-40A.9, First Aid
+3.b.1.  PCN:  144 000037 00.
+3.b.2.  LDC:  None.
+3.b.3.  Manager:  Marine Corps Tactics and Operations Group.
+4.  Readers can provide feedback on Marine Corps doctrine and
+training publications to USMC_Doctrine@usmc.mil.
+5.  This MARADMIN is applicable to the Marine Corps Total Force.
+6.  Release authorized by Lieutenant General Benjamin T. Watson,
+Commanding General, Training and Education Command.//
+
+Example:
+ R 192057Z NOV 24
+MARADMIN 558/24
+MSGID/GENADMIN/CMC PPO PO WASHINGTON DC//
+SUBJ/ANNOUNCEMENT OF THE CALENDAR YEAR (CY) 2024 DOUGLAS 
+A. ZEMBIEC SPECIAL OPERATIONS OFFICER OF THE YEAR 
+SELECTION BOARD//
+REF/A/DOC/MCO 1650.60/YMD: 20180930//
+AMPN/REF A IS MCO 1650.60 MARINE CORPS GROUND AWARDS 
+PROGRAM//
+POC/E.A. BENSON/CIV/UNIT: PPO POF/-/TEL: (703)-692-4303/ 
+EMAIL: EUGENE.A.BENSON@USMC.MIL//
+POC/M.T.BRIDE/LTCOL/UNIT: PPO POF/-/TEL: (703)-692-4289/
+EMAIL: MATT.BRIDE@USMC.MIL//
+POC/M.D. MAROTTA/MGYSGT/UNIT: PPO POF (SOF)/-/
+TEL: 703-697-2959/EMAIL: MATTHEW.MAROTTA.MIL@USMC.MIL//
+POC/R.D. CRYMES/LTCOL/UNIT: PPO POF (SOF)/-/
+TEL: 703-692-4320/ EMAIL: RYAN.D.CRYMES.MIL@USMC.MIL//
+GENTEXT/REMARKS/1.  Situation:  This MARADMIN announces 
+the convening of the 2024 Douglas A. Zembiec Special 
+Operations Officer of the Year selection board and 
+solicits nominations per Ref A. The Zembiec Award is an 
+award presented annually in memory of Major Douglas A. 
+Zembiec, U.S. Marine Corps, killed in action in 
+Iraq, 2007.  The Commander, United States Marine Forces, 
+Special Operations Command (COMMARFORSOC) will convene a 
+board of Senior Field Grade Officers to recommend an 
+officer to the Commandant of the Marine Corps for 
+selection.
+2.  Mission:
+2.a.  Per Ref A, Commanders will use the following 
+criteria to submit nominations:
+2.a.1.  Nominee must be serving on active duty as a 
+MARSOC Special Operations Officer (SOO) Team Commander 
+during the period of eligibility.
+2.a.2.  Previous recipients are ineligible to be 
+re-nominated.  Officers previously nominated but not 
+selected are eligible for subsequent nominations if they 
+meet all award criteria.
+2.a.3.  Nominations may be submitted posthumously, 
+provided the officer nominated would meet all 
+eligibility and award criteria in para (3) of Ref A.
+2.a.4.  Nominees should be recognized by seniors, 
+contemporaries, and subordinates as officers who most 
+exemplify outstanding leadership and tactical acumen in 
+the Marine Special Operations community.
+2.a.5.  Nominees must clearly and dramatically 
+demonstrate the ideals of courage, resourcefulness, 
+perseverance, and concern for the well-being of the 
+Special Operations community, our corps, and their 
+fellow Marines.
+2.a.6.  Nominees must exhibit qualities that have made 
+an outstanding contribution to the development of Esprit 
+De Corps, tactical and technical competence, and loyalty 
+within the Special Operations Forces community.
+2.a.7.  Nominees, through personal example, must set the 
+standards that all other officers seek to emulate.
+2.a.8.  Actions included in each nomination must have 
+occurred within the period of eligibility 
+(January-December 2024).
+3.  Execution:  COMMARFORSOC will accept nominations from 
+across the Service and Joint Force (where Marine Special 
+Operation Officers may be serving) and convene a board to 
+select nominees using the eligibility and award criteria 
+stated above and specified in Ref A.  COMMARFORSOC will 
+submit the names of all nominees chosen by the board, 
+including the recommended award recipient to DC, PP&O 
+(POF) no later than 28 February 2025.  Nominations will 
+consist of the following:
+3.a.  Biographical information of the nominee.
+3.b.  Summary of performance supporting the nominee's 
+qualifications for the award.
+4.  Administration and logistics:
+4.a.  DC, PP&O (POF) will process the nomination packages.  
+The packages submitted will include the nominee's unit 
+address, point of contact, phone number (comm. and DSN) 
+and unclassified email address.  The packages shall be 
+sent electronically via unclassified email to the POC’s 
+indicated in this message.  
+4.a.1. Mailing address for nomination packages is: 
+Commandant of the Marine Corps, HQMC PP&O (POF) 
+(Room 4A480), (Attn: Mr. Gene Benson), 3000 Marine 
+Corps Pentagon, Washington, DC 20350-3000.
+4.a.2.  Nomination packages submitted via email must 
+be sent to all message POCS listed above. 
+4.a.2.a.  Submit package as a .pdf file. Ensure entire 
+package is legible after scanning.  
+4.b.  This MARADMIN is not applicable to the Marine 
+Corps Reserve.
+5.  Command and signal:
+5.a.  Ensure widest dissemination of the contents of 
+this MSG.
+5.b.  Direct all questions regarding this MARADMIN to 
+the POCs listed above.
+6.  Release authorized by MajGen Jason L. Morris, 
+Director, Operations Division, Plans, Policies, and 
+Operations, Headquarters, U.S. Marine Corps.//
+
+Example:
+ R 201254Z NOV 24
+MARADMIN 562/24
+MSGID/GENADMIN/CMC WASHINGTON DC MRA MM//
+SUBJ/1STLT PROMOTIONS FOR DECEMBER 2024//
+REF/A/MSGID:DOC/CONGRESS//
+REF/B/MSGID:MCO/CMC MMPB-10/YMD:20211028//
+REF/C/MSGID:DOC/SECNAV/YMD:20190328//
+REF/D/MSGID:MCO/CMC MMSR/YMD:20190215//
+REF/E/MSGID:DOC/SECNAV/YMD:20181010//
+REF/F/MSGID:DOC/SECNAV/YMD:20190415//
+REF/G/MSGID:MSG/MP/DTG:120935ZJUN2001//
+NARR/REF A IS TITLE 10, U.S.C.  REF B IS MCO P1400.31D, MARINE
+CORPS PROMOTION MANUAL, VOLUME 1, OFFICER PROMOTIONS.  REF C IS
+SECNAVINST 1420.3, DEPARTMENT OF THE NAVY COMMISSIONED OFFICER
+PROMOTION PROGRAM.  REF D IS MCO 1900.16 CH 2, MARINE CORPS
+SEPARATION AND RETIREMENT MANUAL.  REF E IS SECNAVINST 1120.9B,
+DESIGNATION OF OFFICERS OF THE REGULAR MARINE CORPS AND MARINE CORPS
+RESERVE AS MARINE CORPS JUDGE ADVOCATE.  REF F IS SECNAVINST
+1412.6M, PROMOTION OF OFFICERS TO THE GRADE OF LIEUTENANT (JUNIOR
+GRADE) IN THE NAVY AND TO THE GRADE OF FIRST LIEUTENANT IN THE
+MARINE CORPS.  REF G IS MARADMIN 277/01, BACCALAUREATE
+DEGREE REQUIREMENT FOR RESERVE OFFICERS.//
+POC/M. J. COOK/MAJ/UNIT:HD MMPB-10/TEL:(703) 784-1585/
+EMAIL:MICHAEL.J.COOK@USMC.MIL//
+GENTEXT/REMARKS/1.  Authority.  Refs (a) through (g) regulate all
+Marine Corps officer promotions.  This message is the authority for
+commanding officers to effect promotions.  Per the refs, CMC
+(MMPB-10) will not effect an officer's promotion until that
+officer's name appears on a promotion MARADMIN or CMC message.
+MMPB-10 will mail appropriate commissions to parent commands under
+separate cover.  Expect 4-6 weeks for delivery.  The commission is
+not the legal authority to promote and is not required to effect the
+promotion.  For the purposes of conducting a promotion ceremony,
+sample commissions and the oath of office are located in chapter 6
+of ref (b) or the Officer Promotions homepage at www.Marines.mil.
+Under "Marines/Career," click on "Promotions."  Click on "Officer
+Promotions," look under the "Reference" tab on the right side of the
+page.
+2.  Under the provisions of ref (f), the Secretary of the Navy,
+acting for the President of the United States, hereby authorizes the
+promotion of the following named officer(s) on active duty, as
+indicated, to the permanent grade of first lieutenant.  Rank, pay,
+and allowances are effective from the date indicated.
+Name                            DOR          MCC
+Alec S. Coakley                 01Dec24      V15
+Raffael J. Singleton            02Dec24      1PF
+Garand M. Fields                03Dec24      1NP
+Melissa R. Greco                06Dec24      K9R
+Joshua K. Figueredo             09Dec24      124
+Luke R. Jones                   09Dec24      1C0
+Tyler W. Vaughan                11Dec24      V14
+Charles E. Valentine II         12Dec24      K03
+Connor B. Coleman               15Dec24      K03
+Jacob F. GamezMendoza           15Dec24      K27
+Patrick S. McDonald             15Dec24      K89
+Sean A. Baird                   16Dec24      V11
+Brandon J. Benke                16Dec24      1NR
+Eric J. Burchfield              16Dec24      1MY
+Jaymes L. Chambless             16Dec24      15J
+Cory F. Collier                 16Dec24      K03
+Bryann A. ColmenArez            16Dec24      1PJ
+Cesar L. Colon III              16Dec24      1L7
+Albert L. Cordell               16Dec24      K03
+Jordan R. Drake                 16Dec24      1YB
+John M. East                    16Dec24      15C
+Collin C. Evans                 16Dec24      1JJ
+Richard J. Giesler              16Dec24      145
+Campbell B. Hartigan            16Dec24      1F6
+Kelly A. Krempel                16Dec24      1Y1
+John K. Litton                  16Dec24      K9R
+Luke G. Loera                   16Dec24      1G7
+Arthur J. Lohman IV             16Dec24      J61
+Barry J. Morehart               16Dec24      1CG
+Zachary A. Radke                16Dec24      V11
+Michael A. Villegas             16Dec24      1PC
+Robert R. Walker V              16Dec24      K03
+Ronald Watts, Jr.               16Dec24      121
+Chad R. Curtis                  17Dec24      K03
+Benjamin P. Daniels             17Dec24      1PL
+Danner D. Gouge                 17Dec24      15R
+Thomas E. Henderson             17Dec24      013
+Jake A. Hunter                  17Dec24      K03
+Spencer G. Hurley               17Dec24      1LB
+Zachary M. Malone               17Dec24      193
+Jay J. Moirangthem              17Dec24      1NK
+Kaila M. Oberhaus               17Dec24      1NA
+Samuel E. Stonestreet           17Dec24      1RA
+Thomas C. Swain                 17Dec24      KBM
+Joshua S. Taylor                17Dec24      142
+Dane J. Grimm                   19Dec24      1QD
+Nathan T. Merckling             19Dec24      1CS
+John M. Pfeiffer                19Dec24      V35
+Brandon L. Williams             19Dec24      K03
+Joshua M. Lizarraga             20Dec24      1NL
+Seth M. Burns                   22Dec24      19G
+Andy J. Calderon                22Dec24      K03
+James L. Joseph                 22Dec24      137
+Sokhna R. Sall                  22Dec24      1CJ
+Joshua D. Williams              22Dec24      K03
+Andrew M. Campos                23Dec24      1PB
+Donna Linnersten                23Dec24      1Y9
+Jordan N. Miranda               23Dec24      K27
+Ethan Navejar                   23Dec24      V31
+Allein A. Powell                23Dec24      K89
+Julio C. Zavala                 23Dec24      1CF
+Carlos J. Zuniga                23Dec24      1XA
+3.  Under the provisions of ref (f), the Secretary of the Navy,
+acting for the President of the United States, hereby authorizes the
+promotion of the following named reserve officer(s), as indicated,
+to the permanent grade of first lieutenant.  Rank, pay, and
+allowances are effective from the date indicated.
+Name                            DOR          MCC
+Samuel G. Debolt                17Dec24      KBM
+Andrew A. Talamantes            19Dec24      IRR
+4.  Delay of Promotion
+4.a.  Commanding Officer Determination. Per refs (b) and (g), if the
+respective commanding officer determines that an officer is not
+mentally, physically, morally, or professionally qualified for
+promotion, the promotion shall not be effected.  This includes the
+physical examination requirement for reserve officers per section
+10206 of ref (a).  Ref (a) requires written notification to the
+officer of the grounds for delay before the effective date of the
+appointment, unless it is impracticable to do so, in which case the
+notice shall be given as soon as practicable.  Commanding Officers
+must also notify CMC (MMPB-10) prior to the effective date of the
+appointment so that the promotion is not effected in Marine Corps
+Total Force System (MCTFS) and to allow for the initiation of
+administrative action.  Refs (a), (b), (c), and (e) contain
+guidelines for the timely submission of supporting documentation.
+4.b.  Adverse Screening Process.  Before the release of this
+promotion authority, all officers are screened for adverse or
+potentially adverse information. If applicable, CMC (MMPB-10)
+removed the names of those officers with records identified during
+the adverse screening process as containing adverse or potentially
+adverse information from the promotion authority MARADMIN.  Those
+officers will receive correspondence under separate cover from CMC
+(JPL).
+5.  Retirement and Transfer.  Officers considering voluntary
+retirement should review ref (d) for service obligation prior to
+acceptance of promotion.  An officer's selection for promotion
+carries over into the reserve, between AR and SMCR-IRR, and with
+augmentation into the regular component.
+6.  Accepting and Declining Promotion.  Any regular or reserve
+officer who is promoted under the refs is considered to have
+accepted such promotion on the effective date contained in
+paragraphs 2 and 3 (for purposes of date of rank, pay, and
+allowances in the grade to which promoted).  To decline a promotion,
+an officer is required to submit a letter of declination to CMC
+(MMPB-10) expressly at the time their command notifies them of their
+promotion and directs that they begin wearing the insignia of the
+next higher grade.  Any statement or action by the officer which
+signals their acceptance of the promotion, forever waives their
+right to decline.
+7.  For Marine officer promotion matters call Comm (703)784-1585 or
+DSN 278-1585.  Email inquiries may be submitted via the Officer
+Promotions homepage at www.Marines.mil.  Email address is
+officerpromotions@usmc.mil.
+8.  Release authorized by MajGen Ryan S. Rideout, Director, Manpower
+Management Division.//
+
+Example:
+ R 221832Z NOV 24
+MARADMIN 569/24
+MSGID/GENADMIN/CG TECOM QUANTICO VA//
+SUBJ/ANNOUNCEMENT OF THE 2025 HUMAN PERFORMANCE ADVISORY COUNCIL//
+REF/A/DOC/CMC/18DEC18//
+NARR/REF A IS MARINE CORPS ORDER 6100.14 MARINE CORPS PHYSICAL
+FITNESS PROGRAM//
+POC/D.W. MAROCCO/CIV/TECOM HUMAN PERFORMANCE BRANCH/QUANTICO/TEL:
+703-432-0168/EMAIL:  DOUGLAS.MAROCCO@USMC.MIL//
+POC/Z.A. STILLER/CAPT/TECOM HUMAN PERFORMANCE BRANCH/QUANTICO/TEL:
+703-432-1069/EMAIL:  ZACHARY.A.STILLER@USMC.MIL//
+POC/TECOM.FORCEFITNESS@USMC.MIL//
+GENTEXT/REMARKS/1.  The purpose of this MARADMIN is to announce the
+2025 Human Performance Advisory Council (HPAC) hosted by Training
+and Education Command (TECOM). The 2025 HPAC will be conducted
+11-12 February 2025.
+2.  The HPAC, established per ref (a), will gather input through
+collaboration with Marine Corps command representatives and will
+be conducted as a two-day virtual interaction.  Presentations for
+the event will consist of various human performance topics to
+include physical fitness, sports medicine injury prevention, body
+composition, resilience, nutrition, and integration of human
+performance technology.
+3.  The organizations listed are requested to identify at least one
+primary and one alternate attendee no later than 15 December 2024
+for participation in the 2025 HPAC. Nominees should be empowered and
+prepared to make recommendations on behalf of their command. Nominee
+information to include name, rank, email, and command name are to be
+sent to TECOM.FORCEFITNESS@USMC.MIL and to the MARADMIN points of
+contact listed. Additional attendees, approved through their
+commands, are encouraged to be present during plenary sessions to
+reach the widest audience possible.
+Deputy Commandant (DC), Combat Development and Integration
+DC Programs and Resources
+DC Plans, Policies, and Operations
+DC Manpower and Reserve Affairs
+DC Installations and Logistics
+DC Information
+DC Aviation
+Marine Forces Command
+Marine Forces Pacific
+Marine Force Central Command
+Marine Forces Reserve
+I Marine Expeditionary Force
+II Marine Expeditionary Force
+III Marine Expeditionary Force
+Marine Corps Recruiting Command
+Marine Special Operations Command
+TECOM
+Education Command
+Training Command
+Marine Corps Recruit Depot Parris Island
+Marine Corps Recruit Depot San Diego
+Marine Family Programs Division
+Office of Naval Research
+Health Services
+Headquarters Marine Corps Force Preservation (G-10)
+Marine Corps Directorate of Analytics and Performance Optimization
+4.  Additional coordinating instructions for 2025 HPAC for approved
+participants will be sent via separate correspondence.
+5.  More information on the HPAC can be found at:  https:(slash)
+(slash)www.fitness.marines.mil/
+6.  This MARADMIN is applicable to the Marine Corps Total Force.
+7.  Release authorized by Lieutenant General Benjamin T. Watson,
+Commanding General, Training and Education Command.//
+
+Request: Write me a message about a new Fortnite update.Give your answer in naval message format based on the previous examples.
