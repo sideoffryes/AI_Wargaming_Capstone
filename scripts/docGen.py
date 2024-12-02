@@ -5,8 +5,9 @@ import time
 from datetime import datetime
 
 # torch.set_num_threads(32)
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-generator = pipeline("text-generation", model="meta-llama/Llama-3.2-1B-Instruct")
+generator = pipeline("text-generation", model="meta-llama/Llama-3.2-1B-Instruct", device=device)
 logging.set_verbosity_error()
 
 def clean_output(text: str) -> str:
