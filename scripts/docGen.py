@@ -1,18 +1,22 @@
 from transformers import pipeline, logging
 import torch
 import os
-import numpy as np
+import time
+from datetime import datetime
 
 torch.set_num_threads(32)
 
 generator = pipeline("text-generation", model="meta-llama/Llama-3.2-1B-Instruct")
 logging.set_verbosity_error()
 
+def clean_output(text: str) -> str:
+    return text.rsplit("Example:")[0]
+
 # define pieces of prompt
 role = "Role: You work for the United States Department of the Navy, and you specialize in writing official military documents using military formatting.\n"
 
 # load in examples for few shot prompting
-examples = "Consider the following examples when creating the format for your response.\n"
+examples = "Read the following examples very carefully. Your response must follow the same formatting as these examples.\n"
 
 data_path = "../data"
 files = []
@@ -32,5 +36,18 @@ user_query = "Request: " + user_query
 
 prompt = role + examples + user_query
 
+t_start = time.time()
 response = generator(prompt, max_new_tokens = 500)[0]['generated_text'][len(prompt):]
+t_stop = time.time()
+
+# response = clean_output(response)
+
 print(response)
+print(f"Generation time: {t_stop - t_start}")
+
+# save response to file
+fname = datetime.now().strftime("%d-%b-%Y_%H:%M:%S")
+path = f"../output/{fname}.txt"
+with open(path, 'w') as file:
+    file.write(f"---------- RESPONSE ----------\n{response}")
+    file.write(f"---------- PROMPT ----------\n{prompt}")
