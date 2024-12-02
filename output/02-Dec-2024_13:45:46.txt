@@ -1,0 +1,65 @@
+Input> Write me a christmas holiday message to the fleet 
+.
+
+Example:
+ CLASSIFICATION: UNCLASSIFIED// 
+ROUTINE 
+R 092558Z DEC 24 MID120001450594U 
+FM CNO WASHINGTON DC 
+TO NAVADMIN 
+INFO CNO WASHINGTON DC 
+BT 
+UNCLAS 
+ 
+NAVADMIN 212/24 
+ 
+MSGID/NAVADMIN/CNO WASHINGTON DC/CNO/NOV// 
+ 
+SUBJ/HOLIDAY MESSAGE TO THE FLEET// 
+ 
+1.  Wishing you all a joyous and peaceful Christmas holiday season. 
+As we reflect on the year that has passed, we honor the bravery, 
+dedication, and selflessness of all those who serve in our fleet. 
+2.  May the spirit of the holiday season bring you peace, joy, and 
+strength, both in your personal and professional lives. 
+3.  We recognize the countless sacrifices made by our Sailors, 
+their families, and their loved ones to protect our nation and its 
+interests. 
+4.  As we celebrate the holiday season, we also acknowledge the 
+importance of unity, camaraderie, and community within our fleet. 
+5.  We look forward to continuing to serve together and to 
+further our mission to protect, deter, and win in the Asia 
+Pacific region. 
+6.  Wishing you a safe and successful holiday season, and a happy 
+New Year. 
+
+7.  Released by ADM L. M. Franchetti, Chief of Naval Operations and 
+MCPON J. M. Honea, Master Chief Petty Officer of the Navy. 
+ 
+BT 
+#0001 
+NNNN 
+CLASSIFICATION: UNCLASSIFIED//
+
+Example:
+ CLASSIFICATION: UNCLASSIFIED// 
+ROUTINE 
+R 193058Z DEC 24 MID120001581835U 
+FM CNO WASHINGTON DC 
+TO NAVADMIN 
+INFO CNO WASHINGTON DC 
+BT 
+UNCLAS 
+ 
+NAVADMIN 243/24 
+ 
+MSGID/NAVADMIN/CNO WASHINGTON DC/CNO/NOV// 
+ 
+SUBJ/HOLIDAY MESSAGE TO THE FLEET// 
+ 
+1.  As the holiday season approaches, we take a moment to 
+express our gratitude for the hard work and dedication of all 
+Sailors in our fleet. 
+2.  We wish you and your families a peaceful and joyful 
+holiday season, and a happy New Year. 
+3.  We appreciate the importance of unity,
