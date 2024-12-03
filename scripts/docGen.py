@@ -3,6 +3,12 @@ import torch
 import os
 import time
 from datetime import datetime
+import argparse
+
+# parse arguments
+parser = argparse.ArgumentParser(description="Generates military documents via an LLM based on user input")
+parser.add_argument("-t", "--max-tokens", type=int, help="Specify the max number of tokens when generating the document, default is 500", default=500)
+args = parser.parse_args()
 
 # torch.set_num_threads(32)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -52,7 +58,7 @@ format = "Give your answer in naval message format based on the previous example
 prompt = role + examples + user_query + format
 
 t_start = time.time()
-response = generator(prompt, max_new_tokens = 500)[0]['generated_text'][len(prompt):]
+response = generator(prompt, max_new_tokens=args.max_tokens)[0]['generated_text'][len(prompt):]
 t_stop = time.time()
 
 # response = clean_output(response)
