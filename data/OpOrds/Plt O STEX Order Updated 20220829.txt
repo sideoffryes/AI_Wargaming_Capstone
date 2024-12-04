@@ -1,0 +1,221 @@
+﻿UNCLASSIFIED 
+Copy no. ___ of ___ copies 
+THE BASIC SCHOOL 
+                                                                                 QUANTICO, VIRGINIA 
+                                                                                 PLT O STEX 
+ 
+General Situation.  You are the 2d Platoon Commander, Company E, 2d Battalion, 7th Marines (2/7). Over the last two weeks, 2/7 has been conducting offensive operations to counter the MRA’s attempts to interdict the Centralian Army’s MSRs in the Quantico Highlands. The battalion has been advancing primarily in a northeastern direction. Two days ago, a Centralian Army Regular (CAR) platoon operating a vital communications facility (TH 053 731) defected and is now directly aligned with the MRA. This newly-defected MRA platoon now operates the communications facility in support of MRA operations. The Centralian government’s ability to communicate throughout the Quantico Highlands is severely degraded with the loss of the communication facility.     
+ 
+Orientation.  Co E is currently located in the Company Assembly Area (TH 054 711), located on the SW side of Cedar Ridge. The Company Attack Position (TH 062 711) is located on the SE side of Cedar Ridge, and the Line of Departure follows the military crest of Cedar Ridge along the 712-Northing. The Main Effort’s Assault Position (TH 063 733) is located on the NE side of Hill 430. The vegetation in the Quantico Highlands consists of medium growth hardwood deciduous and evergreen trees with occasional open fields and several hills. Hill 464 (062 723) provides good observation on Hill 419. Hill 419 (TH 058 728) is identified as Co Obj A. The MRA communications facility (TH 053 732), identified as Bn Obj 1 is located 250m East of Hill 420. Visibility is limited to 500m from the high ground, 200m in the low ground and reduced to 50m within densely wooded areas. Terrain is unrestricted for foot-mobile infantry, but vehicle movement is restricted to Hidalgo Road, which runs from southwest to northeast through the northern portion of our AO. Weather is as it is today. Illumination will be restricted to 0% during the hours of dusk until 0100. Moonrise will be at 0100, after which illumination will be upwards of 40%. Tactical control measures within the AO include the Co AA, the Co Atk Pos, the LD, the Platoon Release Point (TH 064 713), the ME Aslt Pos, Co Obj A (TH 058 728), and Bn Obj 1. Target AB1001, on Bn Obj 1, is included in the order. 
+ 
+1. (U) Situation 
+ 
+    a. (U) Enemy 
+ 
+      1. (U) Composition/Disposition/Strength.  The MRA platoon (defected CAR platoon) is providing security for the facility and is believed to be occupying defensive positions on high ground surrounding the facility. At 0200 this morning, a squad-size force was seen preparing defensive positions on Hill 419 (TH 058 728). It is not known where the rest of the MRA platoon(-) is located. The enemy is armed with U.S. small arms and wears woodland camouflage uniforms. Additionally, they are known to have M240B machine guns and 81mm mortars. 
+ 
+      2. (U) Capabilities and Limitations.  The enemy is capable of defending from battle positions with as little as a squad sized element and can coordinate direct and indirect fires in support of their defensive operations. They are limited by a lack of mutual support between squad positions. They are capable of reinforcing with an additional platoon within 30 minutes and would do so once they believe they are in a decisive engagement but are limited by the distance between adjacent units. The MRA are capable of attacking in up to squad sized elements if they have advantageous terrain but are limited due to their desire to remain close to the comm facility.  They are capable of withdrawing via Hidalgo Road in either direction. They are limited by their inability to move quickly in the terrain South of Hidalgo Road. They are capable of delaying through the employment of coordinated direct and indirect fires. They are limited by the dense vegetation which results in limited sightlines to develop early warning.
+ 
+      3. (U) Enemy Most Likely Course of Action.  I believe that the EN’s mission is to guard the communications facility in order to allow the MRA to coordinate small unit efforts and the use of indirect fires. Currently, the EN is establishing a defense in depth oriented southwest along the MSR. On contact, the MRA platoon will fiercely defend the Communications Facility. They will fight to gain time using a squad sized forward position, disrupting our attack formations along the MSR IOT allow additional forces time to reinforce the main battle position at the communications facility. They will reinforce the Communications Facility with an additional platoon from the northeast by truck via Hidalgo Road as soon as the on scene platoon commander determines that the forward squad is decisively engaged. The reinforcements will initially focus efforts on reinforcing the forward squad to continue to disrupt our attack and then shift their efforts/remainder of forces to reinforcing around the communications facility to retain the facility. 
+ 
+    b. (U) Friendly 
+ 
+         1. (U) Higher’s Mission and Intent.  O/O, 2/7 seizes the communications facility (Bn Obj 1) in order to allow the Centralian government to resume communications with the local populace throughout the Quantico Highlands.  The battalion commander’s desired endstate is that the battalion regains and returns control and use of the communications facility to the Centralian government, and the MRA in zone is unable to interfere with the government’s ability to communicate throughout the Quantico Highlands. 
+ 
+         2. (U) Adjacent 
+ 
+         1. (U) West.  Co G. (SE1) NLT 1430, block West of Hill 419 (about 2 km off the W side of the sand table) along Hidalgo Road in order to prevent CRF reinforcements from interfering with the main effort’s attack. 
+ 
+         2. (U) South.  Bn Log trains (SE3) NLT 1430, establish CSS logistics staging areas IVO B AA (about 1 km off the S side of the sand table) in order to allow logistics resupply of forward units. 
+ 
+         3. (U) North.  None 
+ 
+         4. (U) East.  Co F. (SE2) NLT 1430, block East of Hill 419 (about 500m just off the E side of the sand table) along Hidalgo Road in order to prevent CRF reinforcements from interfering with the main effort’s attack. 
+ 
+        (3) (U) Supporting. 
+ 
+         1. (U) Artillery.  Kilo Battery 3/11. DS of the battalion. K/3/11 is located 5 km South of Cedar Ridge in GP Pelican (TH 063 665). POF: Echo, Golf, Fox. 
+ 
+         2. (U) Bn 81mm Mortars.  81mm Mortar Platoon. GS of the battalion. The mortar platoon is located at the battalion’s AA 1 km south of Cedar Ridge at 050 700. POF: Echo, Golf, Fox.
+ 
+    c. (U) Attachments/Detachments.  None 
+ 
+2. (U) Mission.  We are the ME for the BN. NLT 1500, Company E seizes the communications facility (Bn Obj 1) in order to allow the Centralian government to resume communications with the local populace throughout the Quantico Highlands. 
+ 
+3. (U) Execution 
+ 
+      1. (U) Commander’s Intent.  The purpose of this operation is to allow the Centralian government to resume communications with the local populace throughout the Quantico Highlands. The enemy’s Center of Gravity is their prepared defense in-depth with the ability to coordinate direct and indirect fires established around the communications facility. The Critical Vulnerability is that as a result of this defense in depth, they have split forces and are no longer able to mutually support positions with direct fire weapons. We will exploit this CV by conducting a conditions based sequential (near simultaneous) attack on the defensive positions to generate tempo and overwhelm forces before they can reinforce or coordinate indirect fire support. My endstate is that the communications facility is seized and returned to Centralian government control enabling their ability to resume communications with the local populace in the Quantico Highlands, the enemy no longer has any influence on the comm facility or surrounding area, and the company is consolidated at the communications facility, prepared for follow on operations. 
+ 
+      2. (U) Concept of Operations 
+ 
+                        (1) (U) Scheme of Maneuver.  We will conduct a flanking attack with one ME, two SE. DOA is North. We will move from the AA to the Atk Pos in a company column (SE2,ME-SE1), crossing the LD at the Platoon Release Point (PRP). From the PRP, SE 1 will move along an independent route and destroy the enemy in vic of Hill 419 (Co Obj A) which will set conditions for the ME attack on Bn Obj1. The company(-) will continue N in a column (SE2-ME) along the E side of Hill 464 to the Company Aslt Pos (NE side of Hill 430), where we will transition to an online formation (ME-SE1). Once SE #1 destroys the enemy on Co Obj A, the Weapons Platoon Commander will call for 5 minutes of indirect fire suppression on Bn Obj 1. Upon effective suppression of the enemy from IDF on the objective, the ME and SE #2 will seize Bn Obj 1 assaulting from East to West. On signal, the company will consolidate on the objective in a 180 degree perimeter oriented north (ME from 8-12 o’clock, SE2 from 12-4 o’clock). On signal, SE 1 will displace and link up with the rest of the company on the objective, with ME from 8-12 o’clock, SE2 from 12-4 o’clock, SE1 from 4-8 o’clock. 
+ 
+                        (2) (U) Fire Support Plan.   
+ 
+         1. (U) Task.  Limit the enemy’s ability to employ direct and indirect fire weapon systems on Company Objective A and Battalion Objective 1. 
+ 
+         2. (U) Purpose.  IOT allow to maneuver elements to close with and destroy the enemy on Battalion Objective 1 and Co Obj A. 
+ 
+         3. (U) Method.   
+ 
+            1. (U) I will use the battalion’s 81mm mortars and the company’s 60mm mortars in support of this attack for the ME and SE2. Co FiST leader will develop TTLODAC for ME attack on Bn Objective 1. 
+            2. (U) 2d Platoon commander submit your TTLODAC for the attack on Company Objective A. You are allotted two targets. Submit your list of targets to the company FiST leader.  
+ 
+                                  (d). (U) Effects.  The enemy on Company Objective A and Battalion Objective 1 are suppressed allowing the maneuver element to close within direct fire weapons range. 
+ 
+            c. (U) Tasks 
+ 
+      1. (U) 2d Platoon.  You are SE 1. NLT 1500, destroy the enemy IVO Co Obj A in order to prevent them from interfering with the Co ME attack on Bn Obj 1. On signal displace to Bn Obj 1 and link up / consolidate with the rest of the company. BPT suppress the enemy on Bn Obj 1 in order to allow the ME to seize Bn Obj 1. BPT assume the mission of the ME. 
+ 
+      2. (U) 1st Platoon.  You are the ME. Upon effective IDF suppression, seize left ½ of Bn Obj 1 in order to allow the Centralian government to resume communications with the local populace throughout the Quantico Highlands. 
+ 
+      3. (U) 3rd Platoon.  You are SE 2. Upon effective IDF suppression seize right ½ of Bn Obj 1 in order to support the MEs seizure of the comm facility. Detach 1 Fire Team to provide security for the 60mm mortar section, effective immediately. 
+ 
+      4. (U) Weapons Platoon   
+ 
+                          (a) (U) 60mm Mortar Section.  60mm Mortar Section. You are in GS of the company. Establish a firing position in the vicinity of our AA, direction of fire 6400 mils. FIRECAP NLT 1200 and BPT receive fire missions. Priority of fires are to 2nd platoon, 1st platoon, then 3rd platoon. You have one fireteam from 3d Plt for security attached, effective immediately. 
+ 
+    d. (U) Coordinating Instructions 
+ 
+        (1) (U) Timeline   
+        0530         Co Commander issues order to Plt Commanders 
+0630          Platoons issue orders
+1200:         LD 
+ 
+        (2) (U) Formation for Movement.   
+ 
+         1. (U) AA to Atk Pos to LD/PRP.  Company Column – 3d Plt, Co HQ, 1st Plt, 2d Plt. 
+ 
+         2. (U) PRP to Co Obj A.  Determined by 2d Platoon Commander. 
+ 
+         3. (U) PRP to Co Aslt Pos.  Company Column – 3d Plt, Co HQ, 1st Plt, 2d Plt. 
+ 
+      3. (U) Lost Marine Plan.  Each platoon is responsible for developing their own tactically sound Lost Marine Plan. Be prepared to brief me on your plans. 
+ 
+      4. (U) No Comm Plan.  If radio communications are lost at any point between the AA and the PRP, we will immediately halt and spend no more than five minutes in an attempt to regain them. Upon determining the extent of the communications problems, I will make the decision to continue with the operation without communication. Once we have passed the PRP, time is critical due to the independent movement of 2d platoon. Upon departing the Co(-) Aslt Pos, we will continue the operation even if radio communications goes down due to our conditions based, event driven SOM. If unable to radio 60s to commence suppression, we will utilize a white star cluster (WSC) to signal suppression commencement. If that fails, we will utilize SE1 as an SBF to provide suppression for the ME. Once we have assaulted through the objective and consolidated, we will attempt to establish communication using the Communications Facility or via other means (messenger) with BN. 2d Platoon: You are responsible for developing your own No Communication Plan. 
+
+
+      5. Priority of Rehearsals. Determined by platoon commanders. Each squad will print off and cut out (1) STEX TCM kit and bring appropriate resources (yarn, etc.) to facilitate squad orders delivery.
+ 
+      6. (U) MOPP Level.  Zero. 
+ 
+      7. (U) Rules of Engagement.  Engage only Hostile Forces and Combatants. A Hostile Force is any person that has committed a hostile act, exhibited hostile intent, or has been declared hostile by appropriate U.S. authority. Positive Identification (PID) is required to engage.
+ 
+4. (U) Administration and Logistics 
+ 
+    a. (U) Administration 
+ 
+      1. (U) Enemy Prisoners of War. EPWs will be handled with STRESS. Upon consolidation, move all prisoners to 3 o’clock on Bn Obj 1 to be collected by the Co GySgt who will coordinate extract with the S-4. 
+ 
+      2. (U) CASEVAC.  2d Platoon will develop a CASEVAC plan from the PRP through their consolidation on Co Obj A. Coordinate all CCPs and plan with Co XO and Co 1stSgt for supportability. Establish CASEVAC LZ to the S of Co Obj A for all priority and urgent casualty evacuation upon consolidation on Co Obj A. All main body casualties from LD to the Assault Position will be initially treated by the platoon corpsmen. Platoon Corpsman will determine priority level. Priority and urgent casualties will be coordinated with the Co 1stSgt for immediate evac via air at hasty LZs enroute to the objective. From the Co (-) Assault position to consolidation all casualties will be treated by platoon corpsman and collected according to the platoon’s CASEVAC plan. Upon consolidation, all casualties will be moved to a casualty collection point (CCP) located at 6 o’clock on Bn Obj 1, where the Co Corpsman will treat and triage the casualties. The Co XO and Co 1stSgt will coordinate all casualty evacuations through Battalion TAC 2 according to priority assessed by the company corpsman. Primary evac for all priority casualties will be air. Alternate will be ground. All routine casualties will be evacuated by ground transportation as required. 
+ 
+    b. (U) Logistics 
+ 
+      1. (U) Ammunition.  Draw three days of supply (DOS) for ammo and batteries from the Co GySgt NLT 1000. 
+ 
+      2. (U) Chow and Water.  Draw three days of supply (DOS) of chow from the Co GySgt NLT 1000.  Ensure all hands possess four quarts water prior to LD. 
+ 
+      3. (U) Pyro.  Each rifle platoon will have 3 GSCs, 3 WSCs, 3 WSP’s, 3 GSmk, 1 RSC, and 3 YSmk. 
+ 
+      4. (U) Resupply.  The CoGySgt will handle the coordination for resupply upon consolidation at the obj.  Platoons should pass any logistics requests to the CoGySgt via the appropriate net.  Main Packs will be staged in the AA and brought forward once the Company has consolidated on the objective.  Marines will wear Assault Packs on the mission. 
+ 
+5. (U) Command and Signal 
+ 
+    a. (U) Signal 
+ 
+      1. (U) Signal Plan.  Platoon commanders will back brief platoon signal plans to company commander prior to issuing platoon orders. 
+ 
+Event 
+	Primary 
+	Alternate 
+	Tertiary 
+	2d Plt, PRP  
+	Radio  
+	Messenger  
+	None  
+	Obj A secure  
+	Visual
+	Radio  
+	Messenger  
+	Fire AB 1001  
+	Radio 
+	WSC
+	None  
+	SBF from Obj A
+	Visual of 60s suppression on Bn Obj
+	Radio
+	GSC
+	Shift Fires  
+	Visual of lead across MSL
+	Radio
+	None 
+	Cease Fires  
+	Visual
+	Radio
+	Whistle  
+	Consolidate  
+	Radio  
+	Hand/Arm
+	Messenger
+	Casualty  
+	Radio  
+	RSC
+	Messenger
+	 
+      2. (U) Frequencies and Callsigns 
+ 
+Unit 
+	Callsign 
+	Frequency 
+	Company Tac  
+	Godfather  
+	160  
+	60s COF
+	Cerberus
+	161
+	1st Plt Tac  
+	Godfather 1 
+	162  
+	2d Plt Tac  
+	Godfather 2 
+	163  
+	3d Plt Tac  
+	Godfather 3 
+	164  
+	Bn Tac 1  
+	Goliath  
+	110  
+	Bn Tac 2  
+	Goliath  
+	120  
+	Bn Log Net  
+	Goliath 4  
+	121  
+	Bn 81mm   
+	Fury  
+	130  
+	K, 3/11  
+	Steel Rain  
+	210  
+	 
+      3. (U) Challenge and Password.  Primary: Spider/Castle.  Alternate: Numbers adding up to 7.  Running: Red Coats. 
+ 
+      4. (U) Location of Communication Electronic Operations Instructions (CEOI).  The CEOI will be retained in the left shoulder pocket of all Platoon Commanders, Platoon Sergeants, TSOs, and Squad Leaders.
+ 
+    b. (U) Command.  
+ 
+      1. (U) Location of Key Leaders.  During the attack, I will be located with the Main Effort. The 1stSgt and Co Corpsman will be as well. The Co XO and Co GySgt will be located with 3d Plt. Upon consolidation, I will establish a Company CP at the MRA facility. The Wpns Plt Cmdr will be located w/the ME. 
+ 
+      2. (U) Succession of Command.  XO, 1st Plt Cmdr, 3d Plt Cmdr, 2d Plt Cmdr. 
+ 
+ACKNOWLEDGE RECEIPT 
+________________
+  
+  
+
+
+
+  
+         
+ 
+UNCLASSIFIED

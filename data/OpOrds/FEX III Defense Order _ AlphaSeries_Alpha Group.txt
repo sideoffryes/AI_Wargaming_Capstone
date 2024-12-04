@@ -1,0 +1,386 @@
+﻿UNCLASSIFIED
+Copy no. ___ of ___ copies
+THE BASIC SCHOOL
+                                                                        QUANTICO, VIRGINIA
+                                                                        Platoon (+) Defense Order 
+A Series A Group
+
+
+General Situation.  You are the # Platoon Commander, Echo Company, 2nd Battalion 7th Marines.  You are currently aboard the USS Bataan serving as the helicopter company of Battalion Landing Team (BLT) for 2nd Battalion 7th Marines.  Co F 2/7 and BLT 2/7 are currently located on separate ships in our Amphibious Readiness Group (ARG), all located off the southwest Coast of Upshur Island.  The MRA has recently sent an additional Company (+) to Upshur Island after our recent successes there.  Their endstate is to reinforce, reorganize, and conduct offensive operations on Quantico Island.
+BLT 2/7 has been tasked with clearing the enemy on the Upshur Island IOT prevent the enemy from seizing Port Upshur and regaining control of the Centralian Islands.  The MEB commander intends to clear the island utilizing BLT 2/7 to conduct distributed patrolling and offensive operations. To set conditions for the BLT operations, he intends to utilize the helicopter company, Co K, in order to gain a foothold and establish initial security on the island and facilitate a strong logistical route from Port Upshur.
+
+
+Orientation.  We are currently on board the USS Bataan just off of the Southwest coast of Upshur Island.  The AO boundaries are as follows:
+-      North- MCB 8
+-      East- Hangman Tree Rd
+-      South- 74N
+-      West- Rte 645
+Terrain/Vegetation: Terrain consists of rolling hills, and intermittent streams in low lying areas. There is mostly thin vegetation in pockets of the region, but is vastly covered with dense vegetation.  During the summer months, vegetation significantly reduces visibility from 200 – 300 meters on high ground to100 – 200 meters in low ground and around streams. During the winter, observation can reach 400 – 500 meters in high ground, due to the lack of foliage.  Hills vary in elevation up to 30 meters, which can canalize and result in slow movement. The AO has many streams and creeks, all of which are fordable on foot, but will slow movement significantly. Weather is similar to our previous operations in the area.
+
+
+Major Roads:  There are several major roads in the AO: MCB 1, 5, 6, 8, RTE 609, RTE 618, RTE 645, RTE 646, and Hangman Tree Rd.  These roads are considered to be unrestricted to vehicular traffic. The MRA does not currently utilize these roads as a result of our shaping fires; which had devastating effects against MRA convoys. The trafficability of the trails on the map are unknown at this time.
+
+
+The following LZ’s are capable to support air CASEVAC’s and air resupply (All other LZ’s are considered unsupportable for air CASEVAC and air resupply):
+-      LZ Eagle (TH 829791)
+-      LZ Pheasant (TH 821779)
+-      LZ Vulture (TH 829779)
+-      LZ Drake (TH 805766)
+-      LZ Tern (TH 810759)
+-      LZ Crane (TH 828754)
+-      LZ Duck (TH 823745)
+-      LZ Canary (TH 845769)
+-      LZ Fazica (TH 861758)
+-      LZ Snipe (TH 829764) 
+
+
+The MEB is located at Camp Barrett on Quantico Island (TH 870740). The BLT 2/7 CP Forward is located on USS Mesa Verde off the Northern Coast of Upshur Island. The company forward command post is currently located on the USS Bataan. The company will establish its command post at Port Upshur as we echelon forces ashore.
+
+
+
+
+
+
+1. (U) Situation
+
+
+    a. (U) Enemy
+
+
+        (1) (U) Composition/Disposition/Strength.  Throughout the last 48 hours the MRA have been reinforced at Upshur Island.   S-2 assessments indicate the MRA will reinforce to a Company (+) size. The MRA are known to wear camouflage uniforms and protective armor.  They typically wear US style utilities in both woodland and desert varieties.  Often, they do not match their pattern to the season/foliage.  The MRA forces are currently re-consolidating to conduct offensive operations to regain a foothold after their recent defeats by coalition forces on the island. The MRA are located within RTE 645, MCB 1, MCB 8, and Hangman Tree Rd at, establishing defensive positions in preparation for reinforcements to arrive on island. They are carrying US style small arms to include M4/M16 rifles, M240 medium machine guns, and possess night vision capabilities. Additionally, they have 81mm mortar assets, but their locations are unknown at this time. They have complex communication capabilities, allowing them communication across their entire AO, and the ability to coordinate with their 81mm mortars. They are known to have basic proficiency with their mortars and can usually achieve effects on target with minimal adjustments. The enemy has not been seen using hardball roads and identifiable trails due to superiority of our close air support and intelligence, surveillance, and reconnaissance assets.  Instead, friendly patrols and human intelligence reporting indicates the enemy primarily uses natural avenues of approach such as streams, draws, and game trails.
+
+
+        (2) (U) Capabilities and Limitations.  
+            (a) (U) Defend: The MRA are capable of defending via their established platoon battle positions. They are capable of defending their positions through forward patrols and LP/OPs coordinating with the main battle position in order to call for indirect fire or prepare for deliberate employment of fires within their established engagement areas.  They are limited in their ability to defend as a result of their limited intelligence assets as they are known to only use UAS systems sparingly and patrolling elements from their defensive battle position.
+            (b) (U) Reinforce: The enemy is capable of reinforcing from a platoon to Company (-) within 1.5 hours due to the large number of enemy forces within the AO.  However, they have to gain significant information regarding our composition, disposition, and strength before they will do so.  They are limited in their ability to reinforce due to their lack of reconnaissance assets, delaying their ability to provide timely information required for an effective reinforcement. 
+            (c) (U) Attack: The enemy is capable of conducting a complex attack by overlapping indirect and direct fires against a gap in our defense.  They typically employ support by fire positions to provide longer duration direct fire suppression which allows their maneuver element to close with our forces.  They are limited in their ability to attack by terrain and visibility.  They struggle to find effective assault positions and support by fire positions with enough visibility to provide desired effects.
+            (d) (U) Withdraw: The enemy is capable of withdrawing along high speed avenues of approach.  However, once committed to the attack, the enemy is extremely limited in their ability to conduct a deliberate withdraw action. 
+            (e) (U) Delay: The main enemy force is extremely limited in their ability to delay our actions.  However, squad size or smaller patrols are capable of delaying our occupation of battle positions in order to further mass troops and conduct a complex attack.
+        (3) (U) Enemy Most Likely Course of Action. The enemy company’s mission is to seize LZ Duck, LZ Crane and LZ Snipe IOT utilize them as logistical resupply hubs, retransmission sites and prepare for follow on offensive operations at Quantico Island. Currently the enemy has established platoon sized battle positions away from MSRs.  Once they become aware of our insert, they will conduct squad sized patrols in an attempt to determine our disposition and identify TCMs. Upon our insert, I believe their mission will be to initially disrupt our occupation of our battle positions in order to set conditions to seize LZ Drake, LZ Pheasant and LZ Vulture and prevent us developing freedom of movement throughout the AO. I believe they have (3) various Plt (+) sized forces each equipped with at least (1) LMG and MMG squad.  I believe the patrols will attempt to gain intelligence on our positions in preparation for platoon sized attacks.  If the enemy identifies a unit in the process of occupying, they will conduct limited attacks to disrupt our forces to allow them time to reinforce to a platoon sized element and conduct a deliberate combined arms attack.  I expect them to initiate their assaults on our battle positions simultaneously across the AO.  They will begin each assault with indirect fires to allow their machineguns to occupy a support by fire position within 200m of our battle positions.  Once the SBF position has effects on our battle position, their maneuver element will assault one of our flanks, attempting to avoid our main engagement area.  Once the support fires have begun, they will not cease the attack despite taking significant casualties.  If we successfully destroy one or more platoons, the rest of the company will withdraw southwest out of the AO away from Port Upshur.
+
+
+    b. (U) Friendly
+
+
+1. (U) Higher’s Mission and Intent.  
+
+
+1. Mission: At 2200 on D-Day + 4, destroy the enemy IVO Upshur Island IOT keep Port Upshur open to facilitate logistical resupply.
+
+
+2. Commander’s Intent: Endstate: Friendly forces control Upshur Island, the MRA are destroyed and unable to reinforce.
+
+
+        (2) (U) Adjacent
+
+
+            (a) (U) Fox Co: ME At 2200, D Day +3, Fox Co destroys enemy IVO BN OBJ 1 (TH 786 759) IOT deny the En the ability to reinforce at Camp Upshur.
+            (b) (U) Golf Co: SE 2: At 2200, D-Day +3, Golf Co destroys enemy IVO TH 797 754, IOT allow BLT to establish CP.
+
+
+        (3) (U) Supporting. 1 squad of engineers attached, effective immediately, until further direction.  1 MMG Squad from Weapons platoon is attached to each platoon effectively immediately.  
+
+
+            (a) (U) Bn 81mm Mortars. Wpns Co, 81mm Mortar Platoon is in DS of Company E and will land IVO LZ Redwing.  POF are to ME, SE1, SE2, SE3.
+
+
+            (b) (U) CAAT 1. CAAT 1 is in DS of Company E and will land IVO DZ Redwing.
+    c. (U) Attachments/Detachments. 1 squad of engineers attached, effective immediately, until further direction.  1 MMG Squad from Weapons platoon is attached to each platoon effectively immediately.  
+
+
+2. (U) Mission.  We are SE 3.  At 1100 on D-Day, Company E, 2/7 block in sector South of MCB - 8 IOT prevent MRA forces from seizing LZs Drake, Pheasant, and Vulture and moving north towards the Battalion Forward established IVO Port Upshur.  
+
+
+3. (U) Execution
+
+
+    a. (U) Commanders Intent.  
+
+
+        (1) (U) Purpose. The purpose of this operation is to prevent the enemy from seizing Port Upshur, the BLT’s forward staging area.
+        (2) (U) Method. I believe the enemy’s center of gravity is their ability to conduct a combined arms attack with machineguns and indirect fire. Their critical vulnerability is their lack of freedom of movement throughout the AO caused by our air superiority, effective CAS, DAS and UAS.  This forces them to avoid using roads/trails and instead handrail these avenues of approach, resulting in a significant amount of time to mass for a coordinated attack. We will exploit his critical vulnerability by establishing a company level defense in depth that will block their use of key avenues of approach. We will disrupt their ability to seize Port Upshur by forcing them into our platoon engagement areas and destroy them with direct fire and indirect fire.
+
+
+        (3) (U) Endstate. Enemy combat power reduced in our AO, Port Upshur remains in friendly control, and friendly logistical supply routes remain open.
+
+
+    b. (U) Concept of Operations
+
+
+        (1) (U) Scheme of Maneuver.  We will establish a company linear defense utilizing three platoon battle position defenses with (1) ME and (2) SEs. I will array the three battle positions to block the enemy and prevent their seizure of LZ Drake, LZ Pheasant and LZ Vulture.  Platoon commanders have the latitude to orient their positions locally to develop the best possible engagement area along viable avenues of approach.  Based on your leader’s reconnaissance, provide a recommendation for the specific site of your position within the sector provide to you by the company.  Ensure your direct and indirect fires will not impact adjacent platoons.  Platoon commanders will determine occupation methods, security plans, alert status, patrol routes, LP/OP locations, and priorities of work as you see fit.  The company will conduct a helicopter borne insert to LZ Drake, LZ Pheasant and LZ Vulture.  Order of movement will be SE1, ME, and SE2. SE2 will establish the easternmost battle position IVO LZ Vulture (within 300m of TH 829 774).  SE1 will establish the westernmost battle position IVO LZ Drake (within 300m of TH 805 759). ME will establish a center battle position IVO LZ Pheasant (within 300m of TH 822 777). The Co CP will be established IVO Port Upshur once all (3) platoon blocking positions are established.  
+        (2) (U) Fire Support Plan.  
+
+
+            (a) (U) Task.   Disrupt enemy forces
+
+
+            (b) (U) Purpose.  Prevent enemy coordinated attacks on battle positions.
+
+
+            (c) (U) Method.  We will use the BLTs 81mm mortars and the company’s 60mm mortars in support of the defense.  POF 81s is to ME, SE2, and SE 1. POF for 60s is SE1, ME, and SE2.  Platoon Commanders are allocated three targets for your defense including (1) FPF.  Platoon commanders will coordinate FPF with CO FiST.  Company Target Block is: 1st Plt: AE1000-1095, 3d Plt: AE3000-3095, 5th Plt: AE5000-5095.
+
+
+            (d). (U) Effects. Enemy forces neutralized. 
+
+
+    c. (U) Tasks
+
+
+        (1) (U) 1st Platoon: SE1.  NLT 1130, Block south, westernmost sector of Company Defense, IVO LZ Drake IOT prevent the Enemy from seizing LZ Drake.  You have (1) MG squad and (1) Engineer fire team attached. 
+
+
+        (2) (U) 5th Platoon: SE2.  NLT 1130, Block south, easternmost sector of Company Defense, IVO LZ Vulture IOT prevent the enemy from seizing LZ Vulture. You have (1) MG squad and (1) Engineer fire team attached.
+        (3) (U) 3rd Platoon: ME. NLT 1130, Block south, center sector of Company Defense, IVO LZ Pheasant IOT prevent the enemy from seizing LZ Pheasant. You have (1) MG squad and (1) Engineer fire team attached.
+        (4) (U) Engineer Squad:  Effective immediately, attach 1 team to ME, SE1, and SE2.  Remain attached until retrograde.
+
+
+        (5) (U) CAAT 1: SE3. Upon insert, Screen IVO LZ Albatross IOT provide indications and warning of enemy movement on the northern flank of the company’s position.
+
+
+        (6) (U) 60mm Mortar Section: Occupy a MFP IVO DZ Redwing IOT provide IDF support to the company. FireCap NLT 1000.
+
+
+    d. (U) Coordinating Instructions
+
+
+        (1) (U) Timeline  
+0600-0700: Orders Prep/Accountability
+0700-0800: Platoon Order issue
+0800: Platoon Cmdrs back-brief CO on SOM, TCMS and FSP
+0800-0845: Prep for Combat (Issue ammo, comm, rehearsals)
+0845-0900: Stage MACO for Insert
+0900-1030: Insert
+1000: 81s and 60s capable of receiving fire missions
+NLT 1130: Defensive Positions established
+NLT 1300: Defensive Fire Plan Sketches reported to COC
+
+
+2. (U) Tactical Control Measures: Determined by platoon commanders. 
+Platoon Boundaries:        1stPlt: RTE 645 – MCB 1
+                                3rdPlt: MCB 1 – SR 609
+                                5thPlt: SR 609 – 84E
+                                
+        (3) (U) Lost Marine Plan: TBD by Platoon Commander.
+
+
+        (4) (U) UAS Support. Plan for a dedicated UAS asset (Raven) to provide aerial reconnaissance in support of your defensive scheme of maneuver. Planning considerations include: Flight time per asset: 30 minutes, Weather limitations
+            (a) (U) Flight Time: 30 minutes per flight window. 
+            (b) (U) Weather limitations: Flight availability dependent on precipitation, cloud coverage and wind.
+
+
+            (c) (U) Availability: UAS Support will be available as indicated by COC each day.
+
+
+(d) (U) Airspace: Airspace use and de-confliction with adjacent platoons will occur through the Company 
+COC via green gear, or in person by request, one hour prior to requested flight time window.
+
+
+(e) (U) Priority: (2) UAS Operators will co-locate with the company COC at Port Upshur. Priority of UAS 
+asset will be determined by number of operational assets on hand and company commander’s discretion/rotation of priority (Priority: ME, SE1, SE2). Limited to (2) flight windows per day.
+
+
+        (5) (U) Direction of Defense: Generally South. 
+
+
+        (6) (U) Air Planning Considerations.  Prepare 15 Marine stick manifests. MV22s are capable of holding (3) sticks.
+
+
+        (7) (U) Priorities of Work: Platoon commanders will develop their specific priorities of work.  NLT 2 hours after occupation on D – Day, I expect platoons to report over Company Tac, at a minimum: 8 Digit Grids of Left, Center and Right most positions of the platoon BP primary positions; grid azimuth of LLL, RLL, MMGs PDF or FPL and FSP with updated targets for platoon BP. NLT 0500 the following day, I expect primary, alternate and supplementary positions established and reported to higher.  Upon occupation, I expect platoon commanders to emplace LP/OPs and conduct patrol operations to support the Company’s defensive operation.  Platoon Commander’s should deconflict patrol and LP/OP operations with adjacent platoons IOT effectively build depth within the AO. Company COC will serve as a backstop and will battle track platoon operations.  As platoons update positions, targets and continue to develop their EA, report all updates to the company COC.
+
+
+       (8) (U) MOPP Level.  MOPP Ready.  Intel reports enemy has used a blood agent in the past and is currently capable of employing a blood agent.  
+
+
+       (9) (U) Rules of Engagement.  Individuals carrying a weapon are NOT declared hostile. Engage only Hostile Forces and Combatants. A Hostile Force is any civilian, paramilitary, or military force or terrorists, with or without national designation, that has committed a hostile act, exhibited hostile intent, or has been declared hostile by appropriate U.S. authority. Hostile forces may also be called Enemy Combatants. Hostile Act (HA): an attack or other use of force against U.S. forces. Some examples of possible hostile intent are an individual burying a suspicious cylinder along a road (likely improvised explosive device), an unknown armed group massing in your area of operation, or an unknown vehicle speeding to catch up with your convoy. Positive Identification (PID)* is required to engage. *Positive Identification (PID): A reasonable certainty that your target is a legitimate military target. *PID does not require 100% certainty. You must have clear line of sight to target and know what is behind it.
+  
+4. (U) Administration and Logistics
+
+
+    a. (U) Administration
+
+
+        (1) (U) Enemy Prisoners of War.  Platoon commanders will develop internal EPW plan.  All EPWs must be transferred to the detention facility within 6 hours of capture.
+
+
+        (2) (U) CASEVAC.  Platoon commanders will develop internal CASEVAC plans. Coordinate CASEVAC plan including extract LZs with Company COC.  All casualties requiring evacuation above the platoon level will be evacuated by air coordinated through the Company COC.  The USS Mesa Verde will have (1) CASEVAC UH-60 Seahawk on 15 minute alert.  The USS Mesa Verde will be the primary CASEVAC ship, which has a level II surgical capability.  Casualties will receive initial treatment and urgent surgical procedures on the USS Mesa Verde before being transferred to the Hospital at Camp Barrett.
+
+
+    b. (U) Logistics
+
+
+        (1) (U) Ammunition.  All platoons will have 4600 rds 5.56 and 1000 rds 7.62.
+
+
+        (2) (U) Chow and Water.  (4) DOS issued prior to insert.  Ressupplies requested through company GySgt over Company Tac. NLT 0800 / 1800 each day.  
+
+
+        (3) (U) Pyro.  All platoons will have at least (1) GSM, YSM, TA SM, GSC, and WSC for signal plan
+
+
+        (4) (U) Additional Logistical Planning.  Any additional requests or logistical support must be planned for and coordinated with the platoon commander and company gunnery sergeant.  
+
+
+5. (U) Command and Signal
+
+
+    a. (U) Signal. In accordance with the formats listed below and CEOI provided by the company.
+
+
+        (1) (U) Signal Plan
+
+
+Event
+	Primary
+	Alternate
+	Tertiary
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+        (2) (U) Frequencies and Callsigns In accordance with the formats listed below and CEOI provided by the company.
+
+
+Unit
+	Callsign
+	Frequency
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+        (3) (U) Challenge and Password. As per CEOI.
+
+
+        (4) (U) Location of Communication Electronic Operations Instructions (CEOI).  
+
+
+    b. (U) Command. 
+
+
+        (1) (U) Location of Key Leaders. I will be located at the Co CP IVO Port Upshur.  XO, 1stSgt and Co GySgt will remain at the Co CP.
+
+
+        (2) (U) Succession of Command.  XO, Wpns PltCmdr, ME PltCmdr, SE1 PltCmdr, and SE2 PltCmdr
+
+
+ACKNOWLEDGE RECEIPT
+
+
+UNCLASSIFIED

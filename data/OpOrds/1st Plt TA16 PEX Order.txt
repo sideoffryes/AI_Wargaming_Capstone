@@ -1,0 +1,203 @@
+﻿UNCLASSIFIED
+                
+Copy no.___of___copies
+MCB QUANTICO
+
+
+OPERATION ORDER Alpha ‘18 (PEX) 1 Plt
+
+
+REFERENCES: (a) Map: V734S QUANTICO, Sheet 5561, 1:50,000
+
+
+TIME ZONE: ROMEO
+
+
+GENERAL SITUATION.  Our recent offensive attacks in the vicinity of DZ Raven and LZ 7 have continued to show significant success in the battalion’s AO.  However, Montanyan regulars have been sighted along Centralia’s northern border (generally along Rt 646 and Rt 619).  This area to date has seen few coalition operations due to the focus of effort in the southern region of thF Country.  It is believed the MRA is going to try to exploit this gap by renewing their infiltration effort in order to continue to reinforce the CRF insurgency.  The battalion is preparing to move north into a new AO IOT stop these border incursions.  Alpha Company has been tasked to begin planning interdiction operations in the new AO prior to the battalion’s arrival IOT gather information about the enemy and terrain in the area, establish a foothold in the AO and develop the situation.
+
+
+ORIENTATION.  The platoon’s AO is bounded to the south by MCB-1, Route 646 to the north, the 84 Easting to the west and 619 to the east.  The terrain is typical to the Centralian Highland region and is generally not as steep as the southern regions of the country.  The terrain is broken with numerous fingers and draws especially near water features.  This will create numerous cross compartmental danger areas.  There are numerous creeks, with the two main ones being South Fork and Quantico Creek which bisect the AO from NW to SE.  Route 618 bisects our AO from north to south, and there are numerous trail networks throughout the AO creating linear danger areas.  There are eleven LZ’s in the AO however not all have been surveyed and may not be useable for all aircraft types.  There are also areas which have been partially opened by bombing and burned by incendiaries and are restrictive to foot mobile forces.  The vegetation is thick and visibility is normally restricted to 50-100m, sometimes less than 10m in the low areas.  Off road traffic is generally no go for wheeled and tracked vehicles and slow go for foot mobile troops.
+
+
+I. SITUATION.
+        A. Enemy.
+                1. Composition, Disposition, and Strength.  Since we have commenced military operations from DZ Raven and LZ 7, enemy forces were observed withdrawing from the Raven/7 AOs and pushing North both directly into the Northern Centralian Highlands and NE around TA16, then re-entering across the Centralia border from the N.  Currently there is a platoon(+) to company (-) size unit of the MRA conducting squad size and smaller operations.  They have been conducting ambushes, to include two within last 24 hours on relief convoys taking supplies to Centralian civilians.  These patrols are armed with a mix of U.S. and Soviet Block small arms and wear woodland pattern utilities and have typically been squad size elements.  They have limited night vision capability and 82mm mortars. Within the last 48 hours EN UAS has been spotted in the area.
+                2. Capabilities and Limitations.
+                        (a) Defend.  CRF/MRA forces are continuously mobile, and are limited in their ability to defend, unless they mass to plt size strength.  They will attempt to defend their cache sites at all costs.
+                        (b) Reinforce.  CRF/MRA forces could reinforce amongst their fellow squads if they are able to establish communications quickly enough.
+                        (c) Attack.  CRF/MRA forces could conduct a deliberate attack if they mass to plt size strength.  They are also capable of attacking like size or larger elements by conducting ambushes.
+                        (d) Withdraw.  CRF/MRA forces can withdraw from engagements if given a clear avenue of egress and outnumbered.
+                        (e) Delay.  CRF/MRA forces can delay our forces from conducting our stabilization and security mission if given the opportunity.
+                3. EMLCOA.  Enemy forces have been forced from the DZ Raven and LZ 7 AOs and are now attempting to establish a presence in terrain further North, believing that we will maintain our presence and not pursue them.  Although our enemy has abandoned AOs when it was proven that we could defeat him in a patrol vs patrol fight, he will continue to fight as squad/FT size elements because of his fear of our indirect fire allowing us to mass on his position if he becomes stagnant.  I believe the enemy will position the majority of his forces throughout the TA16 areas, conducting reconnaissance, attempting to establish safe havens, establishing ingress/egress routes, and gathering information and intelligence on the border regions.  Enemy squad size forces will engage like size and smaller forces and if in an advantageous position, will continue to remain engaged until forced off the terrain or they have reason to believe IDF assets are coming to bear upon them.  If in an equal or disadvantaged position, the enemy will withdrawal from their position.
+        B. Friendly.
+                1. Higher.  Alpha Co, SE1, NLT 1500, INTERDICT MRA/CRF forces in TA16 in order to exploit our success in DZ Raven/LZ-7 and prevent further MRA infiltration into the Centralian Highlands.
+Endstate – Enemy forces prevented from massing combat power and a foothold established by F Co within the Centralian border region of TA16.  
+
+
+                2. Adjacent.
+                        (a) 3rd Plt, ME, NLT 1500, INTERDICT in TA 16E and 16B, IOT prevent the MRA from infiltrating through TA-16 Province and massing combat power.
+                        (b) 5th Plt, SE1, NLT 1500, INTERDICT in TA 16D and 16A, IOT prevent the MRA from infiltrating through TA-16 Province and massing combat power.
+                        (c) Combined Anti-Armor Team (CAAT), Bn SE, NLT 0800, SCREEN along hardball roads in TA-16 Province IOT deny the enemy freedom of movement South.  BPT provide CASEVAC support to Charlie Company.
+                3. Supporting.
+                        (a) 60mm mortars GS of Co IVO LZ Peregrine, 18S TH 856 747 NLT 0900. POF 1, 3, 5 
+        C. Attachments/detachments. None.
+
+
+II. MISSION. 1st Plt, SE2, NLT 2200, INTERDICT in TA 16F, TA 16G, and TA 16C, IOT prevent the MRA from infiltrating through TA16 Province and massing combat power.
+
+
+III. EXECUTION.
+        A. Commander’s Intent.
+                1. Purpose.  To prevent the MRA from infiltrating through TA16 Province and massing combat power.
+                2. Method.  The enemy’s CG is his ability to use covered and concealed routes to infiltrate into and through TA-16.  The enemy’s CV is his inability to quickly reinforce or mass firepower when located.  We will exploit this by conducting a platoon heliborne insert into LZ Peregrine and pushing out squad sized patrols along designated routes throughout our AO.
+                3. Endstate.  Enemy prevented from conducting further ambushes of relief convoys or coalition forces in the AO and is unable to mass combat power for an offensive attack into Camp Barrett.  
+
+
+        B. ConOps.
+                1. SOM.  This operation will be conducted in (2) parts.  Part 1 will begin with our heliborne insert into LZ Peregrine and end when each squad has reached its intermediate ORP.  Part 2 will begin with preparation for an ambush patrol at the intermediate ORP and will end with helo extraction from our assigned extraction LZs.
+                        (a) Part 1.  Part 1 will begin with our heliborne insert into LZ Peregrine.  Each squad will depart along independent patrol routes to their intermediate ORPs.  Checkpoints will be designated in tasks.  Patrols will report their progress to the platoon commander who will be located at the CoC.  Part 1 will end when each patrol has reached their intermediate LZ, NLT 1500.  
+                        (b) Part 2.  Part 2 will begin with ambush patrol preparation at the intermediate ORP.  Each squad will be laid into their ambush site NLT 1845.  Upon completion of the ambush, squads will conduct a night patrol to their extract LZ.  Part 2 will end with helo extraction from extract LZ.  
+
+
+                        (c)  All squad leaders will pursuant to this order create their own operation order and timeline to support their tasks.  All squads will conduct COC Coordination with the company COC.  
+
+
+                2. FSP.
+                        (a) Task.  Limit the CRF’s ability to affect friendly units with direct fire weapons.
+                        (b) Purpose.  IOT allow 1st platoon to move freely throughout the area of operations.
+                        (c) Method.  Squads will build their method for their FSP.
+                        (d) Effects.  CRF in our area of operations is suppressed.
+        C. Tasks.
+                1. 1st Sqd.
+                        (a) Part 1.  ME, NLT 1500 INTERDICT MRA forces IVO CPs 35, 17 ,37 IOT prevent them from interfering with humanitarian operations. Establish ORP IVO LZ Osprey. Time has priority.
+                        (b) Part 2.  ME, NLT 2200 AMBUSH MRA forces IVO 18S TH 8739 7775 IOT degrade his ability to utilize this avenue of approach as an infiltration route.  Mission has priority.  Extraction LZ New Martin (875 766) .
+                2. 2nd Sqd.
+                        (a) Part 1.  SE1, NLT 1500 INTERDICT MRA forces IVO CPs 12, 54, 27 IOT prevent them from interfering with humanitarian operations. Establish ORP IVO LZ New Martin (875 766) . Time has priority.
+                        (b) Part 2.  SE1, NLT 2200 AMBUSH MRA forces IVO 18S TH 8634 7612 IOT degrade his ability to utilize this avenue of approach as an infiltration route.  Mission has priority.  Extraction LZ New Martin (875 766) .
+                3. 3rd Sqd.
+                        (a) Part 1.  SE2, NLT 1500 INTERDICT MRA forces IVO CPs 10, 33, 26 IOT prevent them from interfering with humanitarian operations. Establish ORP IVO LZ Pigeon. Time has priority.
+                        (b) Part 2.  SE2, NLT 2200  AMBUSH MRA forces IVO 18S TH 8625 7570 IOT degrade his ability to utilize this avenue of approach as an infiltration route.  Mission has priority. Extraction LZ New Martin (875 766) .
+        D. Coordinating Instructions.
+                1. Timeline.
+Time
+	Event
+	Prior to 0645
+	gear draw, build terrain model, complete planning
+	0645
+	Company Commander Brief (Safety Brief)
+	0715-0830
+	COC Coord, Brief Order
+	NLT 0830
+	Staged for helo/Truck insert
+	NLT 1500
+	At Intermediate LZ/ORP
+	NLT 1745
+	Ambush Site Occupied
+	NLT 2200
+	At Extract LZ
+	                2. Helo Considerations.
+                        (a) Turn in helo-manifests at COC Coordination prior to insert.
+                        (b) All Weapons condition 3 upon loading helos.
+                        (c) Do not fire any air bursting pyro 30 minutes prior to any extract windows.
+                        (d) Coordination with pilot is responsibility of PL.  All PL’s WILL have LZ Brief’s prepared prior to calling for extract post ambush.  Reference MAWTS-1 TACSOP LZ Brief.
+                        (e) Wrong Insert LZ plan—coordinate with higher immediately in order to receive new patrol route.
+                        (f) Marking of LZ's for extract (ITG): Day--Colored smoke. Night—chem lights in Nato Y and/ or buzzsaw.
+                        (g) Godfather will coordinate all aircraft for extract upon request by PL on Co TAC. Patrols will roll to pre-determined UHF net for ITG after being directed to do so by Godfather. Godfather will notify the patrol of the tail number of its extract helo at that time. Communication with Godfather and aircraft MUST be established by patrol at extract LZ.
+                        (h) Helo call-sign is NIGHTHAWK & TAIL #.
+3. Patrol Boundaries.  AO is bounded to the south by MCB-1; to the east by Route 619, to the north by Route 646, and to the west by the 84 Easting.
+                4. Daytime Patrol Routes. 
+                        (a) 1st Squad.  LZ Peregrine, 35, 17, 37, ORP
+                        (b) 2d Squad.   LZ Peregrine, 12, 54, 27, ORP
+                        (c) 3d Squad.   LZ Peregrine, 10, 33, 26, ORP
+                5. Ambush Sites.  Patrols will depart from their intermediate LZ and conduct ambush patrols at the following assigned ambush sites.  Ambushes will be established NLT 1745.
+                        
+                6. Night Extract LZs.  
+                        (a) 1st Squad.  LZ New Martin (875 766) 
+                        (b) 2d Squad.   LZ New Martin (875 766) 
+                        (c) 3d Squad.   LZ New Martin (875 766) 
+                7. The following will be designated by each patrol leader:
+                        (a) Go / No Go Criteria
+                        (b) Immediate Action Drills
+                        (c) Actions at Rally Points and ORPs
+                        (d) Rehearsal / Inspection Plan
+                        (e) No Comm Plan
+                        (f) Lost Marine Plan
+                        (g) Night Patrol Considerations
+                        (h) Helo Dismount/Depart Drill
+                8. Checkpoint Grids
+Chkpt
+	Grid
+	Chkpt
+	Grid
+	10
+	865 750
+	30
+	879 747
+	11
+	883 752
+	33
+	874 755
+	12
+	861 752
+	34
+	877 770
+	13
+	855 755
+	35
+	861 758
+	15
+	864 765
+	37
+	863 769
+	16
+	858 765
+	40
+	874 745
+	17
+	869 765
+	43
+	878 758
+	23
+	868 774
+	54
+	865 759
+	26
+	882 760
+	67
+	879 752
+	27
+	871 762
+	75
+	885 756
+	29
+	878 766
+	76
+	870 749
+	
+
+                9. Rules of Engagement:  Nothing in these ROE will limit your right to take action in SELF-DEFENSE.
+                        (a) The CRF and MRF have been declared HOSTILE and MAY BE ATTACKED.  This includes ALL CRF and MONTANYAN military personnel and vehicles TRANSPORTING the ENEMY or ENEMY SUPPLIES.
+                        (b) Do NOT attack civilians UNLESS they commit a HOSTILE ACT or it is CLEAR that they are ABOUT TO COMMIT a hostile act (hostile intent) against U.S. Forces.  If a civilian does nothing, they are NOT a threat and may NOT be attacked.
+                        
+IV. ADMIN AND LOGISTICS.
+        A. Administration.
+                1. Casualties. Co Corpsman will be located at the company CP, which will be established IVO LZ Peregrine, 18S TH 856 747.  All PLs will generate a CASEVAC plan that takes their casualty to the closest road/trail or LZ.  Any routine casualties that can continue with the mission should do so and be treated upon extract.  Any urgent/priority casualties will be called to the company CP where CASEVAC link-up point will be arranged.  Expect a mobile element, most likely the Bn CAAT to conduct pick-up for priority casualties within 15 minutes of receiving the report.  Expect all urgent casualties to have simultaneous request for Bn CAAT and air CASEVAC.
+                2. EPWs. All EPWs taken by patrols will be returned to the company CP for tactical questioning and to be processed to higher echelons.  Detainment authority up to (6) hours lies with any detachment leader (in our case, patrol leaders) and holding longer than (6) hours requires a company commander’s approval.  Ensure that any EPWs/detainees that are taken have actionable evidence that will allow them to be held for further processing.  Treat all with STRESS.
+        B. Logistics.  PLs will ensure that all Marines step off w/ four quarts of water and one DOS of chow.
+                1. Ammo will be drawn prior to insert.
+                2. Radios and extra batteries will be drawn prior to insert.
+
+
+V. COMMAND AND SIGNAL.
+        A. Signal.
+                1.  All patrols will utilize company Tac, which will be provided in COC Coordination for all contact with Company.  All CFF missions will be called to Co FiST over Co Tac.
+                2.  Co Call Sign:  Alpha Main.
+                    Co FiST: Alpha Mortars
+                    Sqd Call Signs: Co, Plt, Sqd ie:  “Alpha/1/1”
+                3.  Challenge/Pass, Near/Far Recognition Signal.  Establish them unique to your squad.
+                4.  Reporting Requirements.  Insertion Complete, Arrival at CP’s, En Contact, Friendly KIA/WIA/MIA, Taking of detainee, minimum every 30 minutes, arrival to extract LZ.
+                5.  Company / Plt reserves no pyro for company signal plan, all pyro is free for squad signal plan.
+                6.  Patrols will receive (1) Green Smk
+        B. Command.
+                1. Location of Key Leaders.  The Plt Cmdr, PltSgt and Plt Guide will establish a CP IVO LZ Woodpecker, 18S TH 856 747 NLT 0900.
+                2. Succession of Command.  Plt Sgt, 1st Sqd Ldr, 2nd Sqd Ldr, 3rd Sqd Ldr.

@@ -20,7 +20,7 @@ def clean_output(text: str) -> str:
     return text.rsplit("Example:")[0]
 
 # get document type from user
-doc = int(input("Select document to generate\n1) Naval Message\n2) USMC Message\n> "))
+doc = int(input("Select document to generate\n1) Naval Message (NAVADMIN)\n2) USMC Message (MARADMIN)\n3) USMC OpOrd\n> "))
 type = ""
 
 match doc:
@@ -28,6 +28,8 @@ match doc:
         type = "NAVADMIN"
     case 2:
         type = "MARADMIN"
+    case 3:
+        type = "OpOrd"
     case _:
         type = "NAVADMIN"
 
