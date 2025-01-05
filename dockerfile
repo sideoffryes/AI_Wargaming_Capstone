@@ -33,7 +33,7 @@ RUN conda install -c pytorch -c nvidia -c rapidsai -c conda-forge faiss-gpu-raft
 RUN conda install -c conda-forge transformers --solver classic
 
 # provide hugging face token
-RUN huggingface-cli login --token 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 
+RUN huggingface-cli login --token $HUGGING_TOKEN 
 
 # copy over files
 COPY ./data /app/data
