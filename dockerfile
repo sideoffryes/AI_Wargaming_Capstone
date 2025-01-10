@@ -32,6 +32,8 @@ RUN conda install -c pytorch -c nvidia -c rapidsai -c conda-forge faiss-gpu-raft
 # Hugging face
 RUN conda install -c conda-forge transformers --solver classic
 
+COPY ./.env /app/.env
+
 # provide hugging face token
 RUN huggingface-cli login --token $HUGGING_TOKEN 
 
