@@ -32,10 +32,12 @@ RUN conda install -c pytorch -c nvidia -c rapidsai -c conda-forge faiss-gpu-raft
 # Hugging face
 RUN conda install -c conda-forge transformers --solver classic
 
-COPY ./.env /app/.env
+# USNA certificate stuff
+COPY install-ssl-system.sh /app/
+RUN ./install-ssl-system.sh
 
 # provide hugging face token
-RUN huggingface-cli login --token $HUGGING_TOKEN 
+RUN --mount=type=secret,id=HUGGING_TOKEN huggingface-cli login --token HUGGING_TOKEN 
 
 # copy over files
 COPY ./data /app/data
