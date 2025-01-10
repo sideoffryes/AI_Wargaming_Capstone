@@ -8,7 +8,7 @@ rm -rf /usr/share/ca-certificates/dod
 rm -rf /usr/local/share/ca-certificates/dod
 
 TEMP_DIR=$(mktemp -d) && \
-wget --no-check-certificate http://apt.cs.usna.edu/ssl/system-certs-5.6-pa.tgz -P $TEMP_DIR && \
+cp certs/system-certs-5.6-pa.tgz $TEMP_DIR && \
 tar -C $TEMP_DIR -xpf $TEMP_DIR/system-certs-5.6-pa.tgz && \
 mkdir -p /usr/local/share/ca-certificates/dod/ && \
 cp $TEMP_DIR/*.crt /usr/local/share/ca-certificates/dod/ && \

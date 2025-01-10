@@ -25,16 +25,23 @@ RUN conda init --all
 RUN conda create -n capstone
 RUN echo "source activate capstone" > ~/.bashrc
 ENV PATH="$PATH:/opt/conda/envs/capstone/bin:$PATH"
-# pytorch with GPU - CUDA 12.4
-RUN conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvidia
-# FAISS with GPU (NVIDIA RAFT)
-RUN conda install -c pytorch -c nvidia -c rapidsai -c conda-forge faiss-gpu-raft=1.9.0
-# Hugging face
-RUN conda install -c conda-forge transformers --solver classic
+
+# Try and install all packages at once
+RUN conda install -c conda-forge truststore
+RUN conda config --set ssl_verify truststore
+RUN conda install -c pytorch -c nvidia -c rapidsai -c conda-forge pytorch torchvision torchaudio pytorch-cuda=12.4 faiss-gpu-raft=1.9.0 transformers 
+
+# # pytorch with GPU - CUDA 12.4
+# RUN conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvidia
+# # FAISS with GPU (NVIDIA RAFT)
+# RUN conda install -c pytorch -c nvidia -c rapidsai -c conda-forge faiss-gpu-raft=1.9.0
+# # Hugging face
+# RUN conda install -c conda-forge transformers --solver classic --use-feature truststore
 
 # USNA certificate stuff
-COPY install-ssl-system.sh /app/
-RUN ./install-ssl-system.sh
+COPY certs/install-ssl-system.sh /app/certs/
+COPY certs/system-certs-5.6-pa.tgz /app/certs/
+RUN ./certs/install-ssl-system.sh
 
 # provide hugging face token
 RUN --mount=type=secret,id=HUGGING_TOKEN huggingface-cli login --token HUGGING_TOKEN 
