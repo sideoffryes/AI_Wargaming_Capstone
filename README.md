@@ -34,21 +34,36 @@ be harnessed to enhance and expedite the wargaming process.
 
 ## Meeting/Presentation Schedule
 Morning:
+
 Jan 23 Meeting
+
 Jan 30 PRESENTATION
+
 Feb 13 Meeting
+
 Mar  6 Meeting
+
 Mar 18 PRESENTATION
+
 Apr  3 Meeting
 
+
 Afternoon:
+
 Jan 14 Meeting
+
 Feb  4 Meeting
+
 Feb 18 PRESENTATION
+
 Feb 25 Meeting
+
 Mar 25 Meeting
+
 Apr 15 Meeting
+
 Apr 17 PRESENTATION
+
 
 ## First Steps
 
