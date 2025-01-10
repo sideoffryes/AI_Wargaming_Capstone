@@ -33,7 +33,8 @@ be harnessed to enhance and expedite the wargaming process.
 [LtCol Scotty Black](mailto:scotty.black@nps.edu )
 
 ## Meeting/Presentation Schedule
-Morning:
+
+### Morning:
 
 Jan 23 Meeting
 
@@ -48,7 +49,8 @@ Mar 18 PRESENTATION
 Apr  3 Meeting
 
 
-Afternoon:
+
+### Afternoon:
 
 Jan 14 Meeting
 
