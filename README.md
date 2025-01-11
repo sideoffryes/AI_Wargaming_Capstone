@@ -32,9 +32,25 @@ be harnessed to enhance and expedite the wargaming process.
 
 [LtCol Scotty Black](mailto:scotty.black@nps.edu )
 
+## Running the project
+
+The project is inside of a docker container that inside of a Docker containers that has all of the necessary Python packages installed. The build.sh script runs the necessary `docker build` command to create an image called *capstone*.
+
+```bash
+$ ./build.sh
+```
+
+**It will take around 10 minutes for the build to complete.**
+
+The image can be used to create a container to run the program using the following command:
+
+```bash
+$ ./run.sh
+```
+
 ## Meeting/Presentation Schedule
 
-### Morning:
+### Morning
 
 Jan 23 Meeting
 
@@ -48,9 +64,7 @@ Mar 18 PRESENTATION
 
 Apr  3 Meeting
 
-
-
-### Afternoon:
+### Afternoon
 
 Jan 14 Meeting
 
@@ -65,7 +79,6 @@ Mar 25 Meeting
 Apr 15 Meeting
 
 Apr 17 PRESENTATION
-
 
 ## First Steps
 

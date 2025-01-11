@@ -1,52 +1,38 @@
-FROM ubuntu:22.04
+FROM continuumio/miniconda3
 
 WORKDIR /app
 
 SHELL ["/bin/bash", "-c"]
 
-# install updates and apps curl
-RUN apt update -y
-RUN apt upgrade -y
-RUN apt install -y curl wget
+ARG home
 
-# install miniconda
-RUN mkdir -p ~/miniconda3
-RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
-RUN bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-RUN rm ~/miniconda3/miniconda.sh
-RUN source ~/miniconda3/bin/activate
+# install all updates and necessary libraries
+RUN apt-get update -y && apt-get upgrade -y
+RUN apt-get install -y curl wget
 
-# edit path
-ENV PATH="$PATH:~/miniconda3/bin/"
+# install python AI libraries w/ GPU support
+RUN conda create -n capstone -c pytorch -c nvidia -c rapidsai -c conda-forge pytorch torchvision torchaudio pytorch-cuda=12.4 faiss-gpu-raft=1.9.0 transformers huggingface_hub[cli]
 
-RUN conda init --all
+# set environment to new env
+RUN echo "conda activate capstone" >> ~/.bashrc
 
-# install required python packages through conda
-RUN conda create -n capstone
-RUN echo "source activate capstone" > ~/.bashrc
-ENV PATH="$PATH:/opt/conda/envs/capstone/bin:$PATH"
-
-# Try and install all packages at once
-RUN conda install -c conda-forge truststore
-RUN conda config --set ssl_verify truststore
-RUN conda install -c pytorch -c nvidia -c rapidsai -c conda-forge pytorch torchvision torchaudio pytorch-cuda=12.4 faiss-gpu-raft=1.9.0 transformers 
-
-# # pytorch with GPU - CUDA 12.4
-# RUN conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvidia
-# # FAISS with GPU (NVIDIA RAFT)
-# RUN conda install -c pytorch -c nvidia -c rapidsai -c conda-forge faiss-gpu-raft=1.9.0
-# # Hugging face
-# RUN conda install -c conda-forge transformers --solver classic --use-feature truststore
-
-# USNA certificate stuff
+# USNA cert stuff
 COPY certs/install-ssl-system.sh /app/certs/
 COPY certs/system-certs-5.6-pa.tgz /app/certs/
 RUN ./certs/install-ssl-system.sh
 
+SHELL ["conda", "run", "-n", "capstone", "/bin/bash", "-c"]
+
 # provide hugging face token
-RUN --mount=type=secret,id=HUGGING_TOKEN huggingface-cli login --token HUGGING_TOKEN 
+RUN --mount=type=secret,id=hugging_token \
+export HUGGING_TOKEN=$(cat /run/secrets/hugging_token | cut -d '=' -f2) && \
+huggingface-cli login --token $HUGGING_TOKEN 
 
 # copy over files
 COPY ./data /app/data
 COPY ./scripts /app/scripts
-COPY ./UI /app/UI 
+COPY ./UI /app/UI
+# ADD $home/.cache/huggingface/hub /app/.cache/
+
+# set cache ENV variable
+# ENV HF_HOME=/app/.cache

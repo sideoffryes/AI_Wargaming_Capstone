@@ -1,5 +1,6 @@
 #!/bin/bash
 
 docker build \
-    --secret id=HUGGING_TOKEN,src=.env \
+    --secret id=hugging_token,src=.env \
+    --build-arg home=$HOME \
     -t capstone .
