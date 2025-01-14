@@ -32,20 +32,21 @@ be harnessed to enhance and expedite the wargaming process.
 
 [LtCol Scotty Black](mailto:scotty.black@nps.edu )
 
-## Running the project
+## Installation
 
-The project is inside of a docker container that inside of a Docker containers that has all of the necessary Python packages installed. The build.sh script runs the necessary `docker build` command to create an image called *capstone*.
+This project relies on several python packages. The easiest way to manage these is to create a Conda environment using the provided `environment.yml` file to create a Conda environment.
 
 ```bash
-$ ./build.sh
+conda env create -f environment.yml
 ```
 
-**It will take around 10 minutes for the build to complete.**
+If you do not have Conda installed already, instructions can be found [here](https://docs.anaconda.com/miniconda/install/).
 
-The image can be used to create a container to run the program using the following command:
+Once all of the necessary packages are installed and the environment is activated (`conda activate capstone`), the document generator script can be ran from the scripts directory.
 
 ```bash
-$ ./run.sh
+cd scripts
+python3 docGen.py
 ```
 
 ## Meeting/Presentation Schedule
