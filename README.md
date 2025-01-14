@@ -49,6 +49,21 @@ cd scripts
 python3 docGen.py
 ```
 
+This project also requires that you have access to Meta's Llama 3.2 models via [Hugging Face](https://huggingface.co/). You must request access to the model before this project can be run. Follow these instructions to get access:
+
+1. Visit the page for [Llama-3.2 (1B) on hugging face](https://huggingface.co/meta-llama/Llama-3.2-1B)
+2. Create a free account and login.
+3. Return to the Llama webpage (if not already there).
+4. You should see a Community License Agreement at the top. Click the "Expand to review" button:
+5. If you agree with the terms, fill out the form
+6. Check email later.
+
+Once you have received access to the models, visit your [tokens page](https://huggingface.co/settings/tokens) and click "Create new token". Choose the "Read" token type at the very top. Then click "Create token". Copy the generated string.
+
+In the terminal, run the following command and paste in your access token when prompted:
+
+`huggingface-cli login`
+
 ## Meeting/Presentation Schedule
 
 ### Morning
