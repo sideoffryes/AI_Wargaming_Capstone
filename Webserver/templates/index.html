@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone Starter</title>
+    <style>
+        /* Basic body styling */
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Main container */
+        .main-container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Banner styling */
+        .banner {
+            background-color: #12115c; /* Replace with an image if needed */
+            color: white;
+            width: 20%; /* Adjust width as necessary */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Center content styling */
+        .content {
+            width: 60%; /* Adjust width as necessary */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Logo styling */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Form styling */
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        label {
+            font-size: 16px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #f9f9f9;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #12115c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2d41f7;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <!-- Left banner -->
+        <div class="banner">
+            
+        </div>
+
+        <!-- Center content -->
+        <div class="content">
+            <img src="../static/main_logo.png" alt="USNA logo">
+            <form action="/submit" method="POST">
+                <label for="colors">Selection Options:</label>
+                <select id="colors" name="colors">
+                    <option value="" disabled selected>Please select an artiact</option>
+                    <option value="Five Paragraph Order">FPO</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="red">Red</option>
+                </select><br><br>
+
+                <!-- Submit button -->
+                <button type="submit">Submit</button>
+            </form>
+            <!-- <a href="https://www.example.com" target="_blank" class="button">Go to Example</a> -->
+        </div>
+
+
+        <!-- Right banner -->
+        <div class="banner">
+            
+        </div>
+    </div>
+</body>
+</html>

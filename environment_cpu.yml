@@ -1,0 +1,15 @@
+name: capstone_cpu
+channels:
+  - conda-forge
+  - defaults
+  - pytorch
+  - nvidia
+  - rapidsai
+dependencies:
+  - torchaudio
+  - pytorch
+  - pytorch-cuda=12.4
+  - torchvision
+  - faiss-cpu=1.9.0
+  - transformers
+prefix: /home/hcfrye/miniconda3/envs/capstone

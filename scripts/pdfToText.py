@@ -12,16 +12,16 @@ def pdf_to_text(pdf_path, output_txt):
 
         for page_num in range(len(pdf_reader.pages)):
             page = pdf_reader.pages[page_num]
-            text += page.extract_text()
+            text += page.extract_text() + '\n\n'  # Add double new lines between pages
 
     # Write the extracted text to a text file
     with open(output_txt, 'w', encoding='utf-8') as txt_file:
         txt_file.write(text)
 
 if __name__ == "__main__":
-    pdf_path = sys.argv[0]
+    pdf_path = sys.argv[1]
 
-    output_txt = sys.argv[0].split(".")[0] + ".txt"
+    output_txt = sys.argv[1].split(".")[0] + ".txt"
 
     pdf_to_text(pdf_path, output_txt)
 
