@@ -1,4 +1,4 @@
-name: capstone
+name: capstone_cpu
 channels:
   - conda-forge
   - defaults
@@ -10,6 +10,6 @@ dependencies:
   - pytorch
   - pytorch-cuda=12.4
   - torchvision
-  - faiss-gpu-raft
+  - faiss-cpu=1.9.0
   - transformers
 prefix: /home/hcfrye/miniconda3/envs/capstone
