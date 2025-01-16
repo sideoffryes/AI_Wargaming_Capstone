@@ -34,10 +34,10 @@ be harnessed to enhance and expedite the wargaming process.
 
 ## Installation
 
-This project relies on several python packages. The easiest way to manage these is to create a Conda environment using the provided `environment.yml` file to create a Conda environment.
+This project relies on several python packages. The easiest way to manage these is to create a Conda environment using the provided `.yml` files to create a Conda environment. If you are running the program on Windows or a *non* x86_64 system, you must use the `environment_cpu.yml` configuration. The GPU configuration requires a package that is only available on Linux x86_64 systems. If you are on a Linux x86_64 system with GPU support, you can use the `environment_gpu.yml` configuration. Either configuration will create a new Conda environment called **capstone**.
 
 ```bash
-conda env create -f environment.yml
+conda env create -f [environment_cpu.yml | environment_gpu.yml]
 ```
 
 If you do not have Conda installed already, instructions can be found [here](https://docs.anaconda.com/miniconda/install/).
