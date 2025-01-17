@@ -1,15 +1,13 @@
 name: capstone_gpu
 channels:
-  - conda-forge
-  - defaults
   - pytorch
   - nvidia
-  - rapidsai
+  - conda-forge
+  - defaults
 dependencies:
-  - torchaudio
   - pytorch
-  - pytorch-cuda=12.4
   - torchvision
-  - faiss-gpu-raft
+  - torchaudio
+  - pytorch-cuda=12.4
   - transformers
-prefix: /home/hcfrye/miniconda3/envs/capstone
+  - accelerate
