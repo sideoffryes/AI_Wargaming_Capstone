@@ -1,5 +1,5 @@
 import pytest
-from pdfToText import pdf_to_text
+from scripts.pdfToText import pdf_to_text
 from reportlab.pdfgen import canvas
 
 @pytest.fixture

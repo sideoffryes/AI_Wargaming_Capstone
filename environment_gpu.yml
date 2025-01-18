@@ -12,3 +12,4 @@ dependencies:
   - transformers
   - accelerate
   - pytest
+  - reportlab
