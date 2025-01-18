@@ -12,9 +12,20 @@ parser = argparse.ArgumentParser(description="Generates military documents via a
 parser.add_argument("-t", "--max-tokens", type=int, help="Specify the max number of tokens when generating the document, default is 500", default=500)
 args = parser.parse_args()
 
-model = "meta-llama/Llama-3.1-8B-Instruct"
+# model to select model you want to load
+select = int(input("Select the Llama model you would like to run\n1) Llama 3.2 1B Instruct\n2) Llama 3.2 3B Instruct\n3) Llama 3.1 8B Instruct\n4) Llama 3.3 70B Instruct\n> "))
+model = ""
 
-# generator = pipeline("text-generation", model="meta-llama/Llama-3.2-11B-Vision-Instruct", device=device, device_map="auto")
+match select:
+    case 1:
+        model = "meta-llama/Llama-3.2-1B-Instruct"
+    case 2:
+        model = "meta-llama/Llama-3.2-3B-Instruct"
+    case 3:
+        model = "meta-llama/Llama-3.1-8B-Instruct"
+    case 4:
+        model = "meta-llama/Llama-3.3-70B-Instruct"
+
 tokenizer = AutoTokenizer.from_pretrained(model)
 streamer = TextStreamer(tokenizer, skip_prompt=True)
 generator = pipeline("text-generation", model, tokenizer=tokenizer, device_map="auto", torch_dtype=torch.float16)
@@ -67,7 +78,7 @@ t_start = time.time()
 response = generator(prompt, max_new_tokens=args.max_tokens, streamer=streamer)[0]['generated_text'][len(prompt):]
 t_stop = time.time()
 
-print(f"Generation time: {t_stop - t_start}")
+print(f"Generation time: {t_stop - t_start} sec / {(t_stop - t_start) / 60} min")
 
 # save response to file
 fname = datetime.now().strftime("%d-%b-%Y_%H:%M:%S")

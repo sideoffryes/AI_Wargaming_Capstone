@@ -11,3 +11,4 @@ dependencies:
   - pytorch-cuda=12.4
   - transformers
   - accelerate
+  - pytest
