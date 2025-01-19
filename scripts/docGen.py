@@ -1,9 +1,10 @@
-from transformers import pipeline, logging, AutoTokenizer, TextStreamer
+from transformers import pipeline, logging, AutoTokenizer, TextStreamer, AutoModelForCausalLM
 import os
 import time
 from datetime import datetime
 import argparse
 import torch
+from accelerate import infer_auto_device_map
 
 # export REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
 
@@ -18,21 +19,30 @@ args = parser.parse_args()
 ROLE = "Role: You work for the United States Department of the Navy, and you specialize in writing official military documents using military formatting.\n"
 FORMAT = "Give your answer in naval message format based on the previous examples."
 
-def gen(model: str, type: str, prompt: str) -> str:
-    tokenizer = AutoTokenizer.from_pretrained(model)
+def gen(model_name: str, type: str, prompt: str, save: bool = True) -> str:
+    # create model objects
+    model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype="auto")
+    tokenizer = AutoTokenizer.from_pretrained(model_name, padding_size="left")
+    tokenizer.pad_token = tokenizer.eos_token
     streamer = TextStreamer(tokenizer, skip_prompt=True)
-    generator = pipeline("text-generation", model, tokenizer=tokenizer, device_map="auto", torch_dtype=torch.float16)
-    examples = load_examples(type)
     
+    # set up prompt info
+    examples = load_examples(type)
     prompt = ROLE + examples + prompt + FORMAT
     
+    # set device based on gpu availability
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    model_inputs = tokenizer([prompt], return_tensors="pt", padding=True).to(device)
+    
+    # generate response
     t_start = time.time()
-    response = generator(prompt, max_new_tokens=args.max_tokens, streamer=streamer)[0]['generated_text'][len(prompt):]
+    generated_ids = model.generate(**model_inputs, do_sample=True, max_new_tokens=args.max_tokens, streamer=streamer)
+    response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0][len(prompt):]
     t_stop = time.time()
-
     print(f"Generation time: {t_stop - t_start} sec / {(t_stop - t_start) / 60} min")
     
-    save_response(response, prompt, model)
+    if save:
+        save_response(response, prompt, model)
     
     return response
     
