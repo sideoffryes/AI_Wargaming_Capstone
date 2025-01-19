@@ -13,3 +13,4 @@ dependencies:
   - accelerate
   - pytest
   - reportlab
+  - pypdf

@@ -11,3 +11,4 @@ dependencies:
   - transformers
   - pytest
   - reportlab
+  - pypdf
