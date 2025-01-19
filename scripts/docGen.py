@@ -21,7 +21,8 @@ FORMAT = "Give your answer in naval message format based on the previous example
 
 def gen(model_name: str, type: str, prompt: str, save: bool = True) -> str:
     # create model objects
-    model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype="auto")
+    # model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype="auto")
+    model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype=torch.float16)
     tokenizer = AutoTokenizer.from_pretrained(model_name, padding_size="left")
     tokenizer.pad_token = tokenizer.eos_token
     streamer = TextStreamer(tokenizer, skip_prompt=True)
@@ -42,7 +43,7 @@ def gen(model_name: str, type: str, prompt: str, save: bool = True) -> str:
     print(f"Generation time: {t_stop - t_start} sec / {(t_stop - t_start) / 60} min")
     
     if save:
-        save_response(response, prompt, model)
+        save_response(response, prompt, model_name, model)
     
     return response
     
@@ -66,14 +67,14 @@ def load_examples(type: str) -> str:
             
     return examples
 
-def save_response(response: str, prompt: str, model: str):
+def save_response(response: str, prompt: str, model_name: str, model: str):
     # save response to file
     fname = datetime.now().strftime("%d-%b-%Y_%H:%M:%S")
     path = f"../output/{fname}.txt"
     with open(path, 'w') as file:
         file.write(f"---------- RESPONSE ----------\n{response}\n\n")
         file.write(f"---------- PROMPT ----------\n{prompt}\n\n")
-        file.write(f"---------- MODEL ----------\n{model}")
+        file.write(f"---------- MODEL ----------\n{model_name}\n{model}")
 
 if __name__ == "__main__":
     # model to select model you want to load
