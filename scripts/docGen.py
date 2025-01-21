@@ -1,10 +1,9 @@
-from transformers import pipeline, logging, AutoTokenizer, TextStreamer, AutoModelForCausalLM
+from transformers import logging, AutoTokenizer, TextStreamer, AutoModelForCausalLM
 import os
 import time
 from datetime import datetime
 import argparse
 import torch
-from accelerate import infer_auto_device_map
 
 # export REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
 
@@ -21,7 +20,6 @@ FORMAT = "Give your answer in naval message format based on the previous example
 
 def gen(model_name: str, type: str, prompt: str, save: bool = True) -> str:
     # create model objects
-    # model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype="auto")
     model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype=torch.float16)
     tokenizer = AutoTokenizer.from_pretrained(model_name, padding_size="left")
     tokenizer.pad_token = tokenizer.eos_token
