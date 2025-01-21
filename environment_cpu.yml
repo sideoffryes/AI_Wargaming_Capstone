@@ -9,6 +9,7 @@ dependencies:
   - torchaudio
   - cpuonly
   - transformers
+  - accelerate
   - pytest
   - reportlab
   - pypdf
