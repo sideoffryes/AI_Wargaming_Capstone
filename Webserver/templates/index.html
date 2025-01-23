@@ -33,6 +33,17 @@
             align-items: center;
             text-align: center;
         }
+        
+        .my_text {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            height: 250px;
+            margin-top: 5px;
+            text-align: justify;
+        }
 
         /* Center content styling */
         .content {
@@ -57,10 +68,13 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            width: 400px;
             margin-top: 20px;
             text-align: center;
         }
+        /*Text box styling*/
+    
+
 
         label {
             font-size: 16px;
@@ -106,14 +120,18 @@
         <div class="content">
             <img src="../static/main_logo.png" alt="USNA logo">
             <form action="/submit" method="POST">
-                <label for="colors">Selection Options:</label>
-                <select id="colors" name="colors">
+                <label for="artifact_type">Selection Options:</label>
+                <select id="artifact_type" name="artifact_type">
                     <option value="" disabled selected>Please select an artiact</option>
-                    <option value="Five Paragraph Order">FPO</option>
-                    <option value="blue">Blue</option>
-                    <option value="green">Green</option>
-                    <option value="red">Red</option>
+                    <option value="1">Five Paragraph Order</option>
+                    <option value="2">Nav Admin</option>
+                    <option value="3">Road to War Bief</option>
+                    <option value="4">Rules of Engagment</option>
                 </select><br><br>
+                
+                <label for="artifact_parameters">Additional Parameters:</label>
+                <textarea class ="my_text" id="artifact_parameters" name="artifact_parameters" wrap="hard"></textarea>
+                <br><br>
 
                 <!-- Submit button -->
                 <button type="submit">Submit</button>
