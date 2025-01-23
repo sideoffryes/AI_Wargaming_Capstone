@@ -4,10 +4,13 @@ app = Flask(__name__)
  
  
 @app.route("/")
+@app.route("/index")
+@app.route("/index.html")
 def index():
     return render_template("index.html")
 
 @app.route("/output")
+@app.route("/output.html")
 def home():
     return render_template("output.html")
 
