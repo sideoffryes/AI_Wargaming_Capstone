@@ -21,7 +21,11 @@ def handle_indexPost():
         artifactType = request.form.get('artifact_type')
         otherInput = request.form.get('artifact_parameters')
 
-        #run the docgen and get input:
+        if not isinstance(artifactType, str) or otherInput == "":
+            errorMsg = "ERROR: Please select an artifact and give a prompt"
+            return render_template('index.html', errorMsg=errorMsg)
+
+        #run the docgen and get output:
         #llmOut = docgen(artifactType, otherInput)
         llmOut = "yo wtf I cannot believe this worked"
 

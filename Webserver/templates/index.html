@@ -119,10 +119,11 @@
         <!-- Center content -->
         <div class="content">
             <img src="../static/main_logo.png" alt="USNA logo">
+            <p>{{ errorMsg }}</p>
             <form action="{{ url_for('handle_indexPost') }}" method="POST">
                 <label for="artifact_type">Selection Options:</label>
                 <select id="artifact_type" name="artifact_type">
-                    <option value="" disabled selected>Please select an artifact</option>
+                    <option value="0" disabled selected>Please select an artifact</option>
                     <option value="1">Five Paragraph Order</option>
                     <option value="2">Nav Admin</option>
                     <option value="3">Road to War Bief</option>
@@ -138,7 +139,6 @@
             </form>
             <!-- <a href="https://www.example.com" target="_blank" class="button">Go to Example</a> -->
         </div>
-
 
         <!-- Right banner -->
         <div class="banner">
