@@ -7,13 +7,9 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-@app.route("/home")
+@app.route("/output")
 def home():
-    return render_template("home.html")
-
-@app.route("/returnpg")
-def returnpg():
-    return render_template("return.html")
+    return render_template("output.html")
 
 @app.route('/handle_indexPost', methods=['POST'])
 def handle_indexPost():
@@ -30,7 +26,7 @@ def handle_indexPost():
         llmOut = "yo wtf I cannot believe this worked"
 
         #output result to home.html
-        return render_template('home.html', artifactType=artifactType, otherInput=otherInput, llmOut=llmOut)
+        return render_template('output.html', artifactType=artifactType, otherInput=otherInput, llmOut=llmOut)
     else:
         render_template("index.html")
  
