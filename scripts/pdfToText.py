@@ -1,11 +1,11 @@
-import PyPDF2
+import pypdf
 import sys
 
 def pdf_to_text(pdf_path, output_txt):
     # Open the PDF file in read-binary mode
     with open(pdf_path, 'rb') as pdf_file:
         # Create a PdfReader object instead of PdfFileReader
-        pdf_reader = PyPDF2.PdfReader(pdf_file)
+        pdf_reader = pypdf.PdfReader(pdf_file)
 
         # Initialize an empty string to store the text
         text = ''

@@ -42,7 +42,7 @@ conda env create -f [environment_cpu.yml | environment_gpu.yml]
 
 If you do not have Conda installed already, instructions can be found [here](https://docs.anaconda.com/miniconda/install/).
 
-Once all of the necessary packages are installed and the environment is activated (`conda activate capstone`), the document generator script can be ran from the scripts directory.
+Once all of the necessary packages are installed and the environment is activated (`conda activate [capstone_gpu | capstone_cpu]`), the document generator script can be ran from the scripts directory.
 
 ```bash
 cd scripts

@@ -1,0 +1,451 @@
+---------- RESPONSE ----------
+ CLASSIFICATION: UNCLASSIFIED// 
+ROUTINE 
+R 051135Z FEB 24
+
+---------- PROMPT ----------
+Role: You work for the United States Department of the Navy, and you specialize in writing official military documents using military formatting.
+Read the following examples very carefully. Your response must follow the same formatting as these examples.
+Example:
+ CLASSIFICATION: UNCLASSIFIED// 
+ROUTINE 
+R 151859Z OCT 24 MID120001464464U 
+FM CNO WASHINGTON DC 
+TO NAVADMIN 
+INFO CNO WASHINGTON DC 
+BT 
+UNCLAS 
+ 
+NAVADMIN 214/24 
+ 
+MSGID/NAVADMIN/CNO WASHINGTON DC/N2N6/OCT// 
+ 
+SUBJ/FISCAL YEAR 2025 CYBERSECURITY AWARENESS CHALLENGE// 
+ 
+REF/A/MSG/CNO WASHINGTON DC/061837Z OCT 23// 
+REF/B/DOC/SECNAVINST 5239.3C/2MAY16// 
+REF/C/MSG/CNO WASHINGTON DC/071510Z OCT 24// 
+ 
+NARR/REF A IS NAVADMIN 241/23 PROVIDES GUIDANCE FOR THE FISCAL YEAR 2024 
+CYBERSECURITY AWARENESS TRAINING. 
+REF B IS THE SECRETARY OF THE NAVY INSTRUCTION DEPARTMENT OF THE NAVY (DON) 
+CYBERSECURITY POLICY WHICH ESTABLISHES DON POLICY FOR CYBERSECURITY. 
+REF C IS NAVADMIN 209/24, COMMON MILITARY TRAINING REQUIREMENTS.// 
+ 
+POC/COTTERELL/CIV/OPNAV N2N6D7/TEL:  (703) 695-1858/E-MAIL: 
+DAWN.D.COTTERELL.CIV(AT)US.NAVY.MIL// 
+ 
+RMKS/1.  This NAVADMIN supersedes reference (a) and provides guidance for the 
+Fiscal Year 2025 (FY25) Cybersecurity Awareness Challenge (CAC) training 
+requirement. 
+ 
+2.  Per references (b) and (c), Navy personnel, civilians, and contractors 
+with access to unclassified or classified networks must complete the 
+Department of Defense (DoD) employee version of CAC by 1 September 2025. 
+ 
+3.  Personnel who completed CAC 2024 after 30 September 2024 but before CAC 
+2025 version is available, will receive credit for their annual FY25 
+training. 
+ 
+4.  Total Workforce Management Services (TWMS) is the readiness platform used 
+to track CAC completion percentages for the Navy.  Commands and training 
+platforms must confirm TWMS is capturing all CAC completions under the 
+overarching requirement ID set by CNIC/TWMS Administration (TWMS Requirement 
+ID: 76689 FY25 DoD Cyber Awareness Challenge) to receive credit.  Commands 
+are prohibited from creating additional CAC training requirements to set 
+command specific training metrics.  This requirement cannot be waived.  The 
+options below are the authorized methods for training delivery: 
+    a.  Commands can elect to complete CAC training using instructor-led 
+    delivery.  A command designated cyber security professional such as the 
+    Information Systems Security Manager (ISSM) or Cyber Workforce Program 
+Manager(CWF-PM) must provide the instruction. 
+    b.  Total Workforce Management Service(TWMS), https://twms.dc3n.navy.mil; 
+ 
+    c.  Navy e-Learning (NEL), https://learning.nel.navy.mil/;  
+(Note:  The My Navy Portal, https://learning.nel.navy.mil/ELIAASv2p/  
+redirects users to the NEL link)); 
+    d.  Defense Information Systems Agency (DISA) 
+website, https://cyber.mil/training/cyber-awareness-challenge/; 
+    e.  Waypoints, https://don.csod.com; 
+    f.  Other approved training sources, DISA Digital Video Discs (DVDs). 
+ 
+5.  Ships can access the annual training from the NEL application hosted on 
+the Navy Information/Application Product Suite (NIAPS) server, eliminating 
+the need to reach back to shore hosted NEL websites.  The CAC 2025 course is 
+available via the NEL Afloat Learning Management System Pub Amendment 112 for 
+download by the NIAPS Administrator using the normal manual NIAPS distance 
+support update process.  If unable to download Learning Management System Pub 
+Amendment 112, ships can request a DVD with these files to be mailed by 
+submitting a support request to Navy 311. 
+ 
+6.  Although CAC training is an individual responsibility, commanders and 
+commanding officers are accountable for completion by 100 percent of their 
+personnel.  Effective 1 September 2020, the DoD Cybersecurity Hardening 
+Scorecard collects information on the number of users who completed annual 
+Cybersecurity Awareness training and the scorecard is briefed on a quarterly 
+basis to the Deputy Secretary of Defense. Training officers are responsible 
+for ensuring their personnel complete and properly document the required 
+training. 
+ 
+7.  Command training officers must validate training via TWMS or Fleet 
+Training Management and Planning System (FLTMPS) 
+(https//ntmpsweb.ncdc.navy.mil/fltmps/) authoritative databases. Training 
+officers will manually record training completed via the DISA website, DISA 
+DVDs, or instructor-led.  Manually record training in FLTMPS using the 
+Learning Event Completion Form.  Report any discrepancies to the Navy 
+Training Management Planning System Operational Support office at 
+ntmps.support(AT)navy.mil or 1-866-438-2898/DSN 922-1867. 
+ 
+8.  The Command ISSM is responsible for reporting compliance to meet Federal 
+Information Security Modernization Act of 2014 requirements.  Command ISSMs 
+will disable accounts of users who do not complete training by 1 September 
+2025 and maintain non-compliance list of accounts that were disabled. 
+ 
+9.  This NAVADMIN will remain in effect until cancelled or superseded. 
+ 
+10.  Released by VADM Karl O. Thomas, Deputy Chief of Naval Operations for 
+Information Warfare, OPNAV N2N6.// 
+ 
+BT 
+#0001 
+NNNN 
+CLASSIFICATION: UNCLASSIFIED//
+
+Example:
+ CLASSIFICATION: UNCLASSIFIED// 
+ROUTINE 
+R 091558Z OCT 24 MID120001450594U 
+FM CNO WASHINGTON DC 
+TO NAVADMIN 
+INFO CNO WASHINGTON DC 
+BT 
+UNCLAS 
+ 
+NAVADMIN 212/24 
+ 
+MSGID/NAVADMIN/CNO WASHINGTON DC/CNO/OCT// 
+ 
+SUBJ/CNO BIRTHDAY MESSAGE TO THE FLEET// 
+ 
+1.  America's Warfighting Navy, it's time to reflect on our rich naval 
+history as we celebrate our 249th Birthday - 249 years of Navy 
+"Warfighting Strength and Readiness." 
+ 
+2.  The birth of our Navy came nearly a year before our Nation's 
+independence.  On October 13, 1775, during the early months of the 
+Revolutionary War, our bold and daring Continental Sailors set sail for 
+Boston to deliver America its first dose of Warfighting Advantage.  From that 
+point on, there was no turning back.  The Great American Experiment was truly 
+underway and with it the legacy of our United States Navy. 
+ 
+3.  Over the centuries, battles, and wars since, our Navy Sailors have 
+continued to deliver Warfighting Advantage, always ready to preserve the 
+peace, respond in crisis, and win decisively in war, if called. 
+ 
+4.  From the Eastern Mediterranean to the Indo-Pacific and everywhere in 
+between, our Sailors have been standing the watch, around the world and 
+around the clock, in every domain from seabed to space, and in cyberspace.   
+No other Navy in the world can train, deploy, and sustain such a lethal and 
+combat credible force at the pace, scale, and tempo we do.  All of this has 
+been made possible by you, America's Warfighting Navy.  Each one of you plays 
+a critical role in our Fleet.  You are truly our secret weapon. 
+ 
+5.  As we look to the future and the decisive decade ahead, we know that our 
+team will continue to answer our Nation's call and build on our Navy's legacy 
+with Honor, Courage, and Commitment. 
+ 
+6.  We could not be more proud of each and every one of you, our active and 
+reserve Sailors and Navy civilians who contribute to our Navy's success every 
+day.  Please extend our thanks to your families for their own service and 
+sacrifice.  We could not do what we need to do every day without their love 
+and support. 
+ 
+7.  Happy 249th Birthday, Shipmates.  See you in the Fleet. 
+ 
+8.  Released by ADM L. M. Franchetti, Chief of Naval Operations and 
+MCPON J. M. Honea, Master Chief Petty Officer of the Navy. 
+ 
+BT 
+#0001 
+NNNN 
+CLASSIFICATION: UNCLASSIFIED//
+
+Example:
+ CLASSIFICATION: UNCLASSIFIED// 
+ROUTINE 
+R 260001Z NOV 24 MID120001581835U 
+FM CNO WASHINGTON DC 
+TO NAVADMIN 
+INFO CNO WASHINGTON DC 
+BT 
+UNCLAS 
+ 
+NAVADMIN 243/24 
+ 
+MSGID/NAVADMIN/CNO WASHINGTON DC/CNO/NOV// 
+ 
+SUBJ/2024 THANKSGIVING MESSAGE// 
+ 
+RMKS/1.  America's Warfighting Navy: as we celebrate Thanksgiving this year, 
+MCPON Honea and I want to express our sincere thanks to each and every one of 
+you.  There is no doubt that our Navy-Marine Corps team has been in high 
+demand this past year, and we could not be more proud of all we have 
+accomplished around the world. 
+ 
+2.  In the Middle East and Mediterranean, our teams are delivering decisive 
+combat power and knocking down airborne threats at a rate not seen since 
+World War II.  In the Indo-Pacific, our Warfighters are defending the rules-
+based international order and upholding regional security and stability 
+alongside our Allies and partners. 
+In the Atlantic, the Baltic, and the High North, our Navy continues to work 
+alongside NATO and other partner Navies to deter Russian aggression.  And in 
+the Southern Seas, our Fleet is operating on the maritime frontlines, forging 
+partnerships with other like-minded nations and delivering power for peace. 
+Every day, our Navy team has lived up to our legacy, operating far forward to 
+deter aggression, respond in crisis, and be ready to fight and win 
+decisively, if called. 
+ 
+3.  Today we give thanks for our shipmates and fellow servicemembers standing 
+the watch and we give thanks to our families and broader support networks for 
+their own service and sacrifice.  We cannot do what we do every day without 
+their support and encouragement. 
+ 
+4.  This Thanksgiving, no matter where you are, we hope you find the time to 
+connect with family, friends, and shipmates, and reflect and give thanks. 
+Please remember that holidays like this can be a challenging time for some of 
+our shipmates. Look out for each other and continue to help our people 
+connect their dot to our mission. 
+ 
+5.  The U.S. Navy remains the world's preeminent fighting force, and we are 
+grateful for the work you, our active and reserve Sailors and civilians, do 
+every day to make it that way. 
+ 
+6.  Happy Thanksgiving, Team Navy! We are honored to serve alongside you. 
+ 
+7.  Released by ADM L. M. Franchetti, 33rd Chief of Naval Operations 
+and MCPON J. M. Honea, 16th Master Chief Petty Officer of the Navy. 
+ 
+BT 
+#0001 
+NNNN 
+CLASSIFICATION: UNCLASSIFIED//
+
+Example:
+ CLASSIFICATION: UNCLASSIFIED// 
+ROUTINE 
+R 141633Z FEB 24 MID600117190288U 
+FM CNO WASHINGTON DC 
+TO NAVADMIN 
+INFO CNO WASHINGTON DC 
+BT 
+UNCLAS 
+ 
+NAVADMIN 031/24 
+ 
+PASS TO OFFICE CODES: 
+FM CNO WASHINGTON DC//N1// 
+INFO CNO WASHINGTON DC//N1// 
+MSGID/GENADMIN/CNO WASHINGTON DC/N1/FEB// 
+ 
+SUBJ/NAVY UNIFORM POLICY AND UNIFORM INITIATIVE UPDATE FEBRUARY 2024// 
+ 
+REF/A/DOC/COMNAVPERSCOM/23AUG21// 
+ 
+AMPN/REF A IS NAVPERS 15665J, U.S. NAVY UNIFORM REGULATIONS. 
+ 
+RMKS/1.  This NAVADMIN announces updates to Navy uniform policies 
+for calendar year 2024.  These policy updates are the result of 
+Sailor feedback, command sponsored requests and direction from Navy 
+leadership. 
+ 
+2.  The following Navy uniform policy changes are effective 
+immediately: 
+    a.  Female Combination Cover.  The female combination cover, 
+also referred to as the bucket cover, is reinstated as an optional 
+Navy uniform component for female Sailors (E-1 through O-10) when 
+wearing Service Dress and Dinner Dress Uniforms.  The bucket cover 
+is now also optional for female officers and chief petty officers 
+(CPOs) when wearing Service Khaki and Summer White Uniforms.  Note: 
+the bucket cover will not be available for personal purchase at Navy 
+Exchange Uniform Centers and will need to be privately obtained if 
+desired for wear. 
+    b.  Tiara.  The tiara is reinstated as an optional Navy uniform 
+component for all female Sailors (E-1 through O-10) when wearing 
+Dinner Dress Blue and White Jacket Uniforms.  Note: the tiara will 
+be available for personal purchase as a special order item via Navy 
+Exchange Online Customer Service with a lead time of approximately 
+four weeks. 
+    c.  Physical Training Uniform.  Black or navy-blue 
+leggings/tights are authorized for optional wear with the Physical 
+Training Uniform shorts and fitness suit pants. 
+    d.  Grooming, False Eyelashes.  Female Sailors are authorized to 
+wear false eyelashes or eyelash extensions that project a natural 
+appearance and are no longer than 14 millimeters in length as 
+measured from the eyelid to the tip of the eyelash.  False eyelash 
+color will match the color of the natural eyelash.  Eyelash 
+extensions cannot hinder wear of protective eyewear. 
+    e.  Officer Headgear Cap Insignia.  Warrant Officer One Officers 
+(W-1) will no longer wear the unique W-1 cap device.  All officers 
+(W-1 through O-10) will wear the same officer cap insignia 
+consisting of two gold crossed fouled anchors with burnished silver 
+shield surmounted by a burnished silver eagle facing to wearer's 
+right and may be embroidered or made of metal.  While allowed 
+immediately, in order to allow time for W-1 officers to transition 
+this new policy becomes mandatory on 1 October 2024. 
+    f.  Chaplain Religious Faith Emblem (Chaplain Staff Corps 
+Insignia).  Navy Chaplains are authorized to wear religious faith 
+emblems above their grade insignia on uniform components with rank 
+tabs.  The religious faith emblem is a 1 1/2-inch by 1 1/2-inch 
+black patch with gold embroidered chaplain corps insignia centered 
+on the fabric and positioned upright.  When worn, the religious 
+faith emblem will be sewn or affixed to the uniform using a velcro 
+fastener directly above the rank tab. 
+    g.  Surface Chaplain Officer Qualification (SCO) Insignia.  Navy 
+Chaplains assigned to qualifying afloat units who meet qualification 
+criteria are authorized wear of the SCO breast insignia on Navy 
+uniforms.  Wear of the SCO will be in accordance with reference (a). 
+The SCO may be metal or embroidered.  The SCO insignia design 
+consists of the bow-on aspect of a warship on a background of ocean 
+swells and scroll banner underneath displaying the Navy Chaplain 
+motto, Vocati Ad Servitium. 
+    h.  Aerial Vehicle Pilot (AVP) Warfare Qualification Insignia 
+(Officer).  Chief Warrant Officers and Warrant Officers (737X) 
+successfully completing prescribed training requirements are 
+authorized to wear the AVP breast insignia on Navy uniforms in 
+accordance with reference (a).  The AVP insignia consists of a 
+silver bordered gold shield, a delta pointing downward, crossed 
+fouled anchors and stylized wings. 
+    i.  Female T-Shirts.  All female Sailors are authorized to 
+optionally wear T-shirts specifically designed for female bodies 
+with Navy uniforms.  Female t-shirts will conform to Navy's 
+requirement for color, fabric, and neck configuration (e.g., crew 
+neck, v-neck) per reference (a).  The intent of this policy update 
+is to address expressed dissatisfaction regarding the required wear 
+of male or unisex t-shirts that are not designed to fit female 
+bodies. 
+    j.  Personal Appearance.  The restriction on placing hands in 
+pockets while in uniform is rescinded.  Sailors are authorized to 
+have hands in their pockets when doing so does not compromise safety 
+nor prohibit the proper rendering of honors and courtesies. 
+    k.  Backpacks.  Commercially procured coyote brown backpacks are 
+authorized for optional wear with the NWU Type II and III.  Coyote 
+brown backpacks will be worn in accordance with reference (a). 
+ 
+3.  Ongoing Navy uniform initiatives: 
+    a.  Maternity Pilot Program (MPP).  The MPP is successfully 
+entering its third year of providing participating Sailors free 
+uniforms ready for wear at their doorstep.  Since the program 
+commenced in 2022, over 1300 Sailors have participated in the 
+program.  During 2024, the program will continue to provide pregnant 
+Sailors the option to choose from four maternity sea bag variations 
+encompassing all maternity uniforms and a cardigan sweater with 
+alterations and applicable accoutrements attached.  For more 
+information about the program visit 
+https://www.mynavyhr.navy.mil/References/US-Navy-Uniforms/Maternity-Pilot-
+Program/. 
+    b.  Size Modernization Program (SMP).  The SMP is a multiphase, 
+five-year uniform improvement program with an initial focus on 
+female uniform improvements.  The objective of the SMP is to deliver 
+Navy Sailors with a modernized and consistent uniform fit and sizing 
+system. 
+    c.  Female Officer/CPO Summer White Uniform.  A white overblouse 
+is being added to the list of authorized optional uniforms for the 
+female officer and CPO Summer White Uniform.  The new overblouse is 
+the first line of components delivered by the SMP.  Availability of 
+the Summer White Uniform overblouse is planned for early fall 2024. 
+A dress white overblouse is also being developed as an optional 
+component for the female officer and CPO Service Dress Blue Uniform 
+with estimated introduction after calendar year 2024. 
+    d.  Female Service Uniform Slacks.  The Navy is currently 
+evaluating service uniform slacks with back pockets for females. 
+The focus of the evaluation is to determine the functionality and 
+acceptability of female uniform slacks with back pockets.  If the 
+evaluation to include Sailor feedback is determined to be positive, 
+the future design of female slacks will include back pockets. 
+    e.  Uniform Surveys.  Uniform surveys will be distributed 
+throughout 2024 to continue to capture Fleet-wide input.  Surveys 
+have been determined as the best method for the Uniform Matters 
+Office to capture diverse and unbridled Sailor feedback that is 
+crucial to planning, research and execution of uniform improvements 
+and uniform and grooming policy updates.  Surveys will be announced 
+on the Uniform Matters and MyNavy HR websites.  Access to surveys 
+will be via QR codes or hyperlinks posted on the Uniform Matters and 
+MyNavy HR websites. 
+    f.  Hat Liners.  The Navy Exchange Service Command is adding 
+synthetic liners to their list of uniform accessories for the Navy 
+Working Uniform (NWU) eight-point cover.  The purpose of synthetic 
+hat liners is to address Sailors' expressed concerns regarding 
+unwanted hair removal or loss resulting from donning and doffing the 
+NWU eight-point cover.  The liner will be sold separately and must 
+be sewn into the cover for proper placement and wear.  Availability 
+is expected to commence mid-February 2024 at most major Fleet 
+concentration areas and online via https://www.mynavyexchange.com/. 
+ 
+4.  Questions regarding this NAVADMIN should be addressed via e-mail 
+to Mr. Robert B. Carroll, Navy Uniform Matters and Emerging Issues 
+Branch (OPNAV N13X), at robert.b.carroll3.civ@us.navy.mil, or ETCM 
+Richard Baumert (OPNAV N13X) via richard.a.baumert2.mil@us.navy.mil 
+or PSC Sache Hagans (OPNAV N13X) at sache.m.hagans.mil@us.navy.mil. 
+ 
+5.  Questions regarding the MPP should be addressed to the Uniform 
+Matters Office (OPNAV N13X) at Navy_MPP.fct@navy.mil or LS1 Meagan 
+Cobia, Uniform Matters Special Assistant, 
+meagan.l.cobia.mil@us.navy.mil. 
+ 
+6.  Questions regarding the SMP, Service Uniform Slacks and Summer 
+White Overblouse initiatives, should be addressed to Ms. Louise 
+Caulfield (Navy Clothing and Textile Research Facility) at 
+louise.a.caulfield.civ@us.navy.mil or Dr. Brianna Plummer (Navy 
+Clothing and Textile Research Facility) at 
+brianna.l.plummer2.civ@us.navy.mil. 
+ 
+7.  Questions regarding the Hat Liners should be addressed to Ms. 
+Angela Brown (Navy Exchange Service Command) at 
+angela.brown@nexweb.org. 
+ 
+8.  Feedback and recommendations regarding uniform policy, uniform 
+components and uniform availability are welcomed and can be provided 
+via e-mail at UMO_CMC@navy.mil, via the MyNavy UNIFORMS App, or via 
+MyNavy Portal at https://www.mnp.navy.mil/, select Professional 
+Resources, U.S. Navy Uniforms and *Ask The Chiefs*. 
+ 
+9.  Retain this NAVADMIN until policy changes are incorporated in 
+reference 
+(a), superseded or cancelled, whichever occurs first. 
+ 
+10.  Released by Vice Admiral Richard J. Cheeseman, Jr., N1.// 
+ 
+BT 
+#0001 
+NNNN 
+CLASSIFICATION: UNCLASSIFIED//
+
+Request: Write me a message about school being cancelled for a snow day at the US Naval AcademyGive your answer in naval message format based on the previous examples.
+
+---------- MODEL ----------
+LlamaForCausalLM(
+  (model): LlamaModel(
+    (embed_tokens): Embedding(128256, 2048)
+    (layers): ModuleList(
+      (0-15): 16 x LlamaDecoderLayer(
+        (self_attn): LlamaAttention(
+          (q_proj): Linear(in_features=2048, out_features=2048, bias=False)
+          (k_proj): Linear(in_features=2048, out_features=512, bias=False)
+          (v_proj): Linear(in_features=2048, out_features=512, bias=False)
+          (o_proj): Linear(in_features=2048, out_features=2048, bias=False)
+        )
+        (mlp): LlamaMLP(
+          (gate_proj): Linear(in_features=2048, out_features=8192, bias=False)
+          (up_proj): Linear(in_features=2048, out_features=8192, bias=False)
+          (down_proj): Linear(in_features=8192, out_features=2048, bias=False)
+          (act_fn): SiLU()
+        )
+        (input_layernorm): LlamaRMSNorm((2048,), eps=1e-05)
+        (post_attention_layernorm): LlamaRMSNorm((2048,), eps=1e-05)
+      )
+    )
+    (norm): LlamaRMSNorm((2048,), eps=1e-05)
+    (rotary_emb): LlamaRotaryEmbedding()
+  )
+  (lm_head): Linear(in_features=2048, out_features=128256, bias=False)
+)
