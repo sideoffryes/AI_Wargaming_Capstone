@@ -1,8 +1,5 @@
-# navigate to the environment directory and do ".\Scripts\activate"
-# navigate to the directory with the flask file and do "python app.py"
+from flask import Flask, render_template, request, redirect, session
 
-from flask import Flask, render_template
- 
 app = Flask(__name__)
  
  
@@ -13,6 +10,25 @@ def index():
 @app.route("/home")
 def home():
     return render_template("home.html")
+
+@app.route("/returnpg")
+def returnpg():
+    return render_template("return.html")
+
+@app.route('/handle_indexPost', methods=['POST'])
+def handle_indexPost():
+    if request.method == 'POST':
+        artifactType = request.form.get('artifact_type')
+        otherInput = request.form.get('artifact_parameters')
+
+        #run the docgen and get input:
+        #llmOut = docgen(artifactType, otherInput)
+        llmOut = "yo wtf I cannot believe this worked"
+
+        #output result to home.html
+        return render_template('home.html', artifactType=artifactType, otherInput=otherInput, llmOut=llmOut)
+    else:
+        render_template("index.html")
  
 if __name__ == "__main__":
    app.run()

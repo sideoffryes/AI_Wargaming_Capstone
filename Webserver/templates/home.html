@@ -119,7 +119,9 @@
     <img src="../static/main_logo.png" alt="USNA logo">
         <br><br>
         <div class = "ai-box">
-            <div id="ai-output">output will go here.</div>
+            <div id="ai-output">You selected: {{ artifactType }}</div>
+            <div id="ai-output">You gave the following additional information: {{ otherInput }}</div>
+            <div id="ai-output">Output: {{ llmOut }}</div>
         </div>
     </div>
 
