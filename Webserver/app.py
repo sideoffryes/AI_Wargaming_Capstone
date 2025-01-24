@@ -1,8 +1,9 @@
 from flask import Flask, render_template, request, redirect, session
 
+from scripts.docGen import gen
+
 app = Flask(__name__)
- 
- 
+
 @app.route("/")
 @app.route("/index")
 @app.route("/index.html")
@@ -34,8 +35,8 @@ def handle_indexPost():
             return render_template('index.html', errorMsg=errorMsg)
 
         #run the docgen and get output:
-        #llmOut = docgen(artifactType, otherInput)
-        llmOut = "yo wtf I cannot believe this worked"
+        llmOut = gen(1, int(artifactType), otherInput)
+        #llmOut = "yo wtf I cannot believe this worked"
 
         #output result to home.html
         return render_template('output.html', artifactType=artifactType, otherInput=otherInput, llmOut=llmOut)
