@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, session
 
-from scripts.docGen import gen
+from docGen import gen
 
 app = Flask(__name__)
 
