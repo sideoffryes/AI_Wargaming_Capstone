@@ -35,7 +35,7 @@ def handle_indexPost():
             return render_template('index.html', errorMsg=errorMsg)
 
         #run the docgen and get output:
-        llmOut = gen(1, int(artifactType), otherInput)
+        llmOut = gen(2, int(artifactType), otherInput)
         #llmOut = "yo wtf I cannot believe this worked"
 
         #output result to home.html
@@ -55,8 +55,6 @@ def handle_loginPost():
         #else say error and reload the login page with error message
  
 if __name__ == "__main__":
-   app.run()
-
-from flask import Flask
+   app.run(port=5000, host="0.0.0.0", debug=True)
 
 app = Flask(__name__)
