@@ -124,9 +124,33 @@ express Statement of Purpose.
 
 Dependencies
 
-- [pytorch](https://github.com/pytorch/pytorch/tree/main?tab=License-1-ov-file#readme)
-- [torchvision](https://github.com/UiPath/torchvision/blob/master/LICENSE)
-- torchaudio - [BSD-2-Clause License](https://opensource.org/license/bsd-2-clause)
+From PyTorch:
+    Copyright (c) 2016 Facebook Inc.
+    All rights reserved.
+    
+    Copyright (c) 2015 Google Inc.
+    All rights reserved.
+    
+    Copyright (c) 2015 Yangqing Jia
+    All rights reserved.
+    
+    Copyright 2019-2020 Kakao Brain
+    
+    Copyright (c) 2022 Cruise LLC.
+    All rights reserved.
+    
+    Copyright (c) 2024 Tri Dao.
+    All rights reserved.
+    
+    Copyright (c) 2021, 2023-2024 Arm Limited and/or its affiliates
+
+From TorchVision:
+    Copyright (c) Soumith Chintala 2016, 
+    All rights reserved.
+
+From TorchAudio:
+    Copyright (c) 2024, Torchaudio Contributors.
+
 - [pytorch-cuda/CUDA SDK](https://docs.nvidia.com/cuda/eula/index.html#)
 - [transformers](https://github.com/huggingface/transformers/blob/main/LICENSE)
 - [accelerate](https://github.com/huggingface/accelerate/blob/main/LICENSE)
