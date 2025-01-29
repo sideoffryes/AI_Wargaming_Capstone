@@ -3,117 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <lin rel="stylesheet" href="style.css"></lin>
     <title>Capstone Starter</title>
-    <style>
-        /* Basic body styling */
-        body {
-            font-family: 'Times New Roman', serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
 
-        /* Main container */
-        .main-container {
-            display: flex;
-            width: 100%;
-            height: 100%;
-        }
+    <script>
+        var swap_menu = false;
+        function dropDown(){
+            document.getElementById("dropdownmenu").classList.toggle("show");
 
-        /* Banner styling */
-        .banner {
-            background-color: #12115c; /* Replace with an image if needed */
-            color: white;
-            width: 20%; /* Adjust width as necessary */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-        
-        .my_text {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 350px;
-            height: 250px;
-            margin-top: 5px;
-            text-align: justify;
-        }
-
-        /* Center content styling */
-        .content {
-            width: 60%; /* Adjust width as necessary */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Logo styling */
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-
-        /* Form styling */
-        form {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 400px;
-            margin-top: 20px;
-            text-align: center;
-        }
-        /*Text box styling*/
-    
-
-
-        label {
-            font-size: 16px;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-            background-color: #f9f9f9;
-        }
-
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #12115c;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        button:hover {
-            background-color: #2d41f7;
-        }
-    </style>
+            if(swap_menu == false){
+                document.getElementById("menu_icon").src="../static/menu_open.png";
+                swap_menu = true;
+            }
+            else {
+                document.getElementById("menu_icon").src="../static/menu.png";
+                swap_menu = false;
+            }
+                
+        }        
+    </script>
 </head>
+
+<style>
+    /* Basic body styling */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Main container */
+    .main-container {
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Banner styling */
+    .banner {
+        background-color: #12115c; /* Replace with an image if needed */
+        color: white;
+        width: 20%; /* Adjust width as necessary */
+        display: flex;
+        /* justify-content: center; */
+        /*align-items: center;*/
+        /*text-align: center;*/
+    }
+
+    /* Center content styling */
+    .content {
+        width: 60%; /* Adjust width as necessary */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Logo styling */
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Form styling */
+    form {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    label {
+        font-size: 16px;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        background-color: #f9f9f9;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #12115c;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    button:hover {
+        background-color: #2d41f7;
+    }
+
+    /****** DROPDOWN MENU CSS ******/
+    .dropdown{
+        position: relative;
+        display: inline-block;
+        left:0;
+    }
+    .dropdown img {
+        margin-right:180;
+        /* position:fixed; */
+    }
+    
+    .dropdown-content{
+        /* display:none; */
+        position:absolute;
+        left:0;
+        background-color:#f4f4f4;
+        padding:.75rem;
+        border-radius:.25rem;
+        box-shadow:0 2px 5px 0 rgba(0, 0, 0, .1);
+        opacity: 0;
+        visibility:hidden;
+        transform: translateY(-20px);
+        transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+    }
+    
+    .dropdown-content a {
+        display:block;
+        background-color:#f4f4f4;
+        padding: 12px 16px;
+        text-align: center;
+        text-decoration:none;
+        color:#12115c;
+    }
+
+    .dropdown-content a:hover { 
+        background-color:lightskyblue;
+    }
+
+    .show {
+        opacity: 1; 
+        visibility:visible;
+        transform: translateY(0);
+        /* display:inline-block;  */
+    }
+</style>
 <body>
     <div class="main-container">
         <!-- Left banner -->
         <div class="banner">
-            
+            <div class = "dropdown">
+                <img src="../static/menu.png" id="menu_icon" alt = "menu" onclick="dropDown()"> 
+                <div id = "dropdownmenu" class="dropdown-content">
+                    <a href = "index.html"><img src = "../static/cs_logo.gif">Generate New Document</a>
+                    <a href = "#">Login</a>
+                    <a href = "#">User Profile</a>
+                    <a href = "#">How to Use</a>
+                </div>
+            </div>
         </div>
 
         <!-- Center content -->
