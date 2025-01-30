@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Generated Artifacts</title>
+</head>
+<body>
+    <h2>Your Generated Artifacts</h2>
+
+    {% if artifacts %}
+        <ul>
+        {% for artifact in artifacts %}
+            <li>
+                <strong>Prompt:</strong> <p>{{ artifact.prompt }}</p>
+                <strong>Generated Content:</strong> <p>{{ artifact.content }}</p>
+                <small>Generated on: {{ artifact.created_at }}</small>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No artifacts found.</p>
+    {% endif %}
+</body>
+</html>

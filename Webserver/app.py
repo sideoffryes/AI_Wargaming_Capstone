@@ -3,7 +3,7 @@ import secrets
 from flask_sqlalchemy import SQLAlchemy
 from docGen import gen
 import os
-from datetime import timedelta
+import datetime
 
 app = Flask(__name__)
 
@@ -17,7 +17,7 @@ db = SQLAlchemy(app)
 app.config['SECRET_KEY'] = os.urandom(24)
 
 # Set session expiry to 1 day
-app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=1)
+app.config['PERMANENT_SESSION_LIFETIME'] = datetime.timedelta(days=1)
 
 # Models
 class Profile(db.Model):
@@ -30,9 +30,27 @@ class Profile(db.Model):
     hash = db.Column(db.Integer, unique=False)
     salt = db.Column(db.String(16), unique=False, nullable=False)
 
+    # One-to-many relationship: A user can have many generated artifacts
+    generated_artifacts = db.relationship('GeneratedArtifact', backref='user', lazy=True)
+
     # repr method represents how one object of this datatable will look like
     def __repr__(self):
         return f"Username: {self.username}, Hash: {self.hash}, Salt: {self.salt}"
+    
+class GeneratedArtifact(db.Model):
+    # Unique ID for each generated artifact
+    id = db.Column(db.Integer, primary_key=True)
+    # Foreign key to the Profile table
+    user_id = db.Column(db.Integer, db.ForeignKey('profile.id'), nullable=False)
+    # The prompt used to generate the artifact
+    prompt = db.Column(db.Text, nullable=False)
+    # The generated artifact (text)
+    content = db.Column(db.Text, nullable=False)
+    # Timestamp for when the artifact was created
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+
+    def __repr__(self):
+        return f"<GeneratedArtifact {self.id} for User {self.user_id}>"
 
 # Initialize the database
 with app.app_context():
@@ -83,6 +101,15 @@ def handle_indexPost():
 
         #run the docgen and get output:
         llmOut = gen(2, int(artifactType), otherInput)
+
+        if 'user_id' in session:
+            # Retrieve the logged-in user's ID from the session
+            user_id = session['user_id']
+
+            # Create and save the new artifact to the database
+            new_artifact = GeneratedArtifact(user_id=user_id, prompt=otherInput, content=llmOut)
+            db.session.add(new_artifact)
+            db.session.commit()
 
         #output result to home.html
         return render_template('output.html', artifactType=artifactType, otherInput=otherInput, llmOut=llmOut)
@@ -153,6 +180,25 @@ def handle_registerPost():
 @app.route("/instructions.html")
 def instructions():
     return render_template("instructions.html")
+
+@app.route('/my_artifacts', methods=['GET'])
+def my_artifacts():
+    if 'user_id' not in session:
+        return "Please log in first", 401
+
+    # Retrieve the logged-in user's ID from the session
+    user_id = session['user_id']
+
+    # Query all generated artifacts for the logged-in user
+    user_artifacts = GeneratedArtifact.query.filter_by(user_id=user_id).all()
+
+    # If no artifacts are found, inform the user
+    if not user_artifacts:
+        return "You have no generated artifacts.", 404
+
+    # Render the artifacts to the user (you can format this as needed)
+    return render_template('my_artifacts.html', artifacts=user_artifacts)
+
  
 if __name__ == "__main__":
    app.run(port=5000, host="0.0.0.0", debug=True)
