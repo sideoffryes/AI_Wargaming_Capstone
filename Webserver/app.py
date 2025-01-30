@@ -3,6 +3,8 @@ import secrets
 from flask_sqlalchemy import SQLAlchemy
 from docGen import gen
 import os
+from datetime import datetime
+from datetime import timedelta
 import datetime
 
 app = Flask(__name__)
@@ -17,7 +19,7 @@ db = SQLAlchemy(app)
 app.config['SECRET_KEY'] = os.urandom(24)
 
 # Set session expiry to 1 day
-app.config['PERMANENT_SESSION_LIFETIME'] = datetime.timedelta(days=1)
+app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=1)
 
 # Models
 class Profile(db.Model):
@@ -47,7 +49,7 @@ class GeneratedArtifact(db.Model):
     # The generated artifact (text)
     content = db.Column(db.Text, nullable=False)
     # Timestamp for when the artifact was created
-    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    created_at = db.Column(db.DateTime, default=datetime.datetime.now)
 
     def __repr__(self):
         return f"<GeneratedArtifact {self.id} for User {self.user_id}>"
@@ -101,7 +103,7 @@ def handle_indexPost():
 
         # check if its a debug artifact
         if int(artifactType) == 4:
-            llmOut = "You selected the DEBUG ARTIFACT and gave this prompt: " + otherInput + " Here is a bunch of random numbers: " + hash(otherInput)
+            llmOut = "You selected the DEBUG ARTIFACT and gave this prompt: " + otherInput + " Here is a bunch of random numbers: " + str(hash(otherInput))
         else:
             #run the docgen and get output:
             llmOut = gen(2, int(artifactType), otherInput)
@@ -131,6 +133,9 @@ def handle_loginPost():
         # check credentials:
         # use the username to get the hash and salt from the database
         user = Profile.query.filter_by(username = username).first()
+        if user is None:
+            errorMsg = "ERROR: That username does not exist, please try again."
+            return render_template('login.html', errorMsg=errorMsg)
         userHash = user.hash
         userSalt = user.salt
 
@@ -159,6 +164,14 @@ def handle_registerPost():
     
     else:
         username = request.form.get('username')
+
+        # Check if the username already exists in the database
+        existing_user = Profile.query.filter_by(username=username).first()
+
+        if existing_user:
+            errorMsg = "ERROR: This username already exists. Please use a different one."
+            return render_template('register.html', errorMsg=errorMsg)
+
         password = request.form.get('password')
 
         # generate salt
@@ -188,7 +201,8 @@ def instructions():
 @app.route('/my_artifacts', methods=['GET'])
 def my_artifacts():
     if 'user_id' not in session:
-        return "Please log in first", 401
+        errorMsg = "NOTICE: Please login to see your generated artifacts."
+        return render_template('login.html', errorMsg=errorMsg)
 
     # Retrieve the logged-in user's ID from the session
     user_id = session['user_id']
@@ -198,7 +212,8 @@ def my_artifacts():
 
     # If no artifacts are found, inform the user
     if not user_artifacts:
-        return "You have no generated artifacts.", 404
+        errorMsg = "NOTICE: There are no artifacts associated with this account."
+        return render_template('index.html', errorMsg=errorMsg)
 
     # Render the artifacts to the user (you can format this as needed)
     return render_template('my_artifacts.html', artifacts=user_artifacts)
