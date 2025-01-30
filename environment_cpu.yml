@@ -16,3 +16,4 @@ dependencies:
   - flask
   - flask-sqlalchemy
   - sphinx
+  - sphinx_rtd_theme
