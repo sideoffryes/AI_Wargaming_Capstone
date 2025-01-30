@@ -2,21 +2,9 @@ from transformers import logging, AutoTokenizer, TextStreamer, AutoModelForCausa
 import os
 import time
 from datetime import datetime
-import argparse
 import torch
 
 # export REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
-
-logging.set_verbosity_error()
-
-# parse arguments
-parser = argparse.ArgumentParser(description="Generates military documents via an LLM based on user input")
-parser.add_argument("-t", "--max-tokens", type=int, help="Specify the max number of tokens when generating the document, default is 2000", default=2000)
-args = parser.parse_args()
-
-# Set LLM instructions
-ROLE = "Role: You work for the United States Department of the Navy, and you specialize in writing official military documents using military formatting.\n"
-SYSTEM = "Give your answer in naval message format based on the previous examples. After the final line of the document you create, stop responding and give an eos token."
 
 def gen(model_num: int, type_num: int, prompt: str, save: bool = True) -> str:
     """Generates a specificed document using a specified LLM and returns the result.
@@ -32,6 +20,10 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = True) -> str:
     :return: The document produced by the LLM
     :rtype: str
     """
+    logging.set_verbosity_error()
+    # Set LLM instructions
+    role = "Role: You work for the United States Department of the Navy, and you specialize in writing official military documents using military formatting.\n"
+    system = "Give your answer in naval message format based on the previous examples. After the final line of the document you create, stop responding and give an eos token."
     # create model objects
     model_name = select_model(model_num)
     doc_type = select_doc(type_num)
@@ -42,7 +34,7 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = True) -> str:
     
     # set up prompt info
     examples = load_examples(doc_type)
-    prompt = ROLE + examples + prompt + SYSTEM
+    prompt = role + examples + prompt + system
     
     # set device based on gpu availability
     device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -51,7 +43,7 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = True) -> str:
     # generate response
     t_start = time.time()
     # TODO: Is the streamer actually working as intended, too much overhead? How does this relate to batch_decode?
-    generated_ids = model.generate(**model_inputs, do_sample=True, max_new_tokens=args.max_tokens, streamer=streamer)
+    generated_ids = model.generate(**model_inputs, do_sample=True, max_new_tokens=500, streamer=streamer)
     # TODO: Do I need to slice off the prompt?
     response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0][len(prompt):]
     t_stop = time.time()
