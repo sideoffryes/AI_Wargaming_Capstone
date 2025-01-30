@@ -16,3 +16,4 @@ dependencies:
   - pypdf
   - flask
   - flask-sqlalchemy
+  - sphinx
