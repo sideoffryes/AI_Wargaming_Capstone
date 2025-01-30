@@ -11,12 +11,12 @@ logging.set_verbosity_error()
 
 # parse arguments
 parser = argparse.ArgumentParser(description="Generates military documents via an LLM based on user input")
-parser.add_argument("-t", "--max-tokens", type=int, help="Specify the max number of tokens when generating the document, default is 500", default=500)
+parser.add_argument("-t", "--max-tokens", type=int, help="Specify the max number of tokens when generating the document, default is 2000", default=2000)
 args = parser.parse_args()
 
 # Set LLM instructions
 ROLE = "Role: You work for the United States Department of the Navy, and you specialize in writing official military documents using military formatting.\n"
-SYSTEM = "Give your answer in naval message format based on the previous examples."
+SYSTEM = "Give your answer in naval message format based on the previous examples. After the final line of the document you create, stop responding and give an eos token."
 
 def gen(model_num: int, type_num: int, prompt: str, save: bool = True) -> str:
     # create model objects
