@@ -22,6 +22,7 @@ extensions = [
     'sphinx.ext.doctest',
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
+    'sphinxcontrib.httpdomain',
 ]
 
 templates_path = ['_templates']
