@@ -1,0 +1,62 @@
+---------- RESPONSE ----------
+EOS
+**NAVADMIN 001/23**
+
+**TO:** All Hands, Naval Station Annapolis
+
+**FROM:** [Your Name], Public Affairs Officer
+
+**SUBJECT:** New Krispy Kreme Location in Annapolis, MD
+
+**CLASS:** UNCLASSIFIED
+
+**DATE:** 01 FEB 23
+
+**MSG:** THIS IS NOT A DRILL. A NEW KRISPY KRMEE LOCATION HAS BEEN CONFIRMED IN ANNAPOLIS, MD. DETAILS ARE AS FOLLOWS:
+
+* LOCATION: 123 MAIN ST, ANNAPOLIS, MD 21401
+* HOURS OF OPERATION: MONDAY - FRIDAY 0600 - 1800, SATURDAY - SUNDAY 0700 - 1900
+* CONTACT: KRISPY KRMEE CUSTOMER SERVICE (410) 555-1234
+
+**RECOMMENDATION:** TAKE ADVANTAGE OF THIS NEW LOCATION TO SATISFY YOUR KRISPY KRMEE CRAVINGS.
+
+**END OF MESSAGE**
+
+EOS
+
+---------- PROMPT ----------
+Role: You work for the United States Department of the Navy, and you specialize in writing official military documents using military formatting.
+Read the following examples very carefully. Your response must follow the same formatting as these examples.
+Write me a message 
+about a new krispy 
+kreme location in 
+annapolis marylandGive your answer in naval message format based on the previous examples. After the final line of the document you create, stop responding and give an eos token.
+
+---------- MODEL ----------
+meta-llama/Llama-3.2-3B-Instruct
+LlamaForCausalLM(
+  (model): LlamaModel(
+    (embed_tokens): Embedding(128256, 3072)
+    (layers): ModuleList(
+      (0-27): 28 x LlamaDecoderLayer(
+        (self_attn): LlamaAttention(
+          (q_proj): Linear(in_features=3072, out_features=3072, bias=False)
+          (k_proj): Linear(in_features=3072, out_features=1024, bias=False)
+          (v_proj): Linear(in_features=3072, out_features=1024, bias=False)
+          (o_proj): Linear(in_features=3072, out_features=3072, bias=False)
+        )
+        (mlp): LlamaMLP(
+          (gate_proj): Linear(in_features=3072, out_features=8192, bias=False)
+          (up_proj): Linear(in_features=3072, out_features=8192, bias=False)
+          (down_proj): Linear(in_features=8192, out_features=3072, bias=False)
+          (act_fn): SiLU()
+        )
+        (input_layernorm): LlamaRMSNorm((3072,), eps=1e-05)
+        (post_attention_layernorm): LlamaRMSNorm((3072,), eps=1e-05)
+      )
+    )
+    (norm): LlamaRMSNorm((3072,), eps=1e-05)
+    (rotary_emb): LlamaRotaryEmbedding()
+  )
+  (lm_head): Linear(in_features=3072, out_features=128256, bias=False)
+)

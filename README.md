@@ -64,44 +64,6 @@ In the terminal, run the following command and paste in your access token when p
 
 `huggingface-cli login`
 
-## Meeting/Presentation Schedule
-
-### Morning
-
-Jan 23 Meeting
-
-Jan 30 PRESENTATION
-
-Feb 13 Meeting
-
-Mar  6 Meeting
-
-Mar 18 PRESENTATION
-
-Apr  3 Meeting
-
-### Afternoon
-
-Jan 14 Meeting
-
-Feb  4 Meeting
-
-Feb 18 PRESENTATION
-
-Feb 25 Meeting
-
-Mar 25 Meeting
-
-Apr 15 Meeting
-
-Apr 17 PRESENTATION
-
-## First Steps
-
-- Create a small LLM that can create 5 paragraph orders.
-- Nothing has really been done in this field yet, so we can pretty much do anything.
-- Take a look at the wargaming documents and the wargaming plans.
-
 ## Poster
 
 ![Capstone Poster](./proposal/USNA%20Capstone%20Posterv2.png)

@@ -18,7 +18,6 @@ Welcome to AI Wargaming's documentation!
    
    usage
    api
-   modules
 
 Indices and tables
 ==================

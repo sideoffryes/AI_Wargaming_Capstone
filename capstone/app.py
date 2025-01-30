@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, session
+from flask import Flask, render_template, request, session, send_from_directory
 import secrets
 from flask_sqlalchemy import SQLAlchemy
 from docGen import gen
@@ -218,6 +218,9 @@ def my_artifacts():
     # Render the artifacts to the user (you can format this as needed)
     return render_template('my_artifacts.html', artifacts=user_artifacts)
 
+@app.route("/docs/<path:filename>")
+def docs(filename):
+    return send_from_directory("../docs/build/html", filename)
  
 if __name__ == "__main__":
    app.run(port=5000, host="0.0.0.0", debug=True)

@@ -8,7 +8,7 @@
 
 import sys
 import os
-sys.path.insert(0, os.path.abspath("../scripts"))
+sys.path.insert(0, os.path.abspath("../../capstone"))
 
 project = 'AI Wargaming'
 author = 'Peter Asjes, Henry Frye, Caleb Koutrakos, Will Robinson, and Bobby Ziman'
@@ -22,6 +22,7 @@ extensions = [
     'sphinx.ext.doctest',
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
+    'sphinxcontrib.httpdomain',
 ]
 
 templates_path = ['_templates']

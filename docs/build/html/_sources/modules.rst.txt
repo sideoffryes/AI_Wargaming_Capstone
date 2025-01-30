@@ -1,6 +1,0 @@
-AI_Wargaming_Capstone
-=====================
-
-.. toctree::
-   :maxdepth: 4
-
