@@ -1,136 +1,54 @@
 <head>
-        <meta charset="UTF-8">
-        <title>AI Wargaming</title>
-        <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>AI Wargaming</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <!--ADD APACHE LICENSE TO LIST FOR USING GOOGLE ICONS-->
+    <script>
+        var swap_menu = false;
+        function dropDown(){
+            document.getElementById("dropdownmenu").classList.toggle("show");
+
+            if(swap_menu == false){
+                document.getElementById("menu_icon").src="../static/menu_open.png";
+                swap_menu = true;
+            }
+            else {
+                document.getElementById("menu_icon").src="../static/menu.png";
+                swap_menu = false;
+            }
+            
+        }
+    </script>
 </head>
 
-<style>
-        /* Basic body styling */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        /* Main container */
-        .main-container {
-            display: flex;
-            width: 100%;
-            height: 100%;
-        }
-
-        /* Banner styling */
-        .banner {
-            background-color: #12115c; /* Replace with an image if needed */
-            color: white;
-            width: 20%; /* Adjust width as necessary */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        /* Center content styling */
-        .content {
-            width: 60%; /* Adjust width as necessary */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Logo styling */
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-
-        /* Form styling */
-        form {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        label {
-            font-size: 16px;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-            background-color: #f9f9f9;
-        }
-
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #12115c;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        button:hover {
-            background-color: #2d41f7;
-        }
-        .ai-box {
-            width: 80%;
-            max-width: 600px;
-            padding: 20px;
-            border: 2px solid #333;
-            border-radius: 8px;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            overflow-y:auto;
-            scrollbar-width:thin;
-        }
-
-        #ai-output {
-            font-size: 16px;
-            color: #555;
-            white-space: pre-wrap; /* Preserve newlines */
-        }
-
-    </style>
 <body>
 <div class="main-container">
-    <div class="banner"></div> <!--left banner -->
+<div class="banner">
+    <div class = "dropdown">
+        <img src="../static/menu.png" id="menu_icon" alt = "menu" height="50" width="50"onclick="dropDown()"> 
+        <div id = "dropdownmenu" class="dropdown-content">
+            <a href = "index.html"><img src = "../static/cs_logo.gif">Generate Document</a>
+            <a href = "#"><img src = "../static/key.png" height="60" width="40">Login</a>
+            <a href = "#"><img src = "../static/account_circle.png" height="60" width="40">User Profile</a>
+            <a href = "instructions.html"><img src = "../static/menu_book.png" height="60" width="40">How to Use</a>
 
-    <div class="content">
-    <img src="../static/main_logo.png" alt="USNA logo">
-        <br><br>
-        <div class = "ai-box">
-            <div id="ai-output">You selected: {{ artifactType }}<br></div>
-            <div id="ai-output">You gave the following prompt: {{ otherInput }}<br></div>
-            <div id="ai-output">Output: {{ llmOut }}</div>
         </div>
-    
-    <a href="/">Generate another artifact</a>
+    </div>
+</div> <!--left banner -->
+
+<div class="content"> <!--middle-->
+<img src="../static/main_logo.png" alt="USNA logo">
+    <br><br>
+    <div class = "ai-box">
+        <div id="ai-output">You selected: {{ artifactType }}</div>
+        <div id="ai-output">You gave the following prompt: {{ otherInput }}</div>
+        <div id="ai-output">Output: {{ llmOut }}</div>
     </div>
 
-    
 
-    <div class="banner"></div> <!--right banner -->
+</div>
+
+<div class="banner"></div> <!--right banner -->
 </div>
 </body>
+
