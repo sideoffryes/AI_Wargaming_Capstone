@@ -99,8 +99,12 @@ def handle_indexPost():
             errorMsg = "ERROR: Please select an artifact and give a prompt"
             return render_template('index.html', errorMsg=errorMsg)
 
-        #run the docgen and get output:
-        llmOut = gen(2, int(artifactType), otherInput)
+        # check if its a debug artifact
+        if int(artifactType) == 4:
+            llmOut = "You selected the DEBUG ARTIFACT and gave this prompt: " + otherInput + " Here is a bunch of random numbers: " + hash(otherInput)
+        else:
+            #run the docgen and get output:
+            llmOut = gen(2, int(artifactType), otherInput)
 
         if 'user_id' in session:
             # Retrieve the logged-in user's ID from the session
