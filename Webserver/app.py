@@ -3,7 +3,9 @@ import secrets
 from flask_sqlalchemy import SQLAlchemy
 from docGen import gen
 import os
+from datetime import datetime
 from datetime import timedelta
+import datetime
 
 app = Flask(__name__)
 
@@ -30,9 +32,27 @@ class Profile(db.Model):
     hash = db.Column(db.Integer, unique=False)
     salt = db.Column(db.String(16), unique=False, nullable=False)
 
+    # One-to-many relationship: A user can have many generated artifacts
+    generated_artifacts = db.relationship('GeneratedArtifact', backref='user', lazy=True)
+
     # repr method represents how one object of this datatable will look like
     def __repr__(self):
         return f"Username: {self.username}, Hash: {self.hash}, Salt: {self.salt}"
+    
+class GeneratedArtifact(db.Model):
+    # Unique ID for each generated artifact
+    id = db.Column(db.Integer, primary_key=True)
+    # Foreign key to the Profile table
+    user_id = db.Column(db.Integer, db.ForeignKey('profile.id'), nullable=False)
+    # The prompt used to generate the artifact
+    prompt = db.Column(db.Text, nullable=False)
+    # The generated artifact (text)
+    content = db.Column(db.Text, nullable=False)
+    # Timestamp for when the artifact was created
+    created_at = db.Column(db.DateTime, default=datetime.datetime.now)
+
+    def __repr__(self):
+        return f"<GeneratedArtifact {self.id} for User {self.user_id}>"
 
 # Initialize the database
 with app.app_context():
@@ -65,7 +85,7 @@ def logout():
     session.pop('user_id', None)
     # Redirect to login page
     errorMsg = "Successfully logged out of profile"
-    return render_template('login.html', errorMsg=errorMsg)
+    return render_template('index.html', errorMsg=errorMsg)
 
 @app.route('/handle_indexPost', methods=['POST'])
 def handle_indexPost():
@@ -81,8 +101,21 @@ def handle_indexPost():
             errorMsg = "ERROR: Please select an artifact and give a prompt"
             return render_template('index.html', errorMsg=errorMsg)
 
-        #run the docgen and get output:
-        llmOut = gen(2, int(artifactType), otherInput)
+        # check if its a debug artifact
+        if int(artifactType) == 4:
+            llmOut = "You selected the DEBUG ARTIFACT and gave this prompt: " + otherInput + " Here is a bunch of random numbers: " + str(hash(otherInput))
+        else:
+            #run the docgen and get output:
+            llmOut = gen(2, int(artifactType), otherInput)
+
+        if 'user_id' in session:
+            # Retrieve the logged-in user's ID from the session
+            user_id = session['user_id']
+
+            # Create and save the new artifact to the database
+            new_artifact = GeneratedArtifact(user_id=user_id, prompt=otherInput, content=llmOut)
+            db.session.add(new_artifact)
+            db.session.commit()
 
         #output result to home.html
         return render_template('output.html', artifactType=artifactType, otherInput=otherInput, llmOut=llmOut)
@@ -100,6 +133,9 @@ def handle_loginPost():
         # check credentials:
         # use the username to get the hash and salt from the database
         user = Profile.query.filter_by(username = username).first()
+        if user is None:
+            errorMsg = "ERROR: That username does not exist, please try again."
+            return render_template('login.html', errorMsg=errorMsg)
         userHash = user.hash
         userSalt = user.salt
 
@@ -128,6 +164,14 @@ def handle_registerPost():
     
     else:
         username = request.form.get('username')
+
+        # Check if the username already exists in the database
+        existing_user = Profile.query.filter_by(username=username).first()
+
+        if existing_user:
+            errorMsg = "ERROR: This username already exists. Please use a different one."
+            return render_template('register.html', errorMsg=errorMsg)
+
         password = request.form.get('password')
 
         # generate salt
@@ -141,17 +185,39 @@ def handle_registerPost():
         hashed = hash(combo)
 
         # store the username, hash, and salt in the database
-        user = Profile(username = username, passHash = hashed, passSalt = salt)
+        user = Profile(username = username, hash = hashed, salt = salt)
         db.session.add(user)
-        db.session.committ()
+        db.session.commit()
 
         # go to login page and tell user to login
         errorMsg = "NOTICE: Please login using previously created username and password."
         return render_template('login.html', errorMsg=errorMsg)
  
+@app.route("/instructions")
 @app.route("/instructions.html")
 def instructions():
     return render_template("instructions.html")
+
+@app.route('/my_artifacts', methods=['GET'])
+def my_artifacts():
+    if 'user_id' not in session:
+        errorMsg = "NOTICE: Please login to see your generated artifacts."
+        return render_template('login.html', errorMsg=errorMsg)
+
+    # Retrieve the logged-in user's ID from the session
+    user_id = session['user_id']
+
+    # Query all generated artifacts for the logged-in user
+    user_artifacts = GeneratedArtifact.query.filter_by(user_id=user_id).all()
+
+    # If no artifacts are found, inform the user
+    if not user_artifacts:
+        errorMsg = "NOTICE: There are no artifacts associated with this account."
+        return render_template('index.html', errorMsg=errorMsg)
+
+    # Render the artifacts to the user (you can format this as needed)
+    return render_template('my_artifacts.html', artifacts=user_artifacts)
+
  
 if __name__ == "__main__":
    app.run(port=5000, host="0.0.0.0", debug=True)
