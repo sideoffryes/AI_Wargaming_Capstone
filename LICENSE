@@ -150,11 +150,31 @@ From TorchVision:
 
 From TorchAudio:
     Copyright (c) 2024, Torchaudio Contributors.
+    All rights reserved.
 
-- [pytorch-cuda/CUDA SDK](https://docs.nvidia.com/cuda/eula/index.html#)
-- [transformers](https://github.com/huggingface/transformers/blob/main/LICENSE)
-- [accelerate](https://github.com/huggingface/accelerate/blob/main/LICENSE)
-- [pytest](https://docs.pytest.org/en/stable/license.html)
-- reportlab - [BSD License](https://opensource.org/license/bsd-2-clause)
-- [pypdf](https://github.com/py-pdf/pypdf/blob/main/LICENSE)
-- [flask](https://flask.palletsprojects.com/en/stable/license/)
+From CUDA:
+    Copyright (c) 2007-2025, NVIDIA Corporation & affiliates. 
+    All rights reserved.
+
+From Transformers:
+    Copyright (c) 2018- The Hugging Face team. 
+    All rights reserved. 
+
+From Acelerate:
+    Copyright (c) 2021- The Hugging Face team.
+    All rights reserved.
+
+From PyTest:
+    Copyright (c) 2004 Holger Krekel and others.
+    All rights reserved.
+
+From PyPDF:
+    Copyright (c) 2006-2008, Mathieu Fenniak
+    Some contributions copyright (c) 2007, Ashish Kulkarni <kulkarni.ashish@gmail.com>
+    Some contributions copyright (c) 2014, Steve Witham <switham_github@mac-guyver.com>
+
+    All rights reserved.
+
+From Flask:
+    Copyright (c) 2010 Pallets
+    All rights reserved.
