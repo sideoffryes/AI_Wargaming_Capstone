@@ -5,3 +5,5 @@ API
     :toctree: generated
 
     docGen
+    app
+    pdfToText

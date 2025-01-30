@@ -65,7 +65,7 @@ def load_examples(type: str) -> str:
     # load in examples for few shot prompting
     examples = "Read the following examples very carefully. Your response must follow the same formatting as these examples.\n"
 
-    data_path = "../data"
+    data_path = "./data"
     files = []
 
     # get paths to all example files
@@ -95,7 +95,7 @@ def save_response(response: str, prompt: str, model_name: str, model: str):
     """    
     # save response to file
     fname = datetime.now().strftime("%d-%b-%Y_%H:%M:%S")
-    path = f"../output/{fname}.txt"
+    path = f"output/{fname}.txt"
     with open(path, 'w') as file:
         file.write(f"---------- RESPONSE ----------\n{response}\n\n")
         file.write(f"---------- PROMPT ----------\n{prompt}\n\n")

@@ -8,7 +8,7 @@
 
 import sys
 import os
-sys.path.insert(0, os.path.abspath("../scripts"))
+sys.path.insert(0, os.path.abspath("../../capstone"))
 
 project = 'AI Wargaming'
 author = 'Peter Asjes, Henry Frye, Caleb Koutrakos, Will Robinson, and Bobby Ziman'
