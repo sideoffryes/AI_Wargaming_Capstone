@@ -65,7 +65,7 @@ def logout():
     session.pop('user_id', None)
     # Redirect to login page
     errorMsg = "Successfully logged out of profile"
-    return render_template('login.html', errorMsg=errorMsg)
+    return render_template('index.html', errorMsg=errorMsg)
 
 @app.route('/handle_indexPost', methods=['POST'])
 def handle_indexPost():
@@ -141,9 +141,9 @@ def handle_registerPost():
         hashed = hash(combo)
 
         # store the username, hash, and salt in the database
-        user = Profile(username = username, passHash = hashed, passSalt = salt)
+        user = Profile(username = username, hash = hashed, salt = salt)
         db.session.add(user)
-        db.session.committ()
+        db.session.commit()
 
         # go to login page and tell user to login
         errorMsg = "NOTICE: Please login using previously created username and password."
