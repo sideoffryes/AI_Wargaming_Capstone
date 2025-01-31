@@ -14,3 +14,7 @@ dependencies:
   - reportlab
   - pypdf
   - flask
+  - flask-sqlalchemy
+  - sphinx
+  - sphinx_rtd_theme
+  - sphinxcontrib-httpdomain

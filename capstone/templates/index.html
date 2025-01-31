@@ -1,0 +1,68 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css"></link>
+    <title>Capstone Starter</title>
+
+    <script>
+        var swap_menu = false;
+        function dropDown(){
+            document.getElementById("dropdownmenu").classList.toggle("show");
+
+            if(swap_menu == false){
+                document.getElementById("menu_icon").src="../static/menu_open.png";
+                swap_menu = true;
+            }
+            else {
+                document.getElementById("menu_icon").src="../static/menu.png";
+                swap_menu = false;
+            }
+                
+        }        
+    </script>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="banner">
+            <div class = "dropdown">
+                <img src="../static/menu.png" id="menu_icon" alt = "menu" height="50" width="50"onclick="dropDown()"> 
+                <div id = "dropdownmenu" class="dropdown-content">
+                    <a href = "index.html"><img src = "../static/cs_logo.gif">Generate Document</a>
+                    <a href = "#"><img src = "../static/key.png" height="60" width="40">Login</a>
+                    <a href = "#"><img src = "../static/account_circle.png" height="60" width="40">User Profile</a>
+                    <a href = "/docs/index.html"><img src = "../static/menu_book.png" height="60" width="40">Documentation</a>
+                </div>
+            </div>
+        </div> <!--left banner -->
+
+        <!-- Center content -->
+        <div class="content">
+            <img src="../static/main_logo.png" alt="USNA logo">
+            <p>{{ errorMsg }}</p>
+            <form action="{{ url_for('handle_indexPost') }}" method="POST">
+                <label for="artifact_type">Selection Options:</label>
+                <select id="artifact_type" name="artifact_type">
+                    <option value="0" disabled selected>Please select an artifact</option>
+                    <option value="1">NAVADMIN</option>
+                    <option value="2">MARADMIN</option>
+                    <option value="3">OPORD</option>
+                    <option value="4">DEBUG ARTIFACT</option>
+                </select><br><br>
+                
+                <label for="artifact_parameters">Additional Parameters:</label>
+                <textarea class ="my_text" id="artifact_parameters" name="artifact_parameters" wrap="hard"></textarea>
+                <br><br>
+
+                <!-- Submit button -->
+                <button type="submit">Submit</button>
+            </form>
+            <!-- <a href="https://www.example.com" target="_blank" class="button">Go to Example</a> -->
+        </div>
+
+        <!-- Right banner -->
+        <div class="banner">
+            
+        </div>
+    </div>
+</body>
