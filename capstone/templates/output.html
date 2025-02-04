@@ -42,13 +42,16 @@
     <div class = "ai-box">
         <div id="ai-output">You selected: {{ artifactType }}</div>
         <div id="ai-output">You gave the following prompt: {{ otherInput }}</div>
-        <div id="ai-output">Output: {{ llmOut }}</div>
-    </div>
+        <div id="content"></div>
 
+        <script>
+            const contentDiv = document.getElementById('content');
+            const eventSource = new EventSource('/stream');
 
-</div>
+            eventSource.onmessage = function(event) {
+                contentDiv.innerHTML += event.data;
+            };
 
-<div class="banner"></div> <!--right banner -->
-</div>
-</body>
-
+            eventSource.onerror = function() {
+                console.error("Error reading stream!");
+                evenSourc
