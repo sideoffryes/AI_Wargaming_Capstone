@@ -96,17 +96,18 @@ def handle_indexPost():
     else:
         artifactType = request.form.get('artifact_type')
         otherInput = request.form.get('artifact_parameters')
+        modelType = request.form.get('model_type')
 
-        if not isinstance(artifactType, str) or otherInput == "":
-            errorMsg = "ERROR: Please select an artifact and give a prompt"
+        if not isinstance(artifactType, str) or otherInput == "" or isinstance(modelType, str):
+            errorMsg = "ERROR: Please select an artifact, model type, and give a prompt."
             return render_template('index.html', errorMsg=errorMsg)
 
         # check if its a debug artifact
-        if int(artifactType) == 4:
+        if int(artifactType) == 1:
             llmOut = "You selected the DEBUG ARTIFACT and gave this prompt: " + otherInput + " Here is a bunch of random numbers: " + str(hash(otherInput))
         else:
             #run the docgen and get output:
-            llmOut = gen(2, int(artifactType), otherInput)
+            llmOut = gen(int(modelType), int(artifactType)-1, otherInput)
 
         if 'user_id' in session:
             # Retrieve the logged-in user's ID from the session
