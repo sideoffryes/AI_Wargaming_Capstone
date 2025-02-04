@@ -98,7 +98,7 @@ def handle_indexPost():
         otherInput = request.form.get('artifact_parameters')
         modelType = request.form.get('model_type')
 
-        if not isinstance(artifactType, str) or otherInput == "" or isinstance(modelType, str):
+        if not isinstance(artifactType, str) or otherInput == "" or not isinstance(modelType, str):
             errorMsg = "ERROR: Please select an artifact, model type, and give a prompt."
             return render_template('index.html', errorMsg=errorMsg)
 
