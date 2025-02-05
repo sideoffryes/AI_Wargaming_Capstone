@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, session, send_from_directory
-import secrets
 from flask_sqlalchemy import SQLAlchemy
 from docGen import gen
 import os
