@@ -6,6 +6,7 @@ import os
 from datetime import datetime
 from datetime import timedelta
 import datetime
+import hashlib
 
 app = Flask(__name__)
 
@@ -28,9 +29,9 @@ class Profile(db.Model):
     # hash: Used to store hashed password+salt of the user
     # salt: Used to store the salt of the hash
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(20), unique=True, nullable=False)
-    hash = db.Column(db.Integer, unique=False)
-    salt = db.Column(db.String(16), unique=False, nullable=False)
+    username = db.Column(db.String, unique=True, nullable=False)
+    hash = db.Column(db.String, unique=False)
+    salt = db.Column(db.String, unique=False, nullable=False)
 
     # One-to-many relationship: A user can have many generated artifacts
     generated_artifacts = db.relationship('GeneratedArtifact', backref='user', lazy=True)
@@ -140,11 +141,8 @@ def handle_loginPost():
         userHash = user.hash
         userSalt = user.salt
 
-        # combine the given password and salt
-        saltedPass = password + userSalt
-
         # hash the combination
-        hashedGiven = hash(saltedPass)
+        hashedGiven = hashlib.sha256(userSalt + password.encode()).hexdigest()
 
         # compare the given hash with the database hash
         # if they are the same, then create a temporary cookie
@@ -176,14 +174,10 @@ def handle_registerPost():
         password = request.form.get('password')
 
         # generate salt
-        # 8 bytes * 2 characters per byte = 16 characters
-        salt = secrets.token_hex(8)
-
-        # combine password and salt
-        combo = password + salt
+        salt = os.urandom(16)
 
         # hash the combination
-        hashed = hash(combo)
+        hashed = hashlib.sha256(salt + password.encode()).hexdigest()
 
         # store the username, hash, and salt in the database
         user = Profile(username = username, hash = hashed, salt = salt)
