@@ -14,15 +14,16 @@
    .. autosummary::
    
       createAcc
+      docs
       handle_indexPost
       handle_loginPost
       handle_registerPost
       home
       index
-      instructions
       login
       logout
       my_artifacts
+      profile
    
    
 
