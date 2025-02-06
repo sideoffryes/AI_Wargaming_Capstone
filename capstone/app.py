@@ -60,7 +60,6 @@ with app.app_context():
 
 @app.route("/")
 @app.route("/index")
-@app.route("/index.html")
 def index():
     return render_template("index.html")
 
@@ -70,9 +69,12 @@ def home():
     return render_template("output.html")
 
 @app.route("/login")
-@app.route("/login.html")
 def login():
     return render_template("login.html")
+
+@app.route("/profile")
+def profile():
+    return render_template("userprofile.html")
 
 @app.route("/register")
 @app.route("/register.html")
