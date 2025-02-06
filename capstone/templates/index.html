@@ -16,7 +16,8 @@
             else {
                 document.getElementById("menu_icon").src="../static/menu.png";
                 swap_menu = false;
-            }    
+            }
+                
         }        
     </script>
 </head>
@@ -27,12 +28,10 @@
             <div class = "dropdown">
                 <img src="../static/menu.png" id="menu_icon" alt = "menu" height="50" width="50"onclick="dropDown()"> 
                 <div id = "dropdownmenu" class="dropdown-content">
-                    <a href = "index.html"><img src = "../static/cs_logo.gif">Generate Document</a>
-                    <a href = "register.html"><img src = "../static/key.png" height="60" width="40">Register a new account</a>
-                    <a href = "login.html"><img src = "../static/key.png" height="60" width="40">Login</a>
-                    <a href = "my_artifacts"><img src = "../static/account_circle.png" height="60" width="40">View Your Artifacts</a>
-                    <a href = "/docs/index.html"><img src = "../static/menu_book.png" height="60" width="40">How to Use</a>
-                    <a href = "logout"><img src = "../static/key.png" height="60" width="40">Logout</a>
+                    <a href = "index.html"><img src = "../static/Computer Science Logo_RGB.png" height="180" width="160">Generate Document</a>
+                    <a href = "#"><img src = "../static/key.png" height="60" width="40">Login</a>
+                    <a href = "userprofile.html"><img src = "../static/account_circle.png" height="60" width="40">User Profile</a>
+                    <a href = "instructions.html"><img src = "../static/menu_book.png" height="60" width="40">How to Use</a>
                 </div>
             </div>
         </div> <!--left banner -->
@@ -42,22 +41,12 @@
             <img src="../static/main_logo.png" alt="USNA logo">
             <p>{{ errorMsg }}</p>
             <form action="{{ url_for('handle_indexPost') }}" method="POST">
-                <label for="artifact_type">Artifact Options:</label>
+                <label for="artifact_type">Selection Options:</label>
                 <select id="artifact_type" name="artifact_type">
                     <option value="0" disabled selected>Please select an artifact</option>
-                    <option value="1">DEBUG ARTIFACT</option>
-                    <option value="2">NAVADMIN</option>
-                    <option value="3">MARADMIN</option>
-                    <option value="4">OPORD</option>
-                </select><br><br>
-
-                <label for="model_type">Model Options</label>
-                <select id="model_type" name="model_type">
-                    <option value="0" disabled selected>Please select the model you would like to use</option>
-                    <option value="1">Llama-3.2-1B-Instruct</option>
-                    <option value="2">Llama-3.2-3B-Instruct</option>
-                    <option value="3">Llama-3.1-8B-Instruct</option>
-                    <option value="4">Llama-3.3-70B-Instruct</option>
+                    <option value="1">NAVADMIN</option>
+                    <option value="2">MARADMIN</option>
+                    <option value="3">OPORD</option>
                 </select><br><br>
                 
                 <label for="artifact_parameters">Additional Parameters:</label>
