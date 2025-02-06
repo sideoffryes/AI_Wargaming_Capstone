@@ -41,18 +41,11 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = True) -> str:
     model_inputs = tokenizer([prompt], return_tensors="pt", padding=True).to(device)
     
     # generate response
-    t_start = time.time()
-    # TODO: Is the streamer actually working as intended, too much overhead? How does this relate to batch_decode?
     generated_ids = model.generate(**model_inputs, do_sample=True, max_new_tokens=500, streamer=streamer)
-    # TODO: Do I need to slice off the prompt?
-    response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0][len(prompt):]
-    t_stop = time.time()
-    print(f"Generation time: {t_stop - t_start} sec / {(t_stop - t_start) / 60} min")
+    # response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0][len(prompt):]
     
-    if save:
-        save_response(response, prompt, model_name, model)
-    
-    return response
+    for id in generated_ids:
+        yield tokenizer.decode(id, skip_special_tokens=True)[0]
     
 def load_examples(type: str) -> str:
     """Returns real life examples of the requested document type.

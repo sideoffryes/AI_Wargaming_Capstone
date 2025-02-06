@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, session, send_from_directory
+from flask import Flask, render_template, request, session, send_from_directory, Response, redirect, url_for
 import secrets
 from flask_sqlalchemy import SQLAlchemy
 from docGen import gen
@@ -64,10 +64,6 @@ with app.app_context():
 def index():
     return render_template("index.html")
 
-@app.route("/output")
-@app.route("/output.html")
-def home():
-    return render_template("output.html")
 
 @app.route("/login")
 @app.route("/login.html")
@@ -86,6 +82,13 @@ def logout():
     # Redirect to login page
     errorMsg = "Successfully logged out of profile"
     return render_template('index.html', errorMsg=errorMsg)
+
+@app.route("/output", methods=['POST'])
+def output():
+    artifactType = request.form.get('artifact_type')
+    otherInput = request.form.get('artifact_parameters')
+    
+    return Response(gen(2, int(artifactType), otherInput))
 
 @app.route('/handle_indexPost', methods=['POST'])
 def handle_indexPost():
