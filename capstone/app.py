@@ -60,7 +60,6 @@ with app.app_context():
 
 @app.route("/")
 @app.route("/index")
-@app.route("/index.html")
 def index():
     return render_template("index.html")
 
@@ -70,9 +69,12 @@ def home():
     return render_template("output.html")
 
 @app.route("/login")
-@app.route("/login.html")
 def login():
     return render_template("login.html")
+
+@app.route("/profile")
+def profile():
+    return render_template("userprofile.html")
 
 @app.route("/register")
 @app.route("/register.html")
@@ -187,11 +189,6 @@ def handle_registerPost():
         errorMsg = "NOTICE: Please login using previously created username and password."
         return render_template('login.html', errorMsg=errorMsg)
  
-@app.route("/instructions")
-@app.route("/instructions.html")
-def instructions():
-    return render_template("instructions.html")
-
 @app.route('/my_artifacts', methods=['GET'])
 def my_artifacts():
     if 'user_id' not in session:

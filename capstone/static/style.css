@@ -1,3 +1,4 @@
+
     /* Basic body styling */
     body {
         font-family: Arial, sans-serif;
@@ -34,6 +35,14 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+
+    .usercontent {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content:left;
     }
 
     /* Logo styling */
@@ -159,4 +168,80 @@
         font-size: 16px;
         color: #555;
         white-space: pre-wrap; /* Preserve newlines */
+    }
+
+    /***** USER PROFILE CSS *****/
+    .user-content {
+        width: 60%;
+        display: flex;
+        justify-content: flex-start; /* Align content to the left */
+        padding: 20px; 
+    }
+    .user-menu {
+        width: 200px;
+        max-width: 200px;
+        height: 170px;
+        /* padding-top: 100px; */
+        padding: 20px;
+        /* border: 2px solid #333; */
+        border-radius: 8px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        overflow-y:auto;
+        scrollbar-width:thin;
+        color:#12115c;
+        text-align: center;
+    }
+    .user-right-banner{
+        background-color: #12115c; /* Replace with an image if needed */
+        color: white;
+        width: 20%; /* Adjust width as necessary */
+        display: flex;
+       
+    }
+    .user-menu button{
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: white;
+        color: #12115c;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .user-menu button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* background-color:lightskyblue; */
+    }
+    .profile-info{
+        position: relative;
+        display: inline-block;
+        left:0;
+        color:#12115c;
+        text-align: center;
+    }
+
+    .profile-info-content{
+        /* display:none; */
+        position:absolute;
+        left:300;
+        /* left:calc(10% + .25rem); */
+        background-color:white;
+        padding:.75rem;
+        border-radius:8px;
+        box-shadow:0 2px 5px 0 rgba(0, 0, 0, .1);
+        opacity: 0;
+        visibility:hidden;
+        transform: translateX(20px);
+        transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+    }
+
+    .profile-info-show{
+        opacity: 1; 
+        visibility:visible;
+        transform: translateX(0);
     }
