@@ -187,11 +187,6 @@ def handle_registerPost():
         errorMsg = "NOTICE: Please login using previously created username and password."
         return render_template('login.html', errorMsg=errorMsg)
  
-@app.route("/instructions")
-@app.route("/instructions.html")
-def instructions():
-    return render_template("instructions.html")
-
 @app.route('/my_artifacts', methods=['GET'])
 def my_artifacts():
     if 'user_id' not in session:
