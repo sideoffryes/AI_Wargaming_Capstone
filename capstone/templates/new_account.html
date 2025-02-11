@@ -1,10 +1,8 @@
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/style.css"></link>
-    <title>Login Form</title>
+    <title>Account Creation</title>
 
     <script>
         var swap_menu = false;
@@ -41,18 +39,21 @@
         <img src="../static/main_logo.png" alt="USNA logo">
 
         <p>{{ errorMsg }}</p>
-        <h2>Login Form</h2>
-        <form action="{{ url_for('handle_loginPost') }}" method="POST">
+        <h2>Account Creation Form</h2>
+        <!-- Redirect back to login -->
+        <form action="__CALEB__" method="POST">
             <label for="username">Username:</label><br>
             <input type="text" id="username" name="username" required><br><br>
 
             <label for="password">Password:</label><br>
             <input type="password" id="password" name="password" required><br><br>
 
+            <label for="password">Retype Password:</label><br>
+            <input type="password" id="password" name="password" required><br><br>
+
             <input type="submit" value="Submit">
         </form>
-        <!-- Redirect to new_account.html -->
-        <a href="__CALEB__" target="_blank" class="button">Create Account</a>
+
     </div>
     <div class="banner">
             
