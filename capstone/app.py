@@ -60,6 +60,7 @@ with app.app_context():
 
 @app.route("/")
 @app.route("/index")
+@app.route("/index.html")
 def index():
     return render_template("index.html")
 
@@ -69,17 +70,19 @@ def home():
     return render_template("output.html")
 
 @app.route("/login")
+@app.route("/login.html")
 def login():
     return render_template("login.html")
 
-@app.route("/profile")
-def profile():
+@app.route("/userprofile")
+@app.route("/userprofile.html")
+def userprofile():
     return render_template("userprofile.html")
 
-@app.route("/register")
-@app.route("/register.html")
+@app.route("/new_account")
+@app.route("/new_account.html")
 def createAcc():
-    return render_template("register.html")
+    return render_template("new_account.html")
 
 @app.route('/logout')
 def logout():
@@ -98,9 +101,8 @@ def handle_indexPost():
     else:
         artifactType = request.form.get('artifact_type')
         otherInput = request.form.get('artifact_parameters')
-        modelType = request.form.get('model_type')
 
-        if not isinstance(artifactType, str) or otherInput == "" or not isinstance(modelType, str):
+        if not isinstance(artifactType, str) or otherInput == "":
             errorMsg = "ERROR: Please select an artifact, model type, and give a prompt."
             return render_template('index.html', errorMsg=errorMsg)
 
@@ -109,7 +111,7 @@ def handle_indexPost():
             llmOut = "You selected the DEBUG ARTIFACT and gave this prompt: " + otherInput + " Here is a bunch of random numbers: " + str(hash(otherInput))
         else:
             #run the docgen and get output:
-            llmOut = gen(int(modelType), int(artifactType)-1, otherInput)
+            llmOut = gen(1, int(artifactType)-1, otherInput)
 
         if 'user_id' in session:
             # Retrieve the logged-in user's ID from the session
@@ -160,7 +162,7 @@ def handle_loginPost():
 def handle_registerPost():
     if request.method != 'POST':
         errorMsg = "ERROR: Something went wrong, please try again."
-        return render_template('register.html', errorMsg=errorMsg)
+        return render_template('new_account.html', errorMsg=errorMsg)
     
     else:
         username = request.form.get('username')
@@ -170,9 +172,14 @@ def handle_registerPost():
 
         if existing_user:
             errorMsg = "ERROR: This username already exists. Please use a different one."
-            return render_template('register.html', errorMsg=errorMsg)
+            return render_template('new_account.html', errorMsg=errorMsg)
 
-        password = request.form.get('password')
+        password = request.form.get('ogpassword')
+        passwordRetype = request.form.get('repassword')
+
+        if password != passwordRetype:
+            errorMsg = "ERROR: The passwords did not match."
+            return render_template('new_account.html', errorMsg=errorMsg)
 
         # generate salt
         salt = os.urandom(16)
