@@ -3,4 +3,4 @@ __pycache__
 *.db
 
 docs/build/
-!aiwargaming.pdf
+!docs/build/latex/aiwargaming.pdf
