@@ -4,11 +4,6 @@
 .. automodule:: app
 
    
-   
-   
-
-   
-   
    .. rubric:: Functions
 
    .. autosummary::
@@ -25,10 +20,6 @@
       my_artifacts
       profile
    
-   
-
-   
-   
    .. rubric:: Classes
 
    .. autosummary::
@@ -36,11 +27,3 @@
       GeneratedArtifact
       Profile
    
-   
-
-   
-   
-   
-
-
-
