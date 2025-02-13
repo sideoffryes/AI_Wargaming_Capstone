@@ -111,7 +111,7 @@ def handle_indexPost():
             llmOut = "You selected the DEBUG ARTIFACT and gave this prompt: " + otherInput + " Here is a bunch of random numbers: " + str(hash(otherInput))
         else:
             #run the docgen and get output:
-            llmOut = gen(1, int(artifactType)-1, otherInput)
+            llmOut = gen(2, int(artifactType)-1, otherInput)
 
         if 'user_id' in session:
             # Retrieve the logged-in user's ID from the session

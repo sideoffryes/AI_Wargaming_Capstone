@@ -217,8 +217,12 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         /* background-color:lightskyblue; */
     }
+    .user-menu a{
+        text-decoration: none;
+        color: #12115c;
+    }
     .profile-info{
-        position: relative;
+        position:relative;
         display: inline-block;
         left:0;
         color:#12115c;
@@ -228,7 +232,8 @@
     .profile-info-content{
         /* display:none; */
         position:absolute;
-        left:300;
+        left:120;
+        min-width: 300px;
         /* left:calc(10% + .25rem); */
         background-color:white;
         padding:.75rem;
@@ -236,7 +241,7 @@
         box-shadow:0 2px 5px 0 rgba(0, 0, 0, .1);
         opacity: 0;
         visibility:hidden;
-        transform: translateX(20px);
+        transform: translateX(-20px);
         transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
     }
 

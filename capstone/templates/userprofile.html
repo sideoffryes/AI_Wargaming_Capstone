@@ -29,10 +29,11 @@
             <div class = "dropdown">
                 <img src="../static/menu.png" id="menu_icon" alt = "menu" height="50" width="50"onclick="dropDown()"> 
                 <div id = "dropdownmenu" class="dropdown-content">
-                    <a href = "/index"><img src = "../static/Computer Science Logo_RGB.png" height="180" width="160">Generate Document</a>
-                    <a href = "/login"><img src = "../static/key.png" height="60" width="40">Login</a>
-                    <a href = "/profile"><img src = "../static/account_circle.png" height="60" width="40">User Profile</a>
-                    <a href = "/docs/index.html"><img src = "../static/menu_book.png" height="60" width="40">Documentation</a>
+                    <a href = "index.html"><img src = "../static/Computer Science Logo_RGB.png" height="180" width="160">Generate Document</a>
+                    <a href = "login.html"><img src = "../static/key.png" height="60" width="40">Login</a>
+                    <a href = "userprofile.html"><img src = "../static/account_circle.png" height="60" width="40">User Profile</a>
+                    <a href = "/docs/index.html"><img src = "../static/menu_book.png" height="60" width="40">How to Use</a>
+                    <a href = "logout.html"><img src = "../static/logout.png" height="60" width="40">Logout</a>
                 </div>
             </div>
         </div> <!--left banner -->
@@ -42,11 +43,12 @@
                 <div class = "user-menu" >
                     <h3>User Menu</h3>
                     <button onclick="openProfile()">Profile info</button>
-                    <button>History</button>
+                    <button onclick="location.href = 'my_artifacts.html';">History</button>
                 </div>
                 <div class="profile-info">
                     <div id="profilemenu" class="profile-info-content">
                         <h3>Your Profile</h3>
+                        <!-- FOR CALEB: IMPORT USER INFO INTO HERE -->
                         <p>email: m25xxxx@usna.edu</p>
                         <p>Name: billy rob</p>
                     </div>
