@@ -2,7 +2,11 @@ __pycache__
 .pytest_cache
 *.db
 
+# ignore html docs and extra pdf docs
 docs/build/doctrees
 docs/build/html
 docs/build/latex/*
 !docs/build/latex/aiwargaming.pdf
+
+# ignore old output files
+capstone/output
