@@ -4,6 +4,8 @@
 
 A live version of the project can be found [here](http://lnx1073302govt:5000).
 
+**This link only works while on the USNA Intranet.**
+
 ## Description
 
 Creating believable, realistic, and immersive scenarios in support of wargaming objectives
@@ -33,8 +35,6 @@ be harnessed to enhance and expedite the wargaming process.
 ## POC
 
 [LtCol Scotty Black](mailto:scotty.black@nps.edu )
-
-**This link only works while on the USNA Intranet.**
 
 ## Documentation
 
