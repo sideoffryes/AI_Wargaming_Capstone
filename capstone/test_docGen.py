@@ -7,3 +7,14 @@ def test_navadmin_gen():
     assert "CLASSIFICATION" in doc
     assert "SUBJ" in doc
     assert "REF" in doc
+    
+def test_opord_gen():
+    doc = gen(2, 3, "Write me an OpOrd about an attack on the US Naval Academy.", False)
+    assert "Orientation" in doc
+    assert "Situation" in doc
+    assert "Mission" in doc
+    assert "Execution" in doc
+    assert "Administration" in doc
+    assert "Logistics" in doc
+    assert "Command" in doc
+    assert "Signal" in doc

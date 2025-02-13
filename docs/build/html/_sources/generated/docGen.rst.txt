@@ -4,11 +4,6 @@
 .. automodule:: docGen
 
    
-   
-   
-
-   
-   
    .. rubric:: Functions
 
    .. autosummary::
@@ -19,15 +14,3 @@
       select_doc
       select_model
    
-   
-
-   
-   
-   
-
-   
-   
-   
-
-
-

@@ -6,7 +6,7 @@
 
   \bigletter A
   \item \spxentry{app}
-    \subitem \spxentry{module}, \hyperpage{6}
+    \subitem \spxentry{module}, \hyperpage{5}
 
   \indexspace
   \bigletter D
@@ -16,7 +16,7 @@
   \indexspace
   \bigletter M
   \item \spxentry{module}
-    \subitem \spxentry{app}, \hyperpage{6}
+    \subitem \spxentry{app}, \hyperpage{5}
     \subitem \spxentry{docGen}, \hyperpage{5}
     \subitem \spxentry{pdfToText}, \hyperpage{6}
 

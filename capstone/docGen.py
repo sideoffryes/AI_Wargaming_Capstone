@@ -21,12 +21,14 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = True) -> str:
     :rtype: str
     """
     logging.set_verbosity_error()
-    # Set LLM instructions
-    role = "Role: You work for the United States Department of the Navy, and you specialize in writing official military documents using military formatting.\n"
-    system = "Give your answer in naval message format based on the previous examples. After the final line of the document you create, stop responding and give an eos token."
-    # create model objects
     model_name = select_model(model_num)
     doc_type = select_doc(type_num)
+    
+    # Set LLM instructions
+    role = "Role: You work for the United States Department of Defense, and you specialize in writing official military documents using military formatting.\n"
+    task = f"Give your answer in {doc_type} format based on the previous examples. After the final line of the document you create, stop responding."
+    
+    # create model objects
     model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype=torch.float16)
     tokenizer = AutoTokenizer.from_pretrained(model_name, padding_size="left")
     tokenizer.pad_token = tokenizer.eos_token
@@ -34,7 +36,7 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = True) -> str:
     
     # set up prompt info
     examples = load_examples(doc_type)
-    prompt = role + examples + prompt + system
+    prompt = role + examples + prompt + task
     
     # set device based on gpu availability
     device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -42,8 +44,7 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = True) -> str:
     
     # generate response
     t_start = time.time()
-    # TODO: Is the streamer actually working as intended, too much overhead? How does this relate to batch_decode?
-    generated_ids = model.generate(**model_inputs, do_sample=True, max_new_tokens=500, streamer=streamer)
+    generated_ids = model.generate(**model_inputs, do_sample=True, max_new_tokens=2000)
     # TODO: Do I need to slice off the prompt?
     response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0][len(prompt):]
     t_stop = time.time()
@@ -70,8 +71,8 @@ def load_examples(type: str) -> str:
 
     # get paths to all example files
     for root, dirs, fnames in os.walk(data_path):
-        for f in fnames:
-            if type in f:
+        if type in root:
+            for f in fnames:
                 files.append(os.path.join(root, f))
 
     # append contents of each file to examples
