@@ -18,7 +18,7 @@
       login
       logout
       my_artifacts
-      profile
+      userprofile
    
    .. rubric:: Classes
 

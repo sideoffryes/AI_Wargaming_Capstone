@@ -1,6 +1,8 @@
-# Capstone Description
+# AI Wargaming: GenAI in Support of Wargaming Modernization
 
-## Title: GenAI in Support of Wargaming
+## USNA Demo Link
+
+A live version of the project can be found [here](http://lnx1073302govt:5000).
 
 ## Description
 
@@ -32,10 +34,6 @@ be harnessed to enhance and expedite the wargaming process.
 
 [LtCol Scotty Black](mailto:scotty.black@nps.edu )
 
-## USNA Demo Link
-
-A live version of the project can be found [here](http://lnx1073302govt:5000).
-
 **This link only works while on the USNA Intranet.**
 
 ## Documentation
@@ -43,6 +41,15 @@ A live version of the project can be found [here](http://lnx1073302govt:5000).
 A pre-compiled PDF version of the documentation can be found [here](./docs/build/latex/aiwargaming.pdf).
 
 Once you have the local webserver running, you can access an HTML version of the documentation in the web browser by opening the side bar menu and selecting the documentation link.
+
+The HTML documentation is **not** pre-generated and must be created by the server host. It can be easily generated with the following commands:
+
+```console
+(capstone_gpu) $ cd docs
+(capstone_gpu) $ make html
+```
+
+These instructions can also be found in the PDF version of the docs linked above.
 
 ## Poster
 

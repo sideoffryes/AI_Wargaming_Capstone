@@ -1,3 +1,8 @@
 __pycache__
 .pytest_cache
 *.db
+
+docs/build/doctrees
+docs/build/html
+docs/build/latex/*
+!docs/build/latex/aiwargaming.pdf
