@@ -78,3 +78,17 @@ Interacting with the Webserver in the Browser
 The form presented to you when the website is first loaded can be used to generate a document. Use the *selection options* dropdown menu to select the type of document that you would like to create. You can specify your requirements and any additional specifications in the *additional parameters* textbox.
 
 Depending on the size of the model used to generate the document, the server may load for a few minutes before the final output is produced.
+
+Generating the Docs
+-------------------
+
+The repository is shipped with a precompiled PDF version of the documentation for the entire project for both users and developers.
+
+The HTML documentation that can be viewed from the browser when running the webserver can be created by cding into the docs directory and using the make file.
+
+.. code-block:: console
+
+    (capstone_gpu) $ cd docs
+    (capstone_gpu) $ make html
+
+The generated documentation will appear in the docs/build/html directory.
