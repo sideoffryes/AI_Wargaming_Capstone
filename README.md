@@ -44,6 +44,4 @@ A pre-compiled PDF version of the documentation can be found [here](./docs/build
 
 Once you have the local webserver running, you can access an HTML version of the documentation in the web browser by opening the side bar menu and selecting the documentation link.
 
-## Poster
-
-![Capstone Poster](./proposal/USNA%20Capstone%20Posterv2.png)
+The HTML documentation is **not** pre-generated and must be created by th
