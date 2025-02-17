@@ -29,10 +29,8 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     task = f"Give your answer in {doc_type} format based on the previous examples. After the final line of the document you create, stop responding."
     
     # create model objects
-    model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype=torch.float16)
-    tokenizer = AutoTokenizer.from_pretrained(model_name, padding_size="left")
-    tokenizer.pad_token = tokenizer.eos_token
-    streamer = TextStreamer(tokenizer, skip_prompt=True)
+    model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", load_in_8bit=True, attn_implementation="flash_attention_2")
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
     
     # set up prompt info
     examples = load_examples(doc_type)
@@ -40,12 +38,11 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     
     # set device based on gpu availability
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    model_inputs = tokenizer([prompt], return_tensors="pt", padding=True).to(device)
+    model_inputs = tokenizer([prompt], return_tensors="pt").to(device)
     
     # generate response
     t_start = time.time()
     generated_ids = model.generate(**model_inputs, do_sample=True, max_new_tokens=2000)
-    # TODO: Do I need to slice off the prompt?
     response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0][len(prompt):]
     t_stop = time.time()
     print(f"Generation time: {t_stop - t_start} sec / {(t_stop - t_start) / 60} min")
