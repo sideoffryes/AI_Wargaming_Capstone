@@ -6,7 +6,7 @@ import torch
 
 # export REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
 
-def gen(model_num: int, type_num: int, prompt: str, save: bool = True) -> str:
+def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     """Generates a specificed document using a specified LLM and returns the result.
 
     :param model_num: The number value representing the model to use for generation.
@@ -158,3 +158,4 @@ if __name__ == "__main__":
 
     # call document generator function
     doc = gen(select, doc, user_query)
+    print(doc)

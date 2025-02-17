@@ -1,6 +1,7 @@
 __pycache__
 .pytest_cache
 *.db
+.venv
 
 # ignore html docs and extra pdf docs
 docs/build/doctrees

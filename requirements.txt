@@ -1,0 +1,9 @@
+--extra-index-url https://download.pytorch.org/whl/cu126
+Flask
+flask_sqlalchemy
+pypdf
+pytest
+reportlab
+transformers
+accelerate
+torch==2.6.0+cu126
