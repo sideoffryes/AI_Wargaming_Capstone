@@ -1,4 +1,4 @@
-from transformers import logging, AutoTokenizer, TextStreamer, AutoModelForCausalLM
+from transformers import logging, AutoTokenizer, TextStreamer, AutoModelForCausalLM, BitsAndBytesConfig
 import os
 import time
 from datetime import datetime
@@ -29,20 +29,22 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     task = f"Give your answer in {doc_type} format based on the previous examples. After the final line of the document you create, stop responding."
     
     # create model objects
-    model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", load_in_8bit=True, attn_implementation="flash_attention_2")
+    model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype="auto", quantization_config=BitsAndBytesConfig(load_in_8bit=True, llm_int8_enable_fp32_cpu_offload=True))
+    # model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype=torch.float16)
+    # model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", load_in_8bit=True, attn_implementation="flash_attention_2")
     tokenizer = AutoTokenizer.from_pretrained(model_name)
+    streamer = TextStreamer(tokenizer=tokenizer, skip_prompt=True)
     
     # set up prompt info
     examples = load_examples(doc_type)
     prompt = role + examples + prompt + task
     
     # set device based on gpu availability
-    device = "cuda" if torch.cuda.is_available() else "cpu"
-    model_inputs = tokenizer([prompt], return_tensors="pt").to(device)
+    model_inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
     
     # generate response
     t_start = time.time()
-    generated_ids = model.generate(**model_inputs, do_sample=True, max_new_tokens=2000)
+    generated_ids = model.generate(**model_inputs, do_sample=True, max_new_tokens=500, streamer=streamer)
     response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0][len(prompt):]
     t_stop = time.time()
     print(f"Generation time: {t_stop - t_start} sec / {(t_stop - t_start) / 60} min")
@@ -155,4 +157,4 @@ if __name__ == "__main__":
 
     # call document generator function
     doc = gen(select, doc, user_query)
-    print(doc)
+    # print(doc)

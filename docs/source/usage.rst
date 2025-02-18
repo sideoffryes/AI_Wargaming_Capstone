@@ -13,26 +13,30 @@ The code for this project can be downloaded via `GitHub <https://github.com/side
 
     $ git clone https://github.com/sideoffryes/AI_Wargaming_Capstone.git
 
-Conda and Python Management
+Python Management
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To use this project, the are several prerequisites that are necessary. The easiest way to manage these dependencies is using Conda.
+To use this project, the are several prerequisites that are necessary. The easiest way to manage these dependencies is using pip and a virtual environment.
 
-If you do not have Conda already, `download and install a release <https://docs.anaconda.com/miniconda/install/>`_ for your OS.
+If you do not have python already, `download and install a release of python 3 <https://www.python.org/downloads/>`_ for your platform.
 
-All of the required python packages can be easily installed via the provided configuration files. There are separate files for GPU and CPU dependencies.
+To ensure that pip is available on your system, follow `these instructions <https://pip.pypa.io/en/stable/installation/>`_ for your platform.
 
-CPU
+All of the required python packages can be easily installed via the provided configuration files and setup script. There are separate files for GPU and CPU dependencies.
+
+Setup Script
 +++
 .. code-block:: console
 
-    (base) $ conda env create -f environment_cpu.yml
+    $ ./setup.sh
 
-GPU
-+++
+The setup script will ask if you would like to install the CPU or GPU configuratio and install the appropriate configuration.
+
+Once the setup is complete, make sure to activate the virtual environment.
+
 .. code-block:: console
 
-    (base) $ conda env create -f environment_gpu.yml
+    $ source .venv/bin/activate
 
 Hugging Face
 ^^^^^^^^^^^^
@@ -52,7 +56,7 @@ In the terminal, run the following command and paste in your access token when p
 
 .. code-block:: console
 
-    (base) $ huggingface-cli login
+    (.venv) $ huggingface-cli login
 
 Running the Project
 -------------------
@@ -61,14 +65,14 @@ Before attempting to run any of the scripts, make sure that you have the correct
 
 .. code-block:: console
 
-    (base) $ conda activate capstone_gpu
+    (.venv) $ conda activate capstone_gpu
 
 All of the code that runs the webserver and actually generated the documents can be found inside of the *capstone* directory. *app.py* is the webserver and *docgen.py* is the script that accesses the LLM to generate documents. Running the entire project can be accomplished with the following:
 
 .. code-block:: console
     
-    (capstone_gpu) $ cd capstone
-    (capstone_gpu) $ python3 app.py
+    (.venv) $ cd capstone
+    (.venv) $ python3 app.py
 
 The webserver can be reached from your browser by using one of the ip addresses printed out in the terminal when the server is created.
 
@@ -88,7 +92,7 @@ The HTML documentation that can be viewed from the browser when running the webs
 
 .. code-block:: console
 
-    (capstone_gpu) $ cd docs
-    (capstone_gpu) $ make html
+    (.venv) $ cd docs
+    (.venv) $ make html
 
 The generated documentation will appear in the docs/build/html directory.

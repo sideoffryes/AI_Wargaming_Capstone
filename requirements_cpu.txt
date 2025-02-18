@@ -1,0 +1,15 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+Flask
+flask_sqlalchemy
+pypdf
+pytest
+reportlab
+transformers
+accelerate
+bitsandbytes
+torch
+torchvision
+torchaudio
+sphinxcontrib-httpdomain
+sphinx_rtd_theme
+sphinx
