@@ -228,13 +228,19 @@
         color:#12115c;
         text-align: center;
     }
+    .changePswd{
+        position:relative;
+        display: inline-block;
+        left:0;
+        color:#12115c;
+        text-align: center; 
+    }
 
     .profile-info-content{
         /* display:none; */
         position:absolute;
         left:120;
         min-width: 300px;
-        /* left:calc(10% + .25rem); */
         background-color:white;
         padding:.75rem;
         border-radius:8px;
@@ -249,4 +255,24 @@
         opacity: 1; 
         visibility:visible;
         transform: translateX(0);
+    }
+
+    .changePswd-content{
+        position:absolute;
+        left:120;
+        top:200;
+        background-color:white;
+        padding:.75rem;
+        border-radius:.25rem;
+        box-shadow:0 2px 5px 0 rgba(0, 0, 0, .1);
+        opacity: 0;
+        visibility:hidden;
+        transform: translateY(-20px);
+        transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+    }
+    
+    .changePswd-show{
+        opacity: 1; 
+        visibility:visible;
+        transform: translateY(0);
     }
