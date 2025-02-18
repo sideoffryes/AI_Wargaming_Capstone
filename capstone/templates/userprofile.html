@@ -5,6 +5,8 @@
     <!--ADD APACHE LICENSE TO LIST FOR USING GOOGLE ICONS-->
     <script>
         var swap_menu = false;
+        var changePswd = false;
+        var profileOpen = false;
         function dropDown(){
             document.getElementById("dropdownmenu").classList.toggle("show");
 
@@ -19,6 +21,11 @@
         }
         function openProfile(){
             document.getElementById("profilemenu").classList.toggle("profile-info-show");
+            profileOpen = true;
+        }
+        function openChangePswd(){
+            document.getElementById("changePassword").classList.toggle("changePswd-show");
+            changePswd = true;
         }
     </script>
 </head>
@@ -38,23 +45,35 @@
             </div>
         </div> <!--left banner -->
         
-        <div class="user-content"> <!--middle-->
-                
+        <div class="user-content"> <!--middle-->   
                 <div class = "user-menu" >
                     <h3>User Menu</h3>
-                    <button onclick="openProfile()">Profile info</button>
+                    <button onclick="openProfile()">Profile Info</button>
                     <button onclick="location.href = 'my_artifacts.html';">History</button>
                 </div>
+
                 <div class="profile-info">
                     <div id="profilemenu" class="profile-info-content">
                         <h3>Your Profile</h3>
                         <!-- FOR CALEB: IMPORT USER INFO INTO HERE -->
-                        <p>email: m25xxxx@usna.edu</p>
-                        <p>Name: billy rob</p>
+                        <p>Username: billyrob</p>
+                        <p>Password: xxxxxxxxxxx</p>
+                        <button onclick="openChangePswd()">Change Password</button>
                     </div>
                 </div>
-                
-    
+
+                <div class="changePswd">
+                    <div id="changePassword" class="changePswd-content">
+                        <form>
+                            <label for="curpwd">Current Password:</label>
+                            <input type="password" id="curpwd" name="curpwd">
+                            <label for="newpwd">New Password:</label>
+                            <input type="password" id="newpwd" name="newpwd">
+                            <label for="conpwd">Confirm Password:</label>
+                            <input type="password" id="conpwd" name="conpwd">
+                        </form>
+                    </div>
+                </div>
         </div>
 
         <div class="user-right-banner"></div> <!--right banner -->
