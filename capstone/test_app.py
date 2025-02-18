@@ -43,6 +43,27 @@ class FlaskTestCase(unittest.TestCase):
 
         # Check for the {{ errorMsg }} being empty because there should be no error in this case
         self.assertIn(b'<p></p>', response.data)
+
+    def test_output_page(self):
+        # Send a GET request to the output page
+        response = self.client.get('/output')
+
+        # Check that the response status code is 200 (OK)
+        self.assertEqual(response.status_code, 200)
+
+        # Check that the title is present
+        self.assertIn(b'<title>AI Wargaming</title>', response.data)
+
+        # Check for the dropdown menu items
+        self.assertIn(b'Generate Document', response.data)
+        self.assertIn(b'Login', response.data)
+        self.assertIn(b'User Profile', response.data)
+        self.assertIn(b'Documentation', response.data)
+
+        # Check for output
+        self.assertIn(b'<div id="ai-output">You selected: </div>', response.data)
+        self.assertIn(b'<div id="ai-output">You gave the following prompt: </div>', response.data)
+        self.assertIn(b'<div id="ai-output">Output: </div>', response.data)
         
 if __name__ == '__main__':
     unittest.main()
