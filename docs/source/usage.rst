@@ -25,7 +25,8 @@ To ensure that pip is available on your system, follow `these instructions <http
 All of the required python packages can be easily installed via the provided configuration files and setup script. There are separate files for GPU and CPU dependencies.
 
 Setup Script
-+++
+++++++++++++
+
 .. code-block:: console
 
     $ ./setup.sh
