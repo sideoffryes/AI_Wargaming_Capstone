@@ -60,27 +60,22 @@ with app.app_context():
 
 @app.route("/")
 @app.route("/index")
-@app.route("/index.html")
 def index():
     return render_template("index.html")
 
 @app.route("/output")
-@app.route("/output.html")
 def home():
     return render_template("output.html")
 
 @app.route("/login")
-@app.route("/login.html")
 def login():
     return render_template("login.html")
 
 @app.route("/userprofile")
-@app.route("/userprofile.html")
 def userprofile():
     return render_template("userprofile.html")
 
 @app.route("/new_account")
-@app.route("/new_account.html")
 def createAcc():
     return render_template("new_account.html")
 
