@@ -64,6 +64,33 @@ class FlaskTestCase(unittest.TestCase):
         self.assertIn(b'<div id="ai-output">You selected: </div>', response.data)
         self.assertIn(b'<div id="ai-output">You gave the following prompt: </div>', response.data)
         self.assertIn(b'<div id="ai-output">Output: </div>', response.data)
+
+    def test_login_page(self):
+        # Send a GET request to the output page
+        response = self.client.get('/login')
+
+        # Check that the response status code is 200 (OK)
+        self.assertEqual(response.status_code, 200)
+
+        # Check that the title is present
+        self.assertIn(b'<title>Login Form</title>', response.data)
+
+        # Check for the dropdown menu items
+        self.assertIn(b'Generate Document', response.data)
+        self.assertIn(b'Login', response.data)
+        self.assertIn(b'User Profile', response.data)
+        self.assertIn(b'Documentation', response.data)
+
+        # Check for form
+        self.assertIn(b'<form action="/handle_loginPost" method="POST">', response.data)
+        self.assertIn(b'<input type="text" id="username" name="username" required>', response.data)
+        self.assertIn(b'<input type="password" id="password" name="password" required>', response.data)
+
+        # check for create new account
+        self.assertIn(b'<a href="/new_account" class="button">Create Account</a>', response.data)
+
+        # Check for the {{ errorMsg }} being empty because there should be no error in this case
+        self.assertIn(b'<p></p>', response.data)
         
 if __name__ == '__main__':
     unittest.main()
