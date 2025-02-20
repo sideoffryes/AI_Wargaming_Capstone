@@ -3,8 +3,18 @@ import os
 import time
 from datetime import datetime
 import torch
+from faissSetup import gen_embeds
+import faiss
+import argparse
+
+parser = argparse.ArgumentParser(description="Generates military documents using an LLM based on input from the user.")
+parser.add_argument("-k", "--top-k", type=int, help="Specify the number of related documents to identify for context when creating the new document, default is 5.", default=5)
+parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose mode")
+args = parser.parse_args()
 
 # export REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
+
+torch.cuda.empty_cache()
 
 def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     """Generates a specificed document using a specified LLM and returns the result.
@@ -36,7 +46,7 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     streamer = TextStreamer(tokenizer=tokenizer, skip_prompt=True)
     
     # set up prompt info
-    examples = load_examples(doc_type)
+    examples = load_examples(doc_type, prompt)
     prompt = role + examples + prompt + task
     
     # set device based on gpu availability
@@ -53,12 +63,29 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
         save_response(response, prompt, model_name, model)
     
     return response
-    
-def load_examples(type: str) -> str:
+
+def find_most_rel(query: str, index):
+    """Returns the indices of the most related documents based on the user's query
+
+    :param query: The user's query
+    :type query: str
+    :param index: The FAISS index of all of the corrosponding documents
+    :type index: file
+    :return: A list of the top k indices
+    :rtype: list
+    """
+    query_embed = gen_embeds(query).cpu().detach().numpy().flatten().reshape(1, -1)
+    faiss.normalize_L2(query_embed)
+    _, top_k_indices = index.search(query_embed, args.top_k)
+    return top_k_indices[0]
+
+def load_examples(type: str, prompt: str) -> str:
     """Returns real life examples of the requested document type.
 
     :param type: The document type
     :type type: str
+    :param prompt: The prompt the user entered
+    :type prompt: str
     :return: A string of all of the examples concatenated together
     :rtype: str
     """
@@ -66,19 +93,26 @@ def load_examples(type: str) -> str:
     examples = "Read the following examples very carefully. Your response must follow the same formatting as these examples.\n"
 
     data_path = "./data"
-    files = []
+
+    paths = []
 
     # get paths to all example files
     for root, dirs, fnames in os.walk(data_path):
         if type in root:
             for f in fnames:
-                files.append(os.path.join(root, f))
+                paths.append(os.path.join(root, f))
+                if ".faiss" in f:
+                    index = faiss.read_index(os.path.join(root, f))
 
-    # append contents of each file to examples
-    for f in files:
-        with open(f, 'r') as file:
-            examples += f"Example:\n {file.read()}\n\n"
-            
+    top_k_indices = find_most_rel(prompt, index)
+    
+    for k in top_k_indices:
+        with open(paths[k], 'r') as f:
+            examples += f"Example:\n{f.read()}\n\n"
+
+    if args.verbose:
+        print(f"---------- EXAMPLES SELECTED FOR RAG ----------\n{examples}")
+
     return examples
 
 def save_response(response: str, prompt: str, model_name: str, model: str):
