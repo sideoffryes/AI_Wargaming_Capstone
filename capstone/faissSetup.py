@@ -5,7 +5,14 @@ from transformers import AutoModel, AutoTokenizer, logging
 
 logging.set_verbosity_error()
 
-def cache_faiss(chunks, fname="./data/NAVADMINS/cache.faiss"):
+def cache_faiss(chunks: str, fname="./data/NAVADMINS/cache.faiss"):
+    """Converts each of the given text chunks into a vectory representation, adds them to a FAISS index, and writes the FAISS index to the disk.
+
+    :param chunks: List of strings to be converted to vectors
+    :type chunks: list
+    :param fname: path to save FAISS index to, defaults to "./data/NAVADMINS/cache.faiss"
+    :type fname: str, optional
+    """
     index_file = fname
     embed_file = fname.replace(".faiss", ".npy")
     
@@ -27,6 +34,13 @@ def cache_faiss(chunks, fname="./data/NAVADMINS/cache.faiss"):
     np.save(embed_file, chunk_embeds)
     
 def gen_embeds(text: str):
+    """Converts the given string to its vector embedding
+
+    :param text: The text to convert
+    :type text: str
+    :return: vector of the text
+    :rtype: vector
+    """
     tokenizer = AutoTokenizer.from_pretrained("princeton-nlp/sup-simcse-roberta-large")
     model = AutoModel.from_pretrained("princeton-nlp/sup-simcse-roberta-large")
     inputs = tokenizer(text, return_tensors="pt", truncation=True)

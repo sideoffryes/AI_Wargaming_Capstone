@@ -16,4 +16,4 @@ capstone/output
 # ignore NAVADMINS
 capstone/data/NAVADMINS/*
 !capstone/data/NAVADMINS/pages.txt
-!capstone/data/NAVADMINS/faiss.
+!capstone/data/NAVADMINS/cache.faiss
