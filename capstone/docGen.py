@@ -14,7 +14,6 @@ args = parser.parse_args()
 
 # export REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
 
-torch.cuda.empty_cache()
 
 def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     """Generates a specificed document using a specified LLM and returns the result.
@@ -33,6 +32,7 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     logging.set_verbosity_error()
     model_name = select_model(model_num)
     doc_type = select_doc(type_num)
+    torch.cuda.empty_cache()
     
     # Set LLM instructions
     role = "Role: You work for the United States Department of Defense, and you specialize in writing official military documents using military formatting.\n"
