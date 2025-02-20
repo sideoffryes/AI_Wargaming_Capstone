@@ -52,10 +52,10 @@ if __name__ == "__main__":
     text = []
     for root, dirs, fnames in os.walk("./data/NAVADMINS/"):
         for f in fnames:
-            with open(os.path.join(root, f), 'r') as file:
-                try:
+            try:
+                with open(os.path.join(root, f), 'r') as file:
                     text.append(file.read())
-                except:
-                    continue
+            except:
+                os.remove(os.path.join(root, f))
 
     cache_faiss(text)
