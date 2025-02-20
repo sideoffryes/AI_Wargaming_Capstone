@@ -129,6 +129,19 @@ class FlaskTestCase(unittest.TestCase):
 
         # Check for the {{ errorMsg }} being empty because there should be no error in this case
         self.assertIn(b'<p></p>', response.data)
+
+    def test_my_artifacts_logged_out(self):
+        # Send a GET request to the artifacts page
+        response = self.client.get('/my_artifacts')
+
+        # Check that the response status code is 200 (OK)
+        self.assertEqual(response.status_code, 200)
+
+        # Check that the title is is now Login From because user is not logged in
+        self.assertIn(b'<title>Login Form</title>', response.data)
+
+        # Check for the error message
+        self.assertIn(b'NOTICE: Please login to see your generated artifacts.', response.data)
         
 if __name__ == '__main__':
     unittest.main()
