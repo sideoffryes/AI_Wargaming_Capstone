@@ -167,6 +167,19 @@ class FlaskTestCase(unittest.TestCase):
 
         # Check for the {{ errorMsg }} being empty because there should be no error in this case
         self.assertIn(b'<p></p>', response.data)
+
+    def test_logout(self):
+        # Send a GET request to logout
+        response = self.client.get('/logout')
+
+        # Check that the response status code is 200 (OK)
+        self.assertEqual(response.status_code, 200)
+
+        # Check that the title is present
+        self.assertIn(b'<title>Capstone Starter</title>', response.data)
+
+        # Check for the {{ errorMsg }}
+        self.assertIn(b'Successfully logged out of profile', response.data)
         
 if __name__ == '__main__':
     unittest.main()
