@@ -142,6 +142,31 @@ class FlaskTestCase(unittest.TestCase):
 
         # Check for the error message
         self.assertIn(b'NOTICE: Please login to see your generated artifacts.', response.data)
+
+    def test_new_account(self):
+        # Send a GET request to the new account page
+        response = self.client.get('/new_account')
+
+        # Check that the response status code is 200 (OK)
+        self.assertEqual(response.status_code, 200)
+
+        # Check that the title is present
+        self.assertIn(b'<title>Account Creation</title>', response.data)
+
+        # Check for the dropdown menu items
+        self.assertIn(b'Generate Document', response.data)
+        self.assertIn(b'Login', response.data)
+        self.assertIn(b'User Profile', response.data)
+        self.assertIn(b'Documentation', response.data)
+
+        # Check for form
+        self.assertIn(b'<form action="/handle_registerPost" method="POST">', response.data)
+        self.assertIn(b'<input type="text" id="username" name="username" required>', response.data)
+        self.assertIn(b'<input type="password" id="ogpassword" name="ogpassword" required>', response.data)
+        self.assertIn(b'<input type="password" id="repassword" name="repassword" required>', response.data)
+
+        # Check for the {{ errorMsg }} being empty because there should be no error in this case
+        self.assertIn(b'<p></p>', response.data)
         
 if __name__ == '__main__':
     unittest.main()
