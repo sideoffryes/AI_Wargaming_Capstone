@@ -11,3 +11,6 @@ docs/build/latex/*
 
 # ignore old output files
 capstone/output
+
+# ignore NAVADMINS
+capstone/data/NAVADMINS/*
