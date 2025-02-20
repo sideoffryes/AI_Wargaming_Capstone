@@ -11,8 +11,18 @@ parser = argparse.ArgumentParser(description="Generates military documents using
 parser.add_argument("-k", "--top-k", type=int, help="Specify the number of related documents to identify for context when creating the new document, default is 5.", default=5)
 parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose mode")
 args = parser.parse_args()
+from faissSetup import gen_embeds
+import faiss
+import argparse
+
+parser = argparse.ArgumentParser(description="Generates military documents using an LLM based on input from the user.")
+parser.add_argument("-k", "--top-k", type=int, help="Specify the number of related documents to identify for context when creating the new document, default is 5.", default=5)
+parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose mode")
+args = parser.parse_args()
 
 # export REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
+
+torch.cuda.empty_cache()
 
 torch.cuda.empty_cache()
 
@@ -47,6 +57,7 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     
     # set up prompt info
     examples = load_examples(doc_type, prompt)
+    examples = load_examples(doc_type, prompt)
     prompt = role + examples + prompt + task
     
     # set device based on gpu availability
@@ -80,10 +91,29 @@ def find_most_rel(query: str, index):
     return top_k_indices[0]
 
 def load_examples(type: str, prompt: str) -> str:
+
+def find_most_rel(query: str, index):
+    """Returns the indices of the most related documents based on the user's query
+
+    :param query: The user's query
+    :type query: str
+    :param index: The FAISS index of all of the corrosponding documents
+    :type index: file
+    :return: A list of the top k indices
+    :rtype: list
+    """
+    query_embed = gen_embeds(query).cpu().detach().numpy().flatten().reshape(1, -1)
+    faiss.normalize_L2(query_embed)
+    _, top_k_indices = index.search(query_embed, args.top_k)
+    return top_k_indices[0]
+
+def load_examples(type: str, prompt: str) -> str:
     """Returns real life examples of the requested document type.
 
     :param type: The document type
     :type type: str
+    :param prompt: The prompt the user entered
+    :type prompt: str
     :param prompt: The prompt the user entered
     :type prompt: str
     :return: A string of all of the examples concatenated together
@@ -96,13 +126,19 @@ def load_examples(type: str, prompt: str) -> str:
 
     paths = []
 
+    paths = []
+
     # get paths to all example files
     for root, dirs, fnames in os.walk(data_path):
         if type in root:
             for f in fnames:
-                paths.append(os.path.join(root, f))
                 if ".faiss" in f:
                     index = faiss.read_index(os.path.join(root, f))
+                elif "pages" not in f:
+                    paths.append(os.path.join(root, f))
+                else:
+                    continue
+                    
 
     top_k_indices = find_most_rel(prompt, index)
     
@@ -152,8 +188,6 @@ def select_model(num: int) -> str:
             model = "meta-llama/Llama-3.2-3B-Instruct"
         case 3:
             model = "meta-llama/Llama-3.1-8B-Instruct"
-        case 4:
-            model = "meta-llama/Llama-3.3-70B-Instruct"
 
     return model
 
