@@ -6,9 +6,12 @@ import torch
 from faissSetup import gen_embeds
 import faiss
 import argparse
+import warnings
+
+warnings.filterwarnings("ignore", category=UserWarning)
 
 parser = argparse.ArgumentParser(description="Generates military documents using an LLM based on input from the user.")
-parser.add_argument("-k", "--top-k", type=int, help="Specify the number of related documents to identify for context when creating the new document, default is 5.", default=5)
+parser.add_argument("-k", "--top-k", type=int, help="Specify the number of related documents to identify for context when creating the new document, default is 3.", default=3)
 parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose mode")
 args = parser.parse_args()
 
@@ -32,7 +35,6 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     logging.set_verbosity_error()
     model_name = select_model(model_num)
     doc_type = select_doc(type_num)
-    torch.cuda.empty_cache()
     
     # Set LLM instructions
     role = "Role: You work for the United States Department of Defense, and you specialize in writing official military documents using military formatting.\n"
@@ -52,13 +54,15 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     
     # generate response
     t_start = time.time()
-    generated_ids = model.generate(**model_inputs, do_sample=True, max_new_tokens=500, streamer=streamer)
+    generated_ids = model.generate(**model_inputs, do_sample=True, max_new_tokens=1000, streamer=streamer)
     response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0][len(prompt):]
     t_stop = time.time()
     print(f"Generation time: {t_stop - t_start} sec / {(t_stop - t_start) / 60} min")
     
     if save:
         save_response(response, prompt, model_name, model)
+    
+    torch.cuda.empty_cache()
     
     return response
 
@@ -116,6 +120,7 @@ def load_examples(type: str, prompt: str) -> str:
 
     if args.verbose:
         print(f"---------- EXAMPLES SELECTED FOR RAG ----------\n{examples}")
+        print("---------- END EXAMPLES ----------")
 
     return examples
 
@@ -185,7 +190,7 @@ def select_doc(num: int) -> str:
 
 if __name__ == "__main__":
     # model to select model you want to load
-    select = int(input("Select the Llama model you would like to run\n1) Llama 3.2 1B Instruct\n2) Llama 3.2 3B Instruct\n3) Llama 3.1 8B Instruct\n4) Llama 3.3 70B Instruct\n> "))
+    select = int(input("Select the Llama model you would like to run\n1) Llama 3.2 1B Instruct\n2) Llama 3.2 3B Instruct\n3) Llama 3.1 8B Instruct\n> "))
 
     # get document type from user
     doc = int(input("Select document to generate\n1) Naval Message (NAVADMIN)\n2) USMC Message (MARADMIN)\n3) USMC OpOrd\n> "))

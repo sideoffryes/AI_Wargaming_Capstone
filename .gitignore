@@ -17,3 +17,6 @@ capstone/output
 capstone/data/NAVADMINS/*
 !capstone/data/NAVADMINS/pages.txt
 !capstone/data/NAVADMINS/cache.faiss
+
+# ignore FOUO
+capstone/data/RTW/*
