@@ -128,8 +128,8 @@ def login():
 def userprofile():
     return render_template("userprofile.html")
 
-@app.route("/new_account", methods=['GET', 'POST'])
-def createAcc():
+@app.route("/register", methods=['GET', 'POST'])
+def register():
     if request.method == 'POST':
         username = request.form.get('username')
 
