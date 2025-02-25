@@ -58,9 +58,35 @@ class GeneratedArtifact(db.Model):
 with app.app_context():
     db.create_all()
 
-@app.route("/")
-@app.route("/index")
+@app.route('/')
+@app.route('/index', methods=['GET', 'POST'])
 def index():
+    if request.method == 'POST':
+        artifactType = request.form.get('artifact_type')
+        otherInput = request.form.get('artifact_parameters')
+        llmChosen = request.form.get('model_selection')
+
+        # Validation check
+        if not isinstance(artifactType, str) or otherInput == "" or not isinstance(llmChosen, str):
+            errorMsg = "ERROR: Please select an artifact, model type, and give a prompt."
+            return render_template('index.html', errorMsg=errorMsg)
+
+        # Check if it's a debug artifact
+        if int(artifactType) == 1:
+            llmOut = "You selected the DEBUG ARTIFACT and gave this prompt: " + otherInput + " Here is a bunch of random numbers: " + str(hash(otherInput))
+        else:
+            # Run the docgen and get output
+            llmOut = gen(llmChosen, int(artifactType) - 1, otherInput)
+
+        if 'user_id' in session:
+            user_id = session['user_id']
+            new_artifact = GeneratedArtifact(user_id=user_id, prompt=otherInput, content=llmOut)
+            db.session.add(new_artifact)
+            db.session.commit()
+
+        return render_template('output.html', artifactType=artifactType, otherInput=otherInput, llmOut=llmOut)
+    
+    # If GET request, just render the form
     return render_template("index.html")
 
 @app.route("/output")
@@ -87,39 +113,39 @@ def logout():
     errorMsg = "Successfully logged out of profile"
     return render_template('index.html', errorMsg=errorMsg)
 
-@app.route('/handle_indexPost', methods=['POST'])
-def handle_indexPost():
-    if request.method != 'POST':
-        errorMsg = "ERROR: Something went wrong, please try again."
-        return render_template('index.html', errorMsg=errorMsg)
+# @app.route('/handle_indexPost', methods=['POST'])
+# def handle_indexPost():
+#     if request.method != 'POST':
+#         errorMsg = "ERROR: Something went wrong, please try again."
+#         return render_template('index.html', errorMsg=errorMsg)
     
-    else:
-        artifactType = request.form.get('artifact_type')
-        otherInput = request.form.get('artifact_parameters')
-        llmChosen = request.form.get('model_selection')
+#     else:
+#         artifactType = request.form.get('artifact_type')
+#         otherInput = request.form.get('artifact_parameters')
+#         llmChosen = request.form.get('model_selection')
 
-        if not isinstance(artifactType, str) or otherInput == "" or not isinstance(llmChosen, str):
-            errorMsg = "ERROR: Please select an artifact, model type, and give a prompt."
-            return render_template('index.html', errorMsg=errorMsg)
+#         if not isinstance(artifactType, str) or otherInput == "" or not isinstance(llmChosen, str):
+#             errorMsg = "ERROR: Please select an artifact, model type, and give a prompt."
+#             return render_template('index.html', errorMsg=errorMsg)
 
-        # check if its a debug artifact
-        if int(artifactType) == 1:
-            llmOut = "You selected the DEBUG ARTIFACT and gave this prompt: " + otherInput + " Here is a bunch of random numbers: " + str(hash(otherInput))
-        else:
-            #run the docgen and get output:
-            llmOut = gen(llmChosen, int(artifactType)-1, otherInput)
+#         # check if its a debug artifact
+#         if int(artifactType) == 1:
+#             llmOut = "You selected the DEBUG ARTIFACT and gave this prompt: " + otherInput + " Here is a bunch of random numbers: " + str(hash(otherInput))
+#         else:
+#             #run the docgen and get output:
+#             llmOut = gen(llmChosen, int(artifactType)-1, otherInput)
 
-        if 'user_id' in session:
-            # Retrieve the logged-in user's ID from the session
-            user_id = session['user_id']
+#         if 'user_id' in session:
+#             # Retrieve the logged-in user's ID from the session
+#             user_id = session['user_id']
 
-            # Create and save the new artifact to the database
-            new_artifact = GeneratedArtifact(user_id=user_id, prompt=otherInput, content=llmOut)
-            db.session.add(new_artifact)
-            db.session.commit()
+#             # Create and save the new artifact to the database
+#             new_artifact = GeneratedArtifact(user_id=user_id, prompt=otherInput, content=llmOut)
+#             db.session.add(new_artifact)
+#             db.session.commit()
 
-        #output result to home.html
-        return render_template('output.html', artifactType=artifactType, otherInput=otherInput, llmOut=llmOut)
+#         #output result to home.html
+#         return render_template('output.html', artifactType=artifactType, otherInput=otherInput, llmOut=llmOut)
 
 @app.route('/handle_loginPost', methods=['POST'])
 def handle_loginPost():
