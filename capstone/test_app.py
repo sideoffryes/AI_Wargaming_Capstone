@@ -1,5 +1,7 @@
 import unittest
 from app import app
+import json
+import requests
 
 class FlaskTestCase(unittest.TestCase):
     
@@ -180,6 +182,30 @@ class FlaskTestCase(unittest.TestCase):
 
         # Check for the {{ errorMsg }}
         self.assertIn(b'Successfully logged out of profile', response.data)
+
+    def test_handle_indexPost(self):
+        # Data that simulates what would be entered in the form
+        form_data = {
+            'artifact_type': '1',  # DEBUG ARTIFACT
+            'model_selection': '2',  # Llama-3.1-8B-Instruct
+            'artifact_parameters': 'Some additional parameters for artifact'
+        }
+
+        # Simulate the POST request to the '/index' route with the form data
+        response = self.client.post('/index', data=form_data)
+
+        # Assert that the response is a redirect (302) after form submission
+        self.assertEqual(response.status_code, 302)  # HTTP 302 for redirect
+
+        # Optionally, you can check that the redirect is happening to the correct page (e.g., '/index')
+        self.assertRedirects(response, '/index')
+
+        # Optionally, you can assert that the data is being processed correctly
+        # For example, check the content of the redirected page or other actions
+
+        # Verify the data was processed by checking for specific changes, such as:
+        # - Creation of a new object
+        # - A specific error message or message indicating successful submission
         
 if __name__ == '__main__':
     unittest.main()
