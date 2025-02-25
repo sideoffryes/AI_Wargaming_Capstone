@@ -41,7 +41,7 @@
         <p>{{ errorMsg }}</p>
         <h2>Account Creation Form</h2>
         <!-- Redirect back to login -->
-        <form action="{{ url_for('handle_registerPost') }}" method="POST">
+        <form action="{{ url_for('register') }}" method="POST">
             <label for="username">Username:</label><br>
             <input type="text" id="username" name="username" required><br><br>
 
