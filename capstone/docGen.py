@@ -1,12 +1,16 @@
-from transformers import logging, AutoTokenizer, TextStreamer, AutoModelForCausalLM, BitsAndBytesConfig
+import argparse
 import os
 import time
-from datetime import datetime
-import torch
-from faissSetup import gen_embeds
-import faiss
-import argparse
 import warnings
+from datetime import datetime
+
+import faiss
+import torch
+from docx import Document
+from transformers import (AutoModelForCausalLM, AutoTokenizer,
+                          BitsAndBytesConfig, TextStreamer, logging)
+
+from faissSetup import gen_embeds
 
 warnings.filterwarnings("ignore", category=UserWarning)
 
@@ -115,8 +119,17 @@ def load_examples(type: str, prompt: str) -> str:
     top_k_indices = find_most_rel(prompt, index)
     
     for k in top_k_indices:
-        with open(paths[k], 'r') as f:
-            examples += f"Example:\n{f.read()}\n\n"
+        p = paths[k]
+        if ".docx" in p:
+            doc = Document(p)
+            text = ""
+            for para in doc.paragraphs:
+                text += para.text + "\n\n"
+            
+            examples += f"Example\n{text}\n\n"
+        else:
+            with open(paths[k], 'r') as f:
+                examples += f"Example:\n{f.read()}\n\n"
 
     if args.verbose:
         print(f"---------- EXAMPLES SELECTED FOR RAG ----------\n{examples}")
@@ -183,6 +196,8 @@ def select_doc(num: int) -> str:
             type = "MARADMIN"
         case 3:
             type = "OpOrd"
+        case 4:
+            type = "RTW"
         case _:
             type = "NAVADMIN"
 
@@ -193,7 +208,7 @@ if __name__ == "__main__":
     select = int(input("Select the Llama model you would like to run\n1) Llama 3.2 1B Instruct\n2) Llama 3.2 3B Instruct\n3) Llama 3.1 8B Instruct\n> "))
 
     # get document type from user
-    doc = int(input("Select document to generate\n1) Naval Message (NAVADMIN)\n2) USMC Message (MARADMIN)\n3) USMC OpOrd\n> "))
+    doc = int(input("Select document to generate\n1) Naval Message (NAVADMIN)\n2) USMC Message (MARADMIN)\n3) USMC OpOrd\n4) Road to War\n> "))
 
     user_query = input("Input> ")
     user_query = "Request: " + user_query

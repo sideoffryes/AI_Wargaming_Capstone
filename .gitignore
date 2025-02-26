@@ -20,3 +20,4 @@ capstone/data/NAVADMINS/*
 
 # ignore FOUO
 capstone/data/RTW/*
+!capstone/data/RTW/cache.faiss

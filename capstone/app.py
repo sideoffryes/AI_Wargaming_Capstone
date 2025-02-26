@@ -1,11 +1,12 @@
-from flask import Flask, render_template, request, session, send_from_directory
-from flask_sqlalchemy import SQLAlchemy
-from docGen import gen
-import os
-from datetime import datetime
-from datetime import timedelta
 import datetime
 import hashlib
+import os
+from datetime import datetime, timedelta
+
+from flask import Flask, render_template, request, send_from_directory, session
+from flask_sqlalchemy import SQLAlchemy
+
+from docGen import gen
 
 app = Flask(__name__)
 

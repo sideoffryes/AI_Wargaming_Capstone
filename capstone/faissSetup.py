@@ -1,6 +1,10 @@
-import faiss, os, argparse
-from tqdm import tqdm
+import argparse
+import os
+
+import faiss
 import numpy as np
+from docx import Document
+from tqdm import tqdm
 from transformers import AutoModel, AutoTokenizer, logging
 
 logging.set_verbosity_error()
@@ -8,7 +12,7 @@ logging.set_verbosity_error()
 tokenizer = AutoTokenizer.from_pretrained("princeton-nlp/sup-simcse-roberta-large")
 model = AutoModel.from_pretrained("princeton-nlp/sup-simcse-roberta-large", device_map="cpu")
 
-def cache_faiss(chunks: str, fname="./data/NAVADMINS/cache.faiss"):
+def cache_faiss(chunks: str, fname):
     """Converts each of the given text chunks into a vectory representation, adds them to a FAISS index, and writes the FAISS index to the disk.
 
     :param chunks: List of strings to be converted to vectors
@@ -17,7 +21,6 @@ def cache_faiss(chunks: str, fname="./data/NAVADMINS/cache.faiss"):
     :type fname: str, optional
     """
     index_file = fname
-    embed_file = fname.replace(".faiss", ".npy")
     
     chunk_embeds = []
     for c in tqdm(chunks, desc="Generating document embeddings"):
@@ -35,7 +38,6 @@ def cache_faiss(chunks: str, fname="./data/NAVADMINS/cache.faiss"):
     index.add(chunk_embeds)
     
     faiss.write_index(index, index_file)
-    np.save(embed_file, chunk_embeds)
     
 def gen_embeds(text: str):
     """Converts the given string to its vector embedding
@@ -45,12 +47,12 @@ def gen_embeds(text: str):
     :return: vector of the text
     :rtype: vector
     """
-    inputs = tokenizer(text, return_tensors="pt", padding=True).to("cpu")
+    inputs = tokenizer(text, return_tensors="pt", padding=True, truncation=True).to("cpu")
     outputs = model(**inputs)
     # last hidden state shape = [batch_size, tokens, hidden_dim]
     return outputs.last_hidden_state[:, 0, :]
 
-if __name__ == "__main__":
+def nav():
     text = []
     for root, dirs, fnames in os.walk("./data/NAVADMINS/"):
         for f in fnames:
@@ -61,5 +63,30 @@ if __name__ == "__main__":
                     text.append(subj)
             except:
                 os.remove(os.path.join(root, f))
+    cache_faiss(text, "./data/NAVADMINS/cache.faiss")
 
-    cache_faiss(text)
+def rtw():
+    text = []
+    for root, dirs, fnames in os.walk("./data/RTW/"):
+        for f in fnames:
+            try:
+                doc = Document(os.path.join(root, f))
+                body = ""
+                for p in doc.paragraphs:
+                    body += p.text
+                text.append(body)
+            except:
+                os.remove(os.path.join(root, f))
+                
+    cache_faiss(text, "./data/RTW/cache.faiss")
+
+if __name__ == "__main__":
+    doc = int(input("Select the document type you would like to generate embeddings for.\n1. NAVADMINS\n2. Road to War Briefs\n> "))
+    match doc:
+        case 1:
+            nav()
+        case 2:
+            rtw()
+        case _:
+            print("ERROR! You did not selection a valid option. Exiting...")
+            exit
