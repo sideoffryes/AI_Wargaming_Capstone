@@ -59,80 +59,44 @@ class GeneratedArtifact(db.Model):
 with app.app_context():
     db.create_all()
 
-@app.route("/")
-@app.route("/index")
-@app.route("/index.html")
+@app.route('/')
+@app.route('/index', methods=['GET', 'POST'])
 def index():
-    return render_template("index.html")
-
-@app.route("/output")
-@app.route("/output.html")
-def home():
-    return render_template("output.html")
-
-@app.route("/login")
-@app.route("/login.html")
-def login():
-    return render_template("login.html")
-
-@app.route("/userprofile")
-@app.route("/userprofile.html")
-def userprofile():
-    return render_template("userprofile.html")
-
-@app.route("/new_account")
-@app.route("/new_account.html")
-def createAcc():
-    return render_template("new_account.html")
-
-@app.route('/logout')
-def logout():
-    # Remove 'user_id' from session
-    session.pop('user_id', None)
-    # Redirect to login page
-    errorMsg = "Successfully logged out of profile"
-    return render_template('index.html', errorMsg=errorMsg)
-
-@app.route('/handle_indexPost', methods=['POST'])
-def handle_indexPost():
-    if request.method != 'POST':
-        errorMsg = "ERROR: Something went wrong, please try again."
-        return render_template('index.html', errorMsg=errorMsg)
-    
-    else:
+    if request.method == 'POST':
         artifactType = request.form.get('artifact_type')
         otherInput = request.form.get('artifact_parameters')
+        llmChosen = request.form.get('model_selection')
 
-        if not isinstance(artifactType, str) or otherInput == "":
+        # Validation check
+        if not isinstance(artifactType, str) or otherInput == "" or not isinstance(llmChosen, str):
             errorMsg = "ERROR: Please select an artifact, model type, and give a prompt."
             return render_template('index.html', errorMsg=errorMsg)
 
-        # check if its a debug artifact
+        # Check if it's a debug artifact
         if int(artifactType) == 1:
             llmOut = "You selected the DEBUG ARTIFACT and gave this prompt: " + otherInput + " Here is a bunch of random numbers: " + str(hash(otherInput))
         else:
-            #run the docgen and get output:
-            llmOut = gen(2, int(artifactType)-1, otherInput)
+            # Run the docgen and get output
+            llmOut = gen(llmChosen, int(artifactType) - 1, otherInput)
 
         if 'user_id' in session:
-            # Retrieve the logged-in user's ID from the session
             user_id = session['user_id']
-
-            # Create and save the new artifact to the database
             new_artifact = GeneratedArtifact(user_id=user_id, prompt=otherInput, content=llmOut)
             db.session.add(new_artifact)
             db.session.commit()
 
-        #output result to home.html
         return render_template('output.html', artifactType=artifactType, otherInput=otherInput, llmOut=llmOut)
-
-@app.route('/handle_loginPost', methods=['POST'])
-def handle_loginPost():
-    if request.method != 'POST':
-        errorMsg = "ERROR: Something went wrong, please try again."
-        return render_template('index.html', errorMsg=errorMsg)
     
-    else:
+    # If GET request, just render the form
+    return render_template("index.html")
+
+@app.route("/output")
+def home():
+    return render_template("output.html")
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
         username = request.form.get('username')
         password = request.form.get('password')
 
@@ -158,14 +122,16 @@ def handle_loginPost():
         else:
             errorMsg = "ERROR: Given login credentials were incorrect, please try again."
             return render_template('login.html', errorMsg=errorMsg)
+        
+    return render_template("login.html")
 
-@app.route('/handle_registerPost', methods=['POST'])
-def handle_registerPost():
-    if request.method != 'POST':
-        errorMsg = "ERROR: Something went wrong, please try again."
-        return render_template('new_account.html', errorMsg=errorMsg)
-    
-    else:
+@app.route("/userprofile")
+def userprofile():
+    return render_template("userprofile.html")
+
+@app.route("/register", methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
         username = request.form.get('username')
 
         # Check if the username already exists in the database
@@ -196,6 +162,16 @@ def handle_registerPost():
         # go to login page and tell user to login
         errorMsg = "NOTICE: Please login using previously created username and password."
         return render_template('login.html', errorMsg=errorMsg)
+
+    return render_template("new_account.html")
+
+@app.route('/logout')
+def logout():
+    # Remove 'user_id' from session
+    session.pop('user_id', None)
+    # Redirect to login page
+    errorMsg = "Successfully logged out of profile"
+    return render_template('index.html', errorMsg=errorMsg)
  
 @app.route('/my_artifacts', methods=['GET'])
 def my_artifacts():
