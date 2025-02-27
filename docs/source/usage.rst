@@ -14,7 +14,7 @@ The code for this project can be downloaded via `GitHub <https://github.com/side
     $ git clone https://github.com/sideoffryes/AI_Wargaming_Capstone.git
 
 Python Management
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
 
 To use this project, the are several prerequisites that are necessary. The easiest way to manage these dependencies is using pip and a virtual environment.
 
@@ -31,7 +31,7 @@ Setup Script
 
     $ ./setup.sh
 
-The setup script will ask if you would like to install the CPU or GPU configuratio and install the appropriate configuration.
+The setup script will ask if you would like to install the CPU or GPU configuration and install the appropriate configuration. Once the virtual environment has been created, the script will proceed to download the data necessary for the NAVADMINs and create a FAISS index for them.
 
 Once the setup is complete, make sure to activate the virtual environment.
 

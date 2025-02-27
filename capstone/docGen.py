@@ -14,13 +14,7 @@ from faissSetup import gen_embeds
 
 warnings.filterwarnings("ignore", category=UserWarning)
 
-parser = argparse.ArgumentParser(description="Generates military documents using an LLM based on input from the user.")
-parser.add_argument("-k", "--top-k", type=int, help="Specify the number of related documents to identify for context when creating the new document, default is 3.", default=3)
-parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose mode")
-args = parser.parse_args()
-
 # export REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
-
 
 def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     """Generates a specificed document using a specified LLM and returns the result.
@@ -204,6 +198,11 @@ def select_doc(num: int) -> str:
     return type
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Generates military documents using an LLM based on input from the user.")
+    parser.add_argument("-k", "--top-k", type=int, help="Specify the number of related documents to identify for context when creating the new document, default is 3.", default=3)
+    parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose mode")
+    args = parser.parse_args()
+    
     # model to select model you want to load
     select = int(input("Select the Llama model you would like to run\n1) Llama 3.2 1B Instruct\n2) Llama 3.2 3B Instruct\n3) Llama 3.1 8B Instruct\n> "))
 

@@ -8,16 +8,13 @@
 
    .. autosummary::
    
-      createAcc
       docs
-      handle_indexPost
-      handle_loginPost
-      handle_registerPost
       home
       index
       login
       logout
       my_artifacts
+      register
       userprofile
    
    .. rubric:: Classes

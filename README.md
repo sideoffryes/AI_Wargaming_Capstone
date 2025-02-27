@@ -42,11 +42,16 @@ A pre-compiled PDF version of the documentation can be found [here](./docs/build
 
 Once you have the local webserver running, you can access an HTML version of the documentation in the web browser by opening the side bar menu and selecting the documentation link.
 
-The HTML documentation is **not** pre-generated and must be created by the server host. It can be easily generated with the following commands:
+The HTML documentation is **not** pre-generated and must be created by the server host.
+
+**Make sure you have completed the python virtual environment setup with the setup.sh script before attempting to compile the docs.**
+
+They can be easily generated with the following commands:
 
 ```console
-(capstone_gpu) $ cd docs
-(capstone_gpu) $ make html
+$ source .venv/bin/activate
+(.venv) $ cd docs
+(.venv) $ make html
 ```
 
 These instructions can also be found in the PDF version of the docs linked above.
