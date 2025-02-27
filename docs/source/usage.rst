@@ -66,7 +66,7 @@ Before attempting to run any of the scripts, make sure that you have the correct
 
 .. code-block:: console
 
-    (.venv) $ conda activate capstone_gpu
+    $ source .venv/bin/activate
 
 All of the code that runs the webserver and actually generated the documents can be found inside of the *capstone* directory. *app.py* is the webserver and *docgen.py* is the script that accesses the LLM to generate documents. Running the entire project can be accomplished with the following:
 
