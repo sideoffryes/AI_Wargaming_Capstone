@@ -1,0 +1,17 @@
+--extra-index-url https://download.pytorch.org/whl/cu126
+Flask
+flask_sqlalchemy
+pypdf
+pytest
+reportlab
+transformers
+accelerate
+bitsandbytes
+torch==2.6.0+cu126
+torchvision
+torchaudio
+sphinxcontrib-httpdomain
+sphinx_rtd_theme
+sphinx
+faiss-gpu-cu12
+python-docx

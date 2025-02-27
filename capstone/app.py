@@ -1,11 +1,12 @@
-from flask import Flask, render_template, request, session, send_from_directory
-from flask_sqlalchemy import SQLAlchemy
-from docGen import gen
-import os
-from datetime import datetime
-from datetime import timedelta
 import datetime
 import hashlib
+import os
+from datetime import datetime, timedelta
+
+from flask import Flask, render_template, request, send_from_directory, session
+from flask_sqlalchemy import SQLAlchemy
+
+from docGen import gen
 
 app = Flask(__name__)
 
@@ -49,7 +50,7 @@ class GeneratedArtifact(db.Model):
     # The generated artifact (text)
     content = db.Column(db.Text, nullable=False)
     # Timestamp for when the artifact was created
-    created_at = db.Column(db.DateTime, default=datetime.datetime.now)
+    created_at = db.Column(db.DateTime, default=datetime.now)
 
     def __repr__(self):
         return f"<GeneratedArtifact {self.id} for User {self.user_id}>"

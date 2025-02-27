@@ -1,6 +1,8 @@
 __pycache__
 .pytest_cache
 *.db
+.venv
+HF_TOKEN.txt
 
 # ignore html docs and extra pdf docs
 docs/build/doctrees
@@ -10,3 +12,12 @@ docs/build/latex/*
 
 # ignore old output files
 capstone/output
+
+# ignore NAVADMINS
+capstone/data/NAVADMINS/*
+!capstone/data/NAVADMINS/pages.txt
+!capstone/data/NAVADMINS/cache.faiss
+
+# ignore FOUO
+capstone/data/RTW/*
+!capstone/data/RTW/cache.faiss
