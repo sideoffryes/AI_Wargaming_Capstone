@@ -76,7 +76,7 @@ def find_most_rel(query: str, index):
     """
     query_embed = gen_embeds(query).cpu().detach().numpy().flatten().reshape(1, -1)
     faiss.normalize_L2(query_embed)
-    _, top_k_indices = index.search(query_embed, args.top_k)
+    _, top_k_indices = index.search(query_embed, 3)
     return top_k_indices[0]
 
 def load_examples(type: str, prompt: str) -> str:
@@ -125,9 +125,9 @@ def load_examples(type: str, prompt: str) -> str:
             with open(paths[k], 'r') as f:
                 examples += f"Example:\n{f.read()}\n\n"
 
-    if args.verbose:
-        print(f"---------- EXAMPLES SELECTED FOR RAG ----------\n{examples}")
-        print("---------- END EXAMPLES ----------")
+    # if args.verbose:
+    #     print(f"---------- EXAMPLES SELECTED FOR RAG ----------\n{examples}")
+    #     print("---------- END EXAMPLES ----------")
 
     return examples
 
