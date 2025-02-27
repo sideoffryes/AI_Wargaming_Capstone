@@ -17,4 +17,5 @@ fi
 pip install flash-attn --no-build-isolation
 
 bash ./dataDownload.sh
-python3 ./capstone/faissSetup.py
+cd capstone
+python3 ./faissSetup.py
