@@ -50,7 +50,7 @@ class GeneratedArtifact(db.Model):
     # The generated artifact (text)
     content = db.Column(db.Text, nullable=False)
     # Timestamp for when the artifact was created
-    created_at = db.Column(db.DateTime, default=datetime.datetime.now)
+    created_at = db.Column(db.DateTime, default=datetime.now)
 
     def __repr__(self):
         return f"<GeneratedArtifact {self.id} for User {self.user_id}>"
