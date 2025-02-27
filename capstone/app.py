@@ -63,12 +63,11 @@ with app.app_context():
 @app.route('/index', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        artifactType = request.form.get('artifact_type')
+        artifactType = int(request.form.get('artifact_type'))
         otherInput = request.form.get('artifact_parameters')
-        llmChosen = request.form.get('model_selection')
-
+        llmChosen = int(request.form.get('model_selection'))        
         # Validation check
-        if not isinstance(artifactType, str) or otherInput == "" or not isinstance(llmChosen, str):
+        if not isinstance(artifactType, int) or otherInput == "" or not isinstance(llmChosen, int):
             errorMsg = "ERROR: Please select an artifact, model type, and give a prompt."
             return render_template('index.html', errorMsg=errorMsg)
 
