@@ -8,6 +8,7 @@
 
    .. autosummary::
    
+      find_most_rel
       gen
       load_examples
       save_response

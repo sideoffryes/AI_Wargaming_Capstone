@@ -5,6 +5,7 @@ API
     :toctree: generated
     :recursive:
 
-    docGen
     app
+    docGen
+    faissSetup
     pdfToText
