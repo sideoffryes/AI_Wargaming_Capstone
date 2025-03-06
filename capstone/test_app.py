@@ -6,7 +6,7 @@ class FlaskTestCase(unittest.TestCase):
         app.config['TESTING'] = True
         self.client = app.test_client()
 
-    def test_index(self):
+    def test_index_route(self):
         # Send a GET request to the index page
         response = self.client.get('/index')
         
@@ -44,6 +44,7 @@ class FlaskTestCase(unittest.TestCase):
         # Check for the {{ errorMsg }} being empty because there should be no error in this case
         self.assertIn(b'<p></p>', response.data)
 
+    def test_indexalt_route(self):
         # Send a GET request to the index page again and test all again
         response = self.client.get('/')
         
@@ -81,7 +82,7 @@ class FlaskTestCase(unittest.TestCase):
         # Check for the {{ errorMsg }} being empty because there should be no error in this case
         self.assertIn(b'<p></p>', response.data)
 
-    def test_output(self):
+    def test_output_route(self):
         # Send a GET request to the output page
         response = self.client.get('/output')
 
@@ -102,7 +103,7 @@ class FlaskTestCase(unittest.TestCase):
         self.assertIn(b'<div id="ai-output">You gave the following prompt: </div>', response.data)
         self.assertIn(b'<div id="ai-output">Output: </div>', response.data)
 
-    def test_login(self):
+    def test_login_route(self):
         # Send a GET request to the output page
         response = self.client.get('/login')
 
@@ -142,7 +143,7 @@ class FlaskTestCase(unittest.TestCase):
         # Check for the error message
         self.assertIn(b'NOTICE: Please login to see your generated artifacts.', response.data)
 
-    def test_register(self):
+    def test_register_route(self):
         # Send a GET request to the new account page
         response = self.client.get('/register')
 
@@ -167,7 +168,7 @@ class FlaskTestCase(unittest.TestCase):
         # Check for the {{ errorMsg }} being empty because there should be no error in this case
         self.assertIn(b'<p></p>', response.data)
 
-    def test_logout(self):
+    def test_logout_route(self):
         # Send a GET request to logout
         response = self.client.get('/logout')
 
@@ -180,7 +181,7 @@ class FlaskTestCase(unittest.TestCase):
         # Check for the {{ errorMsg }}
         self.assertIn(b'Successfully logged out of profile', response.data)
 
-    def test_indexPost(self):
+    def test_indexPost_allparams(self):
         # Data that simulates what would be entered in the form
         form_data = {
             'artifact_type': '1',  # DEBUG ARTIFACT
@@ -202,6 +203,7 @@ class FlaskTestCase(unittest.TestCase):
         self.assertIn(b'<div id="ai-output">You gave the following prompt: Some additional parameters for artifact</div>', response.data)
         self.assertIn(b'Output: You selected the DEBUG ARTIFACT and gave this prompt: Some additional parameters for artifact Here is a bunch of random numbers:', response.data)
         
+    def test_indexPost_twoparams(self):
         # Data that simulates what would be entered in the form
         form_data = {
             'artifact_type': '1',  # DEBUG ARTIFACT
@@ -220,6 +222,7 @@ class FlaskTestCase(unittest.TestCase):
         # Check that it gives the error message
         self.assertIn(b'<p>ERROR: Please select an artifact, model type, and give a prompt.</p>', response.data)
 
+    def test_indexPost_onlyparam(self):
         # Data that simulates what would be entered in the form
         form_data = {
             'artifact_parameters': 'Some additional parameters for artifact'
@@ -237,6 +240,7 @@ class FlaskTestCase(unittest.TestCase):
         # Check that it gives the error message
         self.assertIn(b'<p>ERROR: Please select an artifact, model type, and give a prompt.</p>', response.data)
 
+    def test_indexPost_onlytype(self):
         # Data that simulates what would be entered in the form
         form_data = {
             'artifact_type': '1',  # DEBUG ARTIFACT
@@ -254,6 +258,7 @@ class FlaskTestCase(unittest.TestCase):
         # Check that it gives the error message
         self.assertIn(b'<p>ERROR: Please select an artifact, model type, and give a prompt.</p>', response.data)
 
+    def test_indexPost_noparams(self):
         # Data that simulates what would be entered in the form
         form_data = {
         }
