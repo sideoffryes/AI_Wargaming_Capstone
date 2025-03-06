@@ -1,4 +1,3 @@
-import argparse
 import os
 
 import faiss
@@ -53,6 +52,8 @@ def gen_embeds(text: str):
     return outputs.last_hidden_state[:, 0, :]
 
 def nav():
+    """Creates vector embeddings for all documents in the data/NAVADMINS/ directory and adds them to FAISS index in same directory.
+    """
     text = []
     for root, dirs, fnames in os.walk("./data/NAVADMINS/"):
         for f in fnames:
@@ -66,6 +67,8 @@ def nav():
     cache_faiss(text, "./data/NAVADMINS/cache.faiss")
 
 def rtw():
+    """Creates vector embeddings for all documents in the data/RTW/ directory and adds them to FAISS index in the same directory.
+    """
     text = []
     for root, dirs, fnames in os.walk("./data/RTW/"):
         for f in fnames:
@@ -81,12 +84,21 @@ def rtw():
     cache_faiss(text, "./data/RTW/cache.faiss")
 
 if __name__ == "__main__":
-    doc = int(input("Select the document type you would like to generate embeddings for.\n1. NAVADMINS\n2. Road to War Briefs\n> "))
-    match doc:
-        case 1:
-            nav()
-        case 2:
-            rtw()
-        case _:
-            print("ERROR! You did not selection a valid option. Exiting...")
-            exit
+    while True:
+        try:
+            doc = int(input("Select the document type you would like to generate embeddings for.\n1. NAVADMINS\n2. Road to War Briefs\n3. Exit\n> "))
+        
+            match doc:
+                case 1:
+                    nav()
+                    break
+                case 2:
+                    rtw()
+                    break
+                case 3:
+                    print("Exiting...")
+                    quit()
+                case _:
+                    print("ERROR! You did not selection a valid option.")
+        except ValueError:
+            print("ERROR! Please only enter a number!")
