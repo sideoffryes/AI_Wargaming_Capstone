@@ -11,5 +11,6 @@
       cache_faiss
       gen_embeds
       nav
+      opord
       rtw
    
