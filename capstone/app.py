@@ -76,11 +76,11 @@ def index():
         llmChosen = int(llmChosen)
 
         # Check if it's a debug artifact
-        if int(artifactType) == 1:
+        if artifactType == 1:
             llmOut = "You selected the DEBUG ARTIFACT and gave this prompt: " + otherInput + " Here is a bunch of random numbers: " + str(hash(otherInput))
         else:
             # Run the docgen and get output
-            llmOut = gen(llmChosen, int(artifactType) - 1, otherInput)
+            llmOut = gen(llmChosen, artifactType - 1, otherInput)
 
         if 'user_id' in session:
             user_id = session['user_id']
