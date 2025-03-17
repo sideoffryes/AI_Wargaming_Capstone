@@ -126,7 +126,16 @@ def login():
 
 @app.route("/userprofile")
 def userprofile():
-    return render_template("userprofile.html")
+    # Get the user_id from the session (this is set when the user logs in)
+    user_id = session.get('user_id')
+
+    if user_id:
+        # Query the User model to get the user by ID
+        user = Profile.query.filter_by(id=user_id).first()
+
+        return render_template("userprofile.html", username = user.username)
+    
+    return render_template("userprofile.html", username = "Not logged in")
 
 @app.route("/register", methods=['GET', 'POST'])
 def register():
