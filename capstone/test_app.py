@@ -130,6 +130,25 @@ class FlaskTestCase(unittest.TestCase):
         # Check for the {{ errorMsg }} being empty because there should be no error in this case
         self.assertIn(b'<p></p>', response.data)
 
+    def test_loginPost_DNEaccount(self):
+        # Data that simulates what would be entered in the form
+        form_data = {
+            'username': 'DNE',
+            'password': 'DNE',
+        }
+
+        # Simulate the POST request to the '/login' route with the form data
+        response = self.client.post('/login', data=form_data)
+
+        # Assert that the submission works
+        self.assertEqual(response.status_code, 200)
+
+        # Check that it stays on login page
+        self.assertIn(b'<title>Login Form</title>', response.data)
+
+        # Check that the error message exists
+        self.assertIn(b'<p>ERROR: That username does not exist, please try again.</p>', response.data)
+
     def test_my_artifacts_logged_out(self):
         # Send a GET request to the artifacts page
         response = self.client.get('/my_artifacts')
