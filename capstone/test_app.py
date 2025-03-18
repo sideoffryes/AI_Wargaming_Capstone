@@ -174,6 +174,9 @@ class FlaskTestCase(unittest.TestCase):
         # Check for the error message
         self.assertIn(b'NOTICE: Please login to see your generated artifacts.', response.data)
 
+    # def test_myartifacts_logged_in(self):
+    #     return
+
     def test_register_route(self):
         # Send a GET request to the new account page
         response = self.client.get('/register')
@@ -307,7 +310,45 @@ class FlaskTestCase(unittest.TestCase):
         self.assertIn(b'<title>Capstone Starter</title>', response.data)
 
         # Check that the error message exists
-        self.assertIn(b'<p>Successfully logged into: success</p>', response.data)       
+        self.assertIn(b'<p>Successfully logged into: success</p>', response.data)
+
+    def test_registerloginPost_successfulCreation_badpassword(self):
+        # Data that simulates what would be entered in the form
+        form_data = {
+            'username': 'success',
+            'ogpassword': 'success',
+            'repassword': 'success'
+        }
+
+        # Simulate the POST request to the '/login' route with the form data
+        response = self.client.post('/register', data=form_data)
+
+        # Assert that the submission works
+        self.assertEqual(response.status_code, 200)
+
+        # Check that it stays on login page
+        self.assertIn(b'<title>Login Form</title>', response.data)
+
+        # Check that the error message exists
+        self.assertIn(b'<p>NOTICE: Please login using previously created username and password.</p>', response.data)
+
+        # Data that simulates what would be entered in the form
+        form_data = {
+            'username': 'success',
+            'password': 'wrong',
+        }
+
+         # Simulate the POST request to the '/login' route with the form data
+        response = self.client.post('/login', data=form_data)
+
+        # Assert that the submission works
+        self.assertEqual(response.status_code, 200)
+
+        # Check that it stays on login page
+        self.assertIn(b'<title>Login Form</title>', response.data)
+
+        # Check that the error message exists
+        self.assertIn(b'<p>ERROR: Given login credentials were incorrect, please try again.</p>', response.data)     
 
     def test_logout_route(self):
         # Send a GET request to logout
