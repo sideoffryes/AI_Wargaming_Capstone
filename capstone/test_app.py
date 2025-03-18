@@ -685,5 +685,55 @@ class FlaskTestCase(unittest.TestCase):
         # Check that the form and input fields are present
         self.assertIn(b'Username: Not logged in', response.data)
 
+    def test_userprofile_loggedin(self):
+        # Data that simulates what would be entered in the form
+        form_data = {
+            'username': 'success',
+            'ogpassword': 'success',
+            'repassword': 'success'
+        }
+
+        # Simulate the POST request to the '/login' route with the form data
+        response = self.client.post('/register', data=form_data)
+
+        # Assert that the submission works
+        self.assertEqual(response.status_code, 200)
+
+        # Check that it stays on login page
+        self.assertIn(b'<title>Login Form</title>', response.data)
+
+        # Check that the error message exists
+        self.assertIn(b'<p>NOTICE: Please login using previously created username and password.</p>', response.data)
+
+        # Data that simulates what would be entered in the form
+        form_data = {
+            'username': 'success',
+            'password': 'success',
+        }
+
+         # Simulate the POST request to the '/login' route with the form data
+        response = self.client.post('/login', data=form_data)
+
+        # Assert that the submission works
+        self.assertEqual(response.status_code, 200)
+
+        # Check that it stays on login page
+        self.assertIn(b'<title>Capstone Starter</title>', response.data)
+
+        # Check that the error message exists
+        self.assertIn(b'<p>Successfully logged into: success</p>', response.data)
+
+        # Send a GET request to the index page
+        response = self.client.get('/userprofile')
+        
+        # Check that the response status code is 200 (OK)
+        self.assertEqual(response.status_code, 200)
+        
+        # Check that the title is present
+        self.assertIn(b'<title>AI Wargaming</title>', response.data)
+
+        # Check that the form and input fields are present
+        self.assertIn(b'Username: success', response.data)
+
 if __name__ == '__main__':
     unittest.main()
