@@ -672,5 +672,18 @@ class FlaskTestCase(unittest.TestCase):
         # Check that it gives the error message
         self.assertIn(b'<p>ERROR: Please select an artifact, model type, and give a prompt.</p>', response.data)
 
+    def test_userprofile_loggedout(self):
+        # Send a GET request to the index page
+        response = self.client.get('/userprofile')
+        
+        # Check that the response status code is 200 (OK)
+        self.assertEqual(response.status_code, 200)
+        
+        # Check that the title is present
+        self.assertIn(b'<title>AI Wargaming</title>', response.data)
+
+        # Check that the form and input fields are present
+        self.assertIn(b'Username: Not logged in', response.data)
+
 if __name__ == '__main__':
     unittest.main()
