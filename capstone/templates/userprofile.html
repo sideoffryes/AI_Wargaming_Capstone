@@ -62,13 +62,19 @@
 
                 <div class="changePswd">
                     <div id="changePassword" class="changePswd-content">
-                        <form>
+                        <form action="{{ url_for('userprofile') }}" method="POST">
                             <label for="curpwd">Current Password:</label>
                             <input type="password" id="curpwd" name="curpwd">
+
                             <label for="newpwd">New Password:</label>
                             <input type="password" id="newpwd" name="newpwd">
+
                             <label for="conpwd">Confirm Password:</label>
                             <input type="password" id="conpwd" name="conpwd">
+
+                            <br><br>
+                            
+                            <input type="submit" value="Submit">
                         </form>
                     </div>
                 </div>
