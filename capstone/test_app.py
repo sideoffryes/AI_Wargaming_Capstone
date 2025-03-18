@@ -1,10 +1,22 @@
 import unittest
-from app import app
+from app import app, db
 
 class FlaskTestCase(unittest.TestCase):
     def setUp(self):
+        """Set up a fresh database before each test."""
         app.config['TESTING'] = True
+        app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'  # Use a separate test database
         self.client = app.test_client()
+        
+        with app.app_context():
+            db.drop_all()  # Delete existing tables
+            db.create_all()  # Recreate tables
+
+    def tearDown(self):
+        """Clean up the database after each test."""
+        with app.app_context():
+            db.session.remove()
+            db.drop_all()  # Delete all tables after each test
 
     def test_index_route(self):
         # Send a GET request to the index page
@@ -210,9 +222,9 @@ class FlaskTestCase(unittest.TestCase):
     def test_registerPost_successfulCreation(self):
         # Data that simulates what would be entered in the form
         form_data = {
-            'username': 'exist',
-            'ogpassword': 'exist',
-            'repassword': 'exist'
+            'username': 'success',
+            'ogpassword': 'success',
+            'repassword': 'success'
         }
 
         # Simulate the POST request to the '/login' route with the form data
@@ -226,6 +238,38 @@ class FlaskTestCase(unittest.TestCase):
 
         # Check that the error message exists
         self.assertIn(b'<p>NOTICE: Please login using previously created username and password.</p>', response.data)
+
+    def test_registerPost_duplicateCreation(self):
+        # Data that simulates what would be entered in the form
+        form_data = {
+            'username': 'duplicate',
+            'ogpassword': 'duplicate',
+            'repassword': 'duplicate'
+        }
+
+        # Simulate the POST request to the '/login' route with the form data
+        response = self.client.post('/register', data=form_data)
+
+        # Assert that the submission works
+        self.assertEqual(response.status_code, 200)
+
+        # Check that it stays on login page
+        self.assertIn(b'<title>Login Form</title>', response.data)
+
+        # Check that the error message exists
+        self.assertIn(b'<p>NOTICE: Please login using previously created username and password.</p>', response.data)
+
+        # Simulate the POST request to the '/login' route with the form data
+        response = self.client.post('/register', data=form_data)
+
+        # Assert that the submission works
+        self.assertEqual(response.status_code, 200)
+
+        # Check that it stays on login page
+        self.assertIn(b'<title>Account Creation</title>', response.data)
+
+        # Check that the error message exists
+        self.assertIn(b'<p>ERROR: This username already exists. Please use a different one.</p>', response.data)
 
     def test_logout_route(self):
         # Send a GET request to logout
