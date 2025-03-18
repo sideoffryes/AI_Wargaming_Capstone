@@ -224,6 +224,78 @@ class FlaskTestCase(unittest.TestCase):
         # Check for the error message
         self.assertIn(b'NOTICE: There are no artifacts associated with this account.', response.data)
 
+    def test_myartifacts_loggedin_withartifacts(self):
+        # Data that simulates what would be entered in the form
+        form_data = {
+            'username': 'success',
+            'ogpassword': 'success',
+            'repassword': 'success'
+        }
+
+        # Simulate the POST request to the '/login' route with the form data
+        response = self.client.post('/register', data=form_data)
+
+        # Assert that the submission works
+        self.assertEqual(response.status_code, 200)
+
+        # Check that it stays on login page
+        self.assertIn(b'<title>Login Form</title>', response.data)
+
+        # Check that the error message exists
+        self.assertIn(b'<p>NOTICE: Please login using previously created username and password.</p>', response.data)
+
+        # Data that simulates what would be entered in the form
+        form_data = {
+            'username': 'success',
+            'password': 'success',
+        }
+
+         # Simulate the POST request to the '/login' route with the form data
+        response = self.client.post('/login', data=form_data)
+
+        # Assert that the submission works
+        self.assertEqual(response.status_code, 200)
+
+        # Check that it stays on login page
+        self.assertIn(b'<title>Capstone Starter</title>', response.data)
+
+        # Check that the error message exists
+        self.assertIn(b'<p>Successfully logged into: success</p>', response.data)
+
+        # Data that simulates what would be entered in the form
+        form_data = {
+            'artifact_type': '1',  # DEBUG ARTIFACT
+            'model_selection': '2',  # Llama-3.2-3B-Instruct
+            'artifact_parameters': 'Some additional parameters for artifact'
+        }
+
+        # Simulate the POST request to the '/index' route with the form data
+        response = self.client.post('/index', data=form_data)
+
+        # Assert that the submission works
+        self.assertEqual(response.status_code, 200)
+
+        # Check that it redirects to the output page
+        self.assertIn(b'<title>AI Wargaming</title>', response.data)
+
+        # Check that the output exists
+        self.assertIn(b'<div id="ai-output">You selected: 1</div>', response.data)
+        self.assertIn(b'<div id="ai-output">You gave the following prompt: Some additional parameters for artifact</div>', response.data)
+        self.assertIn(b'Output: You selected the DEBUG ARTIFACT and gave this prompt: Some additional parameters for artifact Here is a bunch of random numbers:', response.data)
+
+        # Send a GET request to the artifacts page
+        response = self.client.get('/my_artifacts')
+
+        # Check that the response status code is 200 (OK)
+        self.assertEqual(response.status_code, 200)
+
+        # Check that the title is is now Login From because user is not logged in
+        self.assertIn(b'<title>Your Artifacts</title>', response.data)
+
+        # Check for the error message
+        self.assertIn(b'Some additional parameters for artifact', response.data)
+        self.assertIn(b'You selected the DEBUG ARTIFACT and gave this prompt: Some additional parameters for artifact Here is a bunch of random numbers:', response.data)
+        
     def test_register_route(self):
         # Send a GET request to the new account page
         response = self.client.get('/register')
