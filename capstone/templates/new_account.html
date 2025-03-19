@@ -42,13 +42,13 @@
         <h2>Account Creation Form</h2>
         <!-- Redirect back to login -->
         <form action="{{ url_for('register') }}" method="POST">
-            <label for="username">Username:</label><br>
+            <label for="username">Username:</label>
             <input type="text" id="username" name="username" required><br><br>
 
-            <label for="password">Password:</label><br>
+            <label for="password">Password:</label>
             <input type="password" id="ogpassword" name="ogpassword" required><br><br>
 
-            <label for="password">Retype Password:</label><br>
+            <label for="password">Retype Password:</label>
             <input type="password" id="repassword" name="repassword" required><br><br>
 
             <input type="submit" value="Submit">

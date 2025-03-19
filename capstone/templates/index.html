@@ -70,7 +70,7 @@
         <div class="content">
             <img src="../static/main_logo.png" alt="USNA logo">
             <p>{{ errorMsg }}</p>
-            <form action="{{ url_for('handle_indexPost') }}" method="POST">
+            <form action="{{ url_for('index') }}" method="POST">
                 <label for="artifact_type">Artifact Options:</label>
                 <select id="artifact_type" name="artifact_type" onchange="updateArtifactParameters()">
                     <option value="0" disabled selected>Please select an artifact</option>
