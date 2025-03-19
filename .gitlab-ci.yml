@@ -24,7 +24,7 @@ stages:          # List of stages for jobs, and their order of execution
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
   script:
-    - ./setup.sh
+    - echo "GPU" | ./setup.sh
     - echo "Build complete."
 
 unit-test-job:   # This job runs in the test stage.
@@ -32,7 +32,7 @@ unit-test-job:   # This job runs in the test stage.
   script:
     - echo "Running unit tests..."
     - cd capstone
-    - python -m unittest
+    - python3 -m unittest
 
 deploy-job:      # This job runs in the deploy stage.
   stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
