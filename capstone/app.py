@@ -63,20 +63,24 @@ with app.app_context():
 @app.route('/index', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        artifactType = int(request.form.get('artifact_type'))
+        artifactType = request.form.get('artifact_type')
         otherInput = request.form.get('artifact_parameters')
-        llmChosen = int(request.form.get('model_selection'))        
+        llmChosen = request.form.get('model_selection')
+
         # Validation check
-        if not isinstance(artifactType, int) or otherInput == "" or not isinstance(llmChosen, int):
+        if (artifactType is None) or otherInput == "" or (llmChosen is None):
             errorMsg = "ERROR: Please select an artifact, model type, and give a prompt."
             return render_template('index.html', errorMsg=errorMsg)
+        
+        artifactType = int(artifactType)
+        llmChosen = int(llmChosen)
 
         # Check if it's a debug artifact
-        if int(artifactType) == 1:
+        if artifactType == 1:
             llmOut = "You selected the DEBUG ARTIFACT and gave this prompt: " + otherInput + " Here is a bunch of random numbers: " + str(hash(otherInput))
         else:
             # Run the docgen and get output
-            llmOut = gen(llmChosen, int(artifactType) - 1, otherInput)
+            llmOut = gen(llmChosen, artifactType - 1, otherInput)
 
         if 'user_id' in session:
             user_id = session['user_id']
