@@ -24,7 +24,7 @@ stages:          # List of stages for jobs, and their order of execution
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
   script:
-    - python3 -m ensurepip --upgrade
+    - apt-get install python3-venv
     - echo "GPU" | ./setup.sh
     - echo "Build complete."
 
