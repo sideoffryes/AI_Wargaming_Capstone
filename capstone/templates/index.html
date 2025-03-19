@@ -1,7 +1,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/style.css"></link>
+    <link rel="stylesheet" href="../static/style.css">
     <title>Capstone Starter</title>
 
     <script>
@@ -17,8 +17,38 @@
                 document.getElementById("menu_icon").src="../static/menu.png";
                 swap_menu = false;
             }
-                
-        }        
+        }
+
+        // Function to update artifact parameters based on selected artifact type
+        function updateArtifactParameters() {
+            var artifactType = document.getElementById('artifact_type').value;
+            var artifactParameters = document.getElementById('artifact_parameters');
+            artifactParameters.innerHTML = ''; // Clear the existing fields
+
+            if (artifactType == '2') { // NAVADMIN
+                artifactParameters.innerHTML = '<textarea class="my_text" name="artifact_parameters" wrap="hard" placeholder="Enter NAVADMIN content here..."></textarea>';
+            } else if (artifactType == '4') { // OPORD
+                artifactParameters.innerHTML = `
+                    <label for="opord_orientation">Orientation:</label><br>
+                    <textarea class="my_text" name="opord_orientation" wrap="hard"></textarea><br><br>
+                    <label for="opord_situation">Situation:</label><br>
+                    <textarea class="my_text" name="opord_situation" wrap="hard"></textarea><br><br>
+                    <label for="opord_mission">Mission:</label><br>
+                    <textarea class="my_text" name="opord_mission" wrap="hard"></textarea><br><br>
+                    <label for="opord_execution">Execution:</label><br>
+                    <textarea class="my_text" name="opord_execution" wrap="hard"></textarea><br><br>
+                    <label for="opord_admin">Administration:</label><br>
+                    <textarea class="my_text" name="opord_admin" wrap="hard"></textarea><br><br>
+                    <label for="opord_logistics">Logistics:</label><br>
+                    <textarea class="my_text" name="opord_logistics" wrap="hard"></textarea><br><br>
+                    <label for="opord_command">Command and Signal:</label><br>
+                    <textarea class="my_text" name="opord_command" wrap="hard"></textarea><br><br>
+                `;
+            } else {
+                // Default case for other artifact types (DEBUG ARTIFACT, MARADMIN)
+                artifactParameters.innerHTML = '<textarea class="my_text" name="artifact_parameters" wrap="hard" placeholder="Enter additional parameters here..."></textarea>';
+            }
+        }
     </script>
 </head>
 
@@ -26,7 +56,7 @@
     <div class="main-container">
         <div class="banner">
             <div class = "dropdown">
-                <img src="../static/menu.png" id="menu_icon" alt = "menu" height="50" width="50"onclick="dropDown()"> 
+                <img src="../static/menu.png" id="menu_icon" alt = "menu" height="50" width="50" onclick="dropDown()"> 
                 <div id = "dropdownmenu" class="dropdown-content">
                     <a href = "/index"><img src = "../static/Computer Science Logo_RGB.png" height="180" width="160">Generate Document</a>
                     <a href = "/login"><img src = "../static/key.png" height="60" width="40">Login</a>
@@ -40,9 +70,9 @@
         <div class="content">
             <img src="../static/main_logo.png" alt="USNA logo">
             <p>{{ errorMsg }}</p>
-            <form action="{{ url_for('index') }}" method="POST">
+            <form action="{{ url_for('handle_indexPost') }}" method="POST">
                 <label for="artifact_type">Artifact Options:</label>
-                <select id="artifact_type" name="artifact_type">
+                <select id="artifact_type" name="artifact_type" onchange="updateArtifactParameters()">
                     <option value="0" disabled selected>Please select an artifact</option>
                     <option value="1">DEBUG ARTIFACT</option>
                     <option value="2">NAVADMIN</option>
@@ -53,20 +83,19 @@
                 <label for="model_selection">LLM Model Options:</label>
                 <select id="model_selection" name="model_selection">
                     <option value="0" disabled selected>Please select a model:</option>
-                    <option value="1">Llama-3.2-1B-Instruct</option>
-                    <option value="2">Llama-3.2-3B-Instruct</option>
-                    <option value="3">Llama-3.1-8B-Instruct</option>
-                    <option value="4">Llama-3.3-70B-Instruct</option>
+                    <option value="1">Llama-3.2-3B-Instruct</option>
+                    <option value="2">Llama-3.1-8B-Instruct</option>
+                    <option value="3">Llama-3.3-70B-Instruct</option>
                 </select><br><br>
                 
                 <label for="artifact_parameters">Additional Parameters:</label>
-                <textarea class ="my_text" id="artifact_parameters" name="artifact_parameters" wrap="hard"></textarea>
-                <br><br>
+                <div id="artifact_parameters">
+                    <textarea class="my_text" name="artifact_parameters" wrap="hard" placeholder="Select an artifact type to customize the parameters."></textarea>
+                </div><br><br>
 
                 <!-- Submit button -->
                 <button type="submit">Submit</button>
             </form>
-            <!-- <a href="https://www.example.com" class="button">Go to Example</a> -->
         </div>
 
         <!-- Right banner -->
