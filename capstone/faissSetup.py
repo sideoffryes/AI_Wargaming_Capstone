@@ -5,6 +5,7 @@ import numpy as np
 from docx import Document
 from tqdm import tqdm
 from transformers import AutoModel, AutoTokenizer, logging
+from argparse import ArgumentParser
 
 logging.set_verbosity_error()
 
@@ -99,24 +100,40 @@ def opord():
     cache_faiss(text, "./data/OpOrds/cache.faiss")
 
 if __name__ == "__main__":
-    while True:
-        try:
-            doc = int(input("Select the document type you would like to generate embeddings for.\n1. NAVADMINS\n2. Road to War Briefs\n3. OPORDS\n4. Exit\n> "))
+    parser = ArgumentParser(prog="faissSetup", description="Generates vector embeddings for different document types")
+    parser.add_argument("-d", "--doc", default="nav", help="Document type to generate embeddings. Options are nav, opord, and rtw")
+    args = parser.parse_args()
+
+    match args.doc:
+        case "nav":
+            nav()
+        case "opord":
+            opord()
+        case "rtw":
+            rtw()
+        case _:
+            print("ERROR! Invalid option selected. Exiting...")
+            exit(1)
+            
+    
+    # while True:
+    #     try:
+    #         doc = int(input("Select the document type you would like to generate embeddings for.\n1. NAVADMINS\n2. Road to War Briefs\n3. OPORDS\n4. Exit\n> "))
         
-            match doc:
-                case 1:
-                    nav()
-                    break
-                case 2:
-                    rtw()
-                    break
-                case 3:
-                    opord()
-                    break
-                case 4:
-                    print("Exiting...")
-                    quit()
-                case _:
-                    print("ERROR! You did not selection a valid option.")
-        except ValueError:
-            print("ERROR! Please only enter a number!")
+    #         match doc:
+    #             case 1:
+    #                 nav()
+    #                 break
+    #             case 2:
+    #                 rtw()
+    #                 break
+    #             case 3:
+    #                 opord()
+    #                 break
+    #             case 4:
+    #                 print("Exiting...")
+    #                 quit()
+    #             case _:
+    #                 print("ERROR! You did not selection a valid option.")
+    #     except ValueError:
+    #         print("ERROR! Please only enter a number!")
