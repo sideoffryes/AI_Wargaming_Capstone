@@ -42,6 +42,7 @@
 
             <h2>Your Generated Artifacts</h2>
             {% if artifacts %}
+            <div class="ai-box">
                 <ul>
                 {% for artifact in artifacts %}
                     <li>
@@ -51,10 +52,14 @@
                     </li>
                 {% endfor %}
                 </ul>
+            </div>
             {% else %}
-                <p>No artifacts found.</p>
+                <div class="ai-box">
+                    <p>No artifacts found.</p>
+                </div>
             {% endif %}
         </div>
+        <div class = "banner"></div><!--left banner -->
     </div>
 </body>
 </html>
