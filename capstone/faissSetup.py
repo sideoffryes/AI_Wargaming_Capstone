@@ -116,7 +116,7 @@ def opord():
 
 if __name__ == "__main__":
     parser = ArgumentParser(prog="faissSetup", description="Generates vector embeddings for different document types")
-    parser.add_argument("-d", "--doc", default="nav", help="Document type to generate embeddings. Options are nav, mar, opord, rtw, and all")
+    parser.add_argument("-d", "--doc", default="nav", help="Document type to generate embeddings. Options are NAVADMIN, MARADMIN, OPORD, Road to War Brief, and all", choices=['nav', 'mar', 'rtw', 'opord', 'all'], required=True)
     args = parser.parse_args()
 
     match args.doc:
