@@ -128,18 +128,68 @@ def login():
         
     return render_template("login.html")
 
-@app.route("/userprofile")
+# @app.route("/userprofile", methods=['GET', 'POST'])
+# def userprofile():
+#     # Get the user_id from the session (this is set when the user logs in)
+#     user_id = session.get('user_id')
+
+#     if user_id:
+#         # Query the User model to get the user by ID
+#         user = Profile.query.filter_by(id=user_id).first()
+
+#         return render_template("userprofile.html", username = user.username)
+    
+#     return render_template("userprofile.html", username = "Not logged in")
+
+@app.route("/userprofile", methods=['GET', 'POST'])
 def userprofile():
-    # Get the user_id from the session (this is set when the user logs in)
     user_id = session.get('user_id')
 
-    if user_id:
-        # Query the User model to get the user by ID
-        user = Profile.query.filter_by(id=user_id).first()
+    if not user_id:
+        return render_template("userprofile.html", username="Not logged in", errorMsg="", successMsg="")
 
-        return render_template("userprofile.html", username = user.username)
-    
-    return render_template("userprofile.html", username = "Not logged in")
+    # Fetch user from database
+    user = Profile.query.filter_by(id=user_id).first()
+
+    # Initialize messages
+    errorMsg = ""
+    successMsg = ""
+
+    if request.method == 'POST':
+        current_password = request.form.get('curpwd')
+        new_password = request.form.get('newpwd')
+        confirm_password = request.form.get('conpwd')
+
+        # Validate current password
+        if not user or not current_password or not new_password or not confirm_password:
+            errorMsg = "ERROR: Please fill out all fields."
+            return render_template("userprofile.html", username=user.username, errorMsg=errorMsg, successMsg=successMsg)
+
+        # Check if current password matches the stored hash
+        hashed_given = hashlib.sha256(user.salt + current_password.encode()).hexdigest()
+        if hashed_given != user.hash:
+            errorMsg = "ERROR: Current password is incorrect."
+            return render_template("userprofile.html", username=user.username, errorMsg=errorMsg, successMsg=successMsg)
+
+        # Check if new password and confirm password match
+        if new_password != confirm_password:
+            errorMsg = "ERROR: New passwords do not match."
+            return render_template("userprofile.html", username=user.username, errorMsg=errorMsg, successMsg=successMsg)
+
+        # Generate new salt and hash the new password
+        new_salt = os.urandom(16)
+        new_hashed_password = hashlib.sha256(new_salt + new_password.encode()).hexdigest()
+
+        # Update user password
+        user.salt = new_salt
+        user.hash = new_hashed_password
+        db.session.commit()
+
+        successMsg = "Password successfully changed."
+        return render_template("userprofile.html", username=user.username, errorMsg=errorMsg, successMsg=successMsg)
+
+    return render_template("userprofile.html", username=user.username, errorMsg=errorMsg, successMsg=successMsg)
+
 
 @app.route("/register", methods=['GET', 'POST'])
 def register():
