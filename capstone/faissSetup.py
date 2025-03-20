@@ -67,6 +67,21 @@ def nav():
                 os.remove(os.path.join(root, f))
     cache_faiss(text, "./data/NAVADMINS/cache.faiss")
 
+def mar():
+    """Creates vector embeddings for all documents in the data/MARADMINS/ directory and adds them to FAISS index in same directory.
+    """
+    text = []
+    for root, dirs, fnames in os.walk("./data/MARADMINS/"):
+        for f in fnames:
+            try:
+                with open(os.path.join(root, f), 'r') as file:
+                    content = file.read()
+                    subj = content.split("SUBJ/")[1].split("//")[0].rsplit("\n")[0]
+                    text.append(subj)
+            except:
+                os.remove(os.path.join(root, f))
+    cache_faiss(text, "./data/MARADMINS/cache.faiss")
+
 def rtw():
     """Creates vector embeddings for all documents in the data/RTW/ directory and adds them to FAISS index in the same directory.
     """
@@ -101,15 +116,22 @@ def opord():
 
 if __name__ == "__main__":
     parser = ArgumentParser(prog="faissSetup", description="Generates vector embeddings for different document types")
-    parser.add_argument("-d", "--doc", default="nav", help="Document type to generate embeddings. Options are nav, opord, and rtw")
+    parser.add_argument("-d", "--doc", default="nav", help="Document type to generate embeddings. Options are nav, mar, opord, rtw, and all")
     args = parser.parse_args()
 
     match args.doc:
         case "nav":
             nav()
+        case "mar":
+            mar()
         case "opord":
             opord()
         case "rtw":
+            rtw()
+        case "all":
+            nav()
+            mar()
+            opord()
             rtw()
         case _:
             print("ERROR! Invalid option selected. Exiting...")
