@@ -1,5 +1,7 @@
 cd capstone/data/NAVADMINS
 
+cat pages.txt
+
 cat pages.txt | while read page; do
   curl -s "$page" | \
   grep -oP 'href="\K[^"]+\.txt\?ver=[^"]+' | \
