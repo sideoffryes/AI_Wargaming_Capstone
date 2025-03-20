@@ -16,4 +16,4 @@ fi
 
 bash ./dataDownload.sh
 cd capstone
-python3 ./faissSetup.py -d nav
+python3 ./faissSetup.py -d all
