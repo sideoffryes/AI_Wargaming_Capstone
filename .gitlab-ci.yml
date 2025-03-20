@@ -1,4 +1,4 @@
-image: ubuntu
+image: python
 
 stages:          # List of stages for jobs, and their order of execution
   - build
@@ -8,8 +8,8 @@ stages:          # List of stages for jobs, and their order of execution
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
   script:
-    - apt-get update && apt-get install -y python3 python3-venv apt-utils curl
-    - echo "GPU" | ./setup.sh
+    - apt-get update && apt-get install -y curl
+    - echo "CPU" | ./setup.sh
     - echo "Build complete."
 
 unit-test-job:   # This job runs in the test stage.
