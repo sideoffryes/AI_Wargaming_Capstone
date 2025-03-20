@@ -735,5 +735,118 @@ class FlaskTestCase(unittest.TestCase):
         # Check that the form and input fields are present
         self.assertIn(b'Username: success', response.data)
 
+    def test_change_password(self):
+        """Test that a logged-in user can change their password."""
+        
+        # Step 1: Register a new user
+        register_data = {
+            'username': 'testuser',
+            'ogpassword': 'oldpassword',
+            'repassword': 'oldpassword'
+        }
+        self.client.post('/register', data=register_data)
+
+        # Step 2: Log in as the new user
+        login_data = {
+            'username': 'testuser',
+            'password': 'oldpassword'
+        }
+        response = self.client.post('/login', data=login_data)
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'Successfully logged into: testuser', response.data)
+
+        # Step 3: Change the password
+        with self.client as c:
+            with c.session_transaction() as sess:
+                # Simulate user login by setting session
+                sess['user_id'] = 1  # Assuming the first registered user gets ID 1
+
+            change_password_data = {
+                'curpwd': 'oldpassword',
+                'newpwd': 'newpassword',
+                'conpwd': 'newpassword'
+            }
+            response = c.post('/userprofile', data=change_password_data)
+
+            # Step 4: Check for success message
+            self.assertEqual(response.status_code, 200)
+            self.assertIn(b'Password successfully changed.', response.data)
+
+        # Step 5: Try logging in with the old password (should fail)
+        response = self.client.post('/login', data={'username': 'testuser', 'password': 'oldpassword'})
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'ERROR: Given login credentials were incorrect', response.data)
+
+        # Step 6: Try logging in with the new password (should succeed)
+        response = self.client.post('/login', data={'username': 'testuser', 'password': 'newpassword'})
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'Successfully logged into: testuser', response.data)
+
+
+    def test_change_password_errors(self):
+        """Test various error messages when changing passwords."""
+
+        # Step 1: Register a new user
+        register_data = {
+            'username': 'testuser',
+            'ogpassword': 'oldpassword',
+            'repassword': 'oldpassword'
+        }
+        self.client.post('/register', data=register_data)
+
+        # Step 2: Log in as the new user
+        login_data = {
+            'username': 'testuser',
+            'password': 'oldpassword'
+        }
+        response = self.client.post('/login', data=login_data)
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'Successfully logged into: testuser', response.data)
+
+        with self.client as c:
+            with c.session_transaction() as sess:
+                # Simulate user login by setting session
+                sess['user_id'] = 1  # Assuming the first registered user gets ID 1
+
+            # **Test Case 1: Incorrect Current Password**
+            change_password_data = {
+                'curpwd': 'wrongpassword',  # Wrong current password
+                'newpwd': 'newpassword',
+                'conpwd': 'newpassword'
+            }
+            response = c.post('/userprofile', data=change_password_data)
+            self.assertEqual(response.status_code, 200)
+            self.assertIn(b'ERROR: Current password is incorrect.', response.data)
+
+            # **Test Case 2: New Passwords Do Not Match**
+            change_password_data = {
+                'curpwd': 'oldpassword',  # Correct current password
+                'newpwd': 'newpassword1',
+                'conpwd': 'newpassword2'  # Mismatched confirm password
+            }
+            response = c.post('/userprofile', data=change_password_data)
+            self.assertEqual(response.status_code, 200)
+            self.assertIn(b'ERROR: New passwords do not match.', response.data)
+
+            # **Test Case 3: Missing Fields**
+            change_password_data = {
+                'curpwd': '',  # Missing current password
+                'newpwd': 'newpassword',
+                'conpwd': 'newpassword'
+            }
+            response = c.post('/userprofile', data=change_password_data)
+            self.assertEqual(response.status_code, 200)
+            self.assertIn(b'ERROR: Please fill out all fields.', response.data)
+
+            # **Test Case 4: Missing New Passwords**
+            change_password_data = {
+                'curpwd': 'oldpassword',
+                'newpwd': '',
+                'conpwd': ''
+            }
+            response = c.post('/userprofile', data=change_password_data)
+            self.assertEqual(response.status_code, 200)
+            self.assertIn(b'ERROR: Please fill out all fields.', response.data)
+
 if __name__ == '__main__':
     unittest.main()
