@@ -10,5 +10,6 @@ build-job:       # This job runs in the build stage, which runs first.
     - echo "CPU" | ./setup.sh
     - echo "Build complete."
     - echo "Running unit tests..."
+    - source .venv/bin/activate
     - cd capstone
     - python3 -m unittest
