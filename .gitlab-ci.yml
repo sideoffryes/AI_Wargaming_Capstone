@@ -2,8 +2,6 @@ image: python
 
 stages:          # List of stages for jobs, and their order of execution
   - build
-  - test
-  - deploy
 
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
@@ -11,18 +9,6 @@ build-job:       # This job runs in the build stage, which runs first.
     - apt-get update && apt-get install -y python3-setuptools
     - echo "CPU" | ./setup.sh
     - echo "Build complete."
-
-unit-test-job:   # This job runs in the test stage.
-  stage: test    # It only starts when the job in the build stage completes successfully.
-  script:
     - echo "Running unit tests..."
     - cd capstone
     - python3 -m unittest
-
-deploy-job:      # This job runs in the deploy stage.
-  stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
-  environment: production
-  script:
-    - cd capstone
-    - python3 app.py
-    - echo "Application successfully deployed."
