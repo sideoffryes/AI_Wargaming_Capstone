@@ -13,7 +13,3 @@ else
     echo "You did not select a valid option! Only enter GPU or CPU!"
     exit
 fi
-
-bash ./dataDownload.sh
-cd capstone
-python3 ./faissSetup.py -d all
