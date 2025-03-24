@@ -1,4 +1,6 @@
-cd capstone/data/NAVADMINS
+#!/bin/bash
+
+cd ./capstone/data/NAVADMINS
 
 cat pages.txt | while read page; do
   curl -s "$page" | \
