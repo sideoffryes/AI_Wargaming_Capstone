@@ -22,14 +22,14 @@ $ source .venv/bin/activate
 
 5. The project accesses the Llama 3.1, 3.2, and 3.3 families from Meta via Hugging Face. Running this project requires a Hugging Face account and access to those families.
 
-    1. Visit the page for the model on Hugging Face. For example, `Llama-3.2 (1B) <https://huggingface.co/meta-llama/Llama-3.2-1B>`_
+    1. Visit the page for the model on Hugging Face. For example, [Llama-3.2 (1B)](https://huggingface.co/meta-llama/Llama-3.2-1B)
     2. Create a free account and login.
     3. Return to the Llama webpage (if not already there).
     4. You should see a Community License Agreement at the top. Click the "Expand to review" button:
     5. If you agree with the terms, fill out the form
     6. Check email later.
 
-Once you have received access to the models, visit your `tokens page <https://huggingface.co/settings/tokens>`_ and click "Create new token". Choose the "Read" token type at the very top. Then click "Create token". Copy the generated string and paste when prompted after running the command below.
+Once you have received access to the models, visit your [tokens page](https://huggingface.co/settings/tokens) and click "Create new token". Choose the "Read" token type at the very top. Then click "Create token". Copy the generated string and paste when prompted after running the command below.
 
 ```console
 (.venv) $ huggingface-cli login
