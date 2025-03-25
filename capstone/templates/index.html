@@ -29,20 +29,26 @@
                 artifactParameters.innerHTML = '<textarea class="my_text" name="artifact_parameters" wrap="hard" placeholder="Enter NAVADMIN content here..."></textarea>';
             } else if (artifactType == '4') { // OPORD
                 artifactParameters.innerHTML = `
-                    <label for="opord_orientation">Orientation:</label><br>
-                    <textarea class="my_text" name="opord_orientation" wrap="hard"></textarea><br><br>
-                    <label for="opord_situation">Situation:</label><br>
-                    <textarea class="my_text" name="opord_situation" wrap="hard"></textarea><br><br>
-                    <label for="opord_mission">Mission:</label><br>
-                    <textarea class="my_text" name="opord_mission" wrap="hard"></textarea><br><br>
-                    <label for="opord_execution">Execution:</label><br>
-                    <textarea class="my_text" name="opord_execution" wrap="hard"></textarea><br><br>
-                    <label for="opord_admin">Administration:</label><br>
-                    <textarea class="my_text" name="opord_admin" wrap="hard"></textarea><br><br>
-                    <label for="opord_logistics">Logistics:</label><br>
-                    <textarea class="my_text" name="opord_logistics" wrap="hard"></textarea><br><br>
-                    <label for="opord_command">Command and Signal:</label><br>
-                    <textarea class="my_text" name="opord_command" wrap="hard"></textarea><br><br>
+                    <label for="opord_orientation">Orientation:</label>
+                    <textarea class="my_text" name="opord_orientation" wrap="hard" required></textarea><br><br>
+                    
+                    <label for="opord_situation">Situation:</label>
+                    <textarea class="my_text" name="opord_situation" wrap="hard" required></textarea><br><br>
+                    
+                    <label for="opord_mission">Mission:</label>
+                    <textarea class="my_text" name="opord_mission" wrap="hard" required></textarea><br><br>
+                    
+                    <label for="opord_execution">Execution:</label>
+                    <textarea class="my_text" name="opord_execution" wrap="hard" required></textarea><br><br>
+                    
+                    <label for="opord_admin">Administration:</label>
+                    <textarea class="my_text" name="opord_admin" wrap="hard" required></textarea><br><br>
+                    
+                    <label for="opord_logistics">Logistics:</label>
+                    <textarea class="my_text" name="opord_logistics" wrap="hard" required></textarea><br><br>
+                    
+                    <label for="opord_command">Command and Signal:</label>
+                    <textarea class="my_text" name="opord_command" wrap="hard" required></textarea><br>
                 `;
             } else {
                 // Default case for other artifact types (DEBUG ARTIFACT, MARADMIN)
@@ -90,7 +96,7 @@
                 
                 <label for="artifact_parameters">Additional Parameters:</label>
                 <div id="artifact_parameters">
-                    <textarea class="my_text" name="artifact_parameters" wrap="hard" placeholder="Select an artifact type to customize the parameters."></textarea>
+                    <textarea class="my_text" name="artifact_parameters" wrap="hard" placeholder="Select an artifact type to customize the parameters." required></textarea>
                 </div><br><br>
 
                 <!-- Submit button -->

@@ -848,5 +848,29 @@ class FlaskTestCase(unittest.TestCase):
             self.assertEqual(response.status_code, 200)
             self.assertIn(b'ERROR: Please fill out all fields.', response.data)
 
+    def test_index_page_contains_opord_section(self):
+        """Test that the OPORD section is present in the base HTML structure."""
+        
+        # Send a GET request to load the page
+        response = self.client.get('/index')
+
+        # Check that the page loads successfully
+        self.assertEqual(response.status_code, 200)
+
+        # Check that the JavaScript function is included
+        self.assertIn(b'function updateArtifactParameters()', response.data)
+
+        # Check that the OPORD fields are defined in JavaScript (not rendered initially)
+        self.assertIn(b'opord_orientation', response.data)
+        self.assertIn(b'opord_situation', response.data)
+        self.assertIn(b'opord_mission', response.data)
+        self.assertIn(b'opord_execution', response.data)
+        self.assertIn(b'opord_admin', response.data)
+        self.assertIn(b'opord_logistics', response.data)
+        self.assertIn(b'opord_command', response.data)
+
+        # Check for the artifact_parameters <div> where JavaScript injects content
+        self.assertIn(b'<div id="artifact_parameters">', response.data)
+
 if __name__ == '__main__':
     unittest.main()
