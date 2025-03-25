@@ -21,7 +21,7 @@ capstone/data/NAVADMINS/*
 capstone/data/MARADMINS/cache.faiss
 
 # ignore FOUO
-capstone/data/RTW/*
+capstone/data/RTW/cache.faiss
 
 # ignore OpOrds cache
 capstone/data/OpOrds/cache.faiss
