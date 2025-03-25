@@ -64,16 +64,29 @@ with app.app_context():
 def index():
     if request.method == 'POST':
         artifactType = request.form.get('artifact_type')
-        otherInput = request.form.get('artifact_parameters')
         llmChosen = request.form.get('model_selection')
 
         # Validation check
-        if (artifactType is None) or (otherInput == "") or (llmChosen is None):
+        if (artifactType is None) or (llmChosen is None):
             errorMsg = "ERROR: Please select an artifact, model type, and give a prompt."
             return render_template('index.html', errorMsg=errorMsg)
         
         artifactType = int(artifactType)
         llmChosen = int(llmChosen)
+
+        if artifactType == 4:
+            #get all inputs
+            orientation = request.form.get('opord_orientation')
+            situation = request.form.get('opord_situation')
+            mission = request.form.get('opord_mission')
+            execution = request.form.get('opord_execution')
+            admin = request.form.get('opord_admin')
+            logistics = request.form.get('opord_logistics')
+            command = request.form.get('opord_command')
+            #combine them and put into otherInput
+            otherInput = f"Orientation: {orientation}; Situation: {situation}; Mission: {mission}; Execution: {execution}; Administration: {admin}; Logistics: {logistics}; Command and Signal: {command}"
+        else:
+            otherInput = request.form.get('artifact_parameters')
 
         # Check if it's a debug artifact
         if artifactType == 1:
