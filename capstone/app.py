@@ -68,7 +68,7 @@ def index():
         llmChosen = request.form.get('model_selection')
 
         # Validation check
-        if (artifactType is None) or otherInput == "" or (llmChosen is None):
+        if (artifactType is None) or (otherInput == "") or (llmChosen is None):
             errorMsg = "ERROR: Please select an artifact, model type, and give a prompt."
             return render_template('index.html', errorMsg=errorMsg)
         
@@ -127,19 +127,6 @@ def login():
             return render_template('login.html', errorMsg=errorMsg)
         
     return render_template("login.html")
-
-# @app.route("/userprofile", methods=['GET', 'POST'])
-# def userprofile():
-#     # Get the user_id from the session (this is set when the user logs in)
-#     user_id = session.get('user_id')
-
-#     if user_id:
-#         # Query the User model to get the user by ID
-#         user = Profile.query.filter_by(id=user_id).first()
-
-#         return render_template("userprofile.html", username = user.username)
-    
-#     return render_template("userprofile.html", username = "Not logged in")
 
 @app.route("/userprofile", methods=['GET', 'POST'])
 def userprofile():
