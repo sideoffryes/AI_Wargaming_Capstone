@@ -1,4 +1,3 @@
-import argparse
 import os
 
 import faiss
@@ -6,6 +5,7 @@ import numpy as np
 from docx import Document
 from tqdm import tqdm
 from transformers import AutoModel, AutoTokenizer, logging
+from argparse import ArgumentParser
 
 logging.set_verbosity_error()
 
@@ -17,7 +17,7 @@ def cache_faiss(chunks: str, fname):
 
     :param chunks: List of strings to be converted to vectors
     :type chunks: list
-    :param fname: path to save FAISS index to, defaults to "./data/NAVADMINS/cache.faiss"
+    :param fname: path to save FAISS index to"
     :type fname: str, optional
     """
     index_file = fname
@@ -53,6 +53,8 @@ def gen_embeds(text: str):
     return outputs.last_hidden_state[:, 0, :]
 
 def nav():
+    """Creates vector embeddings for all documents in the data/NAVADMINS/ directory and adds them to FAISS index in same directory.
+    """
     text = []
     for root, dirs, fnames in os.walk("./data/NAVADMINS/"):
         for f in fnames:
@@ -65,7 +67,24 @@ def nav():
                 os.remove(os.path.join(root, f))
     cache_faiss(text, "./data/NAVADMINS/cache.faiss")
 
+def mar():
+    """Creates vector embeddings for all documents in the data/MARADMINS/ directory and adds them to FAISS index in same directory.
+    """
+    text = []
+    for root, dirs, fnames in os.walk("./data/MARADMINS/"):
+        for f in fnames:
+            try:
+                with open(os.path.join(root, f), 'r') as file:
+                    content = file.read()
+                    subj = content.split("SUBJ/")[1].split("//")[0].rsplit("\n")[0]
+                    text.append(subj)
+            except:
+                os.remove(os.path.join(root, f))
+    cache_faiss(text, "./data/MARADMINS/cache.faiss")
+
 def rtw():
+    """Creates vector embeddings for all documents in the data/RTW/ directory and adds them to FAISS index in the same directory.
+    """
     text = []
     for root, dirs, fnames in os.walk("./data/RTW/"):
         for f in fnames:
@@ -80,13 +99,63 @@ def rtw():
                 
     cache_faiss(text, "./data/RTW/cache.faiss")
 
+def opord():
+    """Creates vector embeddings for all documents in the data/OpOrds directory and adds them to FAISS index in the same directory.
+    """
+    text = []
+    for root, dirs, fnames in os.walk("./data/OpOrds/"):
+        for f in fnames:
+            try:
+                with open(os.path.join(root, f), 'r') as file:
+                    content = file.read()
+                    text.append(content)
+            except:
+                os.remove(os.path.join(root, f))
+                
+    cache_faiss(text, "./data/OpOrds/cache.faiss")
+
 if __name__ == "__main__":
-    doc = int(input("Select the document type you would like to generate embeddings for.\n1. NAVADMINS\n2. Road to War Briefs\n> "))
-    match doc:
-        case 1:
+    parser = ArgumentParser(prog="faissSetup", description="Generates vector embeddings for different document types")
+    parser.add_argument("-d", "--doc", default="nav", help="Document type to generate embeddings. Options are NAVADMIN, MARADMIN, OPORD, Road to War Brief, and all", choices=['nav', 'mar', 'rtw', 'opord', 'all'], required=True)
+    args = parser.parse_args()
+
+    match args.doc:
+        case "nav":
             nav()
-        case 2:
+        case "mar":
+            mar()
+        case "opord":
+            opord()
+        case "rtw":
+            rtw()
+        case "all":
+            nav()
+            mar()
+            opord()
             rtw()
         case _:
-            print("ERROR! You did not selection a valid option. Exiting...")
-            exit
+            print("ERROR! Invalid option selected. Exiting...")
+            exit(1)
+            
+    
+    # while True:
+    #     try:
+    #         doc = int(input("Select the document type you would like to generate embeddings for.\n1. NAVADMINS\n2. Road to War Briefs\n3. OPORDS\n4. Exit\n> "))
+        
+    #         match doc:
+    #             case 1:
+    #                 nav()
+    #                 break
+    #             case 2:
+    #                 rtw()
+    #                 break
+    #             case 3:
+    #                 opord()
+    #                 break
+    #             case 4:
+    #                 print("Exiting...")
+    #                 quit()
+    #             case _:
+    #                 print("ERROR! You did not selection a valid option.")
+    #     except ValueError:
+    #         print("ERROR! Please only enter a number!")
