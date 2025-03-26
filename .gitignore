@@ -16,8 +16,12 @@ capstone/output
 # ignore NAVADMINS
 capstone/data/NAVADMINS/*
 !capstone/data/NAVADMINS/pages.txt
-!capstone/data/NAVADMINS/cache.faiss
+
+# ignore MARADMINS cache
+capstone/data/MARADMINS/cache.faiss
 
 # ignore FOUO
-capstone/data/RTW/*
-!capstone/data/RTW/cache.faiss
+capstone/data/RTW/cache.faiss
+
+# ignore OpOrds cache
+capstone/data/OpOrds/cache.faiss
