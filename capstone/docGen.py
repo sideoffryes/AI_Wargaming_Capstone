@@ -33,7 +33,8 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     logging.set_verbosity_error()
     model_name = select_model(model_num)
     doc_type = select_doc(type_num)
-    
+    torch.cuda.empty_cache()
+
     # Set LLM instructions
     role = "Role: You work for the United States Department of Defense, and you specialize in writing official military documents using military formatting.\n"
     task = f"Give your answer in {doc_type} format based on the previous examples. After the final line of the document you create, stop responding."

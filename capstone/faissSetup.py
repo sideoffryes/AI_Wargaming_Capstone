@@ -17,7 +17,7 @@ def cache_faiss(chunks: str, fname):
 
     :param chunks: List of strings to be converted to vectors
     :type chunks: list
-    :param fname: path to save FAISS index to, defaults to "./data/NAVADMINS/cache.faiss"
+    :param fname: path to save FAISS index to"
     :type fname: str, optional
     """
     index_file = fname
