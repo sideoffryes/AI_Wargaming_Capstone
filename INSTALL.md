@@ -8,19 +8,7 @@ $ git clone https://github.com/sideoffryes/AI_Wargaming_Capstone.git
 
 2. Ensure that [Python3](https://www.python.org/downloads/) and [pip](https://pip.pypa.io/en/stable/installation/) are installed on your system.
 
-3. Use the provided bash setup script to create a virtual environment and install the necessary packages. You will be prompted if you would like the GPU or CPU installation. The only valid resposes are "GPU" or "CPU".
-
-```console
-$ ./setup.sh
-```
-
-4. Activate the newly-created virtual environment.
-
-```console
-$ source .venv/bin/activate
-```
-
-5. The project accesses the Llama 3.1, 3.2, and 3.3 families from Meta via Hugging Face. Running this project requires a Hugging Face account and access to those families.
+3. Use the provided bash setup script (setup.sh) to create a virtual environment and install the necessary packages. You will be given several prompts throughout the process. During the process, you will be asked to provide a token to access Hugging Face. If you are not familiar with Hugging Face and access tokens, follow these instructions:
 
     1. Visit the page for the model on Hugging Face. For example, [Llama-3.2 (1B)](https://huggingface.co/meta-llama/Llama-3.2-1B)
     2. Create a free account and login.
@@ -29,10 +17,24 @@ $ source .venv/bin/activate
     5. If you agree with the terms, fill out the form
     6. Check email later.
 
-Once you have received access to the models, visit your [tokens page](https://huggingface.co/settings/tokens) and click "Create new token". Choose the "Read" token type at the very top. Then click "Create token". Copy the generated string and paste when prompted after running the command below.
+Once you have received access to the models, visit your [tokens page](https://huggingface.co/settings/tokens) and click "Create new token". Choose the "Read" token type at the very top. Then click "Create token". Copy the generated string and paste when prompted during the setup process.
+
+If you need to re-login at any point in the future, you can do so with the following command:
 
 ```console
 (.venv) $ huggingface-cli login
+```
+
+The full setup script can be run with the following once you are set up with Hugging Face:
+
+```console
+$ ./setup.sh
+```
+
+4. If you did not choose to run the server at the end of the setup process, activate the newly-created virtual environment.
+
+```console
+$ source .venv/bin/activate
 ```
 
 6. The web server can be creating be entering the *capstone* directory and running the app.py script.
