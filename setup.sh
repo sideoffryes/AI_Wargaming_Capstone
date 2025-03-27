@@ -8,10 +8,10 @@ sleep 2
 DIR="$(pwd)"
 
 # Install python environment
+echo "Installing python packages with GPU support..."
 pip install -r requirements.txt
 
 # Compile the documentation
-echo "Installing python packages with GPU support..."
 read -p "Would you like to compile the documentation? [Y/n] " opt
 case "$opt" in
     Y|y|Yes|yes)
@@ -23,13 +23,6 @@ case "$opt" in
     *)
         ;;
 esac
-
-if [ "$opt" == "Y" ] || [ "$opt" == "y" ] || [ "$opt" == "Yes" ] || [ "$opt" == "yes" ]; then
-    echo "Compiling the HTML documentation..."
-    cd "$DIR/docs"
-    make html
-    echo -e "\nDocs compilation complete!"
-fi
 
 # Generate document embeddings
 echo ""
