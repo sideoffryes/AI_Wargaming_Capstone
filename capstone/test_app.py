@@ -45,7 +45,7 @@ class FlaskTestCase(unittest.TestCase):
         self.assertIn(b'<option value="3">Llama-3.3-70B-Instruct</option>', response.data)
         
         # Instead of checking for the exact textarea, check for the presence of a form field
-        self.assertIn(b'<textarea class="my_text" name="artifact_parameters" wrap="hard" placeholder="Select an artifact type to customize the parameters."></textarea>', response.data)
+        self.assertIn(b'<textarea class="my_text" name="artifact_parameters" wrap="hard" placeholder="Select an artifact type to customize the parameters." required></textarea>', response.data)
         
         # Check for the dropdown menu items
         self.assertIn(b'Generate Document', response.data)
@@ -83,7 +83,7 @@ class FlaskTestCase(unittest.TestCase):
         self.assertIn(b'<option value="3">Llama-3.3-70B-Instruct</option>', response.data)
         
         # Instead of checking for the exact textarea, check for the presence of a form field
-        self.assertIn(b'<textarea class="my_text" name="artifact_parameters" wrap="hard" placeholder="Select an artifact type to customize the parameters."></textarea>', response.data)
+        self.assertIn(b'<textarea class="my_text" name="artifact_parameters" wrap="hard" placeholder="Select an artifact type to customize the parameters." required></textarea>', response.data)
         
         # Check for the dropdown menu items
         self.assertIn(b'Generate Document', response.data)
