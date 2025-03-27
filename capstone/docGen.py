@@ -2,7 +2,7 @@ import argparse
 import os
 import time
 import warnings
-from datetime import datetime
+from datetime import datetime, date
 
 import faiss
 import torch
@@ -35,9 +35,12 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     doc_type = select_doc(type_num)
     torch.cuda.empty_cache()
 
+    today = date.today()
+    formatted_date = today.strftime("%Y-%m-%d")
+
     # Set LLM instructions
     role = "Role: You work for the United States Department of Defense, and you specialize in writing official military documents using military formatting.\n"
-    task = f"Give your answer in {doc_type} format based on the previous examples. After the final line of the document you create, stop responding."
+    task = f"Give your answer in {doc_type} format based on the previous examples. After the final line of the document you create, stop responding. Today's date is {formatted_date}. Adjust the dates in your response accordinly."
     
     # create model objects
     model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype="auto", quantization_config=BitsAndBytesConfig(load_in_8bit=True, llm_int8_enable_fp32_cpu_offload=True))

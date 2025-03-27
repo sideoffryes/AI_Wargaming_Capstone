@@ -9,8 +9,10 @@ from argparse import ArgumentParser
 
 logging.set_verbosity_error()
 
-tokenizer = AutoTokenizer.from_pretrained("princeton-nlp/sup-simcse-roberta-large")
-model = AutoModel.from_pretrained("princeton-nlp/sup-simcse-roberta-large", device_map="cpu")
+tokenizer = AutoTokenizer.from_pretrained("WhereIsAI/UAE-Large-V1")
+model = AutoModel.from_pretrained("WhereIsAI/UAE-Large-V1", device_map="cpu")
+# tokenizer = AutoTokenizer.from_pretrained("princeton-nlp/sup-simcse-roberta-large")
+# model = AutoModel.from_pretrained("princeton-nlp/sup-simcse-roberta-large", device_map="cpu")
 
 def cache_faiss(chunks: str, fname):
     """Converts each of the given text chunks into a vectory representation, adds them to a FAISS index, and writes the FAISS index to the disk.
