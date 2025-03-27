@@ -43,7 +43,7 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     task = f"Give your answer in {doc_type} format based on the previous examples. After the final line of the document you create, stop responding. Today's date is {formatted_date}. Adjust the dates in your response accordinly."
     
     # create model objects
-    model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype="auto", quantization_config=BitsAndBytesConfig(load_in_8bit=True, llm_int8_enable_fp32_cpu_offload=True))
+    model = AutoModelForCausalLM.from_pretrained(model_name, device_map="cuda", torch_dtype="auto", quantization_config=BitsAndBytesConfig(load_in_8bit=True, llm_int8_enable_fp32_cpu_offload=False))
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     streamer = TextStreamer(tokenizer=tokenizer, skip_prompt=True)
     
