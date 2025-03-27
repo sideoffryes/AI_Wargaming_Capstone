@@ -7,7 +7,7 @@ reportlab
 transformers
 accelerate
 bitsandbytes
-torch==2.6.0+cu126
+torch
 torchvision
 torchaudio
 sphinxcontrib-httpdomain
