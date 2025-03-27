@@ -1,23 +1,17 @@
 #!/bin/bash
 
 python3 -m venv .venv
+echo "Creating python virtual environment..."
 source .venv/bin/activate
 sleep 2
 
 DIR="$(pwd)"
 
 # Install python environment
-read -p "Would you like to perform the GPU or CPU setup? [GPU/CPU] " opt
-if [ "$opt" == "GPU" ]; then
-    pip install -r requirements_gpu.txt
-elif [ "$opt" == "CPU" ]; then
-    pip install -r requirements_cpu.txt
-else
-    echo "You did not select a valid option! Only enter GPU or CPU!"
-    exit
-fi
+pip install -r requirements.txt
 
 # Compile the documentation
+echo "Installing python packages with GPU support..."
 read -p "Would you like to compile the documentation? [Y/n] " opt
 case "$opt" in
     Y|y|Yes|yes)

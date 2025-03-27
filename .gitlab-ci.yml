@@ -6,10 +6,6 @@ stages:          # List of stages for jobs, and their order of execution
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
   script:
-    - apt-get update && apt-get install -y python3-setuptools
-    - echo "CPU" | ./setup.sh
-    - echo "Build complete."
-    - echo "Running unit tests..."
     - source .venv/bin/activate
     - cd capstone
     - python3 -m unittest

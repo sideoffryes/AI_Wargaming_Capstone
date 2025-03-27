@@ -1,4 +1,4 @@
---extra-index-url https://download.pytorch.org/whl/cpu
+--extra-index-url https://download.pytorch.org/whl/cu126
 Flask
 flask_sqlalchemy
 pypdf
@@ -7,11 +7,12 @@ reportlab
 transformers
 accelerate
 bitsandbytes
-torch
+torch==2.6.0+cu126
 torchvision
 torchaudio
 sphinxcontrib-httpdomain
 sphinx_rtd_theme
 sphinx
-faiss-cpu
+faiss-gpu-cu12
 python-docx
+beautifulsoup4
