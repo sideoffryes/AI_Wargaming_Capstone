@@ -46,7 +46,16 @@
         </div> <!--left banner -->
         
         <div class="user-content"> <!--middle-->   
-                <div class = "user-menu" >
+                <div class = "user-menu">
+                    <!-- Display error message if it exists -->
+                    {% if errorMsg %}
+                        <p style="color: red; font-weight: bold;">{{ errorMsg }}</p>
+                    {% endif %}
+        
+                    <!-- Display success message if it exists -->
+                    {% if successMsg %}
+                        <p style="color: green; font-weight: bold;">{{ successMsg }}</p>
+                    {% endif %}
                     <h3>User Menu</h3>
                     <button onclick="openProfile()">Profile Info</button>
                     <button onclick="location.href = 'my_artifacts';">History</button>
@@ -64,20 +73,21 @@
                     <div id="changePassword" class="changePswd-content">
                         <form action="{{ url_for('userprofile') }}" method="POST">
                             <label for="curpwd">Current Password:</label>
-                            <input type="password" id="curpwd" name="curpwd">
-
+                            <input type="password" id="curpwd" name="curpwd" required>
+                
                             <label for="newpwd">New Password:</label>
-                            <input type="password" id="newpwd" name="newpwd">
-
+                            <input type="password" id="newpwd" name="newpwd" required>
+                
                             <label for="conpwd">Confirm Password:</label>
-                            <input type="password" id="conpwd" name="conpwd">
-
+                            <input type="password" id="conpwd" name="conpwd" required>
+                
                             <br><br>
-                            
+                
                             <input type="submit" value="Submit">
                         </form>
                     </div>
                 </div>
+                            
         </div>
 
         <div class="user-right-banner"></div> <!--right banner -->

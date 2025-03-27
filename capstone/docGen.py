@@ -33,7 +33,8 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     logging.set_verbosity_error()
     model_name = select_model(model_num)
     doc_type = select_doc(type_num)
-    
+    torch.cuda.empty_cache()
+
     # Set LLM instructions
     role = "Role: You work for the United States Department of Defense, and you specialize in writing official military documents using military formatting.\n"
     task = f"Give your answer in {doc_type} format based on the previous examples. After the final line of the document you create, stop responding."
@@ -203,15 +204,33 @@ if __name__ == "__main__":
     parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose mode")
     args = parser.parse_args()
     
-    # model to select model you want to load
-    select = int(input("Select the Llama model you would like to run\n1) Llama 3.2 1B Instruct\n2) Llama 3.2 3B Instruct\n3) Llama 3.1 8B Instruct\n> "))
+    
+    while True:
+        try:
+            # model to select model you want to load
+            select = int(input("Select the Llama model you would like to run\n1) Llama 3.2 1B Instruct\n2) Llama 3.2 3B Instruct\n3) Llama 3.1 8B Instruct\n4) Exit\n> "))
+            
+            if select < 1 or select > 4:
+                print("ERROR! you did not select a correct model option.")
+                continue
+            elif select == 4:
+                print("Exiting...")
+                quit()
+    
+            try:
+                # get document type from user
+                doc = int(input("Select document to generate\n1) Naval Message (NAVADMIN)\n2) USMC Message (MARADMIN)\n3) USMC OpOrd\n4) Road to War\n> "))
+    
+                if doc < 1 or doc > 4:
+                    print("ERROR! You did not select a correct document options.")
+                    continue
+    
+                user_query = input("Input> ")
+                user_query = "Request: " + user_query
 
-    # get document type from user
-    doc = int(input("Select document to generate\n1) Naval Message (NAVADMIN)\n2) USMC Message (MARADMIN)\n3) USMC OpOrd\n4) Road to War\n> "))
-
-    user_query = input("Input> ")
-    user_query = "Request: " + user_query
-
-    # call document generator function
-    doc = gen(select, doc, user_query)
-    # print(doc)
+                # call document generator function
+                doc = gen(select, doc, user_query)
+            except ValueError:
+                print("ERROR! Please only enter a number!")    
+        except ValueError:
+            print("ERROR! Please only enter a number!")    

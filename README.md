@@ -20,6 +20,14 @@ prompt engineering, while also developing a user-friendly interface and ensuring
 based on user feedback. The final product will serve as a proof of concept, demonstrating how LLMs can
 be harnessed to enhance and expedite the wargaming process.
 
+## Installation
+
+Follow the installation instructions [here](./INSTALL.md).
+
+A pre-compiled PDF version of the documentation can be found [here](./docs/build/latex/aiwargaming.pdf).
+
+Once the python environment has been created, the HTML version of the documentation can be compiled and viewed in the browser once the web server has been created.
+
 ## Group Members
 
 [Peter Asjes](mailto:m250228@usna.edu)
@@ -35,26 +43,6 @@ be harnessed to enhance and expedite the wargaming process.
 ## POC
 
 [LtCol Scotty Black](mailto:scotty.black@nps.edu )
-
-## Documentation
-
-A pre-compiled PDF version of the documentation can be found [here](./docs/build/latex/aiwargaming.pdf).
-
-Once you have the local webserver running, you can access an HTML version of the documentation in the web browser by opening the side bar menu and selecting the documentation link.
-
-The HTML documentation is **not** pre-generated and must be created by the server host.
-
-**Make sure you have completed the python virtual environment setup with the setup.sh script before attempting to compile the docs.**
-
-They can be easily generated with the following commands:
-
-```console
-$ source .venv/bin/activate
-(.venv) $ cd docs
-(.venv) $ make html
-```
-
-These instructions can also be found in the PDF version of the docs linked above.
 
 ## Poster
 

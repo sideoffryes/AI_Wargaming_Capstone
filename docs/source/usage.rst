@@ -62,7 +62,7 @@ In the terminal, run the following command and paste in your access token when p
 Running the Project
 -------------------
 
-Before attempting to run any of the scripts, make sure that you have the correct Conda environment activated.
+Before attempting to run any of the scripts, make sure that you have the correct virtual environment activated.
 
 .. code-block:: console
 
