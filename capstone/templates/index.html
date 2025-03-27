@@ -5,6 +5,11 @@
     <title>Capstone Starter</title>
 
     <script>
+        window.addEventListener("submit", () => {
+            document.getElementById("loadscreen").classList.remove("loader--hidden")
+            document.getElementById("loadscreen").classList.add("loader")
+        }); 
+
         var swap_menu = false;
         function dropDown(){
             document.getElementById("dropdownmenu").classList.toggle("show");
@@ -59,6 +64,11 @@
 </head>
 
 <body>
+    <div id = "loadscreen" class="loader--hidden"> <!--change to loader--hidden-->
+        <img src="../static/Computer Science Logo_RGB.png" height="240" width="220" alt="loader logo">
+        <br><br>
+        <h3>Your Output Is Being Generated</h3><br>
+   </div>
     <div class="main-container">
         <div class="banner">
             <div class = "dropdown">
