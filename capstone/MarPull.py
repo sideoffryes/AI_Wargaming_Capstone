@@ -51,7 +51,7 @@ def get_maradmin_urls(base_url):
 # Base URL for MARADMIN messages
 urls = []
 # Change value inside of range to modify how many pages of MARADMINS to download
-for i in range(100):
+for i in range(50):
     base_url = "https://www.marines.mil/News/Messages/MARADMINS/?Page=" + str(i+1)
     urls = urls + get_maradmin_urls(base_url)
 
