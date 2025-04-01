@@ -13,15 +13,13 @@ docs/build/latex/*
 # ignore old output files
 capstone/output
 
-# ignore NAVADMINS
+# ignore docs that will be downloaded by user
 capstone/data/NAVADMINS/*
-!capstone/data/NAVADMINS/pages.txt
+capstone/data/MARADMINS/*
 
-# ignore MARADMINS cache
-capstone/data/MARADMINS/cache.faiss
-
-# ignore FOUO
+# ignore caches
 capstone/data/RTW/cache.faiss
-
-# ignore OpOrds cache
 capstone/data/OpOrds/cache.faiss
+
+# save pages.txt
+!capstone/data/NAVADMINS/pages.txt

@@ -1,21 +1,15 @@
 #!/bin/bash
 
 python3 -m venv .venv
+echo "Creating python virtual environment..."
 source .venv/bin/activate
 sleep 2
 
 DIR="$(pwd)"
 
 # Install python environment
-read -p "Would you like to perform the GPU or CPU setup? [GPU/CPU] " opt
-if [ "$opt" == "GPU" ]; then
-    pip install -r requirements_gpu.txt
-elif [ "$opt" == "CPU" ]; then
-    pip install -r requirements_cpu.txt
-else
-    echo "You did not select a valid option! Only enter GPU or CPU!"
-    exit
-fi
+echo "Installing python packages with GPU support..."
+pip install -r requirements.txt
 
 # Compile the documentation
 read -p "Would you like to compile the documentation? [Y/n] " opt
@@ -30,24 +24,30 @@ case "$opt" in
         ;;
 esac
 
-if [ "$opt" == "Y" ] || [ "$opt" == "y" ] || [ "$opt" == "Yes" ] || [ "$opt" == "yes" ]; then
-    echo "Compiling the HTML documentation..."
-    cd "$DIR/docs"
-    make html
-    echo -e "\nDocs compilation complete!"
-fi
-
 # Generate document embeddings
 echo ""
 read -p "Would you like to generate the document embeddings now? [Y/n] " opt
 case "$opt" in
     Y|y|Yes|yes)
         echo "Downloading documents..."
+        
+        # NAVADMINS
+        echo "Downloading NAVADMINS..."
         cd "$DIR"
         bash ./dataDownload.sh
-        echo -e "\nDownload complete!"
+        echo -e "\nNAVADMINS download complete!"
+
+        # MARADMINS
+        echo "Downloading MARADMINS..."
+        cd "$DIR/capstone"
+        python3 MarPull.py
+        echo -e "\nMARADMINS download complete!"
+        
+        # HuggingFace login
         echo "Please login to Hugging Face!"
         huggingface-cli login
+        
+        # Embeddings
         echo -e "\nGenerating document embeddings..."
         cd "$DIR/capstone"
         python3 faissSetup.py -d all
@@ -62,7 +62,7 @@ read -p "You you like to start the web server right now? [Y/n] " opt
 case "$opt" in
     Y|y|Yes|yes)
         echo -e "\nStarting webserver..."
-        cd "$Dir/capstone"
+        cd "$DIR/capstone"
         python3 app.py
         ;;
     *)

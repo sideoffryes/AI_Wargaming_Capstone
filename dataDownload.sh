@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ./capstone/data/NAVADMINS || { echo "Failed to change directory"; exit 1; }
+cd "./capstone/data/NAVADMINS" || { echo "Failed to change directory"; exit 1; }
 
 while read -r page; do
   curl -s "$page" \
@@ -23,7 +23,7 @@ while read -r page; do
   -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36' | \
   grep -oP 'href="\K[^"]+\.txt\?ver=[^"]+' | \
   sed "s|^|https://www.mynavyhr.navy.mil|"
-done < pages.txt | xargs -n 1 -P 10 wget --content-disposition
+done < pages.txt | xargs -n 1 -P 10 wget --content-disposition -q
 
 # Rename downloaded files
 for file in NAV*.txt*; do mv "$file" "$(echo "$file" | sed 's/\?.*//')"; done

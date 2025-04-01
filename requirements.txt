@@ -1,4 +1,4 @@
---extra-index-url https://download.pytorch.org/whl/cpu
+--extra-index-url https://download.pytorch.org/whl/cu126
 Flask
 flask_sqlalchemy
 pypdf
@@ -13,5 +13,6 @@ torchaudio
 sphinxcontrib-httpdomain
 sphinx_rtd_theme
 sphinx
-faiss-cpu
+faiss-gpu-cu12
 python-docx
+beautifulsoup4

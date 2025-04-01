@@ -12,8 +12,6 @@ logging.set_verbosity_error()
 
 tokenizer = AutoTokenizer.from_pretrained("WhereIsAI/UAE-Large-V1")
 model = AutoModel.from_pretrained("WhereIsAI/UAE-Large-V1", device_map="cuda")
-# tokenizer = AutoTokenizer.from_pretrained("princeton-nlp/sup-simcse-roberta-large")
-# model = AutoModel.from_pretrained("princeton-nlp/sup-simcse-roberta-large", device_map="cpu")
 
 def cache_faiss(chunks: str, fname):
     """Converts each of the given text chunks into a vectory representation, adds them to a FAISS index, and writes the FAISS index to the disk.
@@ -26,13 +24,9 @@ def cache_faiss(chunks: str, fname):
     index_file = fname
     
     chunk_embeds = []
-    i = 0
+    torch.cuda.empty_cache()
     for c in tqdm(chunks, desc="Generating document embeddings"):
         chunk_embeds.append(gen_embeds(c).cpu().detach().numpy())
-        i += 1
-        if i > 1000:
-            torch.cuda.empty_cache()
-            i = 0
         
     chunk_embeds = np.vstack(chunk_embeds)
     
@@ -64,13 +58,16 @@ def nav():
     text = []
     for root, dirs, fnames in os.walk("./data/NAVADMINS/"):
         for f in fnames:
-            try:
-                with open(os.path.join(root, f), 'r') as file:
-                    content = file.read()
-                    subj = content.split("SUBJ/")[1].split("//")[0].rsplit("\n")[0]
-                    text.append(subj)
-            except:
-                os.remove(os.path.join(root, f))
+            if f == "pages.txt":
+                continue
+            else:
+                try:
+                    with open(os.path.join(root, f), 'r', errors="ignore") as file:
+                        content = file.read()
+                        subj = content.split("SUBJ/")[1].split("//")[0].rsplit("\n")[0]
+                        text.append(subj)
+                except Exception as e:
+                    os.remove(os.path.join(root, f))
     cache_faiss(text, "./data/NAVADMINS/cache.faiss")
 
 def mar():
@@ -85,6 +82,7 @@ def mar():
                     subj = content.split("SUBJ/")[1].split("//")[0].rsplit("\n")[0]
                     text.append(subj)
             except:
+                print(f"Error with file: {f}")
                 os.remove(os.path.join(root, f))
     cache_faiss(text, "./data/MARADMINS/cache.faiss")
 
