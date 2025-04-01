@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import re
+from tqdm import tqdm
 
 headers = {
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
@@ -17,11 +18,14 @@ headers = {
             'Sec-Fetch-User': '?1',
             'Upgrade-Insecure-Requests': '1',
             'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
-        }
+}
+
+session = requests.Session()
+session.headers.update(headers)
 
 def extract_body_text(url):
     try:
-        response = requests.get(url, headers=headers)
+        response = session.get(url, timeout=5)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
 
@@ -46,13 +50,13 @@ def get_maradmin_urls(base_url):
 
 # Base URL for MARADMIN messages
 urls = []
-for i in range(2):
+# Change value inside of range to modify how many pages of MARADMINS to download
+for i in range(100):
     base_url = "https://www.marines.mil/News/Messages/MARADMINS/?Page=" + str(i+1)
     urls = urls + get_maradmin_urls(base_url)
 
-for url in urls:
+for url in tqdm(urls, desc="Downloading MARADMINS"):
     maradmin_number = get_maradmin_number(url)
     content = extract_body_text(url)
-    with open(f"MARADMIN_{maradmin_number}.txt", "w") as file:
+    with open(f"./data/MARADMINS/MARADMIN_{maradmin_number}.txt", "w") as file:
         file.write(content + "\n")
-    print(f"Saved content from {url} to MARADMIN_{maradmin_number}.txt")

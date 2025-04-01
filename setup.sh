@@ -30,11 +30,24 @@ read -p "Would you like to generate the document embeddings now? [Y/n] " opt
 case "$opt" in
     Y|y|Yes|yes)
         echo "Downloading documents..."
+        
+        # NAVADMINS
+        echo "Downloading NAVADMINS..."
         cd "$DIR"
         bash ./dataDownload.sh
-        echo -e "\nDownload complete!"
+        echo -e "\nNAVADMINS download complete!"
+
+        # MARADMINS
+        echo "Downloading MARADMINS..."
+        cd "$DIR/capstone"
+        python3 MarPull.py
+        echo -e "\nMARADMINS download complete!"
+        
+        # HuggingFace login
         echo "Please login to Hugging Face!"
         huggingface-cli login
+        
+        # Embeddings
         echo -e "\nGenerating document embeddings..."
         cd "$DIR/capstone"
         python3 faissSetup.py -d all
@@ -49,7 +62,7 @@ read -p "You you like to start the web server right now? [Y/n] " opt
 case "$opt" in
     Y|y|Yes|yes)
         echo -e "\nStarting webserver..."
-        cd "$Dir/capstone"
+        cd "$DIR/capstone"
         python3 app.py
         ;;
     *)
