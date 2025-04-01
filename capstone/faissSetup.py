@@ -6,11 +6,12 @@ from docx import Document
 from tqdm import tqdm
 from transformers import AutoModel, AutoTokenizer, logging
 from argparse import ArgumentParser
+import torch
 
 logging.set_verbosity_error()
 
-tokenizer = AutoTokenizer.from_pretrained("princeton-nlp/sup-simcse-roberta-large")
-model = AutoModel.from_pretrained("princeton-nlp/sup-simcse-roberta-large", device_map="cpu")
+tokenizer = AutoTokenizer.from_pretrained("WhereIsAI/UAE-Large-V1")
+model = AutoModel.from_pretrained("WhereIsAI/UAE-Large-V1", device_map="cuda")
 
 def cache_faiss(chunks: str, fname):
     """Converts each of the given text chunks into a vectory representation, adds them to a FAISS index, and writes the FAISS index to the disk.
@@ -23,11 +24,10 @@ def cache_faiss(chunks: str, fname):
     index_file = fname
     
     chunk_embeds = []
+    torch.cuda.empty_cache()
     for c in tqdm(chunks, desc="Generating document embeddings"):
-        chunk_embeds.append(gen_embeds(c).cpu().detach().numpy().flatten())
-        # chunk_embeds.append(gen_embeds(c))
+        chunk_embeds.append(gen_embeds(c).cpu().detach().numpy())
         
-    # chunk_embeds = [gen_embeds(c).cpu().detach().numpy().flatten() for c in chunks]
     chunk_embeds = np.vstack(chunk_embeds)
     
     # normalize for cosine similarity
@@ -47,7 +47,7 @@ def gen_embeds(text: str):
     :return: vector of the text
     :rtype: vector
     """
-    inputs = tokenizer(text, return_tensors="pt", padding=True, truncation=True).to("cpu")
+    inputs = tokenizer(text, return_tensors="pt", padding=True, truncation=True).to("cuda")
     outputs = model(**inputs)
     # last hidden state shape = [batch_size, tokens, hidden_dim]
     return outputs.last_hidden_state[:, 0, :]
@@ -58,13 +58,16 @@ def nav():
     text = []
     for root, dirs, fnames in os.walk("./data/NAVADMINS/"):
         for f in fnames:
-            try:
-                with open(os.path.join(root, f), 'r') as file:
-                    content = file.read()
-                    subj = content.split("SUBJ/")[1].split("//")[0].rsplit("\n")[0]
-                    text.append(subj)
-            except:
-                os.remove(os.path.join(root, f))
+            if f == "pages.txt":
+                continue
+            else:
+                try:
+                    with open(os.path.join(root, f), 'r', errors="ignore") as file:
+                        content = file.read()
+                        subj = content.split("SUBJ/")[1].split("//")[0].rsplit("\n")[0]
+                        text.append(subj)
+                except Exception as e:
+                    os.remove(os.path.join(root, f))
     cache_faiss(text, "./data/NAVADMINS/cache.faiss")
 
 def mar():
@@ -79,6 +82,7 @@ def mar():
                     subj = content.split("SUBJ/")[1].split("//")[0].rsplit("\n")[0]
                     text.append(subj)
             except:
+                print(f"Error with file: {f}")
                 os.remove(os.path.join(root, f))
     cache_faiss(text, "./data/MARADMINS/cache.faiss")
 
@@ -136,26 +140,3 @@ if __name__ == "__main__":
         case _:
             print("ERROR! Invalid option selected. Exiting...")
             exit(1)
-            
-    
-    # while True:
-    #     try:
-    #         doc = int(input("Select the document type you would like to generate embeddings for.\n1. NAVADMINS\n2. Road to War Briefs\n3. OPORDS\n4. Exit\n> "))
-        
-    #         match doc:
-    #             case 1:
-    #                 nav()
-    #                 break
-    #             case 2:
-    #                 rtw()
-    #                 break
-    #             case 3:
-    #                 opord()
-    #                 break
-    #             case 4:
-    #                 print("Exiting...")
-    #                 quit()
-    #             case _:
-    #                 print("ERROR! You did not selection a valid option.")
-    #     except ValueError:
-    #         print("ERROR! Please only enter a number!")
