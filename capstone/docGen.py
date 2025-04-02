@@ -33,7 +33,6 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     logging.set_verbosity_error()
     model_name = select_model(model_num)
     doc_type = select_doc(type_num)
-    torch.cuda.empty_cache()
 
     today = date.today()
     formatted_date = today.strftime("%Y-%m-%d")
@@ -56,7 +55,7 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
 
     match doc_type:
         case "NAVADMIN":
-            doc_instructions = "The document you must write is a NAVADMIN. A NAVADMIN is a Navy Administrative Message used to disseminate information, policies, and instructions. Your response must be in exact NAVADMIN formatting."
+            doc_instructions = "The document you must write is a NAVADMIN. A NAVADMIN is a Navy Administrative Message used to disseminate information, policies, and instructions. Your response must be in exact NAVADMIN formatting. Your response must both begin and end with the CLASSIFICATION line."
         case "MARADMIN":
             doc_instructions = "The document you must write is a MARADMIN. A MARADMIN is used by Headquarters Marine Corps staff agencies and specific authorized commands to disseminate route and administrative information applicable to all Marines. You response must be in exact MARADMIN formatting."
         case "OpOrd":
@@ -77,7 +76,7 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     task = f"{doc_instructions} Your answer must be a complete document. Do not add any additional content outside of the document. Today's date is {formatted_date}. Adjust the dates in your response accordinly. The following examples are all examples of the same type of document that you must create. Study their formatting carefully before giving your response."
     
     # create model objects
-    model = AutoModelForCausalLM.from_pretrained(model_name, device_map="cuda", torch_dtype="auto", quantization_config=BitsAndBytesConfig(load_in_8bit=True, llm_int8_enable_fp32_cpu_offload=False))
+    model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype="auto", quantization_config=BitsAndBytesConfig(load_in_8bit=True, llm_int8_enable_fp32_cpu_offload=True))
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     streamer = TextStreamer(tokenizer=tokenizer, skip_prompt=True)
     
@@ -90,7 +89,7 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     
     # generate response
     t_start = time.time()
-    generated_ids = model.generate(**model_inputs, do_sample=True, max_new_tokens=1000, streamer=streamer, eos_token_id=tokenizer.eos_token_id)
+    generated_ids = model.generate(**model_inputs, do_sample=True, max_new_tokens=1000, eos_token_id=tokenizer.eos_token_id)
     response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0][len(prompt):]
     t_stop = time.time()
     print(f"Generation time: {t_stop - t_start} sec / {(t_stop - t_start) / 60} min")
@@ -99,7 +98,7 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
         save_response(response, prompt, model_name, model)
     
     torch.cuda.empty_cache()
-    
+
     return response
 
 def find_most_rel(query: str, index):
@@ -114,7 +113,7 @@ def find_most_rel(query: str, index):
     """
     query_embed = gen_embeds(query).cpu().detach().numpy().flatten().reshape(1, -1)
     faiss.normalize_L2(query_embed)
-    _, top_k_indices = index.search(query_embed, 3)
+    _, top_k_indices = index.search(query_embed, 2)
     return top_k_indices[0]
 
 def load_examples(type: str, prompt: str) -> str:
