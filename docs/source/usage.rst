@@ -22,7 +22,7 @@ If you do not have python already, `download and install a release of python 3 <
 
 To ensure that pip is available on your system, follow `these instructions <https://pip.pypa.io/en/stable/installation/>`_ for your platform.
 
-All of the required python packages can be easily installed via the provided configuration files and setup script. There are separate files for GPU and CPU dependencies.
+All of the required python packages can be easily installed via the provided configuration files and setup script.
 
 Setup Script
 ++++++++++++
@@ -31,7 +31,7 @@ Setup Script
 
     $ ./setup.sh
 
-The setup script will ask if you would like to install the CPU or GPU configuration and install the appropriate configuration. Once the virtual environment has been created, the script will proceed to download the data necessary for the NAVADMINs and create a FAISS index for them.
+The script will prompt you several times for different actions to take during the setup process. If you respond yes to each of the prompts, the project will be fully completed. If you choose not to generate the vector embeddings of the documents during the setup process, you must do it before attempting to generate any documents.
 
 Once the setup is complete, make sure to activate the virtual environment.
 
