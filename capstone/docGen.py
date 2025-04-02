@@ -90,7 +90,7 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     
     # generate response
     t_start = time.time()
-    generated_ids = model.generate(**model_inputs, do_sample=True, max_new_tokens=1000, streamer=streamer)
+    generated_ids = model.generate(**model_inputs, do_sample=True, max_new_tokens=1000, streamer=streamer, eos_token_id=tokenizer.eos_token_id)
     response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0][len(prompt):]
     t_stop = time.time()
     print(f"Generation time: {t_stop - t_start} sec / {(t_stop - t_start) / 60} min")
