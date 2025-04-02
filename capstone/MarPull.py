@@ -35,7 +35,8 @@ def extract_body_text(url):
         else:
             return "Body text not found."
     except requests.exceptions.RequestException as e:
-        return f"Error fetching {url}: {e}"
+        print(f"Error fetching {url}: {e}")
+        return ""
 
 def get_maradmin_number(url):
     match = re.search(r'Messages-Display/Article/(\d+)/', url)
@@ -58,5 +59,6 @@ for i in range(50):
 for url in tqdm(urls, desc="Downloading MARADMINS"):
     maradmin_number = get_maradmin_number(url)
     content = extract_body_text(url)
-    with open(f"./data/MARADMINS/MARADMIN_{maradmin_number}.txt", "w") as file:
-        file.write(content + "\n")
+    if content:
+        with open(f"./data/MARADMINS/MARADMIN_{maradmin_number}.txt", "w") as file:
+            file.write(content + "\n")

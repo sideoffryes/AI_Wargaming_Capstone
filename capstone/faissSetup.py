@@ -77,12 +77,15 @@ def mar():
     for root, dirs, fnames in os.walk("./data/MARADMINS/"):
         for f in fnames:
             try:
-                with open(os.path.join(root, f), 'r') as file:
+                with open(os.path.join(root, f), 'r', errors="ignore") as file:
                     content = file.read()
-                    subj = content.split("SUBJ/")[1].split("//")[0].rsplit("\n")[0]
+                    subj = content.split("SUBJ/")[1]
+                    try:
+                        subj = subj.split("//")[0].rsplit("\n")[0]
+                    except:
+                        subj = subj.rsplit("\n")[0]
                     text.append(subj)
-            except:
-                print(f"Error with file: {f}")
+            except Exception as e:
                 os.remove(os.path.join(root, f))
     cache_faiss(text, "./data/MARADMINS/cache.faiss")
 
