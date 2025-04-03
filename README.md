@@ -118,4 +118,4 @@ A pre-compiled PDF version of the documentation can be found [here](./docs/build
 
 ## Poster
 
-![Capstone Poster](./proposal/Comp%20SCI_Asjes_Frye_Koutrakos_Robinson_Ziman-1.png)
+![Capstone Poster](./proposal/Comp%20SCI_Asjes_Frye_Koutrakos_Robinson_Ziman.png)
