@@ -1,17 +1,22 @@
 import os
+from argparse import ArgumentParser
 
 import faiss
 import numpy as np
+import torch
 from docx import Document
 from tqdm import tqdm
 from transformers import AutoModel, AutoTokenizer, logging
-from argparse import ArgumentParser
-import torch
 
 logging.set_verbosity_error()
 
 tokenizer = AutoTokenizer.from_pretrained("WhereIsAI/UAE-Large-V1")
-model = AutoModel.from_pretrained("WhereIsAI/UAE-Large-V1", device_map="cuda")
+
+device = "cpu"
+if torch.cuda.is_available():
+    device = "cuda"
+
+model = AutoModel.from_pretrained("WhereIsAI/UAE-Large-V1", device_map=device)
 
 def cache_faiss(chunks: str, fname):
     """Converts each of the given text chunks into a vectory representation, adds them to a FAISS index, and writes the FAISS index to the disk.
@@ -24,7 +29,10 @@ def cache_faiss(chunks: str, fname):
     index_file = fname
     
     chunk_embeds = []
-    torch.cuda.empty_cache()
+
+    if device == "cuda":
+        torch.cuda.empty_cache()
+        
     for c in tqdm(chunks, desc="Generating document embeddings"):
         chunk_embeds.append(gen_embeds(c).cpu().detach().numpy())
         
@@ -47,7 +55,7 @@ def gen_embeds(text: str):
     :return: vector of the text
     :rtype: vector
     """
-    inputs = tokenizer(text, return_tensors="pt", padding=True, truncation=True).to("cuda")
+    inputs = tokenizer(text, return_tensors="pt", padding=True, truncation=True).to(device)
     outputs = model(**inputs)
     # last hidden state shape = [batch_size, tokens, hidden_dim]
     return outputs.last_hidden_state[:, 0, :]

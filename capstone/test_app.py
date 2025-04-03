@@ -1,5 +1,7 @@
 import unittest
+
 from app import app, db
+
 
 class FlaskTestCase(unittest.TestCase):
     def setUp(self):
@@ -37,12 +39,13 @@ class FlaskTestCase(unittest.TestCase):
         self.assertIn(b'<option value="2">NAVADMIN</option>', response.data)
         self.assertIn(b'<option value="3">MARADMIN</option>', response.data)
         self.assertIn(b'<option value="4">OPORD</option>', response.data)
+        self.assertIn(b'<option value="5">Road to War Brief</option>', response.data)
 
         self.assertIn(b'<label for="model_selection">LLM Model Options:</label>', response.data)
         self.assertIn(b'<option value="0" disabled selected>Please select a model:</option>', response.data)
-        self.assertIn(b'<option value="1">Llama-3.2-3B-Instruct</option>', response.data)
-        self.assertIn(b'<option value="2">Llama-3.1-8B-Instruct</option>', response.data)
-        self.assertIn(b'<option value="3">Llama-3.3-70B-Instruct</option>', response.data)
+        self.assertIn(b'<option value="1">Llama-3.2-1B-Instruct</option>', response.data)
+        self.assertIn(b'<option value="2">Llama-3.2-3B-Instruct</option>', response.data)
+        self.assertIn(b'<option value="3">Llama-3.1-8B-Instruct</option>', response.data)
         
         # Instead of checking for the exact textarea, check for the presence of a form field
         self.assertIn(b'<textarea class="my_text" name="artifact_parameters" wrap="hard" placeholder="Select an artifact type to customize the parameters." required></textarea>', response.data)
@@ -75,12 +78,14 @@ class FlaskTestCase(unittest.TestCase):
         self.assertIn(b'<option value="2">NAVADMIN</option>', response.data)
         self.assertIn(b'<option value="3">MARADMIN</option>', response.data)
         self.assertIn(b'<option value="4">OPORD</option>', response.data)
+        self.assertIn(b'<option value="5">Road to War Brief</option>', response.data)
+
 
         self.assertIn(b'<label for="model_selection">LLM Model Options:</label>', response.data)
         self.assertIn(b'<option value="0" disabled selected>Please select a model:</option>', response.data)
-        self.assertIn(b'<option value="1">Llama-3.2-3B-Instruct</option>', response.data)
-        self.assertIn(b'<option value="2">Llama-3.1-8B-Instruct</option>', response.data)
-        self.assertIn(b'<option value="3">Llama-3.3-70B-Instruct</option>', response.data)
+        self.assertIn(b'<option value="1">Llama-3.2-1B-Instruct</option>', response.data)
+        self.assertIn(b'<option value="2">Llama-3.2-3B-Instruct</option>', response.data)
+        self.assertIn(b'<option value="3">Llama-3.1-8B-Instruct</option>', response.data)
         
         # Instead of checking for the exact textarea, check for the presence of a form field
         self.assertIn(b'<textarea class="my_text" name="artifact_parameters" wrap="hard" placeholder="Select an artifact type to customize the parameters." required></textarea>', response.data)
