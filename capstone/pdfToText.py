@@ -1,5 +1,7 @@
-import pypdf
 import sys
+
+import pypdf
+
 
 def pdf_to_text(pdf_path, output_txt):
     # Open the PDF file in read-binary mode

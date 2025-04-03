@@ -2,7 +2,7 @@ import argparse
 import os
 import time
 import warnings
-from datetime import datetime, date
+from datetime import date, datetime
 
 import faiss
 import torch
@@ -33,30 +33,63 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     logging.set_verbosity_error()
     model_name = select_model(model_num)
     doc_type = select_doc(type_num)
-    torch.cuda.empty_cache()
 
     today = date.today()
     formatted_date = today.strftime("%Y-%m-%d")
 
+    staff = """The current US military chain of command is:
+    President of the United States: Donald Trump
+    Vice President of the United States: JD Vance
+    Secretary of Defense: Pete Hegseth
+    Chairman of the Joint Chiefs of Staff: ADM Christopher Grady, USN, Acting
+    Vice Chairman of the Joint Chiefs of Staff: ADM Christopher Grady, USN, Acting
+    Chief of Naval Operations: ADM James Kilby, USN, acting
+    Chief of Staff of the Army: General Randy George, USA
+    Chief of Staff of the Air Force: General David Allvin, USAF
+    Commandant of the Marine Corps: General Eric Smith, USMC
+    Commandant of the Coast Guard: ADM Kevin Lunday, USCG
+    Chief of Space Operations: General Chance Saltzman, USSF
+    """
+
+    doc_instructions = ""
+
+    match doc_type:
+        case "NAVADMIN":
+            doc_instructions = "The document you must write is a NAVADMIN. A NAVADMIN is a Navy Administrative Message used to disseminate information, policies, and instructions. Your response must be in exact NAVADMIN formatting. Your response must both begin and end with the CLASSIFICATION line."
+        case "MARADMIN":
+            doc_instructions = "The document you must write is a MARADMIN. A MARADMIN is used by Headquarters Marine Corps staff agencies and specific authorized commands to disseminate route and administrative information applicable to all Marines. You response must be in exact MARADMIN formatting."
+        case "OpOrd":
+            doc_instructions = """An OPORD, Operations Order, or Five Paragraph Order is used to issue an order in a clear and concise manner. There are 5 elements to this order: Situation, Mission, Execution, Administration and Logistics, and Command and Signal. You must write all 5 paragraphs.
+            The situation paragraph contains information on the overall status and disposition of both friendly and enemy forces. It contains 3 subparagraphs on enemy forces and friendly forces.
+            The mission paragraph provides a clear and concise statement of what the unit must accomplish. This is the heard of the order and must contain the who, what, when, where, and why of the operation.
+            The execution paragraph contains the information needed to conduct the operation. It includes 3 subparagraphs on concept of operations, tasks, and coordination instructions.
+            The administration and logistics paragraph contains information or instructions pertaining to rations and ammunition, location of the distribution point, corpsman, aid station, handling of prisoners of war, and other matters.
+            The command and signal paragraph contains 2 subparagraphs on the chain of command with their location and signal instructions for frequences, call signs, radio procedures, etc.
+            """
+        case "RTW":
+            doc_instructions = "The document you must write is a Road to War Brief. This brief describes the scenario and narrative that sets the stage for a conflict, outlining the events and factors leading up to the conflict."
+        case _:
+            doc_instructions = ""
+
     # Set LLM instructions
     role = "Role: You work for the United States Department of Defense, and you specialize in writing official military documents using military formatting.\n"
-    task = f"Give your answer in {doc_type} format based on the previous examples. After the final line of the document you create, stop responding. Today's date is {formatted_date}. Adjust the dates in your response accordinly."
+    task = f"{doc_instructions} Your answer must be a complete document. Do not add any additional content outside of the document. Today's date is {formatted_date}. Adjust the dates in your response accordinly. The following examples are all examples of the same type of document that you must create. Study their formatting carefully before giving your response."
     
     # create model objects
-    model = AutoModelForCausalLM.from_pretrained(model_name, device_map="cuda", torch_dtype="auto", quantization_config=BitsAndBytesConfig(load_in_8bit=True, llm_int8_enable_fp32_cpu_offload=False))
+    model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype="auto", quantization_config=BitsAndBytesConfig(load_in_8bit=True, llm_int8_enable_fp32_cpu_offload=True))
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     streamer = TextStreamer(tokenizer=tokenizer, skip_prompt=True)
     
     # set up prompt info
     examples = load_examples(doc_type, prompt)
-    prompt = role + examples + prompt + task
+    prompt = role + staff + task + examples + "Now that you have studied the examples, create the same type of example using the following prompt: " + prompt
     
     # set device based on gpu availability
     model_inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
     
     # generate response
     t_start = time.time()
-    generated_ids = model.generate(**model_inputs, do_sample=True, max_new_tokens=1000, streamer=streamer)
+    generated_ids = model.generate(**model_inputs, do_sample=True, max_new_tokens=1000, eos_token_id=tokenizer.eos_token_id)
     response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0][len(prompt):]
     t_stop = time.time()
     print(f"Generation time: {t_stop - t_start} sec / {(t_stop - t_start) / 60} min")
@@ -64,8 +97,9 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     if save:
         save_response(response, prompt, model_name, model)
     
-    torch.cuda.empty_cache()
-    
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+
     return response
 
 def find_most_rel(query: str, index):
@@ -80,7 +114,7 @@ def find_most_rel(query: str, index):
     """
     query_embed = gen_embeds(query).cpu().detach().numpy().flatten().reshape(1, -1)
     faiss.normalize_L2(query_embed)
-    _, top_k_indices = index.search(query_embed, 3)
+    _, top_k_indices = index.search(query_embed, 2)
     return top_k_indices[0]
 
 def load_examples(type: str, prompt: str) -> str:
