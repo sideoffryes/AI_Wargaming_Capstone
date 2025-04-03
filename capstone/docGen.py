@@ -2,7 +2,7 @@ import argparse
 import os
 import time
 import warnings
-from datetime import datetime, date
+from datetime import date, datetime
 
 import faiss
 import torch

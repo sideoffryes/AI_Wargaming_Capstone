@@ -1,12 +1,12 @@
 import os
+from argparse import ArgumentParser
 
 import faiss
 import numpy as np
+import torch
 from docx import Document
 from tqdm import tqdm
 from transformers import AutoModel, AutoTokenizer, logging
-from argparse import ArgumentParser
-import torch
 
 logging.set_verbosity_error()
 

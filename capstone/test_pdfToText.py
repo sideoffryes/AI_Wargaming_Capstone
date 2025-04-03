@@ -1,6 +1,8 @@
 import pytest
-from pdfToText import pdf_to_text
 from reportlab.pdfgen import canvas
+
+from pdfToText import pdf_to_text
+
 
 @pytest.fixture
 def create_temp_pdf(tmp_path):
