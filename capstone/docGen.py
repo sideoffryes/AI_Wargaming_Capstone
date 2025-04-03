@@ -97,7 +97,8 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     if save:
         save_response(response, prompt, model_name, model)
     
-    torch.cuda.empty_cache()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
 
     return response
 
