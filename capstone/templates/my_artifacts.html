@@ -47,7 +47,7 @@
                 {% for artifact in artifacts %}
                     <li>
                         <strong>Prompt:</strong> <p>{{ artifact.prompt }}</p>
-                        <strong>Generated Content:</strong> <p>{{ artifact.content }}</p>
+                        <strong>Generated Content:</strong> <pre>{{ artifact.content }}</pre>
                         <small>Generated on: {{ artifact.created_at }}</small>
                     </li>
                 {% endfor %}
