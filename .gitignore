@@ -17,6 +17,9 @@ capstone/output
 capstone/data/NAVADMINS/*
 capstone/data/MARADMINS/*
 
+# make sure to keep MARADMINS dir
+!capstone/data/MARADMINS/.gitkeep
+
 # ignore caches
 capstone/data/RTW/cache.faiss
 capstone/data/OpOrds/cache.faiss
