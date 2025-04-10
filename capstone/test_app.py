@@ -28,7 +28,7 @@ class FlaskTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         
         # Check that the title is present
-        self.assertIn(b'<title>Capstone Starter</title>', response.data)
+        self.assertIn(b'<title>WARDOCX</title>', response.data)
 
         # Check that the form and input fields are present
         self.assertIn(b'<form action="/index" method="POST">', response.data)
@@ -67,7 +67,7 @@ class FlaskTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         
         # Check that the title is present
-        self.assertIn(b'<title>Capstone Starter</title>', response.data)
+        self.assertIn(b'<title>WARDOCX</title>', response.data)
 
         # Check that the form and input fields are present
         self.assertIn(b'<form action="/index" method="POST">', response.data)
@@ -212,7 +212,7 @@ class FlaskTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
         # Check that it stays on login page
-        self.assertIn(b'<title>Capstone Starter</title>', response.data)
+        self.assertIn(b'<title>WARDOCX</title>', response.data)
 
         # Check that the error message exists
         self.assertIn(b'<p>Successfully logged into: success</p>', response.data)
@@ -224,7 +224,7 @@ class FlaskTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
         # Check that the title is is now Login From because user is not logged in
-        self.assertIn(b'<title>Capstone Starter</title>', response.data)
+        self.assertIn(b'<title>WARDOCX</title>', response.data)
 
         # Check for the error message
         self.assertIn(b'NOTICE: There are no artifacts associated with this account.', response.data)
@@ -262,7 +262,7 @@ class FlaskTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
         # Check that it stays on login page
-        self.assertIn(b'<title>Capstone Starter</title>', response.data)
+        self.assertIn(b'<title>WARDOCX</title>', response.data)
 
         # Check that the error message exists
         self.assertIn(b'<p>Successfully logged into: success</p>', response.data)
@@ -431,7 +431,7 @@ class FlaskTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
         # Check that it stays on login page
-        self.assertIn(b'<title>Capstone Starter</title>', response.data)
+        self.assertIn(b'<title>WARDOCX</title>', response.data)
 
         # Check that the error message exists
         self.assertIn(b'<p>Successfully logged into: success</p>', response.data)
@@ -482,7 +482,7 @@ class FlaskTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
         # Check that the title is present
-        self.assertIn(b'<title>Capstone Starter</title>', response.data)
+        self.assertIn(b'<title>WARDOCX</title>', response.data)
 
         # Check for the {{ errorMsg }}
         self.assertIn(b'Successfully logged out of profile', response.data)
@@ -520,7 +520,7 @@ class FlaskTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
         # Check that it stays on login page
-        self.assertIn(b'<title>Capstone Starter</title>', response.data)
+        self.assertIn(b'<title>WARDOCX</title>', response.data)
 
         # Check that the error message exists
         self.assertIn(b'<p>Successfully logged into: success</p>', response.data)
@@ -566,7 +566,7 @@ class FlaskTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
         # Check that the title is present
-        self.assertIn(b'<title>Capstone Starter</title>', response.data)
+        self.assertIn(b'<title>WARDOCX</title>', response.data)
 
         # Check for the {{ errorMsg }}
         self.assertIn(b'Successfully logged out of profile', response.data)
@@ -619,7 +619,7 @@ class FlaskTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
         # Check that it redirects to the output page
-        self.assertIn(b'<title>Capstone Starter</title>', response.data)
+        self.assertIn(b'<title>WARDOCX</title>', response.data)
 
         # Check that it gives the error message
         self.assertIn(b'<p>ERROR: Please select an artifact, model type, and give a prompt.</p>', response.data)
@@ -637,7 +637,7 @@ class FlaskTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
         # Check that it redirects to the output page
-        self.assertIn(b'<title>Capstone Starter</title>', response.data)
+        self.assertIn(b'<title>WARDOCX</title>', response.data)
 
         # Check that it gives the error message
         self.assertIn(b'<p>ERROR: Please select an artifact, model type, and give a prompt.</p>', response.data)
@@ -655,7 +655,7 @@ class FlaskTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
         # Check that it redirects to the output page
-        self.assertIn(b'<title>Capstone Starter</title>', response.data)
+        self.assertIn(b'<title>WARDOCX</title>', response.data)
 
         # Check that it gives the error message
         self.assertIn(b'<p>ERROR: Please select an artifact, model type, and give a prompt.</p>', response.data)
@@ -672,7 +672,7 @@ class FlaskTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
         # Check that it redirects to the output page
-        self.assertIn(b'<title>Capstone Starter</title>', response.data)
+        self.assertIn(b'<title>WARDOCX</title>', response.data)
 
         # Check that it gives the error message
         self.assertIn(b'<p>ERROR: Please select an artifact, model type, and give a prompt.</p>', response.data)
@@ -723,7 +723,7 @@ class FlaskTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
         # Check that it stays on login page
-        self.assertIn(b'<title>Capstone Starter</title>', response.data)
+        self.assertIn(b'<title>WARDOCX</title>', response.data)
 
         # Check that the error message exists
         self.assertIn(b'<p>Successfully logged into: success</p>', response.data)
