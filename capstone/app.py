@@ -84,7 +84,8 @@ def index():
             logistics = request.form.get('opord_logistics')
             command = request.form.get('opord_command')
             #combine them and put into otherInput
-            otherInput = f"Orientation: {orientation}; Situation: {situation}; Mission: {mission}; Execution: {execution}; Administration: {admin}; Logistics: {logistics}; Command and Signal: {command}"
+            otherInput = f"{orientation}[SEP]{situation}[SEP]{mission}[SEP]{execution}[SEP]{admin}[SEP]{logistics}[SEP]{command}"
+            # otherInput = f"Orientation: {orientation}; Situation: {situation}; Mission: {mission}; Execution: {execution}; Administration: {admin}; Logistics: {logistics}; Command and Signal: {command}"
         else:
             otherInput = request.form.get('artifact_parameters')
 
