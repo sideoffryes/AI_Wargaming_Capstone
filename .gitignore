@@ -3,12 +3,13 @@ __pycache__
 *.db
 .venv
 HF_TOKEN.txt
+.vscode
 
 # ignore html docs and extra pdf docs
 docs/build/doctrees
 docs/build/html
 docs/build/latex/*
-!docs/build/latex/aiwargaming.pdf
+!docs/build/latex/wardocx.pdf
 
 # ignore old output files
 capstone/output

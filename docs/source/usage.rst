@@ -7,11 +7,11 @@ Installation
 Download the Code
 ^^^^^^^^^^^^^^^^^
 
-The code for this project can be downloaded via `GitHub <https://github.com/sideoffryes/AI_Wargaming_Capstone/tree/main>`_.
+The code for this project can be downloaded via `GitHub <https://github.com/sideoffryes/WARDOCX>`_.
 
 .. code-block:: console
 
-    $ git clone https://github.com/sideoffryes/AI_Wargaming_Capstone.git
+    $ git clone https://github.com/sideoffryes/WARDOCX.git
 
 Python Management
 ^^^^^^^^^^^^^^^^^
