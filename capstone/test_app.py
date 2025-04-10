@@ -107,7 +107,7 @@ class FlaskTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
         # Check that the title is present
-        self.assertIn(b'<title>AI Wargaming</title>', response.data)
+        self.assertIn(b'<title>WARDOCX</title>', response.data)
 
         # Check for the dropdown menu items
         self.assertIn(b'Generate Document', response.data)
@@ -281,7 +281,7 @@ class FlaskTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
         # Check that it redirects to the output page
-        self.assertIn(b'<title>AI Wargaming</title>', response.data)
+        self.assertIn(b'<title>WARDOCX</title>', response.data)
 
         # Check that the output exists
         self.assertIn(b'<div id="ai-output">You selected: 1</div>', response.data)
@@ -539,7 +539,7 @@ class FlaskTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
         # Check that it redirects to the output page
-        self.assertIn(b'<title>AI Wargaming</title>', response.data)
+        self.assertIn(b'<title>WARDOCX</title>', response.data)
 
         # Check that the output exists
         self.assertIn(b'<div id="ai-output">You selected: 1</div>', response.data)
@@ -598,7 +598,7 @@ class FlaskTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
         # Check that it redirects to the output page
-        self.assertIn(b'<title>AI Wargaming</title>', response.data)
+        self.assertIn(b'<title>WARDOCX</title>', response.data)
 
         # Check that the output exists
         self.assertIn(b'<div id="ai-output">You selected: 1</div>', response.data)
@@ -685,7 +685,7 @@ class FlaskTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         
         # Check that the title is present
-        self.assertIn(b'<title>AI Wargaming</title>', response.data)
+        self.assertIn(b'<title>WARDOCX</title>', response.data)
 
         # Check that the form and input fields are present
         self.assertIn(b'Username: Not logged in', response.data)
@@ -735,7 +735,7 @@ class FlaskTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         
         # Check that the title is present
-        self.assertIn(b'<title>AI Wargaming</title>', response.data)
+        self.assertIn(b'<title>WARDOCX</title>', response.data)
 
         # Check that the form and input fields are present
         self.assertIn(b'Username: success', response.data)

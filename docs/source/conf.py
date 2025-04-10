@@ -10,9 +10,9 @@ import sys
 import os
 sys.path.insert(0, os.path.abspath("../../capstone"))
 
-project = 'AI Wargaming'
-author = 'Peter Asjes, Henry Frye, Caleb Koutrakos, Will Robinson,\nand Bobby Ziman'
-release = '0.5'
+project = 'WARDOCX'
+author = 'Peter Asjes, Henry Frye, Caleb Koutrakos, Will Robinson,and Bobby Ziman'
+release = '0.6'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -22,7 +22,7 @@ extensions = [
     'sphinx.ext.doctest',
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
-    'sphinxcontrib.httpdomain',
+    'sphinxcontrib.httpdomain'
 ]
 autosummary_generate = True
 templates_path = ['_templates']
