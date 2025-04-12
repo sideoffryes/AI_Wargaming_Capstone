@@ -4,21 +4,24 @@ import requests
 from bs4 import BeautifulSoup
 from tqdm import tqdm
 
+error_count = 0
+
 headers = {
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-            'Accept-Language': 'en-US,en;q=0.9',
-            'Cache-Control': 'no-cache',
-            'Pragma': 'no-cache',
-            'Referer': 'https://www.marines.mil/News/Messages/MARADMINS/',
-            'Sec-Ch-Ua': '"Not/A)Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"',
-            'Sec-Ch-Ua-Mobile': '?0',
-            'Sec-Ch-Ua-Platform': '"Linux"',
-            'Sec-Fetch-Dest': 'document',
-            'Sec-Fetch-Mode': 'navigate',
-            'Sec-Fetch-Site': 'same-origin',
-            'Sec-Fetch-User': '?1',
-            'Upgrade-Insecure-Requests': '1',
-            'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+    "Host": "www.marines.mil",
+    "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:136.0) Gecko/20100101 Firefox/136.0",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.5",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Connection": "keep-alive",
+    "Cookie": "mdm-view506=list",
+    "Upgrade-Insecure-Requests": "1",
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "none",
+    "Sec-Fetch-User": "?1",
+    "Priority": "u=0, i",
+    "Pragma": "no-cache",
+    "Cache-Control": "no-cache"
 }
 
 session = requests.Session()
@@ -36,7 +39,8 @@ def extract_body_text(url):
         else:
             return "Body text not found."
     except requests.exceptions.RequestException as e:
-        print(f"Error fetching {url}: {e}")
+        global error_count
+        error_count += 1
         return ""
 
 def get_maradmin_number(url):
@@ -44,11 +48,16 @@ def get_maradmin_number(url):
     return match.group(1) if match else "Unknown"
 
 def get_maradmin_urls(base_url):
-    response = requests.get(base_url, headers=headers)
-    response.raise_for_status()
-    soup = BeautifulSoup(response.text, 'html.parser')
-    links = soup.find_all('a', href=True)
-    return [link['href'] for link in links if '/Messages-Display/Article/' in link['href']]
+    try:
+        response = requests.get(base_url, headers=headers)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.text, 'html.parser')
+        links = soup.find_all('a', href=True)
+        return [link['href'] for link in links if '/Messages-Display/Article/' in link['href']]
+    except Exception as e:
+        global error_count
+        error_count += 1
+        return ""
 
 # Base URL for MARADMIN messages
 urls = []
@@ -63,3 +72,5 @@ for url in tqdm(urls, desc="Downloading MARADMINS"):
     if content:
         with open(f"./data/MARADMINS/MARADMIN_{maradmin_number}.txt", "w") as file:
             file.write(content + "\n")
+            
+print(f"Total number of errors during MARADMIN requests: {error_count}")
