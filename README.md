@@ -1,4 +1,4 @@
-# AI Wargaming: GenAI in Support of Wargaming Modernization
+# WARDOCX: Retrieval Augmented GenAI in Support of Wargaming Modernization
 
 ## USNA Demo Link
 
@@ -27,7 +27,7 @@ be harnessed to enhance and expedite the wargaming process.
 1. Clone the project.
 
 ```console
-$ git clone https://github.com/sideoffryes/AI_Wargaming_Capstone.git
+$ git clone https://github.com/sideoffryes/WARDOCX.git
 ```
 
 2. Ensure that [Python3](https://www.python.org/downloads/) and [pip](https://pip.pypa.io/en/stable/installation/) are installed on your system.
@@ -98,7 +98,7 @@ The IP addresses at which the server can be reached will be printed out to the t
 
 The -d option allows you to specify which embeddings to generate if you would only like to be able to generate a particular subset of documents. Run *python3 faissSetup.py -h* for a list of options.
 
-A pre-compiled PDF version of the documentation can be found [here](./docs/build/latex/aiwargaming.pdf).
+A pre-compiled PDF version of the documentation can be found [here](./docs/build/latex/wardocx.pdf).
 
 ## Group Members
 

@@ -1,12 +1,12 @@
-.. AI Wargaming documentation master file, created by
+.. WARDOCX documentation master file, created by
    sphinx-quickstart on Thu Jan 30 10:32:27 2025.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to AI Wargaming's documentation!
+Welcome to WARDOCX's documentation!
 ========================================
 
-**AI Wargaming** is a undergraduate capstone project part of a larger initiative to modernize wargaming using AI.
+**WARDOCX** is a undergraduate capstone project part of a larger initiative to modernize wargaming using AI.
 
 .. note::
 
@@ -18,6 +18,7 @@ Welcome to AI Wargaming's documentation!
    
    usage
    api
+   app
 
 Indices and tables
 ==================

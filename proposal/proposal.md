@@ -1,4 +1,4 @@
-# AI in Wargaming Capstone Proposal
+# WARDOCX Capstone Proposal
 
 MIDN Peter Asjes, Henry Frye, Caleb Koutrakos, Will Robinson, and Robert Ziman
 
@@ -191,7 +191,7 @@ LT Gentile is designated as a subject matter expert on Wargames. He pointed out 
 
 ### How Code Will Be Delivered
 
-All code will be uploaded onto our public [GitHub Repository](https://github.com/PJusna/AI_Wargaming_Capstone)
+All code will be uploaded onto our public [GitHub Repository](https://github.com/sideoffryes/WARDOCX#)
 
 ### Licensing
 
