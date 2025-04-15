@@ -13,7 +13,7 @@ pip install -r requirements.txt
 echo "Testing for GPU..."
 if python -c "import torch; print(torch.cuda.is_available())" | grep True; then
     echo "GPU detected!"
-    pip install faiss-gpu-cu12 torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
+    pip install faiss-gpu-cu12 bitsandbytes torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
 else
     echo "No GPU detected!"
     pip install faiss-cpu torch torchvision torchaudio
