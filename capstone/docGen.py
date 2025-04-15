@@ -76,7 +76,10 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     task = f"{doc_instructions} Your answer must be a complete document. Do not add any additional content outside of the document. Today's date is {formatted_date}. Adjust the dates in your response accordinly. The following examples are all examples of the same type of document that you must create. Study their formatting carefully before giving your response."
     
     # create model objects
-    model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype="auto", quantization_config=BitsAndBytesConfig(load_in_8bit=True, llm_int8_enable_fp32_cpu_offload=True))
+    if torch.cuda.is_available() and not args.cpu:
+        model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype="auto", quantization_config=BitsAndBytesConfig(load_in_8bit=True, llm_int8_enable_fp32_cpu_offload=True))
+    else:
+        model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype="auto")
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     streamer = TextStreamer(tokenizer=tokenizer, skip_prompt=True)
     
@@ -239,6 +242,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generates military documents using an LLM based on input from the user.")
     parser.add_argument("-k", "--top-k", type=int, help="Specify the number of related documents to identify for context when creating the new document, default is 3.", default=3)
     parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose mode")
+    parser.add_argument("--cpu", action="store_true", help="Force CPU mode")
     args = parser.parse_args()
     
     
