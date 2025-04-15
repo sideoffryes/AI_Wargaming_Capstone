@@ -1,5 +1,5 @@
-API
-===
+Function Call API Documentation
+===============================
 
 .. autosummary::
     :toctree: generated
