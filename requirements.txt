@@ -1,4 +1,3 @@
---extra-index-url https://download.pytorch.org/whl/cu126
 Flask
 flask_sqlalchemy
 pypdf
@@ -7,9 +6,6 @@ reportlab
 transformers
 accelerate
 bitsandbytes
-torch
-torchvision
-torchaudio
 sphinxcontrib-httpdomain
 sphinx_rtd_theme
 sphinx
