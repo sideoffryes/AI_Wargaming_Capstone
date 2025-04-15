@@ -78,28 +78,57 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     # create model objects
     model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype="auto", quantization_config=BitsAndBytesConfig(load_in_8bit=True, llm_int8_enable_fp32_cpu_offload=True))
     tokenizer = AutoTokenizer.from_pretrained(model_name)
-    streamer = TextStreamer(tokenizer=tokenizer, skip_prompt=True)
     
     # set up prompt info
     examples = load_examples(doc_type, prompt)
-    prompt = role + staff + task + examples + "Now that you have studied the examples, create the same type of example using the following prompt: " + prompt
     
-    # set device based on gpu availability
-    model_inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
-    
-    # generate response
-    t_start = time.time()
-    generated_ids = model.generate(**model_inputs, do_sample=True, max_new_tokens=1000, eos_token_id=tokenizer.eos_token_id)
-    response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0][len(prompt):]
-    t_stop = time.time()
-    print(f"Generation time: {t_stop - t_start} sec / {(t_stop - t_start) / 60} min")
-    
-    if save:
-        save_response(response, prompt, model_name, model)
-    
-    if torch.cuda.is_available():
-        torch.cuda.empty_cache()
+    if doc_type == "OpOrd":
+        return opord_gen([prompt, role, staff, task], examples, model, tokenizer)
+    else:
+        prompt = role + staff + task + examples + "Now that you have studied the examples, create the same type of example using the following prompt: " + prompt
+        
+        # set device based on gpu availability
+        model_inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+        
+        # generate response
+        t_start = time.time()
+        generated_ids = model.generate(**model_inputs, do_sample=True, max_new_tokens=1000, eos_token_id=tokenizer.eos_token_id)
+        response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0][len(prompt):]
+        t_stop = time.time()
+        print(f"Generation time: {t_stop - t_start} sec / {(t_stop - t_start) / 60} min")
+        
+        if save:
+            save_response(response, prompt, model_name, model)
+        
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
 
+        return response
+
+def opord_gen(prompts: list[str], examples: str, model, tokenizer):
+    prompt = prompts[0]
+    role = prompts[1]
+    staff = prompts[2]
+    task = prompts[3]
+    
+    user_input = prompt.split("[SEP]")
+    all_prompt = role + staff + task + examples + "Now that you have studdied the OPORD exames, you will create an OPORD one paragraph at a time."
+    paragraphs = []
+    topics = ["Orientation", "Situation", "Mission", "Execution", "Administration", "Logistics", "Command and Signal"]
+    
+    i = 0
+    for t in topics:
+        p = f"{all_prompt} Write the {t} parapgrah using the following subject: {user_input[i]}"
+        i += 1
+        
+        model_inputs = tokenizer(p, return_tensors="pt").to(model.device)
+        generated_ids = model.generate(**model_inputs, do_sample=True, max_new_tokens=1000, eos_token_id=tokenizer.eos_token_id)
+        response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0][len(prompt):]
+        paragraphs.append(response)
+    
+    response = "\n".join(paragraphs)
+    save_response(response, " ".join(user_input), model)
+    
     return response
 
 def find_most_rel(query: str, index):
