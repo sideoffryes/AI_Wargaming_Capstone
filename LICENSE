@@ -178,3 +178,12 @@ From PyPDF:
 From Flask:
     Copyright (c) 2010 Pallets
     All rights reserved.
+
+From Flask-SQLAlchemy:
+    Copyright (c) 2010 Pallets
+    All rights reserved.
+
+From Python-UnitTest:
+    MIT License
+    Copyright (c) 2019 Qualified Inc.
+    All rights reserved.
