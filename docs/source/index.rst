@@ -18,6 +18,7 @@ Welcome to WARDOCX's documentation!
    
    usage
    api
+   app
 
 Indices and tables
 ==================
