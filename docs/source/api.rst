@@ -1,11 +1,10 @@
-API
-===
+Function Call API Documentation
+===============================
 
 .. autosummary::
     :toctree: generated
     :recursive:
 
-    app
     docGen
     faissSetup
     pdfToText
