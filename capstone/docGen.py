@@ -17,6 +17,7 @@ parser = argparse.ArgumentParser(description="Generates military documents using
 parser.add_argument("-k", "--top-k", type=int, help="Specify the number of related documents to identify for context when creating the new document, default is 3.", default=3)
 parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose mode")
 parser.add_argument("--cpu", action="store_true", help="Enable CPU-only mode")
+parser.add_argument("-p", "--print", action="store_true", help="Print the output to the terminal when done")
 
 warnings.filterwarnings("ignore", category=UserWarning)
 
@@ -108,6 +109,10 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
         
         if torch.cuda.is_available():
             torch.cuda.empty_cache()
+
+        use_print = getattr(args, 'print', False)
+        if use_print:
+            print(f"----------Generated document----------\n{response}")
 
         return response
 
