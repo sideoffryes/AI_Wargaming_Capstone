@@ -1,0 +1,5 @@
+﻿faissSetup
+==========
+
+.. automodule:: faissSetup
+   :members:

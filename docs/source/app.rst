@@ -1,16 +1,19 @@
-﻿Webserver API Documentation
-===========================
+﻿Web Server API Documentation
+============================
 
 Describes the API endpoints for the Flask web server
 
 User Endpoints
 --------------
 
+/userprofile
+^^^^^^^^^^^^
+
 .. http:get:: /userprofile
 
    Displays the user profile page.
 
-   This endpoint renders the user profile page, allowing logged-in users to view their username and change their password. If the user is not logged in (no `user_id` in the session), it displays a default view indicating they are not logged in.
+   This endpoint renders the user profile page, allowing logged-in users to view their username and change their password. If the user is not logged in (no `user_id` in the session), it displays a default view indicating they are not logged in. See :func:`~app.userprofile`.
 
    **Session Requirements:**
 
@@ -255,11 +258,14 @@ User Endpoints
 Authentication Endpoints
 ------------------------
 
+/login
+^^^^^^
+
 .. http:get:: /login
 
    Displays the login form.
 
-   This endpoint is responsible for rendering the HTML form that allows users to log in to the web application. No data is submitted or processed when this endpoint is accessed via a GET request.
+   This endpoint is responsible for rendering the HTML form that allows users to log in to the web application. No data is submitted or processed when this endpoint is accessed via a GET request. See :func:`~app.login`.
 
    **Response Body:**
 
@@ -291,7 +297,7 @@ Authentication Endpoints
 
    Handles user login submissions.
 
-   This endpoint processes the login form submitted by users. It expects a POST request with username and password data. It authenticates the user against stored credentials and either logs them in or displays an error message.
+   This endpoint processes the login form submitted by users. It expects a POST request with username and password data. It authenticates the user against stored credentials and either logs them in or displays an error message. See :func:`~app.login`.
 
    **Request Body:**
 
@@ -353,11 +359,14 @@ Authentication Endpoints
           </body>
       </html>
 
+/register
+^^^^^^^^^
+
 .. http:get:: /register
 
    Displays the user registration form.
 
-   This endpoint renders the HTML form that allows new users to create an account on the web application. No data is submitted or processed when this endpoint is accessed via a GET request.
+   This endpoint renders the HTML form that allows new users to create an account on the web application. No data is submitted or processed when this endpoint is accessed via a GET request. See :func:`~app.register`.
 
    **Response Body:**
 
@@ -490,11 +499,14 @@ Authentication Endpoints
           </body>
       </html>
 
+/logout
+^^^^^^^
+
 .. http:get:: /logout
 
    Logs the user out.
 
-   This endpoint handles user logout functionality. When accessed via a GET request, it removes the `user_id` from the session, effectively logging the user out of their profile. It then redirects the user to the main index page with a success message.
+   This endpoint handles user logout functionality. When accessed via a GET request, it removes the `user_id` from the session, effectively logging the user out of their profile. It then redirects the user to the main index page with a success message. See :func:`~app.logout`.
 
    **Session Modification:**
 
@@ -522,21 +534,23 @@ Authentication Endpoints
 Artifact Endpoints
 ------------------
 
+/
+^
+
 .. http:get:: /
 
-   Handles GET requsts to the root path and serves the main HTML home page containing the document generation form.
+   Handles GET requsts to the root path and serves the main HTML home page containing the document generation form. See :func:`~app.index`.
 
-   :undocumented:
+/index
+^^^^^^
 
 .. http:get:: /index
 
-   Handles GET requsts to the /index path and serves the main HTML home page containing the document generation form.
-
-   :undocumented:
+   Handles GET requsts to the /index path and serves the main HTML home page containing the document generation form. See :func:`~app.index`.
 
 .. http:post:: /index
 
-   **Description:** Handles the submission of the artifact generation form. Based on the form data, it either returns an error message or triggers the artifact generation process and redirects to the output page.
+   **Description:** Handles the submission of the artifact generation form. Based on the form data, it either returns an error message or triggers the artifact generation process and redirects to the output page. See :func:`~app.index`.
 
    **Request Body (Form Data):**
 
@@ -599,11 +613,14 @@ Artifact Endpoints
                </body>
            </html>
 
+/output
+^^^^^^^
+
 .. http:get:: /output
 
    Renders the output.html template.
 
-   This endpoint is responsible for displaying the main output of the web application. It fetches no external data but directly renders the content defined in the `output.html` template.
+   This endpoint is responsible for displaying the main output of the web application. It fetches no external data but directly renders the content defined in the `output.html` template. See :func:`~app.home`.
 
    **Response Body:**
 
@@ -625,13 +642,14 @@ Artifact Endpoints
       </html>
 
 
-
+/my_artifacts
+^^^^^^^^^^^^^
 
 .. http:get:: /my_artifacts
 
    Displays the logged-in user's generated artifacts.
 
-   This endpoint retrieves and displays a list of artifacts that have been generated by the currently logged-in user. It requires the user to be authenticated (i.e., having a `user_id` in the session).
+   This endpoint retrieves and displays a list of artifacts that have been generated by the currently logged-in user. It requires the user to be authenticated (i.e., having a `user_id` in the session). See :func:`~app.my_artifacts`.
 
    **Session Requirements:**
 
@@ -709,11 +727,14 @@ Artifact Endpoints
 Documentation Endpoint
 -----------------------
 
+/docs/(path:filename)
+^^^^^^^^^^^^^^^^^^^^^
+
 .. http:get:: /docs/(path:filename)
 
    Serves static documentation files.
 
-   This endpoint serves static files from the Sphinx-generated documentation build directory (`../docs/build/html`). The `filename` part of the URL path is dynamically used to locate and serve the requested file.
+   This endpoint serves static files from the Sphinx-generated documentation build directory (`../docs/build/html`). The `filename` part of the URL path is dynamically used to locate and serve the requested file. See :func:`~app.docs`.
 
    **Path Parameters:**
 

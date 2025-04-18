@@ -24,6 +24,13 @@ app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=1)
 
 # Models
 class Profile(db.Model):
+    """Class that represents a user's profile to be stored in the database
+
+    :param db: The database model base class
+    :type db: _FSAModel
+    :return: User's username, pasword hash, and the password salt
+    :rtype: str
+    """
     # Id : Field which stores unique id for every row in database table.
     # username: Used to store the username of the user
     # hash: Used to store hashed password+salt of the user
@@ -41,6 +48,13 @@ class Profile(db.Model):
         return f"Username: {self.username}, Hash: {self.hash}, Salt: {self.salt}"
     
 class GeneratedArtifact(db.Model):
+    """Class that represents a generated artifact to be stored in the database
+
+    :param db: The database model base class
+    :type db: _FSAModel
+    :return: Artifact's id and the user who generated its id
+    :rtype: str
+    """
     # Unique ID for each generated artifact
     id = db.Column(db.Integer, primary_key=True)
     # Foreign key to the Profile table
@@ -63,76 +77,8 @@ with app.app_context():
 @app.route('/index', methods=['GET', 'POST'])
 def index():
     """
-    .. http:get:: /
-        :undocumented:
-
-    .. http:get:: /index
-        :undocumented:
-
-    .. http:post:: /index
-
-    **Description:** Handles the submission of the artifact generation form. Based on the form data, it either returns an error message or triggers the artifact generation process and redirects to the output page.
-
-    **Request Body (Form Data):**
-
-    The request body is sent as `application/x-www-form-urlencoded` and contains the following fields:
-
-    * `artifact_type` (integer, required): An integer representing the type of artifact to generate.
-    * `model_selection` (integer, required): An integer representing the chosen language model.
-    * `artifact_parameters` (string, required if `artifact_type` is not 4): Free-form text providing parameters for the artifact generation.
-    * `opord_orientation` (string, required if `artifact_type` is 4): Orientation field for OPORD generation.
-    * `opord_situation` (string, required if `artifact_type` is 4): Situation field for OPORD generation.
-    * `opord_mission` (string, required if `artifact_type` is 4): Mission field for OPORD generation.
-    * `opord_execution` (string, required if `artifact_type` is 4): Execution field for OPORD generation.
-    * `opord_admin` (string, required if `artifact_type` is 4): Administration field for OPORD generation.
-    * `opord_logistics` (string, required if `artifact_type` is 4): Logistics field for OPORD generation.
-    * `opord_command` (string, required if `artifact_type` is 4): Command and Signal field for OPORD generation.
-
-    **Request Body Example (Generic Artifact):**
-
-    .. code-block:: http
-
-        POST /index HTTP/1.1
-        Content-Type: application/x-www-form-urlencoded
-
-        artifact_type=2&model_selection=1&artifact_parameters=Provide%20a%20brief%20summary%20of%20the%20topic.
-
-    **Request Body Example (OPORD Artifact):**
-
-    .. code-block:: http
-
-        POST /index HTTP/1.1
-        Content-Type: application/x-www-form-urlencoded
-
-        artifact_type=4&model_selection=2&opord_orientation=Terrain%20and%20Weather...&opord_situation=Enemy%20forces...&opord_mission=Conduct%20an%20attack...&opord_execution=Phase%201...&opord_admin=Supply%20point...&opord_logistics=Transportation...&opord_command=Commander's%20intent...
-
-    **Response (Redirect - 302 Found):**
-
-    On successful form submission and artifact generation, the server typically redirects the user to the `/output` route (not documented here) to display the generated artifact.
-
-    :statuscode 302: Found
-        :description: Redirects to the `/output` page upon successful artifact generation.
-
-    **Response (Error - 200 OK with HTML):**
-
-    If the `artifact_type` or `model_selection` are missing in the form data, the server returns the `index.html` template with an error message.
-
-    :statuscode 200: OK
-        :contenttype text/html:
-        :example:
-
-            .. code-block:: html
-
-            <!DOCTYPE html>
-            <html>
-            <head>
-                <title>Artifact Generator</title>
-            </head>
-            <body>
-                <h1>Generate Artifact</h1>
-                <p style="color: red;">ERROR: Please select an artifact, model type, and give a prompt.</p>
-                </body>
-            </html>
+    | GET: serves the homepage
+    | POST: Calls generation function with data submitted by user from the form on the homepage and serves the output page with the generated document
     """
     if request.method == 'POST':
         artifactType = request.form.get('artifact_type')
@@ -156,8 +102,7 @@ def index():
             logistics = request.form.get('opord_logistics')
             command = request.form.get('opord_command')
             #combine them and put into otherInput
-            otherInput = f"{orientation}[SEP]{situation}[SEP]{mission}[SEP]{execution}[SEP]{admin}[SEP]{logistics}[SEP]{command}"
-            # otherInput = f"Orientation: {orientation}; Situation: {situation}; Mission: {mission}; Execution: {execution}; Administration: {admin}; Logistics: {logistics}; Command and Signal: {command}"
+            otherInput = "[SEP]".join([orientation, situation, mission, execution, admin, logistics, command])
         else:
             otherInput = request.form.get('artifact_parameters')
 
@@ -181,10 +126,17 @@ def index():
 
 @app.route("/output")
 def home():
+    """
+    Renders ouput.html
+    """
     return render_template("output.html")
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    """
+    | GET: Renders login.html
+    | POST: Retrieves username and password from post request, checks that user exists in database, checks if password hash matches, then sets session information to the user's information if login successful
+    """
     if request.method == 'POST':
         username = request.form.get('username')
         password = request.form.get('password')
@@ -211,11 +163,15 @@ def login():
         else:
             errorMsg = "ERROR: Given login credentials were incorrect, please try again."
             return render_template('login.html', errorMsg=errorMsg)
-        
-    return render_template("login.html")
+    else:    
+        return render_template("login.html")
 
 @app.route("/userprofile", methods=['GET', 'POST'])
 def userprofile():
+    """
+    | GET: Renders userprofile.html with user's username
+    | POST: Retrieves user_id from the session, retrieves user from database, validates current password, makes sure that both new password entries match, change user's password in the database to the new password.
+    """
     user_id = session.get('user_id')
 
     if not user_id:
@@ -260,12 +216,16 @@ def userprofile():
 
         successMsg = "Password successfully changed."
         return render_template("userprofile.html", username=user.username, errorMsg=errorMsg, successMsg=successMsg)
-
-    return render_template("userprofile.html", username=user.username, errorMsg=errorMsg, successMsg=successMsg)
+    else:
+        return render_template("userprofile.html", username=user.username, errorMsg=errorMsg, successMsg=successMsg)
 
 
 @app.route("/register", methods=['GET', 'POST'])
 def register():
+    """
+    | GET: Renders new_account.html
+    | POST: Retrieves user's username from submitted form in POST request, checks that user does not alread exist in database, makes sure that passwords match, creates new entry in database for new user with username and password hash
+    """
     if request.method == 'POST':
         username = request.form.get('username')
 
@@ -297,11 +257,14 @@ def register():
         # go to login page and tell user to login
         errorMsg = "NOTICE: Please login using previously created username and password."
         return render_template('login.html', errorMsg=errorMsg)
-
-    return render_template("new_account.html")
+    else:
+        return render_template("new_account.html")
 
 @app.route('/logout')
 def logout():
+    """
+    Unsets user_id from session, renders index.html
+    """
     # Remove 'user_id' from session
     session.pop('user_id', None)
     # Redirect to login page
@@ -310,6 +273,9 @@ def logout():
  
 @app.route('/my_artifacts', methods=['GET'])
 def my_artifacts():
+    """
+    If user not logged in, renders login.html. If user is logged in, retrieves all artifacts associated with uer's user_id from the artifact database and renders my_artifacts.html with the retrieved artifacts
+    """
     if 'user_id' not in session:
         errorMsg = "NOTICE: Please login to see your generated artifacts."
         return render_template('login.html', errorMsg=errorMsg)
@@ -330,6 +296,9 @@ def my_artifacts():
 
 @app.route("/docs/<path:filename>")
 def docs(filename):
+    """
+    Renders the project documentation.
+    """
     return send_from_directory("../docs/build/html", filename)
  
 if __name__ == "__main__":
