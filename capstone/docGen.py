@@ -122,12 +122,15 @@ def opord_gen(prompts: list[str], examples: str, model, tokenizer):
     staff = prompts[2]
     task = prompts[3]    
     user_input = prompt.split("[SEP]")
-    all_prompt = role + staff + task + examples + "Now that you have studdied the OPORD exames, you will create an OPORD one paragraph at a time."
+    all_prompt = role + staff + task + examples + "Now that you have studied the OPORD examples, you will create an OPORD one paragraph at a time."
     paragraphs = []
     topics = ["Orientation", "Situation", "Mission", "Execution", "Administration", "Logistics", "Command and Signal"]
     
     i = 0
     for t in topics:
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+        
         p = f"{all_prompt} Write the {t} parapgrah using the following subject: {user_input[i]}"
         i += 1
         
@@ -141,7 +144,7 @@ def opord_gen(prompts: list[str], examples: str, model, tokenizer):
     
     return response
 
-def find_most_rel(query: str, index):
+def find_most_rel(query: str, index, num: int):
     """Returns the indices of the most related documents based on the user's query
 
     :param query: The user's query
@@ -153,7 +156,7 @@ def find_most_rel(query: str, index):
     """
     query_embed = gen_embeds(query).cpu().detach().numpy().flatten().reshape(1, -1)
     faiss.normalize_L2(query_embed)
-    _, top_k_indices = index.search(query_embed, 2)
+    _, top_k_indices = index.search(query_embed, num)
     return top_k_indices[0]
 
 def load_examples(type: str, prompt: str) -> str:
@@ -185,10 +188,12 @@ def load_examples(type: str, prompt: str) -> str:
                     paths.append(os.path.join(root, f))
                 else:
                     continue
-                    
-
-    top_k_indices = find_most_rel(prompt, index)
     
+    if type == "Opord" or type == "RTW":
+        top_k_indices = find_most_rel(prompt, index, 1)
+    else:
+        top_k_indices = find_most_rel(prompt, index, 2)
+        
     for k in top_k_indices:
         p = paths[k]
         if ".docx" in p:
@@ -303,8 +308,9 @@ if __name__ == "__main__":
                     m = input("Mission> ")
                     e = input("Execution> ")
                     a = input("Administration> ")
+                    l = input("Logistics> ")
                     c = input("Command & Signal> ")
-                    user_query = "[SEP]".join([o, s, m, e, a, c])
+                    user_query = "[SEP]".join([o, s, m, e, a, l, c])
                 else:
                     user_query = input("Input> ")
 

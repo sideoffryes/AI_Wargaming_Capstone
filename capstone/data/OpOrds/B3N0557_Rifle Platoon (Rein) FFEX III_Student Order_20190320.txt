@@ -223,46 +223,6 @@ Event
 	Radio
 	Messenger
 	*2d platoon develop additional signals IAW SOM
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
         (2) (U) Frequencies and Callsigns
 
 
