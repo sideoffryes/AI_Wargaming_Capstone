@@ -12,11 +12,11 @@ from transformers import (AutoModelForCausalLM, AutoTokenizer,
 
 from faissSetup import gen_embeds
 
+args = None
 parser = argparse.ArgumentParser(description="Generates military documents using an LLM based on input from the user.")
 parser.add_argument("-k", "--top-k", type=int, help="Specify the number of related documents to identify for context when creating the new document, default is 3.", default=3)
 parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose mode")
 parser.add_argument("--cpu", action="store_true", help="Enable CPU-only mode")
-args = parser.parse_args()
 
 warnings.filterwarnings("ignore", category=UserWarning)
 
@@ -78,7 +78,8 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     task = f"{doc_instructions} Your answer must be a complete document. Do not add any additional content outside of the document. Today's date is {formatted_date}. Adjust the dates in your response accordinly. The following examples are all examples of the same type of document that you must create. Study their formatting carefully before giving your response."
     
     # create model objects
-    if torch.cuda.is_available() and not args.cpu:
+    use_cpu = getattr(args, 'cpu', False)
+    if torch.cuda.is_available() and not use_cpu:
         model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype="auto", quantization_config=BitsAndBytesConfig(load_in_8bit=True, llm_int8_enable_fp32_cpu_offload=True))
     else:
         model = AutoModelForCausalLM.from_pretrained(model_name, device_map="cpu", torch_dtype="auto")
@@ -196,7 +197,8 @@ def load_examples(type: str, prompt: str) -> str:
             with open(paths[k], 'r') as f:
                 examples += f"Example:\n{f.read()}\n\n"
 
-    if args.verbose:
+    use_verbose = getattr(args, 'verbose', False)
+    if use_verbose:
         print(f"---------- EXAMPLES SELECTED FOR RAG ----------\n{examples}")
         print("---------- END EXAMPLES ----------")
 
@@ -269,6 +271,8 @@ def select_doc(num: int) -> str:
     return type
 
 if __name__ == "__main__":
+    args = parser.parse_args()
+    
     while True:
         try:
             # model to select model you want to load

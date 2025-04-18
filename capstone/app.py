@@ -24,6 +24,13 @@ app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=1)
 
 # Models
 class Profile(db.Model):
+    """Class that represents a user's profile to be stored in the database
+
+    :param db: The database model base class
+    :type db: _FSAModel
+    :return: User's username, pasword hash, and the password salt
+    :rtype: str
+    """
     # Id : Field which stores unique id for every row in database table.
     # username: Used to store the username of the user
     # hash: Used to store hashed password+salt of the user
@@ -41,6 +48,13 @@ class Profile(db.Model):
         return f"Username: {self.username}, Hash: {self.hash}, Salt: {self.salt}"
     
 class GeneratedArtifact(db.Model):
+    """Class that represents a generated artifact to be stored in the database
+
+    :param db: The database model base class
+    :type db: _FSAModel
+    :return: Artifact's id and the user who generated its id
+    :rtype: str
+    """
     # Unique ID for each generated artifact
     id = db.Column(db.Integer, primary_key=True)
     # Foreign key to the Profile table
@@ -62,6 +76,10 @@ with app.app_context():
 @app.route('/')
 @app.route('/index', methods=['GET', 'POST'])
 def index():
+    """
+    | GET: serves the homepage
+    | POST: Calls generation function with data submitted by user from the form on the homepage and serves the output page with the generated document
+    """
     if request.method == 'POST':
         artifactType = request.form.get('artifact_type')
         llmChosen = request.form.get('model_selection')
@@ -108,10 +126,17 @@ def index():
 
 @app.route("/output")
 def home():
+    """
+    Renders ouput.html
+    """
     return render_template("output.html")
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    """
+    | GET: Renders login.html
+    | POST: Retrieves username and password from post request, checks that user exists in database, checks if password hash matches, then sets session information to the user's information if login successful
+    """
     if request.method == 'POST':
         username = request.form.get('username')
         password = request.form.get('password')
@@ -138,11 +163,15 @@ def login():
         else:
             errorMsg = "ERROR: Given login credentials were incorrect, please try again."
             return render_template('login.html', errorMsg=errorMsg)
-        
-    return render_template("login.html")
+    else:    
+        return render_template("login.html")
 
 @app.route("/userprofile", methods=['GET', 'POST'])
 def userprofile():
+    """
+    | GET: Renders userprofile.html with user's username
+    | POST: Retrieves user_id from the session, retrieves user from database, validates current password, makes sure that both new password entries match, change user's password in the database to the new password.
+    """
     user_id = session.get('user_id')
 
     if not user_id:
@@ -187,12 +216,16 @@ def userprofile():
 
         successMsg = "Password successfully changed."
         return render_template("userprofile.html", username=user.username, errorMsg=errorMsg, successMsg=successMsg)
-
-    return render_template("userprofile.html", username=user.username, errorMsg=errorMsg, successMsg=successMsg)
+    else:
+        return render_template("userprofile.html", username=user.username, errorMsg=errorMsg, successMsg=successMsg)
 
 
 @app.route("/register", methods=['GET', 'POST'])
 def register():
+    """
+    | GET: Renders new_account.html
+    | POST: Retrieves user's username from submitted form in POST request, checks that user does not alread exist in database, makes sure that passwords match, creates new entry in database for new user with username and password hash
+    """
     if request.method == 'POST':
         username = request.form.get('username')
 
@@ -224,11 +257,14 @@ def register():
         # go to login page and tell user to login
         errorMsg = "NOTICE: Please login using previously created username and password."
         return render_template('login.html', errorMsg=errorMsg)
-
-    return render_template("new_account.html")
+    else:
+        return render_template("new_account.html")
 
 @app.route('/logout')
 def logout():
+    """
+    Unsets user_id from session, renders index.html
+    """
     # Remove 'user_id' from session
     session.pop('user_id', None)
     # Redirect to login page
@@ -237,6 +273,9 @@ def logout():
  
 @app.route('/my_artifacts', methods=['GET'])
 def my_artifacts():
+    """
+    If user not logged in, renders login.html. If user is logged in, retrieves all artifacts associated with uer's user_id from the artifact database and renders my_artifacts.html with the retrieved artifacts
+    """
     if 'user_id' not in session:
         errorMsg = "NOTICE: Please login to see your generated artifacts."
         return render_template('login.html', errorMsg=errorMsg)
@@ -257,6 +296,9 @@ def my_artifacts():
 
 @app.route("/docs/<path:filename>")
 def docs(filename):
+    """
+    Renders the project documentation.
+    """
     return send_from_directory("../docs/build/html", filename)
  
 if __name__ == "__main__":

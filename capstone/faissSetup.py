@@ -115,7 +115,7 @@ def rtw():
     cache_faiss(text, "./data/RTW/cache.faiss")
 
 def opord():
-    """Creates vector embeddings for all documents in the data/OpOrds directory and adds them to FAISS index in the same directory.
+    """Creates vector embeddings for all documents in the data/OpOrds/ directory and adds them to FAISS index in the same directory.
     """
     text = []
     for root, dirs, fnames in os.walk("./data/OpOrds/"):

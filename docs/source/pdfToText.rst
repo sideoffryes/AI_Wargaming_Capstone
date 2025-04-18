@@ -1,0 +1,5 @@
+﻿pdfToText
+=========
+
+.. automodule:: pdfToText
+   :members:

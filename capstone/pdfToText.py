@@ -3,7 +3,14 @@ import sys
 import pypdf
 
 
-def pdf_to_text(pdf_path, output_txt):
+def pdf_to_text(pdf_path: str, output_txt: str):
+    """Opens the specified PDF file and returns its contents as a text file.
+
+    :param pdf_path: The path to the PDF file
+    :type pdf_path: str
+    :param output_txt: The path to save the text file containing the contents of the PDF file
+    :type output_txt: str
+    """
     # Open the PDF file in read-binary mode
     with open(pdf_path, 'rb') as pdf_file:
         # Create a PdfReader object instead of PdfFileReader
