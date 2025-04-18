@@ -22,7 +22,7 @@ parser.add_argument("-p", "--print", action="store_true", help="Print the output
 warnings.filterwarnings("ignore", category=UserWarning)
 
 def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
-    """Generates a specificed document using a specified LLM and returns the result.
+    """Generates a specified document using a specified LLM and returns the result.
 
     :param model_num: The number value representing the model to use for generation.
     :type model_num: int
@@ -46,7 +46,7 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     "President of the United States: Donald Trump\n"
     "Vice President of the United States: JD Vance\n"
     "Secretary of Defense: Pete Hegseth\n"
-    "Chairman of the Joint Chiefs of Staff: Gneral J. Daniel Caine, USAF\n"
+    "Chairman of the Joint Chiefs of Staff: General J. Daniel Caine, USAF\n"
     "Vice Chairman of the Joint Chiefs of Staff: ADM Christopher W. Grady, USN\n"
     "Chief of Naval Operations: ADM James W. Kilby, USN (Acting)\n"
     "Chief of Staff of the Army: General Randy George, USA\n"
@@ -68,7 +68,7 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
             "The mission paragraph provides a clear and concise statement of what the unit must accomplish. This is the heard of the order and must contain the who, what, when, where, and why of the operation.\n"
             "The execution paragraph contains the information needed to conduct the operation. It includes 3 subparagraphs on concept of operations, tasks, and coordination instructions.\n"
             "The administration and logistics paragraph contains information or instructions pertaining to rations and ammunition, location of the distribution point, corpsman, aid station, handling of prisoners of war, and other matters.\n"
-            "The command and signal paragraph contains 2 subparagraphs on the chain of command with their location and signal instructions for frequences, call signs, radio procedures, etc.")
+            "The command and signal paragraph contains 2 subparagraphs on the chain of command with their location and signal instructions for frequencies, call signs, radio procedures, etc.")
         case "RTW":
             doc_instructions = "The document you must write is a Road to War Brief. This brief describes the scenario and narrative that sets the stage for a conflict, outlining the events and factors leading up to the conflict."
         case _:
@@ -76,7 +76,7 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
 
     # Set LLM instructions
     role = "Role: You work for the United States Department of Defense, and you specialize in writing official military documents using military formatting."
-    task = f"{doc_instructions} Your answer must be a complete document. Do not add any additional content outside of the document. Today's date is {formatted_date}. Adjust the dates in your response accordinly. The following examples are all examples of the same type of document that you must create. Study their formatting carefully before giving your response."
+    task = f"{doc_instructions} Your answer must be a complete document. Do not add any additional content outside of the document. Today's date is {formatted_date}. Adjust the dates in your response accordingly. The following examples are all examples of the same type of document that you must create. Study their formatting carefully before giving your response."
     
     # create model objects
     use_cpu = getattr(args, 'cpu', False)
@@ -131,7 +131,7 @@ def opord_gen(prompts: list[str], examples: str, model, tokenizer):
         if torch.cuda.is_available():
             torch.cuda.empty_cache()
         
-        p = f"{all_prompt} Write the {t} parapgrah using the following subject: {user_input[i]}"
+        p = f"{all_prompt} Write the {t} paragraph using the following subject: {user_input[i]}"
         i += 1
         
         model_inputs = tokenizer(p, return_tensors="pt").to(model.device)
@@ -149,7 +149,7 @@ def find_most_rel(query: str, index, num: int):
 
     :param query: The user's query
     :type query: str
-    :param index: The FAISS index of all of the corrosponding documents
+    :param index: The FAISS index of all of the corresponding documents
     :type index: file
     :return: A list of the top k indices
     :rtype: list
