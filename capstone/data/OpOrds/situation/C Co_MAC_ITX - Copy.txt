@@ -1,0 +1,33 @@
+Situation :
+Composition/Disposition/Strengths:
+One mechanized infantry company occupies defensive 
+positions in the PROSPECT -DELTA corridor.  The company is 
+suspected to be equipped with BMP -2Ms and BRDM -2Ms 
+with AT -5 ATGMs and dismounted troops with AT -5s and SA -
+16 MANPADs. Specific unit defensive positions are unknown, 
+but they are templated to have mutually supported fortified 
+positions covering obstacles. Additionally, the enemy 
+typically employs a forward combat security outpost for 
+early warning and to delay attacking forces. The security 
+elements are equipped with BRDM -2Ms, AT -5 ATGMs, and 
+are suspected to occupy a position at NT899 997 in the 
+PROSPECT -DELTA corridor. 
+Capabilities/Limitations:
+Defend: Likely, will use the OP to AF/FFE on formations as 
+they approach the obstacles. Obstacles and IDF will fix 
+formations to be destroyed with direct fire. 
+Reinforce: Unlikely, Reinforcements from their HHQ are likely 
+within 24 hours
+Attack: Spoiling attack possible and limited offensive 
+operations from a defensive position to gain time 
+Withdraw: Unlikely 
+Delay: Likely 
+EMLCOA: Defend in place until reinforcements can arrive 
+from the company to the north.
+EMDCOA: Enemy conducts a spoiling attack prior to us 
+reaching the objective.
+Center of Gravity: Fortified defense in depth with natural 
+and man made obstacles
+Critical Vulnerability: Lack of mobility in their fixed 
+positions. Mechanized Recon PlatoonMechanized Infantry PlatoonMechanized Infantry Platoon
+Medium AT Missile launcher

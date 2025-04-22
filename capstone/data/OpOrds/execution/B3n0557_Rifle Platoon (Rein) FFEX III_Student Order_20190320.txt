@@ -1,0 +1,103 @@
+3. (U) Execution
+
+
+    a. (U) Commanders Intent.  
+
+
+        (1) (U) Purpose. The purpose of this operation is to prevent the enemy from using the MSR network within the AO.
+
+
+        (2) (U) Method. The enemy’s center of gravity is their prepared defensive positions. The enemy’s critical vulnerability is their fixed orientation. The Company will exploit this critical vulnerability by conducting a rapid assault utilizing combined arms.
+
+
+        (3) (U) Endstate. My desired endstate is that the EN MRA forces are destroyed, the MSR network within our AO is under friendly control, and friendly forces are consolidated and prepared for follow on operations.
+
+
+    b. (U) Concept of Operations
+
+
+        (1) (U) Scheme of Maneuver.  Co F will conduct two independent and near-simultaneous attacks on Co Obj A and BN Obj 2. The distribution of forces is one platoon as the ME, one platoon as SE1, and one platoon as SE2. The direction of attack will be southeast. The ME will depart the AA and move to the Atk Pos in a company column, platoon column. O/O, the company will cross the LD and move to the PRP. At the PRP (TH 795 730), SE2 will be released. O/O, SE 2 will destroy the EN MRA sqd (+) on Co Obj A. The Co (-) will move from the PRP to the Co Aslt Pos (TH 799 736) in a company column (ME in front and SE1 in trace). Upon occupying the Co Aslt Pos, we will transition to a company (-) online oriented E with the ME on the right 1/2 and SE1 on the left 1/2. I will call for six minutes of suppression: 3min HE/Q from the BN 81mm mortars. As the fires lift, (O/O), the Co (-) will conduct a frontal attack, assaulting from W to E through BN Obj 2. We will consolidate oriented E, with the ME responsible for the right 1/2 of the objective and SE1 responsible for the left 1/2 of the objective. After destroying the EN MRA on Co Obj A, SE2 will consolidate oriented SE and await the signal to displace to the Company (-) on BN Obj 2.
+
+
+        (2) (U) Fire Support Plan.  
+
+
+            (a) (U) Task.  [b] suppress the EN Plt (-) on BN Obj 2 and the EN Sqd (+) on Co Obj A
+
+
+            (b) (U) Purpose.  IOT allow the company (-) to close within direct fire weapons range.
+
+
+            (c) (U) Method.  
+
+
+                1. (U) I have planned two targets, AA 2201 and AA 2202 which are located on BN Obj 2 and CO Obj A respectively. I will be the primary observer for AA 2201 (Bn Obj 2) and 2d platoon will be responsible to observe for AA 2202 (Co Obj A). For AA 2201, I will request F 2/11 to engage with three minutes of suppression, shell HE/fuze Quick. For AA 2202, 2d Platoon will have 3 minutes of suppression from 81 mm mortars, shell HE/fuze Quick.
+
+
+            (d). (U) Effects.  The EN is effective suppressed on Co Obj A and Bn Obj 2 allowing maneuver elements to close on the EN.
+
+
+    c. (U) Tasks
+
+
+        (1) (U) 1st Platoon.  You are the Company ME. O/O, destroy the right 1/2 of the EN plt (-) IVO BN Obj 2 IOT deny the EN control and effective use of the MSR network within the AO. You have two MMG squads, 2 60 mm mortar squads and four Aslt Teams attached, effective immediately.
+
+
+        (2) (U) 2nd Platoon. You are the Company SE2. O/O, destroy the EN sqd (+) IVO Co Obj A IOT prevent the EN sqd (+) from interfering in the Co ME atk on BN Obj 2.  You have 1 60 mm mortar squad attached and 1 MMG squad in DS of the platoon, effective immediately. EST SBF Pos IVO (TH 797 729) w/MMG Squad to set conditions for the start of the CO (-) attack. Plan 2 targets (3 min of 81mm suppression) in support of your attack. 
+
+
+        (3) (U) 3rd Platoon. You are the Company SE1. O/O, destroy the left 1/2 of the EN plt (-) IVO BN Obj 2 IOT deny the EN control and effective use of the MSR network within the AO. You have two Aslt Teams attached, effective immediately. 
+
+
+        (4) (U) Weapons Platoon.  Detach two Aslt Teams, 2 MMG squads, and 2 60 mm mortar squads to 1st Platoon, effective immediately. Detach 1 MMG squad to 2nd Platoon, they will be in GS effective immediately.  Detach 2 Aslt Teams to 3rd Platoon, effective immediately.
+
+
+        (5) (U) 60mm Mortar Section.  Attach 2 mortar squads to 1st platoon to be used in their attack and attach 1 mortar squad to 2d platoon to be used in their respective attacks, effective immediately.
+
+
+    d. (U) Coordinating Instructions
+
+
+        (1) (U) Timeline  [c]
+0700        Draw comm assets.
+0710          Draw ammunition and pyro.
+0715          Orders.
+0900          Rehearsals.
+1000          Final inspections.
+1100          Move to PRP.
+1200          Actions On Co Obj A
+
+
+        (2) (U) Tactical Control Measures. Co Assembly Area: TH 794 727. PRP TH 795 730. Co Aslt Pos TH 799 736. Bn Obj 1 TH 825 745. Bn Obj 2 TH 803 736. Co Obj A TH 800 727. 
+
+
+        (3) (U) Priority of Rehearsals
+
+
+            (a) (U) Actions on objective.  
+            (b) (U) Echelon of fires rehearsals.
+            (c) (U) Actions on consolidation.
+            (d) (U) Communications rehearsals.
+            (e) (U) Actions on enemy contact.
+
+
+        (4) (U) Lost Marine Plan. 
+
+
+            (a) (U) AA to Aslt Pos. If a Marine becomes lost between the AA and the Aslt Pos, the lost Marine will orient themselves to the terrain and head west, using the location of the sun as a primary guiding feature and the contours of the terrain (decrease in elevation) as an alternate guiding feature. Once the Marine has eyes on MCB 5, he will turn left and move along the road (in the tree line) until he arrives at the AA location. He will execute the near/far recognition signal.
+
+
+            (b) (U) Aslt Pos to Obj. If a Marine becomes lost between the Aslt Pos and the Obj, the lost Marine will return to the Aslt Pos and remain there for two hours. Once two hours have passed, the Marine will orient themselves to the terrain and head west, using the location of the sun as a primary guiding feature and the contours of the terrain (decrease in elevation) along the W-E trail as an alternate guiding feature. Once the Marine has eyes on MCB 5, he will move along the road (in the tree line) until he arrives at the AA location. He will execute the near/far recognition signal as per company SOP
+
+
+            (c) (U) 2d Platoon, develop a LMP for your SOM.
+
+
+        (5) (U) No Comm Plan.  If communications are lost at any point in the operation, we will immediately attempt to regain them. If we cannot reestablish communications, we will continue the operation and replace any indirect fires with a hasty SBF position. Once we have assaulted through the objective and consolidated, we will attempt to establish communication via other means (messenger) with BN.
+
+
+        (6) (U) Weapons Test Fire.  Platoons are authorized to conduct a test fire of all MGs prior to crossing the LD. However, these test-fires        need to be requested through the Company Commander.
+
+
+        (7) (U) MOPP Level. MOPP level is zero.  
+

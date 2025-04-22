@@ -1,0 +1,80 @@
+﻿5. (U) Command and Signal
+
+
+    a. (U) Signal
+
+
+        (1) (U) Signal Plan.  Platoon commanders will back brief platoon signal plans to company commander prior to issuing platoon orders.
+
+
+
+
+Event
+	Primary
+	Alternate
+	Tertiary
+	Platoon Release
+	Radio 
+	Messenger
+	Hand/Arm
+	Consolidation
+	Radio
+	Messenger
+	None
+	Fire FPF
+	Radio 
+	WSP
+	Messenger
+	
+
+        (2) (U) Frequencies and Callsigns
+
+
+Unit
+	Callsign
+	Frequency
+	Company Tac 
+	Godfather 
+	112
+	Company 60s
+	Godfather mortars
+	113
+	1st Plt Tac 
+	Red
+	114 
+	2d Plt Tac 
+	White
+	115 
+	3d Plt Tac 
+	Blue
+	116
+	Bn Tac 1 
+	Tarawa
+	230 
+	Bn Tac 2 
+	Tarawa
+	231 
+	Bn Log Net 
+	Tarawa 
+	234 
+	Bn 81mm  
+	Tarawa Mortars
+	240 
+	K, 3/11 
+	Brimstone 
+	302 
+	
+
+        (3) (U) Challenge and Password.  Primary: Water/Blackbird.  Alternate: Numbers adding up to 11.  Running: Blacksmith.
+
+
+        (4) (U) Location of Communication Electronic Operations Instructions (CEOI).  All CEOI’s will be retained in the left shoulder pocket by all Platoon Commanders, Platoon Sergeants, Platoon Guides, Platoon RTO’s, and Squad Leaders.
+
+
+    b. (U) Command. 
+
+
+        (1) (U) Location of Key Leaders.  The BN COC(fwd) is with the BN ME.  The BN COC(rear) is IVO Camp Barrett.  All Company staff will be at the Company CP IVO LZ Hawk.
+
+
+        (2) (U) Succession of Command.  XO, Weapons Platoon Commander, 1st        Platoon Commander, 2d Platoon Commander, 3d Platoon Commander.

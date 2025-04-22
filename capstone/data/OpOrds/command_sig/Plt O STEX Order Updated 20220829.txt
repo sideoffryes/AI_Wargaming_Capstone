@@ -1,0 +1,88 @@
+﻿5. (U) Command and Signal 
+ 
+    a. (U) Signal 
+ 
+      1. (U) Signal Plan.  Platoon commanders will back brief platoon signal plans to company commander prior to issuing platoon orders. 
+ 
+Event 
+	Primary 
+	Alternate 
+	Tertiary 
+	2d Plt, PRP  
+	Radio  
+	Messenger  
+	None  
+	Obj A secure  
+	Visual
+	Radio  
+	Messenger  
+	Fire AB 1001  
+	Radio 
+	WSC
+	None  
+	SBF from Obj A
+	Visual of 60s suppression on Bn Obj
+	Radio
+	GSC
+	Shift Fires  
+	Visual of lead across MSL
+	Radio
+	None 
+	Cease Fires  
+	Visual
+	Radio
+	Whistle  
+	Consolidate  
+	Radio  
+	Hand/Arm
+	Messenger
+	Casualty  
+	Radio  
+	RSC
+	Messenger
+	 
+      2. (U) Frequencies and Callsigns 
+ 
+Unit 
+	Callsign 
+	Frequency 
+	Company Tac  
+	Godfather  
+	160  
+	60s COF
+	Cerberus
+	161
+	1st Plt Tac  
+	Godfather 1 
+	162  
+	2d Plt Tac  
+	Godfather 2 
+	163  
+	3d Plt Tac  
+	Godfather 3 
+	164  
+	Bn Tac 1  
+	Goliath  
+	110  
+	Bn Tac 2  
+	Goliath  
+	120  
+	Bn Log Net  
+	Goliath 4  
+	121  
+	Bn 81mm   
+	Fury  
+	130  
+	K, 3/11  
+	Steel Rain  
+	210  
+	 
+      3. (U) Challenge and Password.  Primary: Spider/Castle.  Alternate: Numbers adding up to 7.  Running: Red Coats. 
+ 
+      4. (U) Location of Communication Electronic Operations Instructions (CEOI).  The CEOI will be retained in the left shoulder pocket of all Platoon Commanders, Platoon Sergeants, TSOs, and Squad Leaders.
+ 
+    b. (U) Command.  
+ 
+      1. (U) Location of Key Leaders.  During the attack, I will be located with the Main Effort. The 1stSgt and Co Corpsman will be as well. The Co XO and Co GySgt will be located with 3d Plt. Upon consolidation, I will establish a Company CP at the MRA facility. The Wpns Plt Cmdr will be located w/the ME. 
+ 
+      2. (U) Succession of Command.  XO, 1st Plt Cmdr, 3d Plt Cmdr, 2d Plt Cmdr. 

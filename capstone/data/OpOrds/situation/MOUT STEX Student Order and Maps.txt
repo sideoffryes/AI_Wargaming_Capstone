@@ -1,0 +1,62 @@
+﻿1. Situation
+
+
+   1. General.  We are currently located at the company assembly area (LZ Turkey 789 715). Over the past few months the Company has been conducting continuous combat operations against the CRF forces in the country of Centralia. During recent diplomatic negotiations, the country of Montanya has agreed to cease providing military support to the CRF and close its borders and stop providing refuge for withdrawing Centralian Forces. With this loss of support, the Centralians have decided to withdraw and commit the remainder of their conventional forces into key urban areas in an attempt to gain popular support and maintain their control and influence in the region. Our most recent intelligence indicates the CRF are infiltrating the capital city of Hogan in buddy pair or fire team sized elements in order to disrupt political stability in Centralia. During Phase I of Operation MOUT FEX, we destroyed many of these smaller elements in their safe houses through the use of widely distributed squad size attacks.  However, with the support of the local populace the total strength of the CRF insurgency has continued to grow in the city center of MOUT Town. We will now begin PHASE II of Operation MOUT FEX, where we will maneuver with platoon size elements against the entrenched CRF in the city center of MOUT Town.
+
+
+   2. Battlespace.
+
+
+      1. Area of Interest.  OMMITED
+
+
+      2. Area of Operations.  Our company sector is a small suburb of Combat Town, called MOUT Town, IVO 18S TH 794 727 (Bn Obj 1) and is bordered by LZ Kiwi to the south and MCB 5 to the northeast. The suburb has an estimated population of 1,000 people, but most of the civilians fled when the CRF moved in by force. Several of the buildings around the edges of the suburb have been reduced to rubble. To the north is the core periphery and city center of MOUT Town. Access to the city center through our company sector can only be achieved by transiting along MSR Tampa, which runs through our company sector from north to southwest. A platoon boundary between 3rd (West) and 2nd platoon (East) also runs along MSR Tampa. Phase Line (PL) Apple is the company LOA. Lastly, there is a working sewer system that HUMINT has confirmed runs between some of the buildings in the town.
+
+
+   3. Enemy Forces
+
+
+      3. Composition, Disposition, Strength.  Intelligence collection assets have identified approximately a platoon reinforced CRF element IVO the northern portion of our company sector 18S TH 794 727. Intelligence and satellite imagery suggests CRF insurgents have moved into the area and have begun to fortify defensive positions along MSR Tampa which appear to be blocking south. We suspect they are blocking for the left (east) flank of a CRF company (-) sized force located north of our sector. Any follow on attack on this company of CRF will have to transit our sector first.  The CRF are wearing desert fatigues and carrying small caliber weapons like M4’s and M16’s. Their automatic weapons capabilities are most likely limited to M240’s and M249’s. Indirect capabilities include 60 and 81mm mortars and limited 155mm artillery. 
+
+
+      4. Capabilities and Limitations.  The platoon in our AO has the ability to defend from their established positions until those positions become untenable due to overwhelming fires or taking casualties.  They retain the ability to be reinforced; however, it is estimated that it will take at least one hour based on the proximity of CRF company (-) and the coordination required.  They have the ability to attack our forces within roughly 1km of MOUT Town.  They have demonstrated the ability to use anything from a FT to a full platoon to conduct attacks against our forces.  They also have the ability to attack by fire as we close on the town and enter their developed engagement areas.  Intelligence and satellite imagery both point to this element being part of a larger company (-) sized CRF element, as such they will have a planned withdrawal route that will be covered by their IDF assets and allow them to link up with the bulk of their force as they withdraw to the east.  The enemy in MOUT Town also has the ability to delay us prior to and after our clearance of MOUT Town with the IDF assets and their developed engagement areas.  They also have the ability to delay as wen clear through the town as they can bound back ahead of our lead elements to delay us in every building that we encounter in MOUT Town.  
+
+
+      5. Enemy’s Most Likely Course of Action. The CRF mission is to defeat coalition forces in Centralia. Currently the CRF platoon is fortifying their defensive positions and trying to gain depth in their defense with patrols and LP/OP’s.  On contact the CRF platoon will attempt to delay our advance in three parts.  Prior to our entrance into MOUT Town they will use patrols to locate us and conduct harassing attacks and attempt to call for fire on our positions.  Once we are inside the city they will bound back through their positions forcing us to fight through each building in the city which will slow our advance.  Lastly as we close on the last buildings in MOUT Town they will again use direct and indirect fires to cover their withdrawal to the north once their positions become untenable.
+
+
+   4. Friendly Forces
+
+
+      6. Higher Mission. O/O, 2/7 destroys the enemy IVO MOUT Town IOT deny the CRF units the ability to control the city.  
+
+
+      7. Higher Commander’s Intent
+
+
+         1. Purpose. Support 13th MEU efforts to protect the country of Centralia from CRF aggression and to deny the dissident force's ability to conduct offensive operations in MOUT Town.
+
+
+         2. Method.  The enemy Center of Gravity is their interlocking sectors and mutually supported positions.  The enemy’s Critical Vulnerability is the disaggregated nature of their subordinate positions, lacking a significant mass of firepower at any one position.  We will exploit their CV by isolating single positions in order to mitigate their mutual support. We will then mass combat power on each position and systematically seize the town one position at a time.  
+
+
+         3. End State.  The enemy threat and ability to affect the political affairs of MOUT Town is eliminated and US forces are positioned to repel CRF attacks from the north attempting to retake the city, and infrastructure is retained intact as able to allow for ease of transfer back to the local government.
+
+
+      8. Adjacent. 
+
+
+         4. Company G(+).  ME. Conduct a forward passage of lines through Company E’s sector MOUT Town and destroys the CRF Company (-)(+) IVO of MOUT Town IOT prevent the CRF from interfering in the political affairs of MOUT Town. SE2 
+
+
+         5. Company F.  Battalion reserve.  
+
+
+         6. Weapons Co (-).  Screen to the east of Company E during its assault north. Upon clearance of Combat Town, Weapons Co (-) screens to the east of G and F Companies IOT prevent CRF reinforcements from interfering w/ the ME attack on the city center of MOUT Town.         
+      9. Supporting: 81mm Mortar Platoon located IVO LZ Goshawk 18S TH 783 740 is in GS of the Battalion POF G, E, W (-), F.  (1) Engineer Section with mechanical breaching capabilities and SMAWs. 
+
+
+   5. Civilian Populace.  UAS and satellite imagery identifies approximately 17 buildings making up this town with only one other town near-by, 1500m West.  The population MOUT Town are comparatively low with an estimation that only half the buildings are actually occupied, in part due to the insurgency. A majority of the civilians have left in the wake of the increasing CRF presence. This area has never interacted with uniformed U.S forces before and our presence could come as a shock or be received with curiosity.  Either way, we know the majority of the population is inclined to side with U.S. interests.  Most are not happy about the insurgent activity.  Local intelligence assets have confirmed at least one cell of enemy sympathizers, backed by the CRF, residing within the town.  Best estimates put the number of enemies at a squad minus.  These sympathizers are known to utilize IEDs and Sniper fire. The predominant language is Spanish with few being able to speak English. The people tend to be passionate, regardless of whether their attitude is friendly or hostile. If the men feel slighted, they will become uncooperative to the point of defiance, regardless of whether they are armed or not. The women are culturally hospitable and welcoming, but this typically has no correlation to romantic interest. The education level is not particularly high. Predominant religion is Christianity. There is an established local authority, however their influence is not seen as particularly effective.  
+
+
+5. Attachments and Detachments.  (1) Engineer Section with mechanical breaching capabilities and SMAWs to prep entry to buildings. 

@@ -1,0 +1,93 @@
+﻿3. (U) Execution
+
+
+    a. (U) Commanders Intent.  The purpose of this operation is to prevent the enemy from seizing or destroying the resources at the FASP.  I believe the enemy’s Center of Gravity is his maneuverability.  I believe his Critical Vulnerability is that after conducting reconnaissance at the squad level, he must mass to effectively capture or destroy the FASP.  I plan to exploit this by defending in sector around LZ Hawk to neutralize enemy forces before they can recon the FASP and mass for an attack.  My endstate is that MRA in our sector are neutralized and rendered incapable of destroying or seizing resources from the FASP, the FASP remains under friendly control, and the Company is prepared for follow on operations.
+
+
+    b. (U) Concept of Operations
+
+
+        (1) (U) Scheme of Maneuver.  Our distribution of forces will be one platoon ME, and two platoon SE’s.  We are currently in Camp Barrett.  At 0800, we will conduct a heliborne insert into LZ Hawk.  Company D will establish a company perimeter defense with three platoons in battle positions IVO LZ Hawk.  The orientation of the ME will be northeast.  Immediately upon insert, platoons will recon from the AA to their respective BPs and determine the locations of the engagement areas.  Exact locations of the platoon battle positions will be determined by the platoon commanders during their leader’s reconnaissance.  Platoons will occupy their positions by a technique of the platoon commander’s choosing.  Alternate positions, squad-sized supplementary positions, obstacle plans and early warning indicators should be used to the maximum extent possible to provide flexibility within each platoon BP.  Each platoon must provide at least one LP/OP and patrolling effort focused on the gaps between platoon sectors.  We will initiate patrols NLT 1 hour after occupation.
+
+
+        (2) (U) Fire Support Plan.  
+
+
+            (a) (U) EFST 1
+
+
+                1 (U) Task.  Limit the enemy’s ability to mass forces for a deliberate attack on the FASP at LZ Hawk.
+
+
+                2 (U) Purpose.  Allow the companies to engage the enemy forward of their engagement areas and prevent their ability to mass.
+
+
+                3 (U) Method.  I will use the company 60mm mortars in support of the defense.  POF for 60s is 2d, 3d, 1st.  Platoon commanders submit one target.
+
+
+                4 (U) Effects.  Enemy platoon neutralized and unable to mass for a deliberate attack; friendly units able to engage the enemy forward their engagement areas.
+
+
+            (a) (U) EFST 2
+
+
+                1 (U) Task.  Disrupt the enemy’s ability to close with, in a deliberate attack on the FASP at LZ Hawk
+
+
+                2 (U) Purpose.  Allow the company to destroy the enemy in their engagement areas and prevent interference with the battalion FASP.
+
+
+                3 (U) Method.  I will use the company 60mm mortars in support of the defense.  POF for 60s is 2d, 3d, 1st. Platoon commanders submit two targets; one of which will be your FPF.
+
+
+                4 (U) Effects.  Enemy platoons neutralized and unable to interfere with battalion FASP; friendly units able to engage the enemy in their engagement areas.
+
+
+    c. (U) Tasks
+
+
+        (1) (U) 2d Platoon.  [Student]  SE1.  NLT 1300, block Northwest from LZ Hawk in sector A IOT prevent EN seizure or destruction of the resources at the FASP.  You have (1) engineer team attached, effective immediately. 
+
+
+        (2) (U) 1st Platoon.  ME.  NLT 1300, block Northwest from LZ Hawk in sector A IOT prevent EN seizure or destruction of the resources at the FASP.  You have (1) machine gun squad and (1) engineer team attached, effective immediately.
+
+
+        (3) (U) 3rd Platoon.  SE2.  NLT 1300, block Northwest from LZ Hawk in sector A IOT prevent EN seizure or destruction of the resources at the FASP.  You have one (1) machine gun squad attached, effective immediately.
+
+
+        (4) (U) Weapons Platoon  
+
+
+            (a) (U) 60mm Mortar Section.  SE3.  O/O, suppress the enemy IVO Company D defensive sector IOT prevent EN seizure or destruction of the resources at the FASP.  NLT 1000, establish a mortar firing position (MFP) IVO LZ Hawk.   DOF will be 1000 mils grid.  NLT 1030, establish fire capability (FIRECAP) and BPT receive fire missions.  The company commander will assign POF based on the enemy situation.
+
+
+            (c) (U) Machine Gun Section.  You are to detach (1) machine gun squad to 1st and (1) machine guns squads to 3d platoon, effective immediately.
+
+
+    d. (U) Coordinating Instructions
+
+
+        (1) (U) Timeline  
+0500        Plts issue orders (tentative SOM)
+0545         Prep for combat (issue ammo, radio checks, conduct rehearsals).
+0800         Conduct helo insert, push to platoon ORPs.
+0900        Leader’s recon, (revise SOM as needed)
+1300        Defense occupied, prepared to defend
+
+
+        (2) (U) Priorities of Work.  Determined by platoon commanders.
+
+
+        (3) (U) Priorities of Rehearsals.  Determined by platoon commanders.
+
+
+        (4) (U) Lost Marine Plan.  Platoons will be conducting autonomous insertion into LZ Hawk and immediately moving to their ORP’s.  Thus, platoon commanders are responsible for developing their Lost Marine Plans.  BPT brief the Company Commander before we depart Camp Barrett.
+
+
+        (5) (U) No Comm Plan.  If communication is lost between LZ Hawk and BPs, return to LZ Hawk.  Platoon commanders develop your own internal no-comm plan.  
+
+
+        (6) (U) MOPP Level.  Zero.
+
+
+        (7) (U) Rules of Engagement.  Individuals carrying a weapon are NOT declared hostile. Engage only Hostile Forces and Combatants. A Hostile Force is any civilian, paramilitary, or military force or terrorists, with or without national designation, that has committed a hostile act, exhibited hostile intent, or has been declared hostile by appropriate U.S. authority. Hostile forces may also be called Enemy Combatants. Hostile Act (HA): an attack or other use of force against U.S. forces. Some examples of possible hostile intent are an individual burying a suspicious cylinder along a road (likely improvised explosive device), an unknown armed group massing in your area of operation, or an unknown vehicle speeding to catch up with your convoy. Positive Identification (PID)* is required to engage. *Positive Identification (PID): A reasonable certainty that your target is a legitimate military target. *PID does not require 100% certainty. You must have clear line of sight to target and know what is behind it.

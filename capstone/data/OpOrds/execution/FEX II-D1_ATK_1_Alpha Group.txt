@@ -1,0 +1,74 @@
+3. (U) Execution
+
+
+    a. (U) Commanders Intent.  
+
+
+        (1) (U) Purpose. The purpose of this operation is to allow the company to stage for follow-on operations in support of BLT-2/7.
+
+
+        (2) (U) Method. The enemy’s center of gravity is their defense in depth with LP/OPs and squad sized units forward of the defensive battle positions. His critical vulnerability is his inability to mutually support all positions and conduct lateral communication. We will exploit this critical vulnerability by conducting simultaneous attacks on enemy platoon positions.
+
+
+        (3) (U) Endstate. MRA defensive positions are destroyed and are prevented from conducting resupply operations.  Friendly forces are prepared to conduct follow on offensive operations.
+
+
+    b. (U) Concept of Operations
+
+
+1. (U) Scheme of Maneuver.  Direction of Attack will be Counter-Clockwise for the Company. We will have (1) ME and (3) SEs and will conduct simultaneous platoon attacks. At 1000, our company will conduct air insert to LZ Vulture (ME), LZ Snipe (SE1), and LZ Canary (SE2). Platoons will establish ORPs IVO of TH 830 777 (ME), TH 831 765 (SE1), and TH 845 772 (SE2) and conduct leader’s reconnaissance on assigned objectives. ME will attack LZ Snipe (CO OBJ A).  SE1 will attack LZ Canary (CO OBJ B).  SE2 will attack LZ Vulture (CO OBJ C). Platoons will attack assigned objectives via route of their choosing. Platoons will stage main packs at insert LZs. Actions on objective will be complete NLT 1400. 
+
+
+        (2) (U) Fire Support Plan.  
+
+
+            (a) (U) Task. Limit the enemy’s ability to maneuver in and around the objective
+
+
+            (b) (U) Purpose. Allow the maneuver to close with and destroy the enemy on the company objectives.  
+
+
+            (c) (U) Method. We will use the battalion’s 81mm mortars and the company’s 60mm mortars in support of this attack.  POF 81s is to ME, SE2, and SE1. POF for 60s is SE1, ME, SE2.  Platoon Commanders are allocated three targets for your attack on your respective objectives. Company Target Block: 1st Plt:AD1100-1195, 3d Plt:AD3100-3195, 5th Plt:AD5100-5195.
+            (d). (U) Effects. Enemy on objectives suppressed to allow the maneuver element to close within direct fire weapons systems effective ranges and establish support by fire positions. 
+
+
+    c. (U) Tasks
+
+
+        (1) (U) 1st Platoon. ME. NLT 1100 insert at LZ Vulture. NLT 1400 destroy the MRA platoon battle position IVO LZ Snipe (Co Obj A) IOT allow the company to seize LZ Snipe. BPT conduct follow on offensive operations.  Remain West of 835 Easting IOT prevent interruption with friendly operations within the AO. Effective immediately you have one MG SQD attached. (Enemy at insert LZ are not in play).
+
+
+        (2) (U) 3rd Platoon SE1. NLT 1100 insert at LZ Snipe. NLT 1400 destroy the MRA platoon battle position IVO LZ Canary (Co Obj B) IOT allow the company to seize LZ Canary. BPT conduct follow on offensive operations.  Remain south of 775 Northing IOT prevent interruption with friendly operations within the AO. Effective immediately you have one MG SQD attached. (Enemy at insert LZ are not in play). 
+
+
+        (3) (U) 5th Platoon. SE2. NLT 1100 insert at LZ Canary.  NLT 1400 destroy the MRA platoon battle position IVO LZ Vulture (Co Obj C) IOT allow the company to seize LZ Vulture. BPT conduct follow on offensive operations. Remain north of 775 Northing IOT prevent interruption with friendly operations within the AO. Effective immediately you have one MG SQD attached. (Enemy at insert LZ are not in play).   
+
+
+        (4) (U) 60mm Mortar Section SE3. Upon insertion, establish a firing position IVO LZ Pheasant IOT support offensive operations.  FIRECAP NLT 1130. 
+
+
+    d. (U) Coordinating Instructions
+
+
+        (1) (U) Timeline  
+
+
+0600-0630:        Ammo Draw and comm checks 
+0730-0830:         Platoon Order issue           
+0845:                 All COC Coordination complete
+0845-0930:         Stage MACO for Insert
+0930-1100:         Insert
+NLT 1130:         81s and 60s capable of receiving fire missions
+1400:                Actions on Objective complete
+
+
+        (2) (U) Tactical Control Measures: TBD by Platoon Commander, ensure coordination with COC.  
+
+
+        (3) (U) Lost Marine Plan: TBD by platoon commanders.
+
+
+        (4) (U) MOPP level.  MOPP Ready. Intel reports enemy has used a blood agent in the past and is currently capable of employing a blood agent.    
+
+
+        (5) (U) Rules of Engagement.  Individuals carrying a weapon are NOT declared hostile. Engage only Hostile Forces and Combatants. A Hostile Force is any civilian, paramilitary, or military force or terrorists, with or without national designation, that has committed a hostile act, exhibited hostile intent, or has been declared hostile by appropriate U.S. authority. Hostile forces may also be called Enemy Combatants. Hostile Act (HA): an attack or other use of force against U.S. forces. Some examples of possible hostile intent are an individual burying a suspicious cylinder along a road (likely improvised explosive device), an unknown armed group massing in your area of operation, or an unknown vehicle speeding to catch up with your convoy. Positive Identification (PID)* is required to engage. *Positive Identification (PID): A reasonable certainty that your target is a legitimate military target. *PID does not require 100% certainty. You must have clear line of sight to target and know what is behind it.

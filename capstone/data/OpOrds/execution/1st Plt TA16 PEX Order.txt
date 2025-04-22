@@ -1,0 +1,132 @@
+III. EXECUTION.
+        A. Commander’s Intent.
+                1. Purpose.  To prevent the MRA from infiltrating through TA16 Province and massing combat power.
+                2. Method.  The enemy’s CG is his ability to use covered and concealed routes to infiltrate into and through TA-16.  The enemy’s CV is his inability to quickly reinforce or mass firepower when located.  We will exploit this by conducting a platoon heliborne insert into LZ Peregrine and pushing out squad sized patrols along designated routes throughout our AO.
+                3. Endstate.  Enemy prevented from conducting further ambushes of relief convoys or coalition forces in the AO and is unable to mass combat power for an offensive attack into Camp Barrett.  
+
+
+        B. ConOps.
+                1. SOM.  This operation will be conducted in (2) parts.  Part 1 will begin with our heliborne insert into LZ Peregrine and end when each squad has reached its intermediate ORP.  Part 2 will begin with preparation for an ambush patrol at the intermediate ORP and will end with helo extraction from our assigned extraction LZs.
+                        (a) Part 1.  Part 1 will begin with our heliborne insert into LZ Peregrine.  Each squad will depart along independent patrol routes to their intermediate ORPs.  Checkpoints will be designated in tasks.  Patrols will report their progress to the platoon commander who will be located at the CoC.  Part 1 will end when each patrol has reached their intermediate LZ, NLT 1500.  
+                        (b) Part 2.  Part 2 will begin with ambush patrol preparation at the intermediate ORP.  Each squad will be laid into their ambush site NLT 1845.  Upon completion of the ambush, squads will conduct a night patrol to their extract LZ.  Part 2 will end with helo extraction from extract LZ.  
+
+
+                        (c)  All squad leaders will pursuant to this order create their own operation order and timeline to support their tasks.  All squads will conduct COC Coordination with the company COC.  
+
+
+                2. FSP.
+                        (a) Task.  Limit the CRF’s ability to affect friendly units with direct fire weapons.
+                        (b) Purpose.  IOT allow 1st platoon to move freely throughout the area of operations.
+                        (c) Method.  Squads will build their method for their FSP.
+                        (d) Effects.  CRF in our area of operations is suppressed.
+        C. Tasks.
+                1. 1st Sqd.
+                        (a) Part 1.  ME, NLT 1500 INTERDICT MRA forces IVO CPs 35, 17 ,37 IOT prevent them from interfering with humanitarian operations. Establish ORP IVO LZ Osprey. Time has priority.
+                        (b) Part 2.  ME, NLT 2200 AMBUSH MRA forces IVO 18S TH 8739 7775 IOT degrade his ability to utilize this avenue of approach as an infiltration route.  Mission has priority.  Extraction LZ New Martin (875 766) .
+                2. 2nd Sqd.
+                        (a) Part 1.  SE1, NLT 1500 INTERDICT MRA forces IVO CPs 12, 54, 27 IOT prevent them from interfering with humanitarian operations. Establish ORP IVO LZ New Martin (875 766) . Time has priority.
+                        (b) Part 2.  SE1, NLT 2200 AMBUSH MRA forces IVO 18S TH 8634 7612 IOT degrade his ability to utilize this avenue of approach as an infiltration route.  Mission has priority.  Extraction LZ New Martin (875 766) .
+                3. 3rd Sqd.
+                        (a) Part 1.  SE2, NLT 1500 INTERDICT MRA forces IVO CPs 10, 33, 26 IOT prevent them from interfering with humanitarian operations. Establish ORP IVO LZ Pigeon. Time has priority.
+                        (b) Part 2.  SE2, NLT 2200  AMBUSH MRA forces IVO 18S TH 8625 7570 IOT degrade his ability to utilize this avenue of approach as an infiltration route.  Mission has priority. Extraction LZ New Martin (875 766) .
+        D. Coordinating Instructions.
+                1. Timeline.
+Time
+	Event
+	Prior to 0645
+	gear draw, build terrain model, complete planning
+	0645
+	Company Commander Brief (Safety Brief)
+	0715-0830
+	COC Coord, Brief Order
+	NLT 0830
+	Staged for helo/Truck insert
+	NLT 1500
+	At Intermediate LZ/ORP
+	NLT 1745
+	Ambush Site Occupied
+	NLT 2200
+	At Extract LZ
+	                2. Helo Considerations.
+                        (a) Turn in helo-manifests at COC Coordination prior to insert.
+                        (b) All Weapons condition 3 upon loading helos.
+                        (c) Do not fire any air bursting pyro 30 minutes prior to any extract windows.
+                        (d) Coordination with pilot is responsibility of PL.  All PL’s WILL have LZ Brief’s prepared prior to calling for extract post ambush.  Reference MAWTS-1 TACSOP LZ Brief.
+                        (e) Wrong Insert LZ plan—coordinate with higher immediately in order to receive new patrol route.
+                        (f) Marking of LZ's for extract (ITG): Day--Colored smoke. Night—chem lights in Nato Y and/ or buzzsaw.
+                        (g) Godfather will coordinate all aircraft for extract upon request by PL on Co TAC. Patrols will roll to pre-determined UHF net for ITG after being directed to do so by Godfather. Godfather will notify the patrol of the tail number of its extract helo at that time. Communication with Godfather and aircraft MUST be established by patrol at extract LZ.
+                        (h) Helo call-sign is NIGHTHAWK & TAIL #.
+3. Patrol Boundaries.  AO is bounded to the south by MCB-1; to the east by Route 619, to the north by Route 646, and to the west by the 84 Easting.
+                4. Daytime Patrol Routes. 
+                        (a) 1st Squad.  LZ Peregrine, 35, 17, 37, ORP
+                        (b) 2d Squad.   LZ Peregrine, 12, 54, 27, ORP
+                        (c) 3d Squad.   LZ Peregrine, 10, 33, 26, ORP
+                5. Ambush Sites.  Patrols will depart from their intermediate LZ and conduct ambush patrols at the following assigned ambush sites.  Ambushes will be established NLT 1745.
+                        
+                6. Night Extract LZs.  
+                        (a) 1st Squad.  LZ New Martin (875 766) 
+                        (b) 2d Squad.   LZ New Martin (875 766) 
+                        (c) 3d Squad.   LZ New Martin (875 766) 
+                7. The following will be designated by each patrol leader:
+                        (a) Go / No Go Criteria
+                        (b) Immediate Action Drills
+                        (c) Actions at Rally Points and ORPs
+                        (d) Rehearsal / Inspection Plan
+                        (e) No Comm Plan
+                        (f) Lost Marine Plan
+                        (g) Night Patrol Considerations
+                        (h) Helo Dismount/Depart Drill
+                8. Checkpoint Grids
+Chkpt
+	Grid
+	Chkpt
+	Grid
+	10
+	865 750
+	30
+	879 747
+	11
+	883 752
+	33
+	874 755
+	12
+	861 752
+	34
+	877 770
+	13
+	855 755
+	35
+	861 758
+	15
+	864 765
+	37
+	863 769
+	16
+	858 765
+	40
+	874 745
+	17
+	869 765
+	43
+	878 758
+	23
+	868 774
+	54
+	865 759
+	26
+	882 760
+	67
+	879 752
+	27
+	871 762
+	75
+	885 756
+	29
+	878 766
+	76
+	870 749
+	
+
+                9. Rules of Engagement:  Nothing in these ROE will limit your right to take action in SELF-DEFENSE.
+                        (a) The CRF and MRF have been declared HOSTILE and MAY BE ATTACKED.  This includes ALL CRF and MONTANYAN military personnel and vehicles TRANSPORTING the ENEMY or ENEMY SUPPLIES.
+                        (b) Do NOT attack civilians UNLESS they commit a HOSTILE ACT or it is CLEAR that they are ABOUT TO COMMIT a hostile act (hostile intent) against U.S. Forces.  If a civilian does nothing, they are NOT a threat and may NOT be attacked.
