@@ -3,7 +3,8 @@ flask_sqlalchemy
 pypdf
 pytest
 reportlab
-transformers
+unsloth
+faiss-cpu
 accelerate
 sphinxcontrib-httpdomain
 sphinx_rtd_theme

@@ -7,8 +7,7 @@ from datetime import date, datetime
 import faiss
 import torch
 from docx import Document
-from transformers import (AutoModelForCausalLM, AutoTokenizer,
-                          BitsAndBytesConfig, logging)
+from unsloth import FastLanguageModel
 
 from faissSetup import gen_embeds
 
@@ -16,7 +15,6 @@ args = None
 parser = argparse.ArgumentParser(description="Generates military documents using an LLM based on input from the user.")
 parser.add_argument("-k", "--top-k", type=int, help="Specify the number of related documents to identify for context when creating the new document, default is 3.", default=3)
 parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose mode")
-parser.add_argument("--cpu", action="store_true", help="Enable CPU-only mode")
 parser.add_argument("-p", "--print", action="store_true", help="Print the output to the terminal when done")
 
 warnings.filterwarnings("ignore", category=UserWarning)
@@ -35,7 +33,6 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     :return: The document produced by the LLM
     :rtype: str
     """
-    logging.set_verbosity_error()
     model_name = select_model(model_num)
     doc_type = select_doc(type_num)
 
@@ -79,13 +76,7 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     task = f"{doc_instructions} Your answer must be a complete document. Do not add any additional content outside of the document. Today's date is {formatted_date}. Adjust the dates in your response accordingly. The following examples are all examples of the same type of document that you must create. Study their formatting carefully before giving your response."
     
     # create model objects
-    use_cpu = getattr(args, 'cpu', False)
-    if torch.cuda.is_available() and not use_cpu:
-        model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype="auto", quantization_config=BitsAndBytesConfig(load_in_8bit=True, llm_int8_enable_fp32_cpu_offload=True))
-    else:
-        model = AutoModelForCausalLM.from_pretrained(model_name, device_map="cpu", torch_dtype="auto")
-    
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    model, tokenizer = FastLanguageModel.from_pretrained(model_name=model_name, max_seq_length=2048, dtype=None)
     
     # set up prompt info
     examples = load_examples(doc_type, prompt)
@@ -95,14 +86,13 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     else:
         prompt = role + staff + task + examples + "Now that you have studied the examples, create the same type of example using the following prompt: " + prompt
         
-        model_inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
-        
         # generate response
         t_start = time.time()
-        generated_ids = model.generate(**model_inputs, do_sample=True, max_new_tokens=1000, eos_token_id=tokenizer.eos_token_id)
-        response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0][len(prompt):]
+        FastLanguageModel.for_inference(model)
+        inputs = tokenizer([prompt], return_tensors="pt").to(model.device)
+        outputs = model.generate(**inputs, max_new_tokens = 1000, use_cache=True, do_sample=True, temperature=1.2)
+        response = tokenizer.batch_decode(outputs)[0][len(prompt):]
         t_stop = time.time()
-        print(f"Generation time: {t_stop - t_start} sec / {(t_stop - t_start) / 60} min")
         
         if save:
             save_response(response, prompt, model_name, model)
@@ -114,6 +104,7 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
         if use_print:
             print(f"----------Generated document----------\n{response}")
 
+        print(f"Generation time: {t_stop - t_start} sec / {(t_stop - t_start) / 60} min")
         return response
 
 def opord_gen(prompts: list[str], examples: str, model, tokenizer):
@@ -250,7 +241,9 @@ def select_model(num: int) -> str:
         case 2:
             model = "meta-llama/Llama-3.2-3B-Instruct"
         case 3:
-            model = "meta-llama/Llama-3.1-8B-Instruct"
+            model = "unsloth/Meta-Llama-3.1-8B-Instruct"
+        case 4:
+            model = "unsloth/Llama-3.3-70B-Instruct-bnb-4bit"
         case _:
             model = "meta-llama/Llama-3.2-3B-Instruct"
 
@@ -286,12 +279,12 @@ if __name__ == "__main__":
     while True:
         try:
             # model to select model you want to load
-            select = int(input("Select the Llama model you would like to run\n1) Llama 3.2 1B Instruct\n2) Llama 3.2 3B Instruct\n3) Llama 3.1 8B Instruct\n4) Exit\n> "))
+            select = int(input("Select the Llama model you would like to run\n1) Llama 3.2 1B Instruct\n2) Llama 3.2 3B Instruct\n3) Llama 3.1 8B Instruct\n4) Llama 3.3 70B Instruct\n5) Exit\n> "))
             
-            if select < 1 or select > 4:
+            if select < 1 or select > 5:
                 print("ERROR! you did not select a correct model option.")
                 continue
-            elif select == 4:
+            elif select == 5:
                 print("Exiting...")
                 quit()
     
@@ -316,7 +309,7 @@ if __name__ == "__main__":
 
                 # call document generator function
                 doc = gen(select, doc, user_query)
-            except ValueError:
-                print("ERROR! Please only enter a number!")    
-        except ValueError:
-            print("ERROR! Please only enter a number!")    
+            except ValueError as e:
+                print(f"ERROR! {e}\nCould not select document type. Please only enter a number!")    
+        except ValueError as e:
+            print(f"ERROR! {e}\nCould not select model. Please only enter a number!")    

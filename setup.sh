@@ -10,14 +10,6 @@ DIR="$(pwd)"
 # Install python environment
 echo "Installing python packages..." 
 pip install -r requirements.txt
-echo "Testing for GPU..."
-if python -c "import torch; print(torch.cuda.is_available())" | grep True; then
-    echo "GPU detected!"
-    pip install faiss-gpu-cu12 bitsandbytes torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu126
-else
-    echo "No GPU detected!"
-    pip install faiss-cpu torch torchvision torchaudio
-fi
 
 # Compile the documentation
 read -p "Would you like to compile the documentation? [Y/n] " opt

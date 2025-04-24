@@ -4,6 +4,7 @@ __pycache__
 .venv
 HF_TOKEN.txt
 .vscode
+unsloth_compiled_cache
 
 # ignore html docs and extra pdf docs
 docs/build/doctrees
