@@ -118,16 +118,20 @@ def opord():
     """Creates vector embeddings for all documents in the data/OpOrds/ directory and adds them to FAISS index in the same directory.
     """
     text = []
-    for root, dirs, fnames in os.walk("./data/OpOrds/"):
-        for f in fnames:
-            try:
-                with open(os.path.join(root, f), 'r') as file:
-                    content = file.read()
-                    text.append(content)
-            except:
-                os.remove(os.path.join(root, f))
-                
-    cache_faiss(text, "./data/OpOrds/cache.faiss")
+    dirs = ["admin_log", "command_sig", "execution", "mission", "orientation", "situation"]
+    
+    for d in dirs:
+        for root, dirs, fnames in os.walk(f"./data/OpOrds/{d}/"):
+            for f in fnames:
+                try:
+                    with open(os.path.join(root, f), 'r') as file:
+                        content = file.read()
+                        text.append(content)
+                except:
+                    os.remove(os.path.join(root, f))
+                    
+        cache_faiss(text, f"./data/OpOrds/{d}/cache.faiss")
+        text = []
 
 if __name__ == "__main__":
     parser = ArgumentParser(prog="faissSetup", description="Generates vector embeddings for different document types")

@@ -88,13 +88,17 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     
     # set up prompt info
-    examples = load_examples(doc_type, prompt)
-    
     if doc_type == "OpOrd":
-        return opord_gen([prompt, role, staff, task], examples, model, tokenizer)
-    else:
-        prompt = role + staff + task + examples + "Now that you have studied the examples, create the same type of example using the following prompt: " + prompt
+        response = opord_gen([prompt, role, staff, task], model, tokenizer)
         
+        use_print = getattr(args, 'print', False)
+        if use_print:
+            print(f"----------Generated document----------\n{response}")
+        
+        return response
+    else :
+        examples = load_examples(doc_type, prompt)
+        prompt = f"{role} {staff}\n{task}\n{examples}\nNow that you have studied the examples, create the same type of example using the following prompt: {prompt}"
         model_inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
         
         # generate response
@@ -116,14 +120,22 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
 
         return response
 
-def opord_gen(prompts: list[str], examples: str, model, tokenizer):
+def opord_gen(prompts: list[str], model, tokenizer):
+    t_start = time.time()
     prompt = prompts[0]
     role = prompts[1]
     staff = prompts[2]
     task = prompts[3]    
     user_input = prompt.split("[SEP]")
-    all_prompt = role + staff + task + examples + "Now that you have studied the OPORD examples, you will create an OPORD one paragraph at a time."
+    all_prompt = role + staff + task
     paragraphs = []
+    
+    # paragraph examples
+    dirs = ["admin_log", "command_sig", "execution", "mission", "orientation", "situation"]
+    examples = {}
+    for d in dirs:
+        examples[d] = load_examples(d, prompt)
+    
     topics = ["Orientation", "Situation", "Mission", "Execution", "Administration", "Logistics", "Command and Signal"]
     
     i = 0
@@ -131,7 +143,24 @@ def opord_gen(prompts: list[str], examples: str, model, tokenizer):
         if torch.cuda.is_available():
             torch.cuda.empty_cache()
         
-        p = f"{all_prompt} Write the {t} paragraph using the following subject: {user_input[i]}"
+        dir = ""
+        match t:
+            case "Orientation":
+                dir = "orientation"
+            case "Situation":
+                dir = "situation"
+            case "Mission":
+                dir = "mission"
+            case "Execution":
+                dir = "execution"
+            case "Administration":
+                dir = "admin_log"
+            case "Logistics":
+                dir = "admin_log"
+            case "Command and Signal":
+                dir = "command_sig"
+    
+        p = f"{all_prompt} Write the {t} paragraph using the following examples: {examples[dir]} The subject is: {user_input[i]}."
         i += 1
         
         model_inputs = tokenizer(p, return_tensors="pt").to(model.device)
@@ -140,8 +169,8 @@ def opord_gen(prompts: list[str], examples: str, model, tokenizer):
         paragraphs.append(response)
     
     response = "\n".join(paragraphs)
-    save_response(response, " ".join(user_input), model)
-    
+    t_stop = time.time()
+    print(f"Generation time: {t_stop - t_start} sec / {(t_stop - t_start) / 60} min")
     return response
 
 def find_most_rel(query: str, index, num: int):
@@ -173,11 +202,8 @@ def load_examples(type: str, prompt: str) -> str:
     """
     # load in examples for few shot prompting
     examples = "Read the following examples very carefully. Your response must follow the same formatting as these examples.\n"
-
     data_path = "./data"
-
     paths = []
-
     # get paths to all example files
     for root, dirs, fnames in os.walk(data_path):
         if type in root:
@@ -189,7 +215,7 @@ def load_examples(type: str, prompt: str) -> str:
                 else:
                     continue
     
-    if type == "Opord" or type == "RTW":
+    if type == "RTW":
         top_k_indices = find_most_rel(prompt, index, 1)
     else:
         top_k_indices = find_most_rel(prompt, index, 2)
