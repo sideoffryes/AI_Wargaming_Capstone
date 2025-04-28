@@ -165,7 +165,9 @@ def main(doc_type: str):
     docs = load_examples(doc_type)
     
     # Generate embeddings
-    model = SentenceTransformer(EMBED_MODEL)
+    model = SentenceTransformer(EMBED_MODEL, device=None)
+    
+    # Generate embeddings
     embeds, metadata = embed(docs, model, batch_size=BATCH_SIZE)
     
     # Build FAISS index
