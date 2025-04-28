@@ -1,11 +1,12 @@
-from sentence_transformers import SentenceTransformer
-from tqdm import tqdm
-import numpy as np
-import faiss
 import json
 import os
 from argparse import ArgumentParser
+
+import faiss
+import numpy as np
 from docx import Document
+from sentence_transformers import SentenceTransformer
+from tqdm import tqdm
 
 args = None
 parser = ArgumentParser(prog="faissSetup", description="Generates vector embeddings for different document types")
@@ -32,7 +33,12 @@ OPORD_INDEX = "./data/OPORDS/index.faiss"
 
 BATCH_SIZE = getattr(args, "batch", 128) 
 
-def nav() -> tuple[list[str], list[str]]:
+def nav() -> tuple[list[tuple[str, str]], list[str]]:
+    """Returns a list of tuples of NAVADMIN file names and their contents and a list of file paths of NAVADMINS that cannot be read and should be removed
+
+    :return: A list of tuples of files and their contents and a list of files to be removed
+    :rtype: tuple[list[tuple[str, str]], list[str]]
+    """
     docs = []
     broken = []
     for file in os.listdir(NAV_DIR):
@@ -48,7 +54,12 @@ def nav() -> tuple[list[str], list[str]]:
                 
     return docs, broken
 
-def mar() -> tuple[list[str], list[str]]:
+def mar() -> tuple[list[tuple[str, str]], list[str]]:
+    """Returns a list of tuples of MARADMIN file names and their contents and a list of file paths of MARADMINS that cannot be read and should be removed
+
+    :return: A list of tuples of files and their contents and a list of files to be removed
+    :rtype: tuple[list[tuple[str, str]], list[str]]
+    """
     docs = []
     broken = []
     for file in os.listdir(MAR_DIR):
@@ -64,7 +75,12 @@ def mar() -> tuple[list[str], list[str]]:
                 
     return docs, broken
 
-def opord() -> tuple[list[str], list[str]]:
+def opord() -> tuple[list[tuple[str, str]], list[str]]:
+    """Returns a list of tuples of OPORD paragraph file names and their contents and a list of file paths of OPORD paragraphs that cannot be read and should be removed
+
+    :return: A list of tuples of files and their contents and a list of files to be removed
+    :rtype: tuple[list[tuple[str, str]], list[str]]
+    """
     docs = []
     broken = []
     dirs = ["admin_log", "command_sig", "execution", "mission", "orientation", "situation"]
@@ -83,7 +99,12 @@ def opord() -> tuple[list[str], list[str]]:
     
     return docs, broken
 
-def rtw() -> tuple[list[str], list[str]]:
+def rtw() -> tuple[list[tuple[str, str]], list[str]]:
+    """Returns a list of tuples of Road to War Brief file names and their contents and a list of file paths of RTW briefs that cannot be read and should be removed
+
+    :return: A list of tuples of files and their contents and a list of files to be removed
+    :rtype: tuple[list[tuple[str, str]], list[str]]
+    """
     docs = []
     broken = []
     
@@ -103,6 +124,13 @@ def rtw() -> tuple[list[str], list[str]]:
     return docs, broken
 
 def load_examples(doc_type: str) -> list[str]:
+    """Returns a list examples to be used matching the provided document type
+
+    :param doc_type: The type of document to return examples of
+    :type doc_type: str
+    :return: A list of examples of the specified document
+    :rtype: list[str]
+    """
     docs = []
     broken = []
     
@@ -129,7 +157,18 @@ def load_examples(doc_type: str) -> list[str]:
     
     return docs
 
-def embed(docs: list[str], model, batch_size: int):
+def embed(docs: list[str], model, batch_size: int) -> tuple:
+    """Embeds a list of strings in batches
+
+    :param docs: A list of text to be embedded
+    :type docs: list[str]
+    :param model: The LLM to use to generate the embeddings
+    :type model: SentenceTransformer
+    :param batch_size: Number of documents to embed at once
+    :type batch_size: int
+    :return: Numpy vstack of the embeddings and a json object of the corresponding document metadata
+    :rtype: tuple
+    """
     embeds = []
     metadata = []
     j = 0
@@ -155,6 +194,13 @@ def embed(docs: list[str], model, batch_size: int):
     return array, metadata
     
 def build_faiss(embeds):
+    """Builds and returns FAISS index
+
+    :param embeds: Embeddings to be placed into the index
+    :type embeds: Numpy vstack
+    :return: FAISS Index
+    :rtype: FAISS Index
+    """
     dim = embeds.shape[1]
     index = faiss.IndexFlatL2(dim)
     index.add(embeds)

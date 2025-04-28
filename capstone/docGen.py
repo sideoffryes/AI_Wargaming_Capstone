@@ -5,12 +5,13 @@ import warnings
 from datetime import date, datetime
 
 import faiss
+import json
+import numpy as np
 import torch
 from docx import Document
+from sentence_transformers import SentenceTransformer
 from transformers import (AutoModelForCausalLM, AutoTokenizer,
                           BitsAndBytesConfig, logging)
-
-from faissSetup import gen_embeds
 
 args = None
 parser = argparse.ArgumentParser(description="Generates military documents using an LLM based on input from the user.")
@@ -20,6 +21,18 @@ parser.add_argument("--cpu", action="store_true", help="Enable CPU-only mode")
 parser.add_argument("-p", "--print", action="store_true", help="Print the output to the terminal when done")
 
 warnings.filterwarnings("ignore", category=UserWarning)
+
+EMBED_MODEL = "intfloat/e5-large-v2"
+
+NAV_META = "./data/NAVADMINS/metadata.json"
+MAR_META = "./data/MARADMINS/metadata.json"
+RTW_META = "./data/RTW/metadata.json"
+OPORD_META = "./data/OPORDS/metadata.json"
+
+NAV_INDEX = "./data/NAVADMINS/index.faiss"
+MAR_INDEX = "./data/MARADMINS/index.faiss"
+RTW_INDEX = "./data/RTW/index.faiss"
+OPORD_INDEX = "./data/OPORDS/index.faiss"
 
 def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     """Generates a specified document using a specified LLM and returns the result.
@@ -62,7 +75,7 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
             doc_instructions = "The document you must write is a NAVADMIN. A NAVADMIN is a Navy Administrative Message used to disseminate information, policies, and instructions. Your response must be in exact NAVADMIN formatting. Your response must both begin and end with the CLASSIFICATION line."
         case "MARADMIN":
             doc_instructions = "The document you must write is a MARADMIN. A MARADMIN is used by Headquarters Marine Corps staff agencies and specific authorized commands to disseminate route and administrative information applicable to all Marines. You response must be in exact MARADMIN formatting."
-        case "OpOrd":
+        case "OPORD":
             doc_instructions = ("An OPORD, Operations Order, or Five Paragraph Order is used to issue an order in a clear and concise manner. There are 5 elements to this order: Situation, Mission, Execution, Administration and Logistics, and Command and Signal. You must write all 5 paragraphs.\n"
             "The situation paragraph contains information on the overall status and disposition of both friendly and enemy forces. It contains 3 subparagraphs on enemy forces and friendly forces.\n"
             "The mission paragraph provides a clear and concise statement of what the unit must accomplish. This is the heard of the order and must contain the who, what, when, where, and why of the operation.\n"
@@ -88,7 +101,7 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     
     # set up prompt info
-    if doc_type == "OpOrd":
+    if doc_type == "OPORD":
         response = opord_gen([prompt, role, staff, task], model, tokenizer)
         
         use_print = getattr(args, 'print', False)
@@ -173,20 +186,23 @@ def opord_gen(prompts: list[str], model, tokenizer):
     print(f"Generation time: {t_stop - t_start} sec / {(t_stop - t_start) / 60} min")
     return response
 
-def find_most_rel(query: str, index, num: int):
+def find_most_rel(query: str, index, top_k: int):
     """Returns the indices of the most related documents based on the user's query
 
     :param query: The user's query
     :type query: str
     :param index: The FAISS index of all of the corresponding documents
     :type index: file
+    :param top_k: Number of most similar results to return
+    :type top_k: int
     :return: A list of the top k indices
     :rtype: list
     """
-    query_embed = gen_embeds(query).cpu().detach().numpy().flatten().reshape(1, -1)
-    faiss.normalize_L2(query_embed)
-    _, top_k_indices = index.search(query_embed, num)
-    return top_k_indices[0]
+    embed_model = SentenceTransformer(EMBED_MODEL, device=None)
+    query_embed = embed_model.encode([query], normalize_embeddings=True)
+    distances, indices = index.search(np.array(query_embed), top_k)
+    
+    return indices
 
 def load_examples(type: str, prompt: str) -> str:
     """Returns real life examples of the requested document type.
@@ -202,36 +218,32 @@ def load_examples(type: str, prompt: str) -> str:
     """
     # load in examples for few shot prompting
     examples = "Read the following examples very carefully. Your response must follow the same formatting as these examples.\n"
-    data_path = "./data"
-    paths = []
-    # get paths to all example files
-    for root, dirs, fnames in os.walk(data_path):
-        if type in root:
-            for f in fnames:
-                if ".faiss" in f:
-                    index = faiss.read_index(os.path.join(root, f))
-                elif "pages" not in f:
-                    paths.append(os.path.join(root, f))
-                else:
-                    continue
     
-    if type == "RTW":
-        top_k_indices = find_most_rel(prompt, index, 1)
-    else:
-        top_k_indices = find_most_rel(prompt, index, 2)
-        
-    for k in top_k_indices:
-        p = paths[k]
-        if ".docx" in p:
-            doc = Document(p)
-            text = ""
-            for para in doc.paragraphs:
-                text += para.text + "\n\n"
-            
-            examples += f"Example\n{text}\n\n"
-        else:
-            with open(paths[k], 'r') as f:
-                examples += f"Example:\n{f.read()}\n\n"
+    index = None
+    docs = None
+    meta_path = ""
+    
+    match type:
+        case "NAVADMIN":
+            index = faiss.read_index(NAV_INDEX)
+            meta_path = NAV_META
+        case "MARADMIN":
+            index = faiss.read_index(MAR_INDEX)
+            meta_path = MAR_META
+        case "RTW":
+            index = faiss.read_index(RTW_INDEX)
+            meta_path = RTW_META
+        case "OPORD":
+            index = faiss.read_index(OPORD_INDEX)
+            meta_path = OPORD_META
+    
+    with open(meta_path, "r") as f:
+        docs = json.load(f)
+    
+    top_k_indices = find_most_rel(prompt, index, 1)
+    
+    retrieved_text = [f"Example:\n{docs[i]['text']}\n\n" for i in top_k_indices[0]]
+    examples += "".join(retrieved_text)
 
     use_verbose = getattr(args, 'verbose', False)
     if use_verbose:
@@ -298,7 +310,7 @@ def select_doc(num: int) -> str:
         case 2:
             type = "MARADMIN"
         case 3:
-            type = "OpOrd"
+            type = "OPORD"
         case 4:
             type = "RTW"
         case _:
@@ -323,7 +335,7 @@ if __name__ == "__main__":
     
             try:
                 # get document type from user
-                doc = int(input("Select document to generate\n1) Naval Message (NAVADMIN)\n2) USMC Message (MARADMIN)\n3) USMC OpOrd\n4) Road to War\n> "))
+                doc = int(input("Select document to generate\n1) Naval Message (NAVADMIN)\n2) USMC Message (MARADMIN)\n3) USMC OPORD\n4) Road to War\n> "))
     
                 if doc < 1 or doc > 4:
                     print("ERROR! You did not select a correct document options.")
