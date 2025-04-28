@@ -10,3 +10,4 @@ sphinx_rtd_theme
 sphinx
 python-docx
 beautifulsoup4
+sentence-transformers
