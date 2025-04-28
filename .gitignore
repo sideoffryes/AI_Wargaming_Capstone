@@ -4,7 +4,8 @@ __pycache__
 .venv
 HF_TOKEN.txt
 .vscode
-unsloth_compiled_cache
+*.json
+*.faiss
 
 # ignore html docs and extra pdf docs
 docs/build/doctrees
@@ -21,10 +22,6 @@ capstone/data/MARADMINS/*
 
 # make sure to keep MARADMINS dir
 !capstone/data/MARADMINS/.gitkeep
-
-# ignore caches
-capstone/data/RTW/cache.faiss
-capstone/data/OpOrds/*/cache.faiss
 
 # save pages.txt
 !capstone/data/NAVADMINS/pages.txt
