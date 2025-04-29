@@ -59,19 +59,6 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     today = date.today()
     formatted_date = today.strftime("%d %B, %Y")
 
-    staff = ("Here is the current US Military Chain of Command.\n"
-    "President of the United States: Donald Trump\n"
-    "Vice President of the United States: JD Vance\n"
-    "Secretary of Defense: Pete Hegseth\n"
-    "Chairman of the Joint Chiefs of Staff: General J. Daniel Caine, USAF\n"
-    "Vice Chairman of the Joint Chiefs of Staff: ADM Christopher W. Grady, USN\n"
-    "Chief of Naval Operations: ADM James W. Kilby, USN (Acting)\n"
-    "Chief of Staff of the Army: General Randy George, USA\n"
-    "Chief of Staff of the Air Force: General David W. Allvin, USAF\n"
-    "Commandant of the Marine Corps: General Eric Smith, USMC\n"
-    "Commandant of the Coast Guard: ADM Kevin Lunday, USCG\n"
-    "Chief of Space Operations: General B. Chance Saltzman, USSF")
-
     doc_instructions = ""
 
     match doc_type:
@@ -115,7 +102,7 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     
     # set up prompt info
     if doc_type == "OPORD":
-        response = opord_gen([prompt, role, staff, task], model, tokenizer)
+        response = opord_gen([prompt, role, task], model, tokenizer)
         
         use_print = getattr(args, 'print', False)
         if use_print:
@@ -124,7 +111,7 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
         return response
     else:
         examples = load_examples(doc_type, prompt)
-        prompt = f"{role} {staff}\n{task}\n{examples}\nNow that you have studied the examples, create the same type of example using the following prompt: {prompt}"
+        prompt = f"{role}\n{task}\n{examples}\nNow that you have studied the examples, create the same type of example using the following prompt: {prompt}"
         model_inputs = tokenizer(prompt, return_tensors="pt", truncation=True, max_length=MAX_INPUT_TOKENS).to(model.device)
         
         # generate response
@@ -153,17 +140,10 @@ def opord_gen(prompts: list[str], model, tokenizer):
     t_start = time.time()
     prompt = prompts[0]
     role = prompts[1]
-    staff = prompts[2]
-    task = prompts[3]    
+    task = prompts[2]    
     user_input = prompt.split("[SEP]")
-    all_prompt = role + staff + task
+    all_prompt = role + task
     paragraphs = []
-    
-    # paragraph examples
-    dirs = ["admin_log", "command_sig", "execution", "mission", "orientation", "situation"]
-    examples = {}
-    for d in dirs:
-        examples[d] = load_examples(d, prompt)
     
     topics = ["Orientation", "Situation", "Mission", "Execution", "Administration", "Logistics", "Command and Signal"]
     
@@ -172,30 +152,23 @@ def opord_gen(prompts: list[str], model, tokenizer):
         if torch.cuda.is_available():
             torch.cuda.empty_cache()
         
-        dir = ""
-        match t:
-            case "Orientation":
-                dir = "orientation"
-            case "Situation":
-                dir = "situation"
-            case "Mission":
-                dir = "mission"
-            case "Execution":
-                dir = "execution"
-            case "Administration":
-                dir = "admin_log"
-            case "Logistics":
-                dir = "admin_log"
-            case "Command and Signal":
-                dir = "command_sig"
+        example_query = f"Write the {t} paragraph. The subject is: {user_input[i]}"
+        examples = load_examples("OPORD", example_query) 
     
-        p = f"{all_prompt} Write the {t} paragraph using the following examples: {examples[dir]} The subject is: {user_input[i]}."
+        p = f"{all_prompt} Write the {t} paragraph using the following examples.\n{examples} The subject is: {user_input[i]}."
         i += 1
+        
+        use_verbose = getattr(args, 'verbose', False)
+        if use_verbose:
+            print(f"[INFO] The length of the prompt is: {len(p)}")
         
         model_inputs = tokenizer(p, return_tensors="pt").to(model.device)
         generated_ids = model.generate(**model_inputs, do_sample=True, max_new_tokens=1000, eos_token_id=tokenizer.eos_token_id)
         response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0][len(prompt):]
         paragraphs.append(response)
+    
+        if use_verbose:
+            print(f"----------{t} Paragraph----------\n{response}")
     
     response = "\n".join(paragraphs)
     t_stop = time.time()
@@ -256,7 +229,7 @@ def load_examples(type: str, prompt: str) -> str:
     with open(meta_path, "r") as f:
         docs = json.load(f)
     
-    top_k = getattr(args, 'top-k', 5)
+    top_k = getattr(args, 'top-k', 1)
     top_k_indices = find_most_rel(prompt, index, top_k)
     
     examples = ""
@@ -361,13 +334,20 @@ if __name__ == "__main__":
                     print("ERROR! You did not select a correct document options.")
                     continue
                 if doc == 3:
-                    o = input("Orientation> ")
-                    s = input("Situation> ")
-                    m = input("Mission> ")
-                    e = input("Execution> ")
-                    a = input("Administration> ")
-                    l = input("Logistics> ")
-                    c = input("Command & Signal> ")
+                    o = "Annapolis, MD"
+                    s = "We have 300 US Marines, and there are 2000 enemy fighters who have captured the US Naval Academy and taken midshipmen and faculty hostage."
+                    m = "Recapture the Naval Academy and rescue all hostages."
+                    e = "3 Pronged using combined arms with artillery. DDG 51 USS Arleigh Burke is available to support from the Chesapeake Bay."
+                    a = "Commander is CAPT Walter Allman, USN"
+                    l = "Resupply will be via helicopter at the LZ on Hospital Point"
+                    c = "Make up some cool callsigns with frequencies."
+                    # o = input("Orientation> ")
+                    # s = input("Situation> ")
+                    # m = input("Mission> ")
+                    # e = input("Execution> ")
+                    # a = input("Administration> ")
+                    # l = input("Logistics> ")
+                    # c = input("Command & Signal> ")
                     user_query = "[SEP]".join([o, s, m, e, a, l, c])
                 else:
                     user_query = input("Input> ")
