@@ -1,0 +1,23 @@
+Orientation.  We are currently on board the USS Bataan position off of the Southwest coast of Upshur Island.  The BLT AO boundaries are as follows:
+-      North- 79 Northing
+-      East- N Hangman Tree Road
+-      South- 75 Northing
+-      West- SR 609
+
+
+Terrain/Vegetation: Terrain consists of rolling hills, and intermittent streams in low lying areas. There is mostly thin vegetation in pockets of the region, but is vastly covered with dense vegetation.  During the summer months, vegetation significantly reduces visibility from 200 – 300 meters on high ground to100 – 200 meters in low ground and around streams. During the winter, observation can reach 400 – 500 meters in high ground, due to the lack of foliage.  Hills vary in elevation up to 30 meters, which can canalize and result in slow movement. The AO has many streams and creeks, all of which are fordable on foot, but will slow movement significantly.
+
+
+Major Roads:  There are several major roads in the AO: SR 609 and N Hangman Tree Road.  These roads are unrestricted to vehicular traffic.  There is also 16E Tank Trail running from East to West and is restricted to vehicular traffic. As a result of our shaping fires, which had devastating effects against MRA convoys, the MRA minimizes its use along these roads to singular or double transport vehicles capable of carrying a medium machine gun. The traffic-ability of the trails on the map are currently unknown.
+
+
+The following LZ’s are capable to support air CASEVAC’s and air resupply (All other LZ’s are considered unsupportable for air CASEVAC and air resupply):
+-      LZ Vulture (TH 8285 7790)
+-      LZ Snipe (TH 8295 7645)
+-      LZ Canary (TH 8450 7695)
+-      LZ Tern (TH 8102 7594)
+-      LZ Drake (TH 8051 7660)
+-      LZ Duck (TH 8208 7450)
+-      LZ Pheasant (TH 8200 7780)
+-      LZ Crane (TH 8260 7555)
+-      DZ Redwing (TH 8000 7620)

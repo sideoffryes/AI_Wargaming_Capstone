@@ -1,0 +1,67 @@
+5. (U) Command and Signal
+
+
+    a. (U) Signal
+
+
+        (1) (U) Signal Plan
+
+
+Event
+	Primary
+	Alternate
+	Tertiary
+	Platoon Release
+	Radio
+	Messenger
+	Hand/Arm
+	Change Formation
+	Hand/Arm
+	Messenger
+	None
+	Engagement
+	RTR/ADDRAC
+	Voice
+	Hand/Arm
+	Consolidate
+	Conditions
+	YSMK
+	Radio
+	Displace
+	Conditions
+	Radio
+	Messenger
+	*2d platoon develop additional signals IAW SOM
+        (2) (U) Frequencies and Callsigns
+
+
+Unit
+	Callsign
+	Frequency
+	BN TAC 1
+	Havoc
+	CEOI
+	BN Mortars
+	Havoc Mortars
+	CEOI
+	Company Tac
+	Godfather
+	CEOI
+	Company Mortars
+	Godfather Mortars
+	CEOI
+	K, 3/11
+	K6
+	CEOI
+	
+
+        (3) (U) Challenge and Password.  Primary: Guinness/Monkey.  Alternate: Numbers adding to 9.  Running: Pontiac.
+
+
+    b. (U) Command. 
+
+
+        (1) (U) Location of Key Leaders.  The BN COC (fwd) is with the BN        ME. The BN COC (rear) is IVO LZ Turkey (TH 789 715). The Company First Sergeant and I will be with 1st Platoon. The Weapons Plt Commander and Company Gunnery Sergeant will be at the AA. The Company XO will be with 3rd Platoon.
+
+
+        (2) (U) Succession of Command.  1st Plt Commander, 3rd Plt Commander, Weapons Plt Commander, 2nd Plt Commander.

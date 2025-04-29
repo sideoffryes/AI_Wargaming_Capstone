@@ -1,0 +1,23 @@
+﻿      5. Command and Signal
+
+
+      13. Signal
+
+
+      31. Signal Plan. See Company CEOI and Communications Architecture. Platoon Commander determines signals for platoon attacks. (Make use of available pyro for Primary, Secondary, and Tertiary signals).
+
+
+      32. No Comm Plan. TBD by Platoon Commander.
+  
+
+      14. Command
+
+
+      33. Company Commander will be located with the ME. XO will follow in trace of SE1.
+  
+  
+
+      34. Company 1stSgt and Company GySgt will be located in the AA.
+
+
+      35. Succession of Command: XO, 2nd Plt , 3rd Plt, 1st Plt.

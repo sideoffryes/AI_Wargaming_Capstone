@@ -10,6 +10,6 @@ Function Call API Documentation
     :caption: Contents:
 
     docGen
-    faissSetup
+    embed
     pdfToText
     app_funcs

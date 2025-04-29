@@ -1,0 +1,34 @@
+5. (U) Command and Signal
+
+
+    a. (U) Signal. In accordance with the formats listed below and CEOI provided by the company.
+
+
+        (1) (U) Signal Plan
+
+
+Event
+	Primary
+	Alternate
+	Tertiary
+
+        (2) (U) Frequencies and Callsigns In accordance with the formats listed below and CEOI provided by the company.
+
+
+Unit
+	Callsign
+	Frequency
+
+        (3) (U) Challenge and Password. As per CEOI.
+
+
+        (4) (U) Location of Communication Electronic Operations Instructions (CEOI).  
+
+
+    b. (U) Command. 
+
+
+        (1) (U) Location of Key Leaders. I will be located at the Co CP IVO Port Upshur.  XO, 1stSgt and Co GySgt will remain at the Co CP.
+
+
+        (2) (U) Succession of Command.  XO, Wpns PltCmdr, ME PltCmdr, SE1 PltCmdr, and SE2 PltCmdr

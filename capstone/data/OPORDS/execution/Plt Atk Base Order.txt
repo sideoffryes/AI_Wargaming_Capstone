@@ -1,0 +1,121 @@
+﻿3. (U) Execution
+
+
+    a. (U) Commanders Intent.  PURPOSE: Prevent the enemy from reorganizing and massing combat power. METHOD: The enemy Center of Gravity is their ability to mass firepower in the compartmentalized terrain between the buildings. Their Critical Vulnerability is their lack of covered and concealed movement corridors between buildings.  We will exploit this by isolating the enemy squad battle positions and systematically destroying them with platoon attacks from west to east.  ENDSTATE: The enemy in MOUT Town is destroyed. Company G is consolidated on the east side of town. MSR Tampa is still operable for vehicle traffic.
+
+
+    b. (U) Concept of Operations
+
+
+        (1) (U) Scheme of Maneuver.  We will have 1 ME and 2 SEs. DOA is East. Company B will conduct simultaneous platoon attacks on enemy positions in MOUT Town. SE 1 will assemble 100m NW of MOUT Town and seize Company Objective A (Bldg A4). The ME will assemble 200m W of MOUT Town and seize Company Objective B (Bldg B3/4).  SE 2 will assemble 200m SW of MOUT Town and seize Company Objective C (Bldg C6/7).  Mortars will establish a mortar firing position IVO 7939 7289.  Upon seizure of all company objectives, all platoons will consolidate on the east side of town, oriented east, and stand by for follow on tasking.
+
+
+        (2) (U) Fire Support Plan.  
+
+
+            (a) (U) Task.  Suppress known enemy positions within MOUT Town.
+
+
+            (b) (U) Purpose.  Allow platoons to secure a foothold in their respective sectors.
+
+
+            (c) (U) Method.  
+
+
+                1. (U) Platoon Commanders will submit two preplanned targets prior to briefing their order. Coordinate with COC.             
+
+
+            (d). (U) Effects.  Enemy unable to effectively engage as platoons transition from the treeline into the town.
+
+
+    c. (U) Tasks
+
+
+        (1) (U) (LANE 1, Alpha Sector).         Platoon. You are SE 1. O/O seize Co Obj A IOT allow the main effort to seize Co Obj B. You will have 1 machine gun squad attached, and 1 assault team attached. 
+
+
+        (2) (U) (LANE 2, Bravo Sector).         Platoon. You are the ME.  O/O seize Co Obj B IOT allow the civilian populace to return and re-establish normalcy of living.   You will have 1 machine gun squad attached, and 1 assault team attached. 
+
+
+        (3) (U) (LANE 3, Charlie Sector).         Platoon.  You are SE2.  O/O seize Co Obj C IOT allow the main effort to seize Co Obj B.  You will have 1 machine gun squad attached, and 1 assault team attached. 
+
+
+        (4) (U) Weapons Platoon. Attach 1 MG squad and 1 Assault team to each platoon effective immediately.  
+
+
+            (5) (U) 60mm Mortar Section.  Establish 60mm mortar firing position IVO 7939 7289.  O/O suppress and obscure enemy IVO MOUT Town IOT prevent enemy forces from interfering with the company attack.
+
+
+    d. (U) Coordinating Instructions
+
+
+        (1) (U) Timeline: platoon commanders develop individual timelines.  Plan for roughly 2 ½ hours prior to LD through consolidation and re-supply.  
+
+
+        (2) (U) Tactical Control Measure.  
+
+
+                    (a) (U) (LANE 1).         Platoon.
+
+
+                        1. (U) AA: 100m Northwest of Bldg A1
+
+
+                        2. (U) CCP: Plt Cmdr Discretion
+
+
+                        3. (U) Co Obj A: Bldg A4
+
+
+                        4. (U) DOA: East
+
+
+                        5. (U) Restrictions: Keep all personnel north of your platoon boundary (refer to imagery); however, fires can be oriented to the south due to the fact the rest of the city is unoccupied.
+
+
+                    (b) (U) (LANE 2).         Platoon.  
+
+
+                        1. (U) AA: 200m West of building B1.  
+
+
+                        2. (U) CCP: Plt Cmdr discretion
+
+
+                        3. (U) Co Obj B: Bldg B3/4
+
+
+                        4. (U) DOA: East
+
+
+                        5. (U) Restrictions: Keep all personnel between your platoon boundaries (refer to imagery); however, fires can be oriented to the south and north due to the fact the rest of the city is unoccupied.
+
+
+                    (c) (U) (LANE 3).         Platoon.  
+
+
+                        1. (U) AA: 200m Southwest of building C3.  
+
+
+                        2. (U) CCP: Plt Cmdr Discretion
+
+
+                        3. (U) Co Obj C: Bldg C6/7
+
+
+                        4. (U) DOA: East
+
+
+                        5. (U) Restrictions: Keep all personnel south of your platoon boundary (refer to imagery); however, fires can be oriented to the north due to the fact the rest of the city is unoccupied.
+
+
+          (3) (U) Lost Marine Plan.  Each platoon is responsible for developing their own tactically sound Lost Marine Plan. Be prepared to brief me on your plans.
+
+
+                (4) (U) Comm Plan.  Checks required upon commencing movement from treeline into town, upon commencing movement to next building in SOM, and upon securing any building.
+
+
+                (5) (U) Air Defense Warning Condition.  White.  The enemy has limited UAS capability that they may attempt to use to call for fire or for recon.
+
+
+                (6) (U) MOPP Level.  MOPP Ready.  Intel reports enemy has used a blood agent in the past and is currently capable of employing a blood agent.    

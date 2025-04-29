@@ -1,0 +1,185 @@
+
+
+Execution:
+Commander’s Intent:
+Tasks: Clear in zone, Defend in sector
+Purpose: Gain control of the Prospect Delta, Deny enemy use of the Prospect Delta AoA
+Method: We will sequentially isolate and seize each objective through a combined arms flanking 
+attack from north to south.  
+Endstate : Enemy forces cleared from Prospect Delta, key terrain within the Prospect Delta 
+controlled, friendly forces prepared for follow on operations.  
+SOM:
+Phase I: Clear CSOP
+1)All C Co and attachments located in TAA (NT 925 915)
+2)Arty fire capped at PAA 1
+3)CAAT crosses LD and screens to the NW
+4)Tanks and main body cross LD
+1)Co Wedge: Tanks lead, C1 to the West, C2 to the East, FiST in trace of Tanks, 81s in 
+trace of FiST, C3 in trace of 81s
+5)Upon confirmation of enemy CSOP, FiST develops a quick fire plan to suppress the CSOP 
+with Arty and destroy with Tank main guns
+1)81s BPT establish hasty MFP to the East
+2)C1 BPT conduct flanking attack from West to East
+6)Upon destruction of the CSOP, Tanks and main body will hold IVO 995 Northing
+7)CAAT and FiST will move to position IVO 00 Northing IOT screen, observe enemy obstacles, 
+and enemy mechanized platoon on Obj1
+8)81s moves to MFP 1 IVO NU 892 005
+9)Establishment of 81s, CAAT, and FiST positions ends Phase I
+Conditions set prior to moving to Phase II:
+-Enemy CSOP destroyed
+-CAAT screening North
+-81s firecapped at MFP 1
+-FiST established IVO 00 Northing
+Casevac plan: Establish hasty LZ for extract for Urgent casualties, following destruction of CSOP 
+establish LZ at NT 890 975. 
+LDTAA12
+3
+
+SOM:
+Current conditions:
+-Enemy CSOP destroyed
+-CAAT screening North
+-81s firecapped at MFP 1
+-FiST established IVO 00 Northing
+Phase II: Clear Co Obj1
+1)FiST, Tanks, Engineers executes Breach Series
+1)Arty suppresses Obj1
+2)81s suppresses Obj1
+3)Tanks estnear side SBF
+4)OCD breaches obstacle
+5)Tanks estfar side SBF
+2)CAAT estscreen to the North
+1)BPT engage Obj1 or Enemy to the North
+3)C1 clears Obj1 from West to East
+1)60s DS to C1
+2)C2 and C3 BPT support C1 clear
+3)Upon clear of Obj1, C1 orients north
+4)60s are now DS to C2
+5)C2 and C3 BPT to clear any additional enemy positions 
+identified 
+6)CAAT screens north IVO 045 northing
+7)Tanks, 81s, FiST, C2, C3, and C1 then move north 
+8)81s establish MFP 2 (NU 861 044)
+Conditions set prior to moving to Phase III:
+-Obj1 clear
+-CAAT screening north
+-81s establish MFP 2
+Casevac plan: Establish hasty LZ for extract for Urgent 
+casualties, following clear of Obj1 establish LZ NU 865 025
+1
+2
+3Obj1
+
+SOM:
+Current conditions:
+-Obj1 clear
+-CAAT screening north
+-81s establish MFP 2
+Phase III: Clear Co Obj2
+1)FiST adjusts Arty onto Obj2
+2)Upon effective suppression from Arty, Tanks begin 
+moving to SBF
+1)FiST and CAAT move to OP and CAAT hot posIVO 
+NU 870 065
+3)FiST adjusts 81s onto Obj2
+4)Upon effective suppression from 81s, Tanks moves to SBF 
+position staying to East of the MSR
+1)C2, C3, C1 , and Engineers follow in trace
+5)C2 clears Obj2 from East to West
+1)60s DS to C2
+2)C3 BPT support C2 clear
+6)C1 and Engineers follow in trace
+7)Upon Obj2 clear, CAAT will screen north IVO 077 
+Northing
+8)Artillery Battery will move from PAA 1 to PAA 2 (NT 890 
+980)
+Conditions set prior to moving to Phase IV:
+-Obj2 clear
+-CAAT screening north
+-Artillery moving to PAA 2
+-Engineers prepared to construct obstacles for the defense
+Casevac plan: Establish hasty LZ for extract for Urgent 
+casualties, following clear of Obj1 establish LZ NU 861 076
+12
+3
+
+SOM :
+Current conditions:
+-Obj2 clear
+-CAAT screening north
+-Engineers prepared to construct obstacles for 
+the defense
+Phase IV: Establish deliberate defense
+1) CAAT will screen north IVO 835 087
+2) Engineers will begin constructing FEA 
+obstacles IVO 079 Northing
+3) C1, C2, and C3 will move to establish battle 
+positions IVO 012 Northing oriented north
+1) From East to West: 60s, C1, C2, C3
+4) 81s move to MFP 3 IVO NU 858 012
+5) Tanks establish attack by fire position IVO NU 
+852 060
+6) FiST remain at OP IVO NU 870 065 
+7) Artillery Battery estPAA 2 (NT 890 980 )
+8) C7 will coordinate for the tactical resupply of 
+ammunition and fuel from LCE.
+1) Coordinate for EA elements resupply
+2) Coordinate for FEA elements 
+resupply
+3) Following resupply LCE, LCE convoy 
+will stage at NT 898 970.
+9) CAAT will send an element to recon their hot 
+position within the FEA IVO NU 872 063
+10) FiST will establish priority targets to the NE 
+of CAATs screen position and within FEA 
+STEEL
+11) Upon contact with enemy forces CAAT will 
+destroy two BMPs or BRDMs and retrograde 
+to their hot position IVO Nu 872 063
+12) Upon enemy entering FEA STEEL, Tanks and 
+CAAT will destroy 4x BMPs, FiST will fire 
+smoke from Arty, allowing Tanks, CAAT, and 
+FiST to retrograde to the main defensive 
+position
+Casevac plan: Move all casualties to the Company 
+CCP located IVO 011 Northing
+FEA STEEL
+XXXXXX
+
+SOM:
+Phase IV: Establish deliberate defense
+1)CAAT will screen north IVO 835 087
+2)Engineers will begin constructing FEA 
+obstacles IVO 079 Northing (Priority 1), 
+then move to the EA obstacles (Priority 2)
+3)C1, C2, and C3 will move to establish battle 
+positions IVO 012 Northing oriented north
+1)From East to West: 60s, C1, C2, C3
+2)60s GS to the Company
+4)81s move to MFP 3 IVO NU 858 012
+5)Tanks establish attack by fire position IVO 
+NU 852 060
+6)CAAT will send an element to recon their 
+hot position within the FEA IVO NU 872 
+063
+7)FiST will establish priority targets to the NE 
+of CAATs screen position and within FEA 
+STEEL
+8)Upon contact with enemy forces CAAT will 
+destroy two BMPs or BRDMs and 
+retrograde to their hot position IVO NU 
+872 063
+9)Upon enemy entering FEA STEEL, FiST will 
+fire FEA Series, Tanks and CAAT will 
+destroy 4x BMPs, FiST will fire smoke from 
+Arty, allowing Tanks and CAAT to 
+retrograde to the main defensive position
+10)As the enemy advances south FiST will fire 
+EA Series, we will engage with indirect fire 
+weapons, followed by direct fire weapons.
+Casevac plan: Move all casualties to the 
+Company CCP located IVO 011 Northing
+1
+2 3EA IRON
+XXXXXX XXXXXX
+

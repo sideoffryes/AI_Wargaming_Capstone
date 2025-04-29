@@ -1,0 +1,46 @@
+5. (U) Command and Signal
+
+
+    a. (U) Signal
+
+
+1. (U) Signal Plan. Platoon commanders develop signal plans IAW SOM and CEOI. Radio checks and communications will occur at the top of the hour. If a separate element is breaking away from the platoon, a SITREP is required to deconflict the battlespace.
+2. No Comm Plan. Timeline below outlines the Co No Comm Plan 
+   1. 1st comm check missed- continue with mission and attempt to reestablish Comm. 
+   2. 2nd comm check missed- Continue with mission and attempt to reestablish Comm. COC will attempt to contact PLT every 30 min.
+   3. 3rd comm check missed- Attempt to contact adjacent PLT’s IOT pass SITREPs to the COC. If unable to communicate with adjacent units roll to plain text and pass brevity (assigned below in table)
+
+
+
+
+3. (U) Frequencies and Callsigns. IAW CEOI.
+No Comm Freq and brevity codes
+	Freq
+	Mission Capable
+	Resupply required
+	CASEVAC Required
+	Unable to complete mission
+	51.51
+	Chesty Puller
+	Steak and Eggs
+	Blacklist
+	Burner
+	
+
+
+
+4. (U) Challenge and Password.  
+   1. Verbal- Challenge--- Yeti /// Pass--- Flathead
+   2. Running- Binder 
+   3. Numbers adding to 11
+   4. Night IR flash- Challenge--- 3 IR Flash /// Pass--- 5 IR Flash/// Confirmation--- 2 long IR Flash
+   5. Near and Far- Challenge--- V Hand and arm signal /// Pass--- Skirmisher’s hand and arm signal/// Confirmation--- touchdown
+
+
+    b. (U) Command. 
+
+
+        (1) (U) Location of Key Leaders.  I will be located at the Company Command Post at LZ Pheasant.  XO, 1stSgt and the Company Gunnery Sergeant will remain at the CP. 
+
+
+        (2) (U) Succession of Command.  XO, Wpns Plt Cmdr, ME Plt Cmdr, SE1 Plt Cmdr, and SE2 Plt Cmdr.

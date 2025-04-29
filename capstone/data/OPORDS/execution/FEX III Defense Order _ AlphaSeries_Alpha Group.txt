@@ -1,0 +1,101 @@
+3. (U) Execution
+
+
+    a. (U) Commanders Intent.  
+
+
+        (1) (U) Purpose. The purpose of this operation is to prevent the enemy from seizing Port Upshur, the BLT’s forward staging area.
+        (2) (U) Method. I believe the enemy’s center of gravity is their ability to conduct a combined arms attack with machineguns and indirect fire. Their critical vulnerability is their lack of freedom of movement throughout the AO caused by our air superiority, effective CAS, DAS and UAS.  This forces them to avoid using roads/trails and instead handrail these avenues of approach, resulting in a significant amount of time to mass for a coordinated attack. We will exploit his critical vulnerability by establishing a company level defense in depth that will block their use of key avenues of approach. We will disrupt their ability to seize Port Upshur by forcing them into our platoon engagement areas and destroy them with direct fire and indirect fire.
+
+
+        (3) (U) Endstate. Enemy combat power reduced in our AO, Port Upshur remains in friendly control, and friendly logistical supply routes remain open.
+
+
+    b. (U) Concept of Operations
+
+
+        (1) (U) Scheme of Maneuver.  We will establish a company linear defense utilizing three platoon battle position defenses with (1) ME and (2) SEs. I will array the three battle positions to block the enemy and prevent their seizure of LZ Drake, LZ Pheasant and LZ Vulture.  Platoon commanders have the latitude to orient their positions locally to develop the best possible engagement area along viable avenues of approach.  Based on your leader’s reconnaissance, provide a recommendation for the specific site of your position within the sector provide to you by the company.  Ensure your direct and indirect fires will not impact adjacent platoons.  Platoon commanders will determine occupation methods, security plans, alert status, patrol routes, LP/OP locations, and priorities of work as you see fit.  The company will conduct a helicopter borne insert to LZ Drake, LZ Pheasant and LZ Vulture.  Order of movement will be SE1, ME, and SE2. SE2 will establish the easternmost battle position IVO LZ Vulture (within 300m of TH 829 774).  SE1 will establish the westernmost battle position IVO LZ Drake (within 300m of TH 805 759). ME will establish a center battle position IVO LZ Pheasant (within 300m of TH 822 777). The Co CP will be established IVO Port Upshur once all (3) platoon blocking positions are established.  
+        (2) (U) Fire Support Plan.  
+
+
+            (a) (U) Task.   Disrupt enemy forces
+
+
+            (b) (U) Purpose.  Prevent enemy coordinated attacks on battle positions.
+
+
+            (c) (U) Method.  We will use the BLTs 81mm mortars and the company’s 60mm mortars in support of the defense.  POF 81s is to ME, SE2, and SE 1. POF for 60s is SE1, ME, and SE2.  Platoon Commanders are allocated three targets for your defense including (1) FPF.  Platoon commanders will coordinate FPF with CO FiST.  Company Target Block is: 1st Plt: AE1000-1095, 3d Plt: AE3000-3095, 5th Plt: AE5000-5095.
+
+
+            (d). (U) Effects. Enemy forces neutralized. 
+
+
+    c. (U) Tasks
+
+
+        (1) (U) 1st Platoon: SE1.  NLT 1130, Block south, westernmost sector of Company Defense, IVO LZ Drake IOT prevent the Enemy from seizing LZ Drake.  You have (1) MG squad and (1) Engineer fire team attached. 
+
+
+        (2) (U) 5th Platoon: SE2.  NLT 1130, Block south, easternmost sector of Company Defense, IVO LZ Vulture IOT prevent the enemy from seizing LZ Vulture. You have (1) MG squad and (1) Engineer fire team attached.
+        (3) (U) 3rd Platoon: ME. NLT 1130, Block south, center sector of Company Defense, IVO LZ Pheasant IOT prevent the enemy from seizing LZ Pheasant. You have (1) MG squad and (1) Engineer fire team attached.
+        (4) (U) Engineer Squad:  Effective immediately, attach 1 team to ME, SE1, and SE2.  Remain attached until retrograde.
+
+
+        (5) (U) CAAT 1: SE3. Upon insert, Screen IVO LZ Albatross IOT provide indications and warning of enemy movement on the northern flank of the company’s position.
+
+
+        (6) (U) 60mm Mortar Section: Occupy a MFP IVO DZ Redwing IOT provide IDF support to the company. FireCap NLT 1000.
+
+
+    d. (U) Coordinating Instructions
+
+
+        (1) (U) Timeline  
+0600-0700: Orders Prep/Accountability
+0700-0800: Platoon Order issue
+0800: Platoon Cmdrs back-brief CO on SOM, TCMS and FSP
+0800-0845: Prep for Combat (Issue ammo, comm, rehearsals)
+0845-0900: Stage MACO for Insert
+0900-1030: Insert
+1000: 81s and 60s capable of receiving fire missions
+NLT 1130: Defensive Positions established
+NLT 1300: Defensive Fire Plan Sketches reported to COC
+
+
+2. (U) Tactical Control Measures: Determined by platoon commanders. 
+Platoon Boundaries:        1stPlt: RTE 645 – MCB 1
+                                3rdPlt: MCB 1 – SR 609
+                                5thPlt: SR 609 – 84E
+                                
+        (3) (U) Lost Marine Plan: TBD by Platoon Commander.
+
+
+        (4) (U) UAS Support. Plan for a dedicated UAS asset (Raven) to provide aerial reconnaissance in support of your defensive scheme of maneuver. Planning considerations include: Flight time per asset: 30 minutes, Weather limitations
+            (a) (U) Flight Time: 30 minutes per flight window. 
+            (b) (U) Weather limitations: Flight availability dependent on precipitation, cloud coverage and wind.
+
+
+            (c) (U) Availability: UAS Support will be available as indicated by COC each day.
+
+
+(d) (U) Airspace: Airspace use and de-confliction with adjacent platoons will occur through the Company 
+COC via green gear, or in person by request, one hour prior to requested flight time window.
+
+
+(e) (U) Priority: (2) UAS Operators will co-locate with the company COC at Port Upshur. Priority of UAS 
+asset will be determined by number of operational assets on hand and company commander’s discretion/rotation of priority (Priority: ME, SE1, SE2). Limited to (2) flight windows per day.
+
+
+        (5) (U) Direction of Defense: Generally South. 
+
+
+        (6) (U) Air Planning Considerations.  Prepare 15 Marine stick manifests. MV22s are capable of holding (3) sticks.
+
+
+        (7) (U) Priorities of Work: Platoon commanders will develop their specific priorities of work.  NLT 2 hours after occupation on D – Day, I expect platoons to report over Company Tac, at a minimum: 8 Digit Grids of Left, Center and Right most positions of the platoon BP primary positions; grid azimuth of LLL, RLL, MMGs PDF or FPL and FSP with updated targets for platoon BP. NLT 0500 the following day, I expect primary, alternate and supplementary positions established and reported to higher.  Upon occupation, I expect platoon commanders to emplace LP/OPs and conduct patrol operations to support the Company’s defensive operation.  Platoon Commander’s should deconflict patrol and LP/OP operations with adjacent platoons IOT effectively build depth within the AO. Company COC will serve as a backstop and will battle track platoon operations.  As platoons update positions, targets and continue to develop their EA, report all updates to the company COC.
+
+
+       (8) (U) MOPP Level.  MOPP Ready.  Intel reports enemy has used a blood agent in the past and is currently capable of employing a blood agent.  
+
+
+       (9) (U) Rules of Engagement.  Individuals carrying a weapon are NOT declared hostile. Engage only Hostile Forces and Combatants. A Hostile Force is any civilian, paramilitary, or military force or terrorists, with or without national designation, that has committed a hostile act, exhibited hostile intent, or has been declared hostile by appropriate U.S. authority. Hostile forces may also be called Enemy Combatants. Hostile Act (HA): an attack or other use of force against U.S. forces. Some examples of possible hostile intent are an individual burying a suspicious cylinder along a road (likely improvised explosive device), an unknown armed group massing in your area of operation, or an unknown vehicle speeding to catch up with your convoy. Positive Identification (PID)* is required to engage. *Positive Identification (PID): A reasonable certainty that your target is a legitimate military target. *PID does not require 100% certainty. You must have clear line of sight to target and know what is behind it.
