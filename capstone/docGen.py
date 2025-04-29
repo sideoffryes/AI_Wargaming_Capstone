@@ -1,16 +1,16 @@
 import argparse
+import json
 import time
 import warnings
+from collections import Counter
 from datetime import date, datetime
 
 import faiss
-import json
 import numpy as np
 import torch
 from sentence_transformers import SentenceTransformer
 from transformers import (AutoModelForCausalLM, AutoTokenizer,
                           BitsAndBytesConfig, logging)
-from collections import Counter
 
 args = None
 parser = argparse.ArgumentParser(description="Generates military documents using an LLM based on input from the user.")
@@ -221,7 +221,7 @@ def find_most_rel(query: str, index, top_k: int):
     return indices
 
 def load_examples(type: str, prompt: str) -> str:
-    """Returns real life examples of the requested document type.
+    """Returns as many real life examples of the requested document type as long as total word count is under MAX_TOKENS.
 
     :param type: The document type
     :type type: str

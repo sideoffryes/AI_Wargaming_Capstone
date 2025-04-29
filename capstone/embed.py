@@ -249,4 +249,10 @@ if __name__ == "__main__":
     
     print(f"[INFO] Generating embeddings for {args.doc}")
     
-    main(args.doc)
+    if args.doc == "all":
+        main("nav")
+        main("mar")
+        main("opord")
+        main("rtw")
+    else:
+        main(args.doc)

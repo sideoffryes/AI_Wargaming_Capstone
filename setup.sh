@@ -1,7 +1,7 @@
 #!/bin/bash
 
-python3 -m venv .venv
 echo "Creating python virtual environment..."
+python3 -m venv .venv
 source .venv/bin/activate
 sleep 2
 
@@ -17,6 +17,14 @@ if python -c "import torch; print(torch.cuda.is_available())" | grep True; then
 else
     echo "No GPU detected!"
     pip install faiss-cpu torch torchvision torchaudio
+fi
+
+# HuggingFace login
+if [ -s "$HOME/.huggingface/token" ]; then
+    echo "✅ Hugging Face credentials found."
+else
+    echo "⚠️ No Hugging Face credentials found. Running huggingface-cli login..."
+    huggingface-cli login
 fi
 
 # Compile the documentation
@@ -51,14 +59,10 @@ case "$opt" in
         python3 MarPull.py
         echo -e "\nMARADMINS download complete!"
         
-        # HuggingFace login
-        echo "Please login to Hugging Face!"
-        huggingface-cli login
-        
         # Embeddings
         echo -e "\nGenerating document embeddings..."
         cd "$DIR/capstone"
-        python3 faissSetup.py -d all
+        python3 embed.py -d all
         ;;
     *)
         echo -e '\nMake sure you generate the embeddings using the faissSetup.py script in the capstone directory before attempting to generate any documents!'
