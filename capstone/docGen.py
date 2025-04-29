@@ -1,5 +1,4 @@
 import argparse
-import os
 import time
 import warnings
 from datetime import date, datetime
@@ -8,21 +7,26 @@ import faiss
 import json
 import numpy as np
 import torch
-from docx import Document
 from sentence_transformers import SentenceTransformer
 from transformers import (AutoModelForCausalLM, AutoTokenizer,
                           BitsAndBytesConfig, logging)
+from collections import Counter
 
 args = None
 parser = argparse.ArgumentParser(description="Generates military documents using an LLM based on input from the user.")
-parser.add_argument("-k", "--top-k", type=int, help="Specify the number of related documents to identify for context when creating the new document, default is 3.", default=3)
+parser.add_argument("-k", "--top-k", type=int, help="Specify the number of related documents to identify for context when creating the new document, default is 1.", default=1)
 parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose mode")
+parser.add_argument("-e", "--examples", action="store_true", help="Display examples used for RAG")
 parser.add_argument("--cpu", action="store_true", help="Enable CPU-only mode")
 parser.add_argument("-p", "--print", action="store_true", help="Print the output to the terminal when done")
+parser.add_argument("-m", "--max", type=int, default=5000, help="Set the max number of input tokens, default is 5000")
 
 warnings.filterwarnings("ignore", category=UserWarning)
 
 EMBED_MODEL = "intfloat/e5-large-v2"
+
+# This variable control the max length of the input to the model
+MAX_INPUT_TOKENS = getattr(args, 'max', 5000)
 
 NAV_META = "./data/NAVADMINS/metadata.json"
 MAR_META = "./data/MARADMINS/metadata.json"
@@ -94,11 +98,20 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
     # create model objects
     use_cpu = getattr(args, 'cpu', False)
     if torch.cuda.is_available() and not use_cpu:
-        model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype="auto", quantization_config=BitsAndBytesConfig(load_in_8bit=True, llm_int8_enable_fp32_cpu_offload=True))
+        model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto", torch_dtype="auto", quantization_config=BitsAndBytesConfig(load_in_8bit=True, llm_int8_enable_fp32_cpu_offload=True), offload_folder="./offload", offload_state_dict=True)
     else:
-        model = AutoModelForCausalLM.from_pretrained(model_name, device_map="cpu", torch_dtype="auto")
+        model = AutoModelForCausalLM.from_pretrained(model_name, device_map="cpu", torch_dtype="auto", offload_folder="./offload", offload_state_dict=True)
     
+    model.eval()
     tokenizer = AutoTokenizer.from_pretrained(model_name)
+    
+    use_verbose = getattr(args, 'verbose', False)
+    if use_verbose:
+        device_map = model.hf_device_map
+        counter = Counter(device_map.values())
+        print("\nDevice map summary:")
+        for device, count in counter.items():
+            print(f"  {device}: {count} layers/modules")   
     
     # set up prompt info
     if doc_type == "OPORD":
@@ -109,10 +122,10 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
             print(f"----------Generated document----------\n{response}")
         
         return response
-    else :
+    else:
         examples = load_examples(doc_type, prompt)
         prompt = f"{role} {staff}\n{task}\n{examples}\nNow that you have studied the examples, create the same type of example using the following prompt: {prompt}"
-        model_inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+        model_inputs = tokenizer(prompt, return_tensors="pt", truncation=True, max_length=MAX_INPUT_TOKENS).to(model.device)
         
         # generate response
         t_start = time.time()
@@ -124,6 +137,9 @@ def gen(model_num: int, type_num: int, prompt: str, save: bool = False) -> str:
         if save:
             save_response(response, prompt, model_name, model)
         
+        # clean up memory
+        del model_inputs
+        del generated_ids
         if torch.cuda.is_available():
             torch.cuda.empty_cache()
 
@@ -240,13 +256,14 @@ def load_examples(type: str, prompt: str) -> str:
     with open(meta_path, "r") as f:
         docs = json.load(f)
     
-    top_k_indices = find_most_rel(prompt, index, 1)
+    top_k = getattr(args, 'top-k', 1)
+    top_k_indices = find_most_rel(prompt, index, top_k)
     
     retrieved_text = [f"Example:\n{docs[i]['text']}\n\n" for i in top_k_indices[0]]
     examples += "".join(retrieved_text)
 
-    use_verbose = getattr(args, 'verbose', False)
-    if use_verbose:
+    use_examples = getattr(args, 'examples', False)
+    if use_examples:
         print(f"---------- EXAMPLES SELECTED FOR RAG ----------\n{examples}")
         print("---------- END EXAMPLES ----------")
 

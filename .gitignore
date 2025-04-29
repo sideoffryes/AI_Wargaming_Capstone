@@ -7,6 +7,8 @@ HF_TOKEN.txt
 *.json
 *.faiss
 
+capstone/offload
+
 # ignore html docs and extra pdf docs
 docs/build/doctrees
 docs/build/html
