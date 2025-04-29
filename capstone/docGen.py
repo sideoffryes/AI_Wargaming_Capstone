@@ -14,7 +14,7 @@ from collections import Counter
 
 args = None
 parser = argparse.ArgumentParser(description="Generates military documents using an LLM based on input from the user.")
-parser.add_argument("-k", "--top-k", type=int, help="Specify the number of related documents to identify for context when creating the new document, default is 1.", default=1)
+parser.add_argument("-k", "--top-k", type=int, help="Specify the number of related documents to identify for context when creating the new document, default is 5.", default=5)
 parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose mode")
 parser.add_argument("-e", "--examples", action="store_true", help="Display examples used for RAG")
 parser.add_argument("--cpu", action="store_true", help="Enable CPU-only mode")
@@ -256,12 +256,16 @@ def load_examples(type: str, prompt: str) -> str:
     with open(meta_path, "r") as f:
         docs = json.load(f)
     
-    top_k = getattr(args, 'top-k', 1)
+    top_k = getattr(args, 'top-k', 5)
     top_k_indices = find_most_rel(prompt, index, top_k)
     
-    retrieved_text = [f"Example:\n{docs[i]['text']}\n\n" for i in top_k_indices[0]]
-    examples += "".join(retrieved_text)
-
+    examples = ""
+    for i in top_k_indices[0]:
+        new_text = docs[i]['text']
+        print(f"i = {i}\nlen = {len(new_text)}")
+        if len(examples) + len(new_text) < MAX_INPUT_TOKENS:
+            examples += f"Example:\n{new_text}\n\n"
+    
     use_examples = getattr(args, 'examples', False)
     if use_examples:
         print(f"---------- EXAMPLES SELECTED FOR RAG ----------\n{examples}")
