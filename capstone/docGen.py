@@ -262,7 +262,6 @@ def load_examples(type: str, prompt: str) -> str:
     examples = ""
     for i in top_k_indices[0]:
         new_text = docs[i]['text']
-        print(f"i = {i}\nlen = {len(new_text)}")
         if len(examples) + len(new_text) < MAX_INPUT_TOKENS:
             examples += f"Example:\n{new_text}\n\n"
     
