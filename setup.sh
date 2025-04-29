@@ -16,11 +16,11 @@ if python -c "import torch; print(torch.cuda.is_available())" | grep True; then
     pip install faiss-gpu-cu12 bitsandbytes torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu126
 else
     echo "No GPU detected!"
-    pip install faiss-cpu torch torchvision torchaudio
+    pip install faiss-cpu torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cpu
 fi
 
 # HuggingFace login
-if [ -s "$HOME/.huggingface/token" ]; then
+if [ -s "$HOME/.cache/huggingface/token" ]; then
     echo "✅ Hugging Face credentials found."
 else
     echo "⚠️ No Hugging Face credentials found. Running huggingface-cli login..."
